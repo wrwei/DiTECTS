@@ -42,8 +42,8 @@ The element identity space derived from these models, the impact, coverage and r
 measured results and the static demonstration are in the case-study repository
 [wrwei/digital-thread-ads-case-study](https://github.com/wrwei/digital-thread-ads-case-study).
 
-## Licences
+## Licence
 
-See [NOTICE](NOTICE): models and documentation are CC-BY-4.0 ([LICENSE](LICENSE)); executable artefacts are
-Apache-2.0 ([LICENSE-Apache-2.0](LICENSE-Apache-2.0)); the RoboChart CSP semantic libraries keep their EPL-2.0
-headers.
+This repository accompanies a manuscript under peer review and is provided under the
+[DiTECTS Reviewer Evaluation Licence](LICENSE): editors and referees may download, build, run and inspect it
+for the review only. The RoboChart CSP semantic libraries keep their EPL-2.0 licence ([NOTICE](NOTICE)).

@@ -1,25 +1,9 @@
 Licensing and third-party components
 ====================================
 
-The engineering artefacts in this repository are dual-licensed by area.
-
-Executable artefacts -- Apache-2.0 (LICENSE-Apache-2.0)
--------------------------------------------------------
-  formal/dafny/          Dafny proof
-  formal/isabelle/       Isabelle/HOL theory and session ROOT
-  formal/csp/            CSP models, EXCEPT the RoboChart libraries listed below
-  implementation/java/   Java controller and JUnit suite
-  simulation/modelica/   OpenModelica changeover transient
-
-Engineering models and documentation -- CC-BY-4.0 (LICENSE)
------------------------------------------------------------
-  models/sysml/          Requirements and design, SysML v2 textual notation and OMG interchange JSON
-  models/safety-case/    GSN safety case
-  models/fmeda/          Failure analysis as JSON
-  models/fta/            Fault tree as JSON
-  models/digital-twin/   Digital-twin part mappings, signal bindings and plant mesh
-  models/traceability/   Completion overlay (authored trace links and analysis records)
-  README.md, NOTICE, .gitignore
+All material in this repository is provided under the DiTECTS Reviewer Evaluation
+Licence (LICENSE), except the third-party files listed below, which keep their
+own licences.
 
 Third-party: RoboChart CSP semantic libraries -- EPL-2.0
 --------------------------------------------------------
@@ -48,7 +32,7 @@ Contributor named in the file headers: Alvaro Miyazawa
 These files carry their own copyright headers and SPDX identifiers, retained
 unmodified. They are the CSP semantic definitions the RoboChart generator
 requires. The generated ADS process definitions that include them are part of
-this work and are Apache-2.0.
+this work and are covered by LICENSE.
 
 Note on per-file headers
 ------------------------
@@ -58,7 +42,7 @@ LF), and the accompanying article reproduces excerpts verbatim, so inserting
 licence headers would break both. The two SysML files additionally carry the
 three attributes the completion overlay records (changeoverPeriod,
 saturationTimeConstant, minDecontaminationFactor), pending re-export. Licensing is
-therefore declared by area in this file.
+therefore declared in LICENSE and this file.
 
 Build-time dependencies
 -----------------------
