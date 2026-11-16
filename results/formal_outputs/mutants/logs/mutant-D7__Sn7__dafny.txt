@@ -1,0 +1,17 @@
+# mutant-D7 Sn7 -> ADS Controller Proof - Dafny via dafny
+# command: dafny verify ./ADSController.dfy
+# exit: 4  timedOut: False  seconds: 1.23
+
+ADSController.dfy(70,8): Error: a postcondition could not be proved on this return path
+   |
+70 |         if (event == PowerLoss) {
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ADSController.dfy(67,21): Related location: this is the postcondition that could not be proved
+   |
+67 |         ensures mode == nextMode(old(mode), event)
+   |                      ^^
+
+
+Dafny program verifier finished with 10 verified, 1 error
+

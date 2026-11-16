@@ -1,0 +1,21 @@
+# mutant-I5 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-82706-93640 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/reverify-review3/mutants:~/ads-experiments/reverify-review3/mutants -w ~/ads-experiments/reverify-review3/mutants/work/mutant-I5__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/reverify-review3/mutants/work/mutant-I5__Sn8
+# exit: 1  timedOut: False  seconds: 36.91
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to apply initial proof method (line 346 of "~/ads-experiments/reverify-review3/mutants/work/mutant-I5__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. H{$activeDryer = d ∧ $tr = t} ChangeoverToNormalOperation () {r.
+***     $st = NormalOperation ∧
+***     $activeDryer = nextDryer d ∧
+***     $tr = t @ [Event changeoverComplete, State NormalOperation]}
+*** At command "by" (line 346 of "~/ads-experiments/reverify-review3/mutants/work/mutant-I5__Sn8/ADSController_Beh.thy")
+*** Failed to apply initial proof method (line 312 of "~/ads-experiments/reverify-review3/mutants/work/mutant-I5__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. H{$activeDryer = d} ChangeoverToNormalOperation () {r.
+***     $activeDryer = nextDryer d}
+*** At command "by" (line 312 of "~/ads-experiments/reverify-review3/mutants/work/mutant-I5__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:31 elapsed time, 0:00:33 cpu time, factor 1.06
+

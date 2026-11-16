@@ -1,0 +1,87 @@
+[
+ {
+  "id": "I12",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered handler binding",
+  "requirement": "REQ-ADS-007",
+  "description": "The power-loss channel in NormalOperation runs the changeover operation (handler binding swapped in the executable operation list)",
+  "expected": "FAIL: ADSController_handler_targets",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(zop_event normalOperationToFailSafe NormalOperationToFailSafe_type NormalOperationToFailSafe_pre normalOperationToFailSafe_Out )NormalOperationToFailSafe",
+    "replace": "$1NormalOperationToChangeover",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "F8",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted output command",
+  "requirement": "REQ-ADS-007",
+  "description": "The composed module no longer emits enterFailSafe on entering FailSafe",
+  "expected": "FAIL: ADS_ModuleCommandNormal [FD= ADS_ModuleCommandView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\n\\t{6}Active \\t\\t= true&\\()share__choice\\(enterFailSafe\\.out -> SKIP\\)(\\) ; )",
+    "replace": "$1SKIP$2",
+    "expectCount": 2
+   }
+  ]
+ },
+ {
+  "id": "F9",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted bed swap",
+  "requirement": "REQ-ADS-006",
+  "description": "The composed module writes the current bed instead of the other bed on changeover completion",
+  "expected": "FAIL: ADS_ModuleAlternationStart(ADS_InitialBed) [FD= ADS_ModuleAlternationView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\n\\t{6} \\t \\[\\] dbisim\\(\\(true\\)&\\(changeoverComplete__!NID_Changeover\\.in[^\\n]*?)set_activeDryer!nextDryer\\(activeDryer\\)",
+    "replace": "$1set_activeDryer!activeDryer",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "F10",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted output command",
+  "requirement": "REQ-ADS-007",
+  "description": "The controller no longer emits enterFailSafe on entering FailSafe",
+  "expected": "FAIL: ADS_CtrlCommandNormal [FD= ADS_CtrlCommandView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\n\\t{5}Active \\t\\t= true&\\()share__choice\\(enterFailSafe\\.out -> SKIP\\)(\\) ; )",
+    "replace": "$1SKIP$2",
+    "expectCount": 2
+   }
+  ]
+ },
+ {
+  "id": "F11",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted bed swap",
+  "requirement": "REQ-ADS-006",
+  "description": "The controller writes the current bed instead of the other bed on changeover completion",
+  "expected": "FAIL: ADS_CtrlAlternationStart(ADS_InitialBed) [FD= ADS_CtrlAlternationView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\n\\t{5} \\t \\[\\] dbisim\\(\\(true\\)&\\(changeoverComplete__!NID_Changeover\\.in[^\\n]*?)set_activeDryer!nextDryer\\(activeDryer\\)",
+    "replace": "$1set_activeDryer!activeDryer",
+    "expectCount": 1
+   }
+  ]
+ }
+]

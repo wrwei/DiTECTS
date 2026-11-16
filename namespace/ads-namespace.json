@@ -1,0 +1,2508 @@
+{
+ "schema": "ads-namespace/5",
+ "description": "Every ADS model element that participates in a cross-concern relationship, in one identity space.",
+ "provenance": "Derived from the modelling tool's project export by tools/derive_from_export.py; identities and text verbatim. Element UUIDs follow the same per-kind rule as the platform's traceability resolver: SysML elements, FMEDA rows and fault-tree elements carry elementId, safety-case elements carry gid. Executable evidence models, and digital-twin mappings, have no UUID of their own and carry null. A traceability link with several targets contributes one edge per target, each carrying the link's name. Two edge kinds are read from the export's structure rather than its trace links: attribute-of (a telemetry-bound attribute to the part usages its owning definition types) and fta-fmeda (a basic event to the FMEDA row its description names). Edges and elements with origin 'completion' come from models/traceability/completion.json, authored to complete the thread and pending engineering review. A link from a failure-analysis element to a requirement carries a relation: challenges (the failure or event violates the requirement) or realises (the safety mechanism or control it names implements the requirement). A link from an FMEDA row to a design part carries the relation analyses and records the part the row's itemElement field names; where such a link exists, no field-derived fmeda-item edge is added. A link from a Modelica parameter to a SysML attribute carries the relation binds and records a Degree 0 value binding; where such a link exists, it is the binding's edge and no sim-binding edge is added. Three SysML attributes (changeoverPeriod, saturationTimeConstant, minDecontaminationFactor) and the Modelica parameters they set (tCycle, tSat, DFtarget) come from the completion overlay: parameter-of joins a parameter to the Modelica model that declares it, and sim-binding is a Degree 0 value binding from a parameter to the attribute whose value it takes. Both ends of a binding carry `value` (the SysML literal; the parameter's value as declared in the exported Modelica source), which must be equal; a bound attribute also carries its `qualifiedName`.",
+ "identity": "`id` is the endpoint identifier the traceability links use. `uuid` is the element's own stable identifier, matching @id in the SysML, FMEDA, fault-tree and safety-case JSON exports, so a thread edge can be joined to the model that describes what it points at. Fault-tree elements are identified by their event and gate codes (TE-01, BE-12, G-04), which are their elementId.",
+ "nodes": [
+  {
+   "id": "13c384f8531f671f0cd5f6ad",
+   "uuid": null,
+   "concern": "executable-evidence",
+   "kind": "ModelicaParameter",
+   "label": "tSat",
+   "text": "Bed saturation time constant [s]",
+   "notation": "Modelica",
+   "qualifiedName": "ADSChangeover.tSat",
+   "value": 4000.0,
+   "unit": "s",
+   "origin": "completion"
+  },
+  {
+   "id": "17e99f6d-a9ac-4bd6-b7a9-63783d4f0a26",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinBinding",
+   "label": "releaseRate",
+   "text": "MBq/h"
+  },
+  {
+   "id": "1c7e0157c257a016d0fcc2a9",
+   "uuid": "BE-05",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-05",
+   "text": "Condenser cooling water loss",
+   "notation": "FTA",
+   "origin": "completion"
+  },
+  {
+   "id": "37154c6e-38b3-42fc-a163-2187b0e39fd7",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinBinding",
+   "label": "dewpoint",
+   "text": "\u00b0C"
+  },
+  {
+   "id": "3d983bc88f975172593dfea0",
+   "uuid": "904391e3-3105-5de8-9318-e4affc96dcad",
+   "concern": "design",
+   "kind": "SAttributeUsage",
+   "label": "saturationTimeConstant",
+   "text": null,
+   "qualifiedName": "ADSDesign::MolecularSieveDryer::saturationTimeConstant",
+   "value": 4000,
+   "origin": "completion"
+  },
+  {
+   "id": "45bc6a3e-da49-43f1-96e4-4e945a37090a",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinBinding",
+   "label": "activeDryer",
+   "text": ""
+  },
+  {
+   "id": "473b1281-2236-44a4-b281-7dfe624596f5",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinBinding",
+   "label": "bedSaturation",
+   "text": "%"
+  },
+  {
+   "id": "561b87a8f83753d9161a29c5",
+   "uuid": "IE-09",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-09",
+   "text": "Duty bed (dryer A) breakthrough",
+   "notation": "FTA",
+   "origin": "completion"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4770",
+   "uuid": "7efc8c65-838e-44fa-9bae-3151d38d9efa",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "dischargeLimit",
+   "text": null,
+   "shortName": "REQ-TRIT-014"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4774",
+   "uuid": "9578e1df-fccc-449a-b3e7-08fc3f494148",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "confinementIntegrity",
+   "text": null,
+   "shortName": "REQ-TRIT-007"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4778",
+   "uuid": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "inventoryCap",
+   "text": null,
+   "shortName": "REQ-TRIT-021"
+  },
+  {
+   "id": "6a9650997a882e24b8eb477c",
+   "uuid": "29b0fc80-e569-4ff0-9384-c32e67ab9149",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "detritiationAvailability",
+   "text": null,
+   "shortName": "REQ-TRIT-030"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4780",
+   "uuid": "2682f889-39f3-4a35-80d0-9c46c3315818",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "detritiationCapacity",
+   "text": null,
+   "shortName": "REQ-ADS-001"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4784",
+   "uuid": "9e69adb7-d1dc-4251-9b88-72c276305d42",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "changeoverContinuity",
+   "text": null,
+   "shortName": "REQ-ADS-002"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4788",
+   "uuid": "825753a8-c7c1-4151-99db-e7cfbd23572a",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "monitoringAndAlarm",
+   "text": null,
+   "shortName": "REQ-ADS-003"
+  },
+  {
+   "id": "6a9650997a882e24b8eb478c",
+   "uuid": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "recombinerEfficiency",
+   "text": null,
+   "shortName": "REQ-ADS-004"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4790",
+   "uuid": "c395ce14-a2df-4903-b5e0-451585b2b067",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "dryerCapacityMargin",
+   "text": null,
+   "shortName": "REQ-ADS-005"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4794",
+   "uuid": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "dryerRedundancy",
+   "text": null,
+   "shortName": "REQ-ADS-006"
+  },
+  {
+   "id": "6a9650997a882e24b8eb4798",
+   "uuid": "b35b12d4-7f37-4161-b84f-9dc52adc58c8",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "lossOfPowerResponse",
+   "text": null,
+   "shortName": "REQ-ADS-007"
+  },
+  {
+   "id": "6a9650997a882e24b8eb479c",
+   "uuid": "43969a1e-31a4-4fd9-939b-39b1b1b5475d",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "stackMonitorIndependence",
+   "text": null,
+   "shortName": "REQ-ADS-008"
+  },
+  {
+   "id": "6a9650997a882e24b8eb47a0",
+   "uuid": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "regenerationContainment",
+   "text": null,
+   "shortName": "REQ-ADS-009"
+  },
+  {
+   "id": "6a9650997a882e24b8eb47a4",
+   "uuid": "36478332-e697-4d97-a985-16f36207458d",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "changeoverProofTest",
+   "text": null,
+   "shortName": "REQ-ADS-010"
+  },
+  {
+   "id": "6a9650997a882e24b8eb47a8",
+   "uuid": "63afabd1-02d4-4319-90ba-a5711c916666",
+   "concern": "requirements",
+   "kind": "SRequirementUsage",
+   "label": "dewpointAccuracy",
+   "text": null,
+   "shortName": "REQ-ADS-011"
+  },
+  {
+   "id": "6a9650997a882e24b8eb482f",
+   "uuid": "2baf394a-18b2-4d79-b23c-76028ed2f5f2",
+   "concern": "design",
+   "kind": "SAttributeUsage",
+   "label": "bedSaturation",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb4846",
+   "uuid": "e9d71e6e-cc4f-49b1-b377-65ca193a1b6b",
+   "concern": "design",
+   "kind": "SAttributeUsage",
+   "label": "dewpoint",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb4854",
+   "uuid": "382679d0-0154-409f-b2c9-0d63873ee7ab",
+   "concern": "design",
+   "kind": "SAttributeUsage",
+   "label": "releaseRate",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb485d",
+   "uuid": "8c7c7bfe-0b6f-4b38-9709-24d95fba2cc4",
+   "concern": "design",
+   "kind": "SAttributeUsage",
+   "label": "activeDryer",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb4870",
+   "uuid": "0ff55ad7-bb83-4a0d-a6e2-55c10030510f",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "ads",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb487e",
+   "uuid": "030dc940-4a7c-4361-a4ff-d2e556457d5a",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "blower",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb488c",
+   "uuid": "bda3dd8d-8cb0-4b22-be47-15bfc1754f94",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "condenser",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb489d",
+   "uuid": "cbfdf551-c1ca-4c8f-adbe-d348d9d5eb3a",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "recombiner",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb48ab",
+   "uuid": "be10ffd3-ca48-4915-bf0e-350d249d47fe",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "dryerA",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb48c0",
+   "uuid": "ce4ef408-0c7f-4d07-8ade-257d13f8dae4",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "dryerB",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb48d2",
+   "uuid": "016114b4-f61e-4c8e-a90f-6c90dcf74340",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "changeoverValves",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb48e6",
+   "uuid": "3ad103b3-0c49-49f1-9e73-5370d3978e0e",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "dewpointMonitor",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb48f0",
+   "uuid": "21854fa0-e6ba-463f-913a-dc31025945ad",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "stackMonitor",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb48fa",
+   "uuid": "ae9fb8e4-5451-41f7-ab59-0f83c3d1d2d8",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "backupSupply",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb4927",
+   "uuid": "22cc77c0-1162-4238-8a68-f953a603e901",
+   "concern": "design",
+   "kind": "SInterfaceUsage",
+   "label": "dryerARegenReturn",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb492b",
+   "uuid": "a0e2c3db-e284-4297-bba5-30903ef1fbc2",
+   "concern": "design",
+   "kind": "SInterfaceUsage",
+   "label": "interfaceEdge",
+   "text": null
+  },
+  {
+   "id": "6a9650997a882e24b8eb4978",
+   "uuid": "0bfa4288-e199-4fc1-b0cf-8e54faa02fa8",
+   "concern": "design",
+   "kind": "SPartUsage",
+   "label": "controller",
+   "text": null
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c04",
+   "uuid": "3a3b090e-60e1-417c-a792-d1dda6f5f758",
+   "concern": "safety-case",
+   "kind": "Goal",
+   "label": "G1",
+   "text": "ADS maintains stack tritium release within the authorised limit and ALARP (discharges REQ-TRIT-014)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c05",
+   "uuid": "ac912ce3-e782-4e85-88a6-df8572e2cfff",
+   "concern": "safety-case",
+   "kind": "Context",
+   "label": "C1",
+   "text": "ADS design model (02-design.sysml)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c06",
+   "uuid": "0defd89d-d902-428f-ba43-06247b16b360",
+   "concern": "safety-case",
+   "kind": "Context",
+   "label": "C2",
+   "text": "Authorised discharge limits and the ALARP duty"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c07",
+   "uuid": "3ae8b116-be06-4e1d-8744-d4577dafa8e0",
+   "concern": "safety-case",
+   "kind": "Assumption",
+   "label": "A1",
+   "text": "Generic reliability data is representative pending fusion-specific data"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c08",
+   "uuid": "086d12b6-7cb4-4e11-93dc-c8b0af9fe718",
+   "concern": "safety-case",
+   "kind": "Strategy",
+   "label": "S1",
+   "text": "Argument over identified failure modes (FMEDA)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c09",
+   "uuid": "5f3f661c-a1e5-4314-a4e7-4b09e8608e8e",
+   "concern": "safety-case",
+   "kind": "Strategy",
+   "label": "S2",
+   "text": "Argument over defence-in-depth functions"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c0a",
+   "uuid": "fb318414-2a9e-4e3f-ac52-ac0b8f8ea7a1",
+   "concern": "safety-case",
+   "kind": "Goal",
+   "label": "G2",
+   "text": "Dryer breakthrough is detected and mitigated before the authorised limit is challenged"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c0b",
+   "uuid": "ee1ce039-8d2f-4040-8fd2-d6475e64e071",
+   "concern": "safety-case",
+   "kind": "Goal",
+   "label": "G3",
+   "text": "Bed changeover preserves the detritiation function"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c0c",
+   "uuid": "15f7fc46-8588-4a08-a168-c4f7746e4a71",
+   "concern": "safety-case",
+   "kind": "Goal",
+   "label": "G4",
+   "text": "Loss of off-site power leads to a fail-safe state with timely recovery"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c0d",
+   "uuid": "3e07f4a2-4f09-4a40-93eb-7a797ff6df10",
+   "concern": "safety-case",
+   "kind": "Goal",
+   "label": "G5",
+   "text": "Detritiation capacity is adequate (DF >= 1000, REQ-ADS-001)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c0e",
+   "uuid": "ff788d33-966d-470c-b9ea-0b982a191a3a",
+   "concern": "safety-case",
+   "kind": "Goal",
+   "label": "G6",
+   "text": "Monitoring is independent (REQ-ADS-008) and calibrated (REQ-ADS-011)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c0f",
+   "uuid": "5ebe3735-9cd4-44e6-865c-d6ba25c4ae44",
+   "concern": "safety-case",
+   "kind": "Goal",
+   "label": "G7",
+   "text": "The regeneration path is contained (REQ-ADS-009)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c10",
+   "uuid": "4d9933df-7d61-4170-bf03-130d16e12cec",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn1",
+   "text": "FMEDA row 7 + dual-bed changeover test results"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c11",
+   "uuid": "62e31c40-754f-4a01-b5d9-a7ce6e34a2db",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn2",
+   "text": "Changeover proof-test records (future: FMU transient evidence)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c12",
+   "uuid": "b5abd0ad-9643-4b35-8454-7b54acfd02db",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn3",
+   "text": "UPS discharge-test records + FMEDA rows 15/17"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c13",
+   "uuid": "0f580cf4-67c7-4c93-a2fe-c6531e4ba586",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn4",
+   "text": "DF design calculation + recombiner efficiency data (row 3)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c14",
+   "uuid": "5d707198-140c-415c-bbd9-2aab05b68e75",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn5",
+   "text": "Calibration records + stack-monitor independence analysis (rows 12/14)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c15",
+   "uuid": "f501167c-8dcd-46e4-bc0d-498ba7216c54",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn6",
+   "text": "Regeneration-path design verification (row 6)"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c27",
+   "uuid": "34de5777-2c41-4063-bf85-1dbb0f42eec9",
+   "concern": "safety-case",
+   "kind": "Strategy",
+   "label": "S3",
+   "text": "Argument that the controller's changeover and fail-safe logic is formally verified and its implementation tested"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c28",
+   "uuid": "6198d5ab-6b6f-4620-a23a-acb6c630406b",
+   "concern": "safety-case",
+   "kind": "Goal",
+   "label": "G8",
+   "text": "The ADS controller correctly sequences bed changeover and enters fail-safe on power loss (REQ-ADS-002/006/007), with no deadlock"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c29",
+   "uuid": "0588beeb-6865-495d-b227-11a5a962dfee",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn7",
+   "text": "Dafny proof: one-live-bed invariant + PowerLoss => FailSafe postconditions"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c2a",
+   "uuid": "4c11154b-2dd2-452b-8599-f5ac1c6ca224",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn8",
+   "text": "Isabelle/HOL proof: invariant preservation, R1 (FailSafe exits only on backup), R2 (one live bed), deadlock-freedom"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c2b",
+   "uuid": "70d6082a-3ee0-44a7-b750-d2daf461de8d",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn9",
+   "text": "FDR/CSP refinement + determinism/deadlock/livelock checks generated from RoboChart"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4c2c",
+   "uuid": "588f1f8d-11a9-4bc9-85d2-31afe5a1bae7",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn10",
+   "text": "Java JUnit suite: 12 controller scenarios + dryer alternation"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cc9",
+   "uuid": null,
+   "concern": "executable-evidence",
+   "kind": "ModelicaModel",
+   "label": "ADS Changeover Transient_Modelica",
+   "text": null,
+   "notation": "Modelica"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ccc",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "BLOWER",
+   "text": "blower"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ccd",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "RECOMBINER",
+   "text": "recombiner"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cce",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "CONDENSER",
+   "text": "condenser"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ccf",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "CHANGEOVER",
+   "text": "changeoverValves"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cd0",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "DRYER A",
+   "text": "dryerA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cd1",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "DRYER B",
+   "text": "dryerB"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cd2",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "DEWPOINT",
+   "text": "dewpointMonitor"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cd3",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "STACK MON",
+   "text": "stackMonitor"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cd4",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "CONTROLLER",
+   "text": "controller"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cd5",
+   "uuid": null,
+   "concern": "digital-twin",
+   "kind": "TwinPart",
+   "label": "BACKUP",
+   "text": "backupSupply"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cd9",
+   "uuid": "1ab52260-556a-4af3-8893-9a06fed915c2",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 17",
+   "text": "Battery degraded",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cda",
+   "uuid": "3292d316-1c3d-4e14-8c19-4380346a3616",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 1",
+   "text": "Bearing seizure",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cdb",
+   "uuid": "fe5c49fd-06fa-43c7-9caa-6f414346f8fa",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 2",
+   "text": "Impeller fouling",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cdc",
+   "uuid": "35add4ed-ca30-4b84-b071-676d0c3a316b",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 11",
+   "text": "Seat leak-through",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cdd",
+   "uuid": "2f3a0d7d-ec31-4921-968b-486cdcdadb39",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 10",
+   "text": "Stuck mid-travel",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cde",
+   "uuid": "b77bf099-c35f-4906-8ec2-798d5c80eace",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 5",
+   "text": "Cooling water loss",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4cdf",
+   "uuid": "59a45ccf-afa7-4692-accc-1a3e06e02622",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 6",
+   "text": "Regen-path leak to stack",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce0",
+   "uuid": "1e2240e2-365a-4383-8c48-c304c41c61a0",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 15",
+   "text": "Fails on LOOP",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce1",
+   "uuid": "d884b8f2-a35b-4e59-a9a5-a6ba11e0afce",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 16",
+   "text": "Spurious changeover",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce2",
+   "uuid": "8a137ee0-bb27-4437-ba32-f5e7035d9316",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 12",
+   "text": "Drift (reads dry)",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce3",
+   "uuid": "4d13462c-1aca-492b-853f-cb507719fc5e",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 13",
+   "text": "Fail high (reads wet)",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce4",
+   "uuid": "36fa7eb4-5f18-43e1-94fe-f919bba34f79",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 8",
+   "text": "Bed channelling",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce5",
+   "uuid": "734b04a0-2b04-43e5-8273-26a3cf93cff7",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 7",
+   "text": "Sieve breakthrough",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce6",
+   "uuid": "b7593881-b7e5-4fe2-9493-10efca880882",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 9",
+   "text": "Regen heater failure",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce7",
+   "uuid": "dbbfe120-892b-4191-92b5-4c132f771335",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 3",
+   "text": "Catalyst poisoning",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce8",
+   "uuid": "dfaec895-e04d-44ed-9b7f-017575ab597d",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 4",
+   "text": "Heater failure",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb4ce9",
+   "uuid": "c0ac0289-4021-4336-b956-ee523425e818",
+   "concern": "failure-analysis",
+   "kind": "FMEARow",
+   "label": "FMEDA row 14",
+   "text": "Loss of signal",
+   "notation": "FMEDA"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb5b9b",
+   "uuid": null,
+   "concern": "executable-evidence",
+   "kind": "Java Model",
+   "label": "ADS Controller Implementation",
+   "text": null,
+   "notation": "Java"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb5ba7",
+   "uuid": null,
+   "concern": "executable-evidence",
+   "kind": "Dafny Model",
+   "label": "ADS Controller Proof - Dafny",
+   "text": null,
+   "notation": "Dafny"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb5ba9",
+   "uuid": null,
+   "concern": "executable-evidence",
+   "kind": "Isabelle Model",
+   "label": "ADS Controller Behaviour",
+   "text": null,
+   "notation": "Isabelle/HOL"
+  },
+  {
+   "id": "6a96509a7a882e24b8eb5bab",
+   "uuid": null,
+   "concern": "executable-evidence",
+   "kind": "FDR Model",
+   "label": "ADS Controller Refinement",
+   "text": null,
+   "notation": "CSP/FDR"
+  },
+  {
+   "id": "6a96588b7a882e24b8eb5ca7",
+   "uuid": "TE-01",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "TE-01",
+   "text": "Tritium discharge to atmosphere exceeds authorised limit",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5cd6",
+   "uuid": "BE-01",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-01",
+   "text": "Blower bearing seizure",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5ce6",
+   "uuid": "BE-03",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-03",
+   "text": "Recombiner catalyst poisoning",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5cf6",
+   "uuid": "BE-04",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-04",
+   "text": "Recombiner heater failure",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d06",
+   "uuid": "BE-06",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-06",
+   "text": "Regeneration-path leak to stack",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d16",
+   "uuid": "BE-07",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-07",
+   "text": "Dryer A sieve breakthrough",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d26",
+   "uuid": "BE-09",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-09",
+   "text": "Dryer B regeneration heater failure",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d36",
+   "uuid": "BE-10",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-10",
+   "text": "Changeover valves stuck mid-travel",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d46",
+   "uuid": "BE-11",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-11",
+   "text": "Changeover valve seat leak-through",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d56",
+   "uuid": "BE-12",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-12",
+   "text": "Dewpoint monitor drift (reads dry)",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d66",
+   "uuid": "BE-14",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-14",
+   "text": "Stack monitor loss of signal",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d76",
+   "uuid": "BE-15",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-15",
+   "text": "Controller fails on power transition",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d86",
+   "uuid": "BE-17",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-17",
+   "text": "UPS battery degraded",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5d96",
+   "uuid": "IE-01",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-01",
+   "text": "Sustained undetected breakthrough",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5da6",
+   "uuid": "IE-02",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-02",
+   "text": "Detritiation fails to remove tritium",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5db6",
+   "uuid": "IE-03",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-03",
+   "text": "Loss of drying",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e07a882e24b8eb5dc6",
+   "uuid": "IE-04",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-04",
+   "text": "Both dryer beds unavailable",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5dd6",
+   "uuid": "IE-05",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-05",
+   "text": "Upstream conversion loss",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5de6",
+   "uuid": "IE-06",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-06",
+   "text": "Loss of motive flow",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5df6",
+   "uuid": "IE-07",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-07",
+   "text": "Loss of control on loss of off-site power",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5e06",
+   "uuid": "IE-08",
+   "concern": "failure-analysis",
+   "kind": "FTAIntermediateEvent",
+   "label": "IE-08",
+   "text": "Release not detected",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5e19",
+   "uuid": "G-00",
+   "concern": "failure-analysis",
+   "kind": "FTAOrGate",
+   "label": "G-00",
+   "text": "TOP",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5e2d",
+   "uuid": "G-01",
+   "concern": "failure-analysis",
+   "kind": "FTAAndGate",
+   "label": "G-01",
+   "text": "Breakthrough AND not detected",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5e41",
+   "uuid": "G-02",
+   "concern": "failure-analysis",
+   "kind": "FTAOrGate",
+   "label": "G-02",
+   "text": "Any loss of removal",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5e55",
+   "uuid": "G-03",
+   "concern": "failure-analysis",
+   "kind": "FTAOrGate",
+   "label": "G-03",
+   "text": "Drying lost",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5e69",
+   "uuid": "G-04",
+   "concern": "failure-analysis",
+   "kind": "FTAAndGate",
+   "label": "G-04",
+   "text": "Both beds out AND no changeover",
+   "notation": "FTA",
+   "origin": "completion (patched)"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5e7d",
+   "uuid": "G-05",
+   "concern": "failure-analysis",
+   "kind": "FTAOrGate",
+   "label": "G-05",
+   "text": "Conversion lost",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5e91",
+   "uuid": "G-06",
+   "concern": "failure-analysis",
+   "kind": "FTAOrGate",
+   "label": "G-06",
+   "text": "Flow lost",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5ea5",
+   "uuid": "G-07",
+   "concern": "failure-analysis",
+   "kind": "FTAAndGate",
+   "label": "G-07",
+   "text": "Controller AND UPS fail",
+   "notation": "FTA"
+  },
+  {
+   "id": "6a9658e17a882e24b8eb5eb9",
+   "uuid": "G-08",
+   "concern": "failure-analysis",
+   "kind": "FTAAndGate",
+   "label": "G-08",
+   "text": "Both detection channels fail",
+   "notation": "FTA"
+  },
+  {
+   "id": "6e34b3c6d75cfbd9474db3d0",
+   "uuid": "019eeadb-f689-5b5a-ab3c-f2b57d354b35",
+   "concern": "safety-case",
+   "kind": "Solution",
+   "label": "Sn11",
+   "text": "Blower flow-alarm and standby-restart test records + FMEDA rows 1/2",
+   "origin": "completion"
+  },
+  {
+   "id": "8e07484d89138b0ef4630246",
+   "uuid": null,
+   "concern": "executable-evidence",
+   "kind": "ModelicaParameter",
+   "label": "DFtarget",
+   "text": "Authorised minimum decontamination factor (REQ-ADS-001) [-]",
+   "notation": "Modelica",
+   "qualifiedName": "ADSChangeover.DFtarget",
+   "value": 1000.0,
+   "unit": "-",
+   "origin": "completion"
+  },
+  {
+   "id": "a8886f64c5698007eb768894",
+   "uuid": "BE-08",
+   "concern": "failure-analysis",
+   "kind": "FTABasicEvent",
+   "label": "BE-08",
+   "text": "Dryer A bed channelling",
+   "notation": "FTA",
+   "origin": "completion"
+  },
+  {
+   "id": "b337953a31d5259347f343ae",
+   "uuid": "9ba31269-d98d-5d70-a722-8ad6c2e0d24b",
+   "concern": "design",
+   "kind": "SAttributeUsage",
+   "label": "changeoverPeriod",
+   "text": null,
+   "qualifiedName": "ADSDesign::ADSController::changeoverPeriod",
+   "value": 7000,
+   "origin": "completion"
+  },
+  {
+   "id": "ba2349c73842715316887a8d",
+   "uuid": "3764af26-8f2d-563c-8296-d3dace486012",
+   "concern": "safety-case",
+   "kind": "Assumption",
+   "label": "A2",
+   "text": "REQ-TRIT-007 (confinement barriers) and REQ-TRIT-021 (inventory cap) are plant-level requirements allocated to the plant confinement and inventory safety cases, outside the ADS argument",
+   "origin": "completion"
+  },
+  {
+   "id": "c1746a1c5f8412c5180e8ca1",
+   "uuid": "09e9ced8-acca-5a30-8e32-be678a1277fb",
+   "concern": "requirements",
+   "kind": "SAttributeUsage",
+   "label": "minDecontaminationFactor",
+   "text": null,
+   "qualifiedName": "'ADS Requirements'::detritiationCapacity::minDecontaminationFactor",
+   "value": 1000,
+   "origin": "completion"
+  },
+  {
+   "id": "d5723237b215f7b233a22e7f",
+   "uuid": null,
+   "concern": "executable-evidence",
+   "kind": "ModelicaParameter",
+   "label": "tCycle",
+   "text": "Changeover period: the duty bed is swapped to the fresh standby every tCycle [s]",
+   "notation": "Modelica",
+   "qualifiedName": "ADSChangeover.tCycle",
+   "value": 7000.0,
+   "unit": "s",
+   "origin": "completion"
+  },
+  {
+   "id": "e48ae12a64a8d58132791354",
+   "uuid": "G-09",
+   "concern": "failure-analysis",
+   "kind": "FTAOrGate",
+   "label": "G-09",
+   "text": "Any duty-bed breakthrough cause",
+   "notation": "FTA",
+   "origin": "completion"
+  }
+ ],
+ "edges": [
+  {
+   "source": "6a96509a7a882e24b8eb4c11",
+   "target": "6a96509a7a882e24b8eb4cc9",
+   "kind": "traceability",
+   "name": "Sn2-to-Modelica"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c2c",
+   "target": "6a96509a7a882e24b8eb5b9b",
+   "kind": "traceability",
+   "name": "Sn10-to-Java"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ccc",
+   "target": "6a9650997a882e24b8eb487e",
+   "kind": "traceability",
+   "name": "BLOWER (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ccd",
+   "target": "6a9650997a882e24b8eb489d",
+   "kind": "traceability",
+   "name": "RECOMBINER (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cce",
+   "target": "6a9650997a882e24b8eb488c",
+   "kind": "traceability",
+   "name": "CONDENSER (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ccf",
+   "target": "6a9650997a882e24b8eb48d2",
+   "kind": "traceability",
+   "name": "CHANGEOVER (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cd0",
+   "target": "6a9650997a882e24b8eb48ab",
+   "kind": "traceability",
+   "name": "DRYER A (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cd1",
+   "target": "6a9650997a882e24b8eb48c0",
+   "kind": "traceability",
+   "name": "DRYER B (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cd2",
+   "target": "6a9650997a882e24b8eb48e6",
+   "kind": "traceability",
+   "name": "DEWPOINT (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cd3",
+   "target": "6a9650997a882e24b8eb48f0",
+   "kind": "traceability",
+   "name": "STACK MON (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cd4",
+   "target": "6a9650997a882e24b8eb4978",
+   "kind": "traceability",
+   "name": "CONTROLLER (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cd5",
+   "target": "6a9650997a882e24b8eb48fa",
+   "kind": "traceability",
+   "name": "BACKUP (twin) -> SysML"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c29",
+   "target": "6a96509a7a882e24b8eb5ba7",
+   "kind": "traceability",
+   "name": "Sn7-to-Dafny"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c2a",
+   "target": "6a96509a7a882e24b8eb5ba9",
+   "kind": "traceability",
+   "name": "Sn8-to-Isabelle"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c2b",
+   "target": "6a96509a7a882e24b8eb5bab",
+   "kind": "traceability",
+   "name": "Sn9-to-FDR"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "6a9650997a882e24b8eb4770",
+   "kind": "traceability",
+   "name": "G1-to-Req"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0a",
+   "target": "6a9650997a882e24b8eb4788",
+   "kind": "traceability",
+   "name": "G2-to-monitoring"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0a",
+   "target": "6a9650997a882e24b8eb4790",
+   "kind": "traceability",
+   "name": "G2-to-dryerCapacity"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0b",
+   "target": "6a9650997a882e24b8eb4784",
+   "kind": "traceability",
+   "name": "G3-to-Changeover"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0c",
+   "target": "6a9650997a882e24b8eb4798",
+   "kind": "traceability",
+   "name": "G4-to-lossOfPower"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0d",
+   "target": "6a9650997a882e24b8eb4780",
+   "kind": "traceability",
+   "name": "G5-to-DetritiationCapacity"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0e",
+   "target": "6a9650997a882e24b8eb479c",
+   "kind": "traceability",
+   "name": "G6-to-StackMonitor"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0e",
+   "target": "6a9650997a882e24b8eb47a8",
+   "kind": "traceability",
+   "name": "G6-to-DewPointAccuracy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0f",
+   "target": "6a9650997a882e24b8eb47a0",
+   "kind": "traceability",
+   "name": "G7-to-RegenerationContainment"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c28",
+   "target": "6a9650997a882e24b8eb4784",
+   "kind": "traceability",
+   "name": "G8-to-Changeover"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c28",
+   "target": "6a9650997a882e24b8eb4794",
+   "kind": "traceability",
+   "name": "G8-to-DryerRedundancy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c28",
+   "target": "6a9650997a882e24b8eb4798",
+   "kind": "traceability",
+   "name": "G8-to-LossOfPower"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4978",
+   "target": "6a96509a7a882e24b8eb4cc9",
+   "kind": "traceability",
+   "name": "Controller-to-Simulation"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4870",
+   "target": "6a9650997a882e24b8eb4770",
+   "kind": "traceability",
+   "name": "ads-to-dischargeLimit"
+  },
+  {
+   "source": "6a9650997a882e24b8eb489d",
+   "target": "6a9650997a882e24b8eb478c",
+   "kind": "traceability",
+   "name": "recombiner-to-reccombinerEfficiency"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48fa",
+   "target": "6a9650997a882e24b8eb477c",
+   "kind": "traceability",
+   "name": "backupSupply-to-detritiationAvailability"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48ab",
+   "target": "6a9650997a882e24b8eb4790",
+   "kind": "traceability",
+   "name": "dryerA-to-dryerCapacityMargin"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4978",
+   "target": "6a9650997a882e24b8eb4794",
+   "kind": "traceability",
+   "name": "controller-to-dryerRedundancy"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48d2",
+   "target": "6a9650997a882e24b8eb4784",
+   "kind": "traceability",
+   "name": "changeoverValues-to-changeoverContinuity"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48fa",
+   "target": "6a9650997a882e24b8eb4798",
+   "kind": "traceability",
+   "name": "backupSupply-to-lossOfPowerResponse"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48e6",
+   "target": "6a9650997a882e24b8eb4788",
+   "kind": "traceability",
+   "name": "dewpointMonitor-to-monitoring"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48f0",
+   "target": "6a9650997a882e24b8eb479c",
+   "kind": "traceability",
+   "name": "stackMonitor-to-stackMonitorInjdependence"
+  },
+  {
+   "source": "6a9650997a882e24b8eb488c",
+   "target": "6a9650997a882e24b8eb47a0",
+   "kind": "traceability",
+   "name": "condenser-to-regenerationContainment"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48e6",
+   "target": "6a9650997a882e24b8eb47a8",
+   "kind": "traceability",
+   "name": "dewpointMonitor-to-dewpointAccuracy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a96509a7a882e24b8eb4ce5",
+   "kind": "traceability",
+   "name": "Sn1-to-FMEA"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c12",
+   "target": "6a96509a7a882e24b8eb4ce0",
+   "kind": "traceability",
+   "name": "Sn3-to-FMEA1"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c12",
+   "target": "6a96509a7a882e24b8eb4cd9",
+   "kind": "traceability",
+   "name": "Sn3-to-FMEA2"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c13",
+   "target": "6a96509a7a882e24b8eb4ce7",
+   "kind": "traceability",
+   "name": "Sn4-to-FMEA"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c14",
+   "target": "6a96509a7a882e24b8eb4ce2",
+   "kind": "traceability",
+   "name": "Sn5-to-FMEA1"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c14",
+   "target": "6a96509a7a882e24b8eb4ce9",
+   "kind": "traceability",
+   "name": "Sn5-to-FMEA2"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c15",
+   "target": "6a96509a7a882e24b8eb4cdf",
+   "kind": "traceability",
+   "name": "Sn6-to-FMEA"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "6a96588b7a882e24b8eb5ca7",
+   "kind": "traceability",
+   "name": "G1-to-FTA-TopEvent"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a9658e07a882e24b8eb5d16",
+   "kind": "traceability",
+   "name": "Sn1-to-FTA-Breakthrough"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a9658e07a882e24b8eb5dc6",
+   "kind": "traceability",
+   "name": "Sn1-to-FTA-Breakthrough"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c11",
+   "target": "6a9658e07a882e24b8eb5d36",
+   "kind": "traceability",
+   "name": "Sn2-to-FTA-ChangeoverValves"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c12",
+   "target": "6a9658e07a882e24b8eb5d76",
+   "kind": "traceability",
+   "name": "Sn3-to-FTA-LOOP"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c12",
+   "target": "6a9658e07a882e24b8eb5d86",
+   "kind": "traceability",
+   "name": "Sn3-to-FTA-LOOP"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c12",
+   "target": "6a9658e17a882e24b8eb5df6",
+   "kind": "traceability",
+   "name": "Sn3-to-FTA-LOOP"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c13",
+   "target": "6a9658e07a882e24b8eb5ce6",
+   "kind": "traceability",
+   "name": "Sn4-to-FTA-Conversion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c13",
+   "target": "6a9658e07a882e24b8eb5cf6",
+   "kind": "traceability",
+   "name": "Sn4-to-FTA-Conversion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c13",
+   "target": "6a9658e17a882e24b8eb5dd6",
+   "kind": "traceability",
+   "name": "Sn4-to-FTA-Conversion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c14",
+   "target": "6a9658e07a882e24b8eb5d56",
+   "kind": "traceability",
+   "name": "Sn5-to-FTA-MonitoringIndependence"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c14",
+   "target": "6a9658e07a882e24b8eb5d66",
+   "kind": "traceability",
+   "name": "Sn5-to-FTA-MonitoringIndependence"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c14",
+   "target": "6a9658e17a882e24b8eb5e06",
+   "kind": "traceability",
+   "name": "Sn5-to-FTA-MonitoringIndependence"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c15",
+   "target": "6a9658e07a882e24b8eb5d06",
+   "kind": "traceability",
+   "name": "Sn6-to-FTA-RegenPath"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4870",
+   "target": "6a9650997a882e24b8eb4780",
+   "kind": "traceability",
+   "name": "ads-to-detritiationCapacity",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4978",
+   "target": "6a9650997a882e24b8eb47a4",
+   "kind": "traceability",
+   "name": "controller-to-changeoverProofTest",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48c0",
+   "target": "6a9650997a882e24b8eb4790",
+   "kind": "traceability",
+   "name": "dryerB-to-dryerCapacityMargin",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48ab",
+   "target": "6a9650997a882e24b8eb4794",
+   "kind": "traceability",
+   "name": "dryerA-to-dryerRedundancy",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb48c0",
+   "target": "6a9650997a882e24b8eb4794",
+   "kind": "traceability",
+   "name": "dryerB-to-dryerRedundancy",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb487e",
+   "target": "6a9650997a882e24b8eb4780",
+   "kind": "traceability",
+   "name": "blower-to-detritiationCapacity",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0b",
+   "target": "6a9650997a882e24b8eb47a4",
+   "kind": "traceability",
+   "name": "G3-to-changeoverProofTest",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0d",
+   "target": "6a9650997a882e24b8eb478c",
+   "kind": "traceability",
+   "name": "G5-to-recombinerEfficiency",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0c",
+   "target": "6a9650997a882e24b8eb477c",
+   "kind": "traceability",
+   "name": "G4-to-detritiationAvailability",
+   "origin": "completion"
+  },
+  {
+   "source": "ba2349c73842715316887a8d",
+   "target": "6a9650997a882e24b8eb4774",
+   "kind": "traceability",
+   "name": "A2-to-PlantLevelRequirements",
+   "origin": "completion"
+  },
+  {
+   "source": "ba2349c73842715316887a8d",
+   "target": "6a9650997a882e24b8eb4778",
+   "kind": "traceability",
+   "name": "A2-to-PlantLevelRequirements",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a96509a7a882e24b8eb4cde",
+   "kind": "traceability",
+   "name": "Sn1-to-FMEA-BedAvailability",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a96509a7a882e24b8eb4ce4",
+   "kind": "traceability",
+   "name": "Sn1-to-FMEA-BedAvailability",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a96509a7a882e24b8eb4ce6",
+   "kind": "traceability",
+   "name": "Sn1-to-FMEA-BedAvailability",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "1c7e0157c257a016d0fcc2a9",
+   "kind": "traceability",
+   "name": "Sn1-to-FTA-BedAvailability",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "a8886f64c5698007eb768894",
+   "kind": "traceability",
+   "name": "Sn1-to-FTA-BedAvailability",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a9658e07a882e24b8eb5d26",
+   "kind": "traceability",
+   "name": "Sn1-to-FTA-BedAvailability",
+   "origin": "completion"
+  },
+  {
+   "source": "6e34b3c6d75cfbd9474db3d0",
+   "target": "6a96509a7a882e24b8eb4cda",
+   "kind": "traceability",
+   "name": "Sn11-to-FMEA",
+   "origin": "completion"
+  },
+  {
+   "source": "6e34b3c6d75cfbd9474db3d0",
+   "target": "6a96509a7a882e24b8eb4cdb",
+   "kind": "traceability",
+   "name": "Sn11-to-FMEA",
+   "origin": "completion"
+  },
+  {
+   "source": "6e34b3c6d75cfbd9474db3d0",
+   "target": "6a9658e07a882e24b8eb5cd6",
+   "kind": "traceability",
+   "name": "Sn11-to-FTA-MotiveFlow",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c11",
+   "target": "6a9658e07a882e24b8eb5d46",
+   "kind": "traceability",
+   "name": "Sn2-to-FTA-ValveLeak",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c13",
+   "target": "6a96509a7a882e24b8eb4ce8",
+   "kind": "traceability",
+   "name": "Sn4-to-FMEA-Heater",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c11",
+   "target": "6a96509a7a882e24b8eb4cdd",
+   "kind": "traceability",
+   "name": "Sn2-to-FMEA-Valves",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4978",
+   "target": "6a96509a7a882e24b8eb5ba7",
+   "kind": "traceability",
+   "name": "controller-to-Dafny",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4978",
+   "target": "6a96509a7a882e24b8eb5ba9",
+   "kind": "traceability",
+   "name": "controller-to-Isabelle",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4978",
+   "target": "6a96509a7a882e24b8eb5bab",
+   "kind": "traceability",
+   "name": "controller-to-FDR",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4978",
+   "target": "6a96509a7a882e24b8eb5b9b",
+   "kind": "traceability",
+   "name": "controller-to-Java",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce2",
+   "target": "6a9650997a882e24b8eb47a8",
+   "kind": "traceability",
+   "name": "FMEA-row12-to-dewpointAccuracy",
+   "origin": "completion",
+   "relation": "realises"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cd9",
+   "target": "6a9650997a882e24b8eb4798",
+   "kind": "traceability",
+   "name": "FMEA-row17-to-lossOfPowerResponse",
+   "origin": "completion",
+   "relation": "challenges"
+  },
+  {
+   "source": "6a96588b7a882e24b8eb5ca7",
+   "target": "6a9650997a882e24b8eb4770",
+   "kind": "traceability",
+   "name": "TE-01-to-DischargeRequirements",
+   "origin": "completion",
+   "relation": "challenges"
+  },
+  {
+   "source": "6a96588b7a882e24b8eb5ca7",
+   "target": "6a9650997a882e24b8eb4780",
+   "kind": "traceability",
+   "name": "TE-01-to-DischargeRequirements",
+   "origin": "completion",
+   "relation": "challenges"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d56",
+   "target": "6a9650997a882e24b8eb47a8",
+   "kind": "traceability",
+   "name": "BE-12-to-dewpointAccuracy",
+   "origin": "completion",
+   "relation": "realises"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d86",
+   "target": "6a9650997a882e24b8eb4798",
+   "kind": "traceability",
+   "name": "BE-17-to-lossOfPowerResponse",
+   "origin": "completion",
+   "relation": "challenges"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5df6",
+   "target": "6a9650997a882e24b8eb477c",
+   "kind": "traceability",
+   "name": "IE-07-to-LossOfPowerRequirements",
+   "origin": "completion",
+   "relation": "challenges"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5df6",
+   "target": "6a9650997a882e24b8eb4798",
+   "kind": "traceability",
+   "name": "IE-07-to-LossOfPowerRequirements",
+   "origin": "completion",
+   "relation": "challenges"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a9650997a882e24b8eb48ab",
+   "kind": "traceability",
+   "name": "Sn1-to-DualBedChangeover",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a9650997a882e24b8eb48c0",
+   "kind": "traceability",
+   "name": "Sn1-to-DualBedChangeover",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c10",
+   "target": "6a9650997a882e24b8eb48d2",
+   "kind": "traceability",
+   "name": "Sn1-to-DualBedChangeover",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c11",
+   "target": "6a9650997a882e24b8eb48d2",
+   "kind": "traceability",
+   "name": "Sn2-to-changeoverValves",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c12",
+   "target": "6a9650997a882e24b8eb48fa",
+   "kind": "traceability",
+   "name": "Sn3-to-backupSupply",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c13",
+   "target": "6a9650997a882e24b8eb4870",
+   "kind": "traceability",
+   "name": "Sn4-to-DFDesign",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c13",
+   "target": "6a9650997a882e24b8eb489d",
+   "kind": "traceability",
+   "name": "Sn4-to-DFDesign",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c14",
+   "target": "6a9650997a882e24b8eb48e6",
+   "kind": "traceability",
+   "name": "Sn5-to-Monitors",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c14",
+   "target": "6a9650997a882e24b8eb48f0",
+   "kind": "traceability",
+   "name": "Sn5-to-Monitors",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c15",
+   "target": "6a9650997a882e24b8eb4927",
+   "kind": "traceability",
+   "name": "Sn6-to-RegenerationPath",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c15",
+   "target": "6a9650997a882e24b8eb492b",
+   "kind": "traceability",
+   "name": "Sn6-to-RegenerationPath",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6e34b3c6d75cfbd9474db3d0",
+   "target": "6a9650997a882e24b8eb487e",
+   "kind": "traceability",
+   "name": "Sn11-to-blower",
+   "origin": "completion",
+   "relation": "architecture"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cda",
+   "target": "6a9650997a882e24b8eb487e",
+   "kind": "traceability",
+   "name": "FMEA-row1-to-blower",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cdb",
+   "target": "6a9650997a882e24b8eb487e",
+   "kind": "traceability",
+   "name": "FMEA-row2-to-blower",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce7",
+   "target": "6a9650997a882e24b8eb489d",
+   "kind": "traceability",
+   "name": "FMEA-row3-to-recombiner",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce8",
+   "target": "6a9650997a882e24b8eb489d",
+   "kind": "traceability",
+   "name": "FMEA-row4-to-recombiner",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cde",
+   "target": "6a9650997a882e24b8eb488c",
+   "kind": "traceability",
+   "name": "FMEA-row5-to-condenser",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cdf",
+   "target": "6a9650997a882e24b8eb488c",
+   "kind": "traceability",
+   "name": "FMEA-row6-to-condenser",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce5",
+   "target": "6a9650997a882e24b8eb48ab",
+   "kind": "traceability",
+   "name": "FMEA-row7-to-dryerA",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce4",
+   "target": "6a9650997a882e24b8eb48ab",
+   "kind": "traceability",
+   "name": "FMEA-row8-to-dryerA",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce6",
+   "target": "6a9650997a882e24b8eb48c0",
+   "kind": "traceability",
+   "name": "FMEA-row9-to-dryerB",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cdd",
+   "target": "6a9650997a882e24b8eb48d2",
+   "kind": "traceability",
+   "name": "FMEA-row10-to-changeoverValves",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cdc",
+   "target": "6a9650997a882e24b8eb48d2",
+   "kind": "traceability",
+   "name": "FMEA-row11-to-changeoverValves",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce2",
+   "target": "6a9650997a882e24b8eb48e6",
+   "kind": "traceability",
+   "name": "FMEA-row12-to-dewpointMonitor",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce3",
+   "target": "6a9650997a882e24b8eb48e6",
+   "kind": "traceability",
+   "name": "FMEA-row13-to-dewpointMonitor",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce9",
+   "target": "6a9650997a882e24b8eb48f0",
+   "kind": "traceability",
+   "name": "FMEA-row14-to-stackMonitor",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce0",
+   "target": "6a9650997a882e24b8eb4978",
+   "kind": "traceability",
+   "name": "FMEA-row15-to-controller",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4ce1",
+   "target": "6a9650997a882e24b8eb4978",
+   "kind": "traceability",
+   "name": "FMEA-row16-to-controller",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4cd9",
+   "target": "6a9650997a882e24b8eb48fa",
+   "kind": "traceability",
+   "name": "FMEA-row17-to-backupSupply",
+   "origin": "completion",
+   "relation": "analyses"
+  },
+  {
+   "source": "d5723237b215f7b233a22e7f",
+   "target": "b337953a31d5259347f343ae",
+   "kind": "traceability",
+   "name": "tCycle-to-changeoverPeriod",
+   "origin": "completion",
+   "relation": "binds"
+  },
+  {
+   "source": "13c384f8531f671f0cd5f6ad",
+   "target": "3d983bc88f975172593dfea0",
+   "kind": "traceability",
+   "name": "tSat-to-saturationTimeConstant",
+   "origin": "completion",
+   "relation": "binds"
+  },
+  {
+   "source": "8e07484d89138b0ef4630246",
+   "target": "c1746a1c5f8412c5180e8ca1",
+   "kind": "traceability",
+   "name": "DFtarget-to-minDecontaminationFactor",
+   "origin": "completion",
+   "relation": "binds"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "6a96509a7a882e24b8eb4c08",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "6a96509a7a882e24b8eb4c09",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c08",
+   "target": "6a96509a7a882e24b8eb4c0a",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c08",
+   "target": "6a96509a7a882e24b8eb4c0b",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c08",
+   "target": "6a96509a7a882e24b8eb4c0c",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c09",
+   "target": "6a96509a7a882e24b8eb4c0d",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c09",
+   "target": "6a96509a7a882e24b8eb4c0e",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c09",
+   "target": "6a96509a7a882e24b8eb4c0f",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0a",
+   "target": "6a96509a7a882e24b8eb4c10",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0b",
+   "target": "6a96509a7a882e24b8eb4c11",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0c",
+   "target": "6a96509a7a882e24b8eb4c12",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0d",
+   "target": "6a96509a7a882e24b8eb4c13",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0e",
+   "target": "6a96509a7a882e24b8eb4c14",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0f",
+   "target": "6a96509a7a882e24b8eb4c15",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "6a96509a7a882e24b8eb4c05",
+   "kind": "gsn-InContextOf"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "6a96509a7a882e24b8eb4c06",
+   "kind": "gsn-InContextOf"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "6a96509a7a882e24b8eb4c07",
+   "kind": "gsn-InContextOf"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "6a96509a7a882e24b8eb4c27",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c27",
+   "target": "6a96509a7a882e24b8eb4c28",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c28",
+   "target": "6a96509a7a882e24b8eb4c29",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c28",
+   "target": "6a96509a7a882e24b8eb4c2a",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c28",
+   "target": "6a96509a7a882e24b8eb4c2b",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c28",
+   "target": "6a96509a7a882e24b8eb4c2c",
+   "kind": "gsn-SupportedBy"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c04",
+   "target": "ba2349c73842715316887a8d",
+   "kind": "gsn-InContextOf",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c0d",
+   "target": "6e34b3c6d75cfbd9474db3d0",
+   "kind": "gsn-SupportedBy",
+   "origin": "completion"
+  },
+  {
+   "source": "37154c6e-38b3-42fc-a163-2187b0e39fd7",
+   "target": "6a9650997a882e24b8eb4846",
+   "kind": "twin-binding"
+  },
+  {
+   "source": "17e99f6d-a9ac-4bd6-b7a9-63783d4f0a26",
+   "target": "6a9650997a882e24b8eb4854",
+   "kind": "twin-binding"
+  },
+  {
+   "source": "45bc6a3e-da49-43f1-96e4-4e945a37090a",
+   "target": "6a9650997a882e24b8eb485d",
+   "kind": "twin-binding"
+  },
+  {
+   "source": "473b1281-2236-44a4-b281-7dfe624596f5",
+   "target": "6a9650997a882e24b8eb482f",
+   "kind": "twin-binding"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e19",
+   "target": "6a96588b7a882e24b8eb5ca7",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e19",
+   "target": "6a9658e07a882e24b8eb5d06",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e19",
+   "target": "6a9658e07a882e24b8eb5d96",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e2d",
+   "target": "6a9658e07a882e24b8eb5d96",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e2d",
+   "target": "6a9658e07a882e24b8eb5da6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e2d",
+   "target": "6a9658e17a882e24b8eb5e06",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e41",
+   "target": "6a9658e07a882e24b8eb5da6",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e41",
+   "target": "6a9658e07a882e24b8eb5db6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e41",
+   "target": "6a9658e17a882e24b8eb5dd6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e41",
+   "target": "6a9658e07a882e24b8eb5d46",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e41",
+   "target": "6a9658e17a882e24b8eb5de6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e55",
+   "target": "6a9658e07a882e24b8eb5db6",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e55",
+   "target": "6a9658e07a882e24b8eb5d36",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e55",
+   "target": "6a9658e07a882e24b8eb5dc6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e69",
+   "target": "6a9658e07a882e24b8eb5dc6",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e69",
+   "target": "561b87a8f83753d9161a29c5",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e69",
+   "target": "6a9658e07a882e24b8eb5d26",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e69",
+   "target": "6a9658e07a882e24b8eb5d56",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e7d",
+   "target": "6a9658e17a882e24b8eb5dd6",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e7d",
+   "target": "6a9658e07a882e24b8eb5ce6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e7d",
+   "target": "6a9658e07a882e24b8eb5cf6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e91",
+   "target": "6a9658e17a882e24b8eb5de6",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e91",
+   "target": "6a9658e07a882e24b8eb5cd6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5e91",
+   "target": "6a9658e17a882e24b8eb5df6",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5ea5",
+   "target": "6a9658e17a882e24b8eb5df6",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5ea5",
+   "target": "6a9658e07a882e24b8eb5d76",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5ea5",
+   "target": "6a9658e07a882e24b8eb5d86",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5eb9",
+   "target": "6a9658e17a882e24b8eb5e06",
+   "kind": "fta-output"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5eb9",
+   "target": "6a9658e07a882e24b8eb5d56",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9658e17a882e24b8eb5eb9",
+   "target": "6a9658e07a882e24b8eb5d66",
+   "kind": "fta-input"
+  },
+  {
+   "source": "e48ae12a64a8d58132791354",
+   "target": "561b87a8f83753d9161a29c5",
+   "kind": "fta-output"
+  },
+  {
+   "source": "e48ae12a64a8d58132791354",
+   "target": "6a9658e07a882e24b8eb5d16",
+   "kind": "fta-input"
+  },
+  {
+   "source": "e48ae12a64a8d58132791354",
+   "target": "a8886f64c5698007eb768894",
+   "kind": "fta-input"
+  },
+  {
+   "source": "e48ae12a64a8d58132791354",
+   "target": "1c7e0157c257a016d0fcc2a9",
+   "kind": "fta-input"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4846",
+   "target": "6a9650997a882e24b8eb48e6",
+   "kind": "attribute-of"
+  },
+  {
+   "source": "6a9650997a882e24b8eb4854",
+   "target": "6a9650997a882e24b8eb48f0",
+   "kind": "attribute-of"
+  },
+  {
+   "source": "6a9650997a882e24b8eb485d",
+   "target": "6a9650997a882e24b8eb4978",
+   "kind": "attribute-of"
+  },
+  {
+   "source": "6a9650997a882e24b8eb482f",
+   "target": "6a9650997a882e24b8eb48ab",
+   "kind": "attribute-of"
+  },
+  {
+   "source": "6a9650997a882e24b8eb482f",
+   "target": "6a9650997a882e24b8eb48c0",
+   "kind": "attribute-of"
+  },
+  {
+   "source": "b337953a31d5259347f343ae",
+   "target": "6a9650997a882e24b8eb4978",
+   "kind": "attribute-of",
+   "origin": "completion"
+  },
+  {
+   "source": "3d983bc88f975172593dfea0",
+   "target": "6a9650997a882e24b8eb48ab",
+   "kind": "attribute-of",
+   "origin": "completion"
+  },
+  {
+   "source": "3d983bc88f975172593dfea0",
+   "target": "6a9650997a882e24b8eb48c0",
+   "kind": "attribute-of",
+   "origin": "completion"
+  },
+  {
+   "source": "c1746a1c5f8412c5180e8ca1",
+   "target": "6a9650997a882e24b8eb4780",
+   "kind": "attribute-of",
+   "origin": "completion"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5cd6",
+   "target": "6a96509a7a882e24b8eb4cda",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5ce6",
+   "target": "6a96509a7a882e24b8eb4ce7",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5cf6",
+   "target": "6a96509a7a882e24b8eb4ce8",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d06",
+   "target": "6a96509a7a882e24b8eb4cdf",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d16",
+   "target": "6a96509a7a882e24b8eb4ce5",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d26",
+   "target": "6a96509a7a882e24b8eb4ce6",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d36",
+   "target": "6a96509a7a882e24b8eb4cdd",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d46",
+   "target": "6a96509a7a882e24b8eb4cdc",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d56",
+   "target": "6a96509a7a882e24b8eb4ce2",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d66",
+   "target": "6a96509a7a882e24b8eb4ce9",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d76",
+   "target": "6a96509a7a882e24b8eb4ce0",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "6a9658e07a882e24b8eb5d86",
+   "target": "6a96509a7a882e24b8eb4cd9",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "1c7e0157c257a016d0fcc2a9",
+   "target": "6a96509a7a882e24b8eb4cde",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "a8886f64c5698007eb768894",
+   "target": "6a96509a7a882e24b8eb4ce4",
+   "kind": "fta-fmeda"
+  },
+  {
+   "source": "d5723237b215f7b233a22e7f",
+   "target": "6a96509a7a882e24b8eb4cc9",
+   "kind": "parameter-of",
+   "origin": "completion"
+  },
+  {
+   "source": "13c384f8531f671f0cd5f6ad",
+   "target": "6a96509a7a882e24b8eb4cc9",
+   "kind": "parameter-of",
+   "origin": "completion"
+  },
+  {
+   "source": "8e07484d89138b0ef4630246",
+   "target": "6a96509a7a882e24b8eb4cc9",
+   "kind": "parameter-of",
+   "origin": "completion"
+  }
+ ],
+ "concerns": "Concern names group elements the way the article's link breakdown does, so the two count the same concern pairs. The five executable evidence models share one concern, `executable-evidence`, with the specific notation on each node's `notation` field. Failure analysis is likewise one concern, `failure-analysis`, holding the FMEDA rows (`notation` FMEDA) and the fault-tree events and gates (`notation` FTA)."
+}

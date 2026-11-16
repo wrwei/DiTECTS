@@ -1,0 +1,22 @@
+# baseline Sn2 -> ADS Changeover Transient_Modelica via modelica
+# command: docker run --rm --init --pull never --name reverify-omc-33020-84805 -e HOME=/tmp -v ~/ads-experiments/isabelle-paper-update-2026-11-15/other-baselines/work/baseline__Sn2:~/ads-experiments/isabelle-paper-update-2026-11-15/other-baselines/work/baseline__Sn2 -w ~/ads-experiments/isabelle-paper-update-2026-11-15/other-baselines/work/baseline__Sn2/simulation/modelica openmodelica/openmodelica:v1.26.9-minimal timeout -k 30 630 omc reverify_verdict.mos
+# exit: 0  timedOut: False  seconds: 1.26
+
+true
+""
+record SimulationResult
+    resultFile = "~/ads-experiments/isabelle-paper-update-2026-11-15/other-baselines/work/baseline__Sn2/simulation/modelica/ADSChangeover_verdict_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 2e4, numberOfIntervals = 2000, tolerance = 1e-6, method = 'dassl', fileNamePrefix = 'ADSChangeover_verdict', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.005353,
+    timeBackend = 0.012321125,
+    timeSimCode = 0.008518291,
+    timeTemplates = 0.018323917000000002,
+    timeCompile = 0.780856625,
+    timeSimulation = 0.025621292,
+    timeTotal = 0.851637417
+end SimulationResult;
+""
+

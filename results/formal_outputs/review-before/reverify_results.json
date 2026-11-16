@@ -1,0 +1,582 @@
+{
+ "generatedAt": "2026-11-15T16:04:59+0000",
+ "condition": "mutants",
+ "repo": "<repo>",
+ "namespace": "namespace/ads-namespace.json",
+ "evidenceLinks": [
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-DualBedChangeover",
+   "target": "dryerA",
+   "targetId": "6a9650997a882e24b8eb48ab",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-DualBedChangeover",
+   "target": "dryerB",
+   "targetId": "6a9650997a882e24b8eb48c0",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-DualBedChangeover",
+   "target": "changeoverValves",
+   "targetId": "6a9650997a882e24b8eb48d2",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FMEA",
+   "target": "FMEDA row 7",
+   "targetId": "6a96509a7a882e24b8eb4ce5",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FMEA-BedAvailability",
+   "target": "FMEDA row 5",
+   "targetId": "6a96509a7a882e24b8eb4cde",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FMEA-BedAvailability",
+   "target": "FMEDA row 8",
+   "targetId": "6a96509a7a882e24b8eb4ce4",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FMEA-BedAvailability",
+   "target": "FMEDA row 9",
+   "targetId": "6a96509a7a882e24b8eb4ce6",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FTA-BedAvailability",
+   "target": "BE-05",
+   "targetId": "1c7e0157c257a016d0fcc2a9",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FTA-BedAvailability",
+   "target": "BE-08",
+   "targetId": "a8886f64c5698007eb768894",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FTA-BedAvailability",
+   "target": "BE-09",
+   "targetId": "6a9658e07a882e24b8eb5d26",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FTA-Breakthrough",
+   "target": "BE-07",
+   "targetId": "6a9658e07a882e24b8eb5d16",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn1",
+   "solutionId": "6a96509a7a882e24b8eb4c10",
+   "link": "Sn1-to-FTA-Breakthrough",
+   "target": "IE-04",
+   "targetId": "6a9658e07a882e24b8eb5dc6",
+   "targetKind": "FTAIntermediateEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn2",
+   "solutionId": "6a96509a7a882e24b8eb4c11",
+   "link": "Sn2-to-FMEA-Valves",
+   "target": "FMEDA row 10",
+   "targetId": "6a96509a7a882e24b8eb4cdd",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn2",
+   "solutionId": "6a96509a7a882e24b8eb4c11",
+   "link": "Sn2-to-FTA-ChangeoverValves",
+   "target": "BE-10",
+   "targetId": "6a9658e07a882e24b8eb5d36",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn2",
+   "solutionId": "6a96509a7a882e24b8eb4c11",
+   "link": "Sn2-to-FTA-ValveLeak",
+   "target": "BE-11",
+   "targetId": "6a9658e07a882e24b8eb5d46",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn2",
+   "solutionId": "6a96509a7a882e24b8eb4c11",
+   "link": "Sn2-to-Modelica",
+   "target": "ADS Changeover Transient_Modelica",
+   "targetId": "6a96509a7a882e24b8eb4cc9",
+   "targetKind": "ModelicaModel",
+   "runner": "modelica"
+  },
+  {
+   "solution": "Sn2",
+   "solutionId": "6a96509a7a882e24b8eb4c11",
+   "link": "Sn2-to-changeoverValves",
+   "target": "changeoverValves",
+   "targetId": "6a9650997a882e24b8eb48d2",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn3",
+   "solutionId": "6a96509a7a882e24b8eb4c12",
+   "link": "Sn3-to-FMEA1",
+   "target": "FMEDA row 15",
+   "targetId": "6a96509a7a882e24b8eb4ce0",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn3",
+   "solutionId": "6a96509a7a882e24b8eb4c12",
+   "link": "Sn3-to-FMEA2",
+   "target": "FMEDA row 17",
+   "targetId": "6a96509a7a882e24b8eb4cd9",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn3",
+   "solutionId": "6a96509a7a882e24b8eb4c12",
+   "link": "Sn3-to-FTA-LOOP",
+   "target": "BE-15",
+   "targetId": "6a9658e07a882e24b8eb5d76",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn3",
+   "solutionId": "6a96509a7a882e24b8eb4c12",
+   "link": "Sn3-to-FTA-LOOP",
+   "target": "BE-17",
+   "targetId": "6a9658e07a882e24b8eb5d86",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn3",
+   "solutionId": "6a96509a7a882e24b8eb4c12",
+   "link": "Sn3-to-FTA-LOOP",
+   "target": "IE-07",
+   "targetId": "6a9658e17a882e24b8eb5df6",
+   "targetKind": "FTAIntermediateEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn3",
+   "solutionId": "6a96509a7a882e24b8eb4c12",
+   "link": "Sn3-to-backupSupply",
+   "target": "backupSupply",
+   "targetId": "6a9650997a882e24b8eb48fa",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn4",
+   "solutionId": "6a96509a7a882e24b8eb4c13",
+   "link": "Sn4-to-DFDesign",
+   "target": "ads",
+   "targetId": "6a9650997a882e24b8eb4870",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn4",
+   "solutionId": "6a96509a7a882e24b8eb4c13",
+   "link": "Sn4-to-DFDesign",
+   "target": "recombiner",
+   "targetId": "6a9650997a882e24b8eb489d",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn4",
+   "solutionId": "6a96509a7a882e24b8eb4c13",
+   "link": "Sn4-to-FMEA",
+   "target": "FMEDA row 3",
+   "targetId": "6a96509a7a882e24b8eb4ce7",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn4",
+   "solutionId": "6a96509a7a882e24b8eb4c13",
+   "link": "Sn4-to-FMEA-Heater",
+   "target": "FMEDA row 4",
+   "targetId": "6a96509a7a882e24b8eb4ce8",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn4",
+   "solutionId": "6a96509a7a882e24b8eb4c13",
+   "link": "Sn4-to-FTA-Conversion",
+   "target": "BE-03",
+   "targetId": "6a9658e07a882e24b8eb5ce6",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn4",
+   "solutionId": "6a96509a7a882e24b8eb4c13",
+   "link": "Sn4-to-FTA-Conversion",
+   "target": "BE-04",
+   "targetId": "6a9658e07a882e24b8eb5cf6",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn4",
+   "solutionId": "6a96509a7a882e24b8eb4c13",
+   "link": "Sn4-to-FTA-Conversion",
+   "target": "IE-05",
+   "targetId": "6a9658e17a882e24b8eb5dd6",
+   "targetKind": "FTAIntermediateEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn5",
+   "solutionId": "6a96509a7a882e24b8eb4c14",
+   "link": "Sn5-to-FMEA1",
+   "target": "FMEDA row 12",
+   "targetId": "6a96509a7a882e24b8eb4ce2",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn5",
+   "solutionId": "6a96509a7a882e24b8eb4c14",
+   "link": "Sn5-to-FMEA2",
+   "target": "FMEDA row 14",
+   "targetId": "6a96509a7a882e24b8eb4ce9",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn5",
+   "solutionId": "6a96509a7a882e24b8eb4c14",
+   "link": "Sn5-to-FTA-MonitoringIndependence",
+   "target": "BE-12",
+   "targetId": "6a9658e07a882e24b8eb5d56",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn5",
+   "solutionId": "6a96509a7a882e24b8eb4c14",
+   "link": "Sn5-to-FTA-MonitoringIndependence",
+   "target": "BE-14",
+   "targetId": "6a9658e07a882e24b8eb5d66",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn5",
+   "solutionId": "6a96509a7a882e24b8eb4c14",
+   "link": "Sn5-to-FTA-MonitoringIndependence",
+   "target": "IE-08",
+   "targetId": "6a9658e17a882e24b8eb5e06",
+   "targetKind": "FTAIntermediateEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn5",
+   "solutionId": "6a96509a7a882e24b8eb4c14",
+   "link": "Sn5-to-Monitors",
+   "target": "dewpointMonitor",
+   "targetId": "6a9650997a882e24b8eb48e6",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn5",
+   "solutionId": "6a96509a7a882e24b8eb4c14",
+   "link": "Sn5-to-Monitors",
+   "target": "stackMonitor",
+   "targetId": "6a9650997a882e24b8eb48f0",
+   "targetKind": "SPartUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn6",
+   "solutionId": "6a96509a7a882e24b8eb4c15",
+   "link": "Sn6-to-FMEA",
+   "target": "FMEDA row 6",
+   "targetId": "6a96509a7a882e24b8eb4cdf",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn6",
+   "solutionId": "6a96509a7a882e24b8eb4c15",
+   "link": "Sn6-to-FTA-RegenPath",
+   "target": "BE-06",
+   "targetId": "6a9658e07a882e24b8eb5d06",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn6",
+   "solutionId": "6a96509a7a882e24b8eb4c15",
+   "link": "Sn6-to-RegenerationPath",
+   "target": "dryerARegenReturn",
+   "targetId": "6a9650997a882e24b8eb4927",
+   "targetKind": "SInterfaceUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn6",
+   "solutionId": "6a96509a7a882e24b8eb4c15",
+   "link": "Sn6-to-RegenerationPath",
+   "target": "interfaceEdge",
+   "targetId": "6a9650997a882e24b8eb492b",
+   "targetKind": "SInterfaceUsage",
+   "runner": null
+  },
+  {
+   "solution": "Sn7",
+   "solutionId": "6a96509a7a882e24b8eb4c29",
+   "link": "Sn7-to-Dafny",
+   "target": "ADS Controller Proof - Dafny",
+   "targetId": "6a96509a7a882e24b8eb5ba7",
+   "targetKind": "Dafny Model",
+   "runner": "dafny"
+  },
+  {
+   "solution": "Sn8",
+   "solutionId": "6a96509a7a882e24b8eb4c2a",
+   "link": "Sn8-to-Isabelle",
+   "target": "ADS Controller Behaviour",
+   "targetId": "6a96509a7a882e24b8eb5ba9",
+   "targetKind": "Isabelle Model",
+   "runner": "isabelle"
+  },
+  {
+   "solution": "Sn9",
+   "solutionId": "6a96509a7a882e24b8eb4c2b",
+   "link": "Sn9-to-FDR",
+   "target": "ADS Controller Refinement",
+   "targetId": "6a96509a7a882e24b8eb5bab",
+   "targetKind": "FDR Model",
+   "runner": "fdr"
+  },
+  {
+   "solution": "Sn10",
+   "solutionId": "6a96509a7a882e24b8eb4c2c",
+   "link": "Sn10-to-Java",
+   "target": "ADS Controller Implementation",
+   "targetId": "6a96509a7a882e24b8eb5b9b",
+   "targetKind": "Java Model",
+   "runner": "gradle"
+  },
+  {
+   "solution": "Sn11",
+   "solutionId": "6e34b3c6d75cfbd9474db3d0",
+   "link": "Sn11-to-FMEA",
+   "target": "FMEDA row 1",
+   "targetId": "6a96509a7a882e24b8eb4cda",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn11",
+   "solutionId": "6e34b3c6d75cfbd9474db3d0",
+   "link": "Sn11-to-FMEA",
+   "target": "FMEDA row 2",
+   "targetId": "6a96509a7a882e24b8eb4cdb",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn11",
+   "solutionId": "6e34b3c6d75cfbd9474db3d0",
+   "link": "Sn11-to-FTA-MotiveFlow",
+   "target": "BE-01",
+   "targetId": "6a9658e07a882e24b8eb5cd6",
+   "targetKind": "FTABasicEvent",
+   "runner": null
+  },
+  {
+   "solution": "Sn11",
+   "solutionId": "6e34b3c6d75cfbd9474db3d0",
+   "link": "Sn11-to-blower",
+   "target": "blower",
+   "targetId": "6a9650997a882e24b8eb487e",
+   "targetKind": "SPartUsage",
+   "runner": null
+  }
+ ],
+ "baseline": [],
+ "mutants": [
+  {
+   "tag": "mutant-IX1",
+   "solution": "Sn8",
+   "link": "Sn8-to-Isabelle",
+   "target": "ADS Controller Behaviour",
+   "runner": "isabelle",
+   "command": "docker run --rm --init --name reverify-isa-72555-2008 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/review-candidates:~/ads-experiments/review-candidates -w ~/ads-experiments/review-candidates/work/mutant-IX1__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/review-candidates/work/mutant-IX1__Sn8",
+   "exit": 0,
+   "verdict": "PASS",
+   "detail": "Finished ADSController_Check",
+   "seconds": 50.13,
+   "artefactChanged": true,
+   "log": "logs/mutant-IX1__Sn8__isabelle.txt",
+   "mutant": "IX1",
+   "class": "fault",
+   "operator": "altered transition target",
+   "description": "NormalOperationToChangeover enters FailSafe (with the FailSafe trigger set) instead of Changeover",
+   "outcome": "survived"
+  },
+  {
+   "tag": "mutant-IX2",
+   "solution": "Sn8",
+   "link": "Sn8-to-Isabelle",
+   "target": "ADS Controller Behaviour",
+   "runner": "isabelle",
+   "command": "docker run --rm --init --name reverify-isa-72555-52144 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/review-candidates:~/ads-experiments/review-candidates -w ~/ads-experiments/review-candidates/work/mutant-IX2__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/review-candidates/work/mutant-IX2__Sn8",
+   "exit": 0,
+   "verdict": "PASS",
+   "detail": "Finished ADSController_Check",
+   "seconds": 46.51,
+   "artefactChanged": true,
+   "log": "logs/mutant-IX2__Sn8__isabelle.txt",
+   "mutant": "IX2",
+   "class": "fault",
+   "operator": "premature action",
+   "description": "NormalOperationToChangeover swaps the duty bed when changeover starts (bed swaps twice per cycle)",
+   "outcome": "survived"
+  },
+  {
+   "tag": "mutant-IX3",
+   "solution": "Sn8",
+   "link": "Sn8-to-Isabelle",
+   "target": "ADS Controller Behaviour",
+   "runner": "isabelle",
+   "command": "docker run --rm --init --name reverify-isa-72555-98663 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/review-candidates:~/ads-experiments/review-candidates -w ~/ads-experiments/review-candidates/work/mutant-IX3__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/review-candidates/work/mutant-IX3__Sn8",
+   "exit": 0,
+   "verdict": "PASS",
+   "detail": "Finished ADSController_Check",
+   "seconds": 40.93,
+   "artefactChanged": true,
+   "log": "logs/mutant-IX3__Sn8__isabelle.txt",
+   "mutant": "IX3",
+   "class": "fault",
+   "operator": "altered transition target",
+   "description": "FailSafeToNormalOperation enters Changeover (with the Changeover trigger set) instead of NormalOperation",
+   "outcome": "survived"
+  },
+  {
+   "tag": "mutant-FX1",
+   "solution": "Sn9",
+   "link": "Sn9-to-FDR",
+   "target": "ADS Controller Refinement",
+   "runner": "fdr",
+   "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+   "exit": 0,
+   "verdict": "PASS",
+   "detail": "22 assertions passed, 0 failed",
+   "seconds": 1.39,
+   "artefactChanged": true,
+   "log": "logs/mutant-FX1__Sn9__fdr.txt",
+   "mutant": "FX1",
+   "class": "fault",
+   "operator": "deleted output action",
+   "description": "FailSafe exit no longer emits restoreNormal",
+   "outcome": "survived"
+  },
+  {
+   "tag": "mutant-FX2",
+   "solution": "Sn9",
+   "link": "Sn9-to-FDR",
+   "target": "ADS Controller Refinement",
+   "runner": "fdr",
+   "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+   "exit": 0,
+   "verdict": "PASS",
+   "detail": "22 assertions passed, 0 failed",
+   "seconds": 0.81,
+   "artefactChanged": true,
+   "log": "logs/mutant-FX2__Sn9__fdr.txt",
+   "mutant": "FX2",
+   "class": "fault",
+   "operator": "deleted output action",
+   "description": "Dewpoint alarm no longer emits raiseAlarm",
+   "outcome": "survived"
+  },
+  {
+   "tag": "mutant-JX1",
+   "solution": "Sn10",
+   "link": "Sn10-to-Java",
+   "target": "ADS Controller Implementation",
+   "runner": "gradle",
+   "command": "gradle test --offline --no-daemon --console=plain",
+   "exit": 0,
+   "verdict": "PASS",
+   "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
+   "seconds": 4.09,
+   "artefactChanged": true,
+   "log": "logs/mutant-JX1__Sn10__gradle.txt",
+   "mutant": "JX1",
+   "class": "fault",
+   "operator": "deleted output action",
+   "description": "Dewpoint alarm no longer emits RaiseAlarm",
+   "outcome": "survived"
+  }
+ ],
+ "stale": [],
+ "toolVersions": {
+  "python": "3.9.6",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "cpus": 10,
+  "dafny": "4.11.0",
+  "gradle": "Gradle 9.0.0",
+  "java": "java version \"21.0.10\" 2026-01-20 LTS",
+  "fdr": "4.2.7 (6ecbe5a21b71ab020e8fcaeccfe5ebaad0599f4f)",
+  "isabelle": "docker image isabelle-runtime:22.04",
+  "openmodelica": {
+   "available": false,
+   "reason": "no --modelica-docker image configured"
+  }
+ }
+}

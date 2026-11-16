@@ -1,4 +1,4 @@
-# DiTECTS: ADS case-study models
+# DiTECTS: ADS case-study models, tools and results
 
 The engineering models of the abstracted Atmosphere Detritiation System (ADS) used in the article
 *Digital-thread-centric engineering of safety-critical systems from requirements to digital twin*.
@@ -38,9 +38,42 @@ complete the thread, each with a rationale and the status *pending engineering r
 | Java | Gradle 9.0.0, JUnit 5.11.4, OpenJDK 21 | `cd implementation/java && gradle test` |
 | Modelica | OpenModelica 1.26.9 | `simulate(ADSChangeover)` over the model's experiment annotation |
 
-The element identity space derived from these models, the impact, coverage and re-verification tools, the
-measured results and the static demonstration are in the case-study repository
-[wrwei/digital-thread-ads-case-study](https://github.com/wrwei/digital-thread-ads-case-study).
+## Identity space, tools and results
+
+| Path | Contents |
+|---|---|
+| `namespace/ads-namespace.json` | Element identity space: 134 elements and 216 edges derived from the models and the completion overlay |
+| `namespace/impact.py` | Change-impact traversal over the identity space (`python3 namespace/impact.py dryerA --stats`) |
+| `tools/coverage.py` | Coverage checks over the identity space (`--export <dir>` checks the export-only thread) |
+| `tools/manual_trace.py`, `tools/manual_time.py` | Name-search comparison with the traversal and its time estimate |
+| `tools/reverify.py`, `tools/c3/` | Evidence re-verification: baseline, 37 seeded faults and 6 controls, change scenarios, traversal latency |
+| `tools/derive_from_export.py`, `tools/sim_bindings.py` | Derivation of the views and identity space from the platform's project export; simulation value bindings |
+| `results/` | Recorded outputs of the tools above, with change logs |
+| `studies/manual-impact/` | Protocol, participant materials, recording sheet and scorer for a timed manual change-impact study |
+| `tests/` | Unit and regression tests (`python3 -m pytest tests`) |
+
+All tools use the Python 3 standard library. `tools/reverify.py` additionally calls the checkers listed above;
+`tests/test_csp_powerloss.py` needs a licensed FDR installation. The platform's project export used by
+`tools/derive_from_export.py` is not included. The static demonstration of the platform's project viewers is
+not included in this repository.
+
+```
+python3 namespace/impact.py dryerA --stats            # impact of a change to the duty dryer bed
+python3 tools/coverage.py                              # coverage of the completed thread
+python3 tools/manual_trace.py                          # rewrites results/manual_vs_thread.{json,md}; deterministic
+python3 tools/manual_time.py                           # -> results/manual_time.json
+python3 tools/reverify.py links                        # Solution -> evidence -> checker
+python3 tools/reverify.py baseline                     # unmodified artefacts
+python3 tools/reverify.py mutants                      # tools/c3/mutants.json
+python3 tools/reverify.py stale                        # tools/c3/stale.json
+python3 tools/reverify.py latency --reps 30
+python3 studies/manual-impact/score.py --self-test
+```
+
+The protocol section of `results/manual_vs_thread.md` was fixed before the first run and is hashed in
+`results/manual_vs_thread.json`; it is left unchanged here. Where it refers to the twin mesh under `demo/` and to
+the twin model as not deposited, the mesh is `models/digital-twin/ads-digital-twin-plant.glb` (byte-identical)
+and the twin model is `models/digital-twin/ads-digital-twin.json`, which the name-search procedure does not read.
 
 ## Licence
 

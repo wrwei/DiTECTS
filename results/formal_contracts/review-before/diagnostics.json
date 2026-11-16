@@ -1,0 +1,62 @@
+[
+  {
+    "id": "REVIEW_D_NO_START",
+    "solution": "Sn7",
+    "class": "fault",
+    "operator": "review diagnostic",
+    "description": "DewpointHigh no longer starts a changeover",
+    "edits": [
+      {
+        "file": "ADSController.dfy",
+        "pattern": "\\ \\ \\ \\ \\ \\ \\ \\ else\\ if\\ \\(event\\ ==\\ DewpointHigh\\)\\ \\{\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ mode\\ :=\\ Changeover;\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ //\\ action:\\ RaiseAlarm\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\}",
+        "replace": "        // REVIEW: ignore the dewpoint alarm.",
+        "expectCount": 1
+      }
+    ]
+  },
+  {
+    "id": "REVIEW_D_NO_RECOVERY",
+    "solution": "Sn7",
+    "class": "fault",
+    "operator": "review diagnostic",
+    "description": "BackupRestored no longer leaves FailSafe",
+    "edits": [
+      {
+        "file": "ADSController.dfy",
+        "pattern": "\\ \\ \\ \\ \\ \\ \\ \\ if\\ \\(event\\ ==\\ BackupRestored\\)\\ \\{\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ mode\\ :=\\ NormalOperation;\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ //\\ action:\\ RestoreNormal\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\}",
+        "replace": "        // REVIEW: ignore backup restoration.",
+        "expectCount": 1
+      }
+    ]
+  },
+  {
+    "id": "REVIEW_D_EARLY_SWAP",
+    "solution": "Sn7",
+    "class": "fault",
+    "operator": "review diagnostic",
+    "description": "Duty bed changes before ChangeoverComplete",
+    "edits": [
+      {
+        "file": "ADSController.dfy",
+        "pattern": "\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ mode\\ :=\\ Changeover;\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ //\\ action:\\ RaiseAlarm",
+        "replace": "            mode := Changeover;\n            activeDryer := nextDryer(activeDryer);\n            // action: RaiseAlarm",
+        "expectCount": 1
+      }
+    ]
+  },
+  {
+    "id": "REVIEW_I_NO_POWERLOSS",
+    "solution": "Sn8",
+    "class": "fault",
+    "operator": "review diagnostic",
+    "description": "Remove both power-loss operations from the executable machine; keep R1/R3 and the unused operation lemmas",
+    "edits": [
+      {
+        "file": "ADSController_Beh.thy",
+        "pattern": "operations\\ \\ InitialToNormalOperation\\ NormalOperationToFailSafe\\ NormalOperationToChangeover\\ ChangeoverToFailSafe\\ ChangeoverToNormalOperation\\ FailSafeToNormalOperation",
+        "replace": "operations  InitialToNormalOperation NormalOperationToChangeover ChangeoverToNormalOperation FailSafeToNormalOperation",
+        "expectCount": 1
+      }
+    ]
+  }
+]

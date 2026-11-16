@@ -1,0 +1,131 @@
+{
+  "note": "Byte-for-byte copies of the earlier raw logs referenced by the composed results. Earlier outcomes and timings are unchanged. These files were not produced by the new checker runs.",
+  "logs": [
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-D1__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-D1__Sn7__dafny.txt",
+      "sha256": "3f4a0f35ddf43fbc6b7263233c286a80a29d7efc7837cf066f11dd93aa50a377"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-D2__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-D2__Sn7__dafny.txt",
+      "sha256": "70258b21d9497c9841ef1181c734510ac1f88e2ae3465ec8f81092c839675318"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-D3__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-D3__Sn7__dafny.txt",
+      "sha256": "e73ac58d30e3b9b152f21add3cae224ae8968056f57de36565ec7b4830571683"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-D4__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-D4__Sn7__dafny.txt",
+      "sha256": "a740a70a333428a729e9cd46edfc4af43d505dc2d18948b506fa0e6bb899390e"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-D5__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-D5__Sn7__dafny.txt",
+      "sha256": "e794a0404b54081c2b4371da86cc7025e473eb055c0deaf9f0c684c5303e9e35"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-DC1__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-DC1__Sn7__dafny.txt",
+      "sha256": "5682d8ff8f5d7f576c4aa58b235fbd3c4c1ee965b6a8486c1cea7cc86e857818"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-DC2__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-DC2__Sn7__dafny.txt",
+      "sha256": "e7edb18b204049c41d40bff8ce2f545400fe27a8eba686b8500045bbd72da9db"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-J1__Sn10__gradle.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-J1__Sn10__gradle.txt",
+      "sha256": "969c8cb404b4167576d910501b97f3a8e5b96bd6554f345878f7f1620860a553"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-J2__Sn10__gradle.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-J2__Sn10__gradle.txt",
+      "sha256": "fd496db9f371062e98e64ba0ba9fe275c0d5e346017881b56b9857df7597ec8e"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-J3__Sn10__gradle.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-J3__Sn10__gradle.txt",
+      "sha256": "dbb1086c5e1cb9ae0fe970c72a2af7967676f6cb52365067435fe65c251de3de"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-J4__Sn10__gradle.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-J4__Sn10__gradle.txt",
+      "sha256": "7fc36d9be751b4f8f0f077de6142e6960a183a8c6b5868a6cf3d032b867c26df"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-JC1__Sn10__gradle.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-JC1__Sn10__gradle.txt",
+      "sha256": "77e085b9781d76fd20287a6206fbda862654b1c0d3a980e1063062cc8b6c283e"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-JC2__Sn10__gradle.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-JC2__Sn10__gradle.txt",
+      "sha256": "c07ca2e6d4d7066e9d23080dc70fbd4941ead3cd83095647cfefcdb098c8a809"
+    },
+    {
+      "sourceRun": "rerun-stale",
+      "originalLog": "logs/stale-ST1-tCycle__Sn2__modelica.log",
+      "archivedLog": "prior_bound_thread/logs/stale-ST1-tCycle__Sn2__modelica.txt",
+      "sha256": "331b3d91779d1f1de1b1438c334c30ecce9e4cb80c0f450a292c11629c8bcfae"
+    },
+    {
+      "sourceRun": "rerun-stale",
+      "originalLog": "logs/stale-ST1-tCycle__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/stale-ST1-tCycle__Sn7__dafny.txt",
+      "sha256": "690bf9afee437b0140e7ce2b0e8534c84b50015d555c3df182e16dc9ef4b3972"
+    },
+    {
+      "sourceRun": "rerun-stale",
+      "originalLog": "logs/stale-ST1-tCycle__Sn10__gradle.log",
+      "archivedLog": "prior_bound_thread/logs/stale-ST1-tCycle__Sn10__gradle.txt",
+      "sha256": "fcfe9039248b316fc6d6911e9632c6b680c2b72ef69c7cace47cd9954312b6aa"
+    },
+    {
+      "sourceRun": "rerun-stale",
+      "originalLog": "logs/stale-ST2-initialBed__Sn2__modelica.log",
+      "archivedLog": "prior_bound_thread/logs/stale-ST2-initialBed__Sn2__modelica.txt",
+      "sha256": "17d0ec32d02b4c15e65cada35c797ab315f0430d6313f0772b5589bc280c4296"
+    },
+    {
+      "sourceRun": "rerun-stale",
+      "originalLog": "logs/stale-ST2-initialBed__Sn7__dafny.log",
+      "archivedLog": "prior_bound_thread/logs/stale-ST2-initialBed__Sn7__dafny.txt",
+      "sha256": "3d5311fcb998a524673fd154fdd21160966cb75ca5267cf484b16213ab185ce5"
+    },
+    {
+      "sourceRun": "rerun-stale",
+      "originalLog": "logs/stale-ST2-initialBed__Sn10__gradle.log",
+      "archivedLog": "prior_bound_thread/logs/stale-ST2-initialBed__Sn10__gradle.txt",
+      "sha256": "117a79a65ea1e47b89d8e654f264e97125e0587aacc44cf1d092ef5d7d5c0e4d"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-I4__Sn8__isabelle.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-I4__Sn8__isabelle.txt",
+      "sha256": "503e7ed425f8914a392c4d1443b5a6738c3ea4fad10ed7f59a109bed97902ccb"
+    },
+    {
+      "sourceRun": "all",
+      "originalLog": "logs/mutant-F3__Sn9__fdr.log",
+      "archivedLog": "prior_bound_thread/logs/mutant-F3__Sn9__fdr.txt",
+      "sha256": "572cab55b692e90294700a011d807bd0a8ce0a87c5a78daa2d6f708d736d0460"
+    }
+  ]
+}

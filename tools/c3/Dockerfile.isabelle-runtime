@@ -1,0 +1,4 @@
+# Minimal runtime (build with --platform linux/amd64) for the (Linux-only) Isabelle2023-CyPhyAssure install, which is bind-mounted.
+FROM ubuntu:22.04
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      libfontconfig1 libfreetype6 libgomp1 perl ca-certificates && rm -rf /var/lib/apt/lists/*

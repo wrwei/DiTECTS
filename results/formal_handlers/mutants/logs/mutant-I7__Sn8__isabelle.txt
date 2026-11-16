@@ -1,0 +1,32 @@
+# mutant-I7 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-92939-40219 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/reverify-review4/mutants:~/ads-experiments/reverify-review4/mutants -w ~/ads-experiments/reverify-review4/mutants/work/mutant-I7__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/reverify-review4/mutants/work/mutant-I7__Sn8
+# exit: 1  timedOut: False  seconds: 55.79
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to finish proof (line 219 of "~/ads-experiments/reverify-review4/mutants/work/mutant-I7__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ⟦st⇩v s = NormalOperation; c = normalOperationToChangeover_C ();
+***      () ∈ ❙R (inp_in
+***               ⦇prism_match =
+***                  λd. if is_normalOperationToChangeover_Out_C d
+***                      then Some (un_normalOperationToChangeover_Out_C d)
+***                      else None,
+***                  prism_build = normalOperationToChangeover_Out_C⦈
+***               {()});
+***      s' = s
+***      ⦇st⇩v := FailSafe,
+***         tr⇩v :=
+***           tr⇩v s @
+***           [Event dewpointHigh, Event raiseAlarm, Event startChangeover,
+***            State FailSafe],
+***         triggers⇩v := {backupRestored}⦈⟧
+***     ⟹ False
+*** At command "by" (line 219 of "~/ads-experiments/reverify-review4/mutants/work/mutant-I7__Sn8/ADSController_Beh.thy")
+*** Failed to finish proof (line 358 of "~/ads-experiments/reverify-review4/mutants/work/mutant-I7__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. False
+*** At command "by" (line 358 of "~/ads-experiments/reverify-review4/mutants/work/mutant-I7__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:50 elapsed time, 0:00:55 cpu time, factor 1.11
+

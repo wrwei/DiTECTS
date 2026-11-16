@@ -1,0 +1,17 @@
+# mutant-I2 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-58827-22032 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/reverify-formalfix/mutants:~/ads-experiments/reverify-formalfix/mutants -w ~/ads-experiments/reverify-formalfix/mutants/work/mutant-I2__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/reverify-formalfix/mutants/work/mutant-I2__Sn8
+# exit: 1  timedOut: False  seconds: 36.77
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to apply initial proof method (line 210 of "~/ads-experiments/reverify-formalfix/mutants/work/mutant-I2__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. H{R2 ∧ ADSController_inv} ChangeoverToNormalOperation () {r. R2}
+*** At command "by" (line 210 of "~/ads-experiments/reverify-formalfix/mutants/work/mutant-I2__Sn8/ADSController_Beh.thy")
+*** Failed to apply initial proof method (line 195 of "~/ads-experiments/reverify-formalfix/mutants/work/mutant-I2__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ❙{True❙} ⟨Init⟩⇩a ❙{R2❙}
+*** At command "by" (line 195 of "~/ads-experiments/reverify-formalfix/mutants/work/mutant-I2__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:31 elapsed time, 0:00:26 cpu time, factor 0.83
+

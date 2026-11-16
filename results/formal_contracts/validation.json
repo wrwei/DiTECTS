@@ -1,0 +1,20 @@
+{
+  "baselinesPassed": 5,
+  "faultsDetected": 23,
+  "controlsPassed": 6,
+  "regressionTestsPassed": 17,
+  "cspProtocolChecksByInitialBed": [
+    35,
+    35
+  ],
+  "timedCspAssertionsPassed": 30,
+  "demoComponentTestsPassed": 19,
+  "demoSeedTestsPassed": 8,
+  "demoBuildFiles": 489,
+  "demoIndexedElements": 547,
+  "paperMainTextWords": 4889,
+  "paperMethodsWords": 2612,
+  "paperPages": 54,
+  "paperSHA256": "e57b30ffa36249f98e26813c243012443ea44dc1d32d86e9d5df1cba34b5ed31",
+  "paperVisualReview": "Affected pages rendered and inspected; build has no unresolved references, font warnings or overfull boxes."
+}

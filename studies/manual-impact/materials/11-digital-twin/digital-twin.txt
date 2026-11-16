@@ -1,0 +1,15 @@
+kind | name | mesh or signal
+TwinBinding | releaseRate | MBq/h
+TwinBinding | dewpoint | °C
+TwinBinding | activeDryer | 
+TwinBinding | bedSaturation | %
+TwinPart | BLOWER | blower
+TwinPart | RECOMBINER | recombiner
+TwinPart | CONDENSER | condenser
+TwinPart | CHANGEOVER | changeoverValves
+TwinPart | DRYER A | dryerA
+TwinPart | DRYER B | dryerB
+TwinPart | DEWPOINT | dewpointMonitor
+TwinPart | STACK MON | stackMonitor
+TwinPart | CONTROLLER | controller
+TwinPart | BACKUP | backupSupply

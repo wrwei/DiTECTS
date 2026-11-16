@@ -1,0 +1,7 @@
+# stale-ST1-tCycle Sn7 -> ADS Controller Proof - Dafny via dafny
+# command: dafny verify ./ADSController.dfy
+# exit: 0  timedOut: False  seconds: 1.09
+
+
+Dafny program verifier finished with 11 verified, 0 errors
+

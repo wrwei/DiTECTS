@@ -1,0 +1,50 @@
+# stale-ST2-initialBed Sn10 -> ADS Controller Implementation via gradle
+# command: gradle test --offline --no-daemon --console=plain
+# exit: 1  timedOut: False  seconds: 3.62
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.0.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test FAILED
+
+ADSControllerTest > Two successive changeovers return the active bed to A (alternation) FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:87
+
+ADSControllerTest > Spurious ChangeoverComplete / BackupRestored in NormalOperation are ignored FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:154
+
+ADSControllerTest > Starts in NormalOperation on bed A FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:52
+
+ADSControllerTest > DewpointHigh requests changeover and commands StartChangeover FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:66
+
+ADSControllerTest > Full choreography: Normal → Changeover → Normal(B) → FailSafe → Normal(B) FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:191
+
+ADSControllerTest > ChangeoverComplete alternates the active bed and returns to NormalOperation FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:76
+
+ADSControllerTest > A second DewpointHigh during Changeover is ignored (no double changeover) FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:97
+
+14 tests completed, 7 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file://~/ads-experiments/reverify-formalfix/stale/work/stale-ST2-initialBed__Sn10/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to generate a Build Scan (Powered by Develocity).
+
+BUILD FAILED in 3s
+3 actionable tasks: 3 executed
+

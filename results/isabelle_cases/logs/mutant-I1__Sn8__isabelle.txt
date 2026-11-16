@@ -1,0 +1,14 @@
+# mutant-I1 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-32808-53102 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I1__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I1__Sn8
+# exit: 1  timedOut: False  seconds: 40.47
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to finish proof (line 169 of "~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I1__Sn8/ADSController_Beh.thy"):
+*** goal (2 subgoals):
+***  1. ⋀tr. tr ≠ [] ⟹ False
+***  2. ⋀tr. tr ≠ [] ⟹ False
+*** At command "by" (line 169 of "~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I1__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:34 elapsed time, 0:00:27 cpu time, factor 0.79
+

@@ -1,0 +1,19 @@
+# mutant-I1 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-73990-85643 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/reverify-outputs/mutants:~/ads-experiments/reverify-outputs/mutants -w ~/ads-experiments/reverify-outputs/mutants/work/mutant-I1__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/reverify-outputs/mutants/work/mutant-I1__Sn8
+# exit: 1  timedOut: False  seconds: 44.82
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to apply initial proof method (line 356 of "~/ads-experiments/reverify-outputs/mutants/work/mutant-I1__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. H{InputsAgree ∧ ADSController_inv} NormalOperationToFailSafe () {r.
+***     InputsAgree}
+*** At command "by" (line 356 of "~/ads-experiments/reverify-outputs/mutants/work/mutant-I1__Sn8/ADSController_Beh.thy")
+*** Failed to finish proof (line 230 of "~/ads-experiments/reverify-outputs/mutants/work/mutant-I1__Sn8/ADSController_Beh.thy"):
+*** goal (2 subgoals):
+***  1. ⋀tr. tr ≠ [] ⟹ False
+***  2. ⋀tr. tr ≠ [] ⟹ False
+*** At command "by" (line 230 of "~/ads-experiments/reverify-outputs/mutants/work/mutant-I1__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:39 elapsed time, 0:00:37 cpu time, factor 0.96
+

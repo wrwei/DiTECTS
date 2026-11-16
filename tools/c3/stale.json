@@ -1,0 +1,66 @@
+[
+ {
+  "id": "ST1-tCycle",
+  "description": "Changeover timing: the design's changeover period (attribute changeoverPeriod of part def ADSController), bound to the simulation parameter tCycle by a Degree 0 value binding",
+  "change": "ADSController::changeoverPeriod 7000 s -> 9000 s (SysML design attribute), propagated to ADSChangeover.tCycle through the sim-binding",
+  "traceEndpoints": [
+   "b337953a31d5259347f343ae"
+  ],
+  "endpointMapping": "the changed attribute is itself an identity-space element (completion overlay); sim-binding joins it to the parameter tCycle and parameter-of joins tCycle to the Modelica model that Sn2 cites. Until 2026-11-14 the change was made to tCycle in the Modelica source, with the model record as the trace endpoint",
+  "traversal": "extended",
+  "artefactEdits": {
+   "Sn2": [
+    {
+     "file": "models/sysml/02-design.sysml",
+     "pattern": "attribute changeoverPeriod : ScalarValues::Real = 7000\\b",
+     "replace": "attribute changeoverPeriod : ScalarValues::Real = 9000",
+     "expectCount": 1
+    }
+   ]
+  }
+ },
+ {
+  "id": "ST2-initialBed",
+  "description": "Controller design parameter: initial duty bed (attribute activeDryer : Dryer = Dryer::BedA in part def ADSController)",
+  "change": "ADSController.activeDryer default Dryer::BedA -> Dryer::BedB, propagated to the Dafny, Isabelle, CSP and Java artefacts",
+  "traceEndpoints": [
+   "6a9650997a882e24b8eb4978"
+  ],
+  "endpointMapping": "attribute 6a9650997a882e24b8eb485d is owned by part def ADSController, which is not a trace endpoint; mapped by typing to the endpoint partUsage10 (controller : ADSController)",
+  "traversal": "extended",
+  "artefactEdits": {
+   "Sn7": [
+    {
+     "file": "ADSController.dfy",
+     "pattern": "activeDryer := BedA;",
+     "replace": "activeDryer := BedB;",
+     "expectCount": 1
+    }
+   ],
+   "Sn8": [
+    {
+     "file": "ADSController_Beh.thy",
+     "pattern": "\\[activeDryer\\\\<leadsto> BedA",
+     "replace": "[activeDryer\\<leadsto> BedB",
+     "expectCount": 1
+    }
+   ],
+   "Sn9": [
+    {
+     "file": "instantiations.csp",
+     "pattern": "ADS_InitialBed = Dryer_BedA",
+     "replace": "ADS_InitialBed = Dryer_BedB",
+     "expectCount": 1
+    }
+   ],
+   "Sn10": [
+    {
+     "file": "src/main/java/ads/controller/ADSController.java",
+     "pattern": "private Dryer activeDryer = Dryer\\.BedA;",
+     "replace": "private Dryer activeDryer = Dryer.BedB;",
+     "expectCount": 1
+    }
+   ]
+  }
+ }
+]

@@ -1,0 +1,1569 @@
+# mutant-F1 Sn9 -> ADS Controller Refinement via fdr
+# command: /Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp
+# exit: 0  timedOut: False  seconds: 1.04
+
+Welcome to FDR Version 4.2.7 copyright 2016 Oxford University Innovation Ltd. All Rights Reserved.
+License: Academic license for non-commercial use only
+P_ADSController :[deadlock free]:
+    Log:
+            Found 273 processes including 47 names
+        Visited 226 processes and discovered 28 recursive names
+        Constructed 0 states with 1 transitions
+        Constructed 2 states with 1 transitions
+        Constructed 0 states with 1 transitions
+        Constructed 3 states with 2 transitions
+        Visited 74 processes generating 90 machines
+        Constructed 0 states with 1 transitions
+        Constructed 3 states with 2 transitions
+        Constructed 0 states with 2 transitions
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 0 states with 2 transitions
+        Constructed 4 states with 5 transitions
+        Constructed 0 states with 1 transitions
+        Constructed 2 states with 2 transitions
+        Constructed 0 states with 1 transitions
+        Constructed 0 states with 3 transitions
+        Constructed 3 states with 2 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 0 states with 3 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 1 of 90 machines
+        Constructed 2 of 90 machines
+        Constructed 3 of 90 machines
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 0 states with 3 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 4 of 90 machines
+        Constructed 5 of 90 machines
+        Constructed 6 of 90 machines
+        Constructed 7 of 90 machines
+        Constructed 0 states with 2 transitions
+        Constructed 0 states with 1 transitions
+        Constructed 0 states with 3 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 8 of 90 machines
+        Constructed 9 of 90 machines
+        Constructed 10 of 90 machines
+        Constructed 6 states with 11 transitions
+        Constructed 0 states with 6 transitions
+        Constructed 4 states with 13 transitions
+        Constructed 11 of 90 machines
+        Constructed 23 states with 49 transitions
+        Constructed 12 of 92 machines
+        Constructed 13 of 92 machines
+        Constructed 14 of 92 machines
+        Constructed 15 of 92 machines
+        Constructed 16 of 92 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 17 of 92 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 18 of 92 machines
+        Reduced 2 states to 2 equivalence classes
+        Constructed 19 of 92 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 20 of 92 machines
+        Constructed 14 equivalence classes
+        Reduced 3 states to 3 equivalence classes
+        Constructed 21 of 92 machines
+        Reduced 2 states to 2 equivalence classes
+        Constructed 22 of 92 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 23 of 92 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 24 of 92 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 25 of 92 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 26 of 92 machines
+        Constructed 18 equivalence classes
+        Constructed 22 equivalence classes
+        Constructed 22 equivalence classes
+        Reduced 23 states to 22 equivalence classes
+        Reduced 3 states to 3 equivalence classes
+        Constructed 27 of 92 machines
+        Constructed 28 of 92 machines
+        Reduced 4 states to 4 equivalence classes
+        Constructed 29 of 92 machines
+        Constructed 30 of 92 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 31 of 92 machines
+        Constructed 32 of 92 machines
+        Constructed 33 of 92 machines
+        Constructed 34 of 92 machines
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 35 of 92 machines
+        Constructed 36 of 92 machines
+        Constructed 37 of 92 machines
+        Constructed 38 of 92 machines
+        Constructed 39 of 92 machines
+        Constructed 40 of 92 machines
+        Constructed 41 of 92 machines
+        Constructed 42 of 92 machines
+        Constructed 43 of 92 machines
+        Constructed 44 of 92 machines
+        Constructed 45 of 92 machines
+        Constructed 46 of 92 machines
+        Constructed 47 of 92 machines
+        Constructed 0 formats
+        Constructed 4 formats
+        Constructed 48 of 92 machines
+        Constructed 0 formats
+        Constructed 4 formats
+        Constructed 49 of 92 machines
+        Constructed 50 of 92 machines
+        Constructed 51 of 92 machines
+        Constructed 0 formats
+        Constructed 4 formats
+        Constructed 52 of 92 machines
+        Constructed 53 of 98 machines
+        Constructed 54 of 98 machines
+        Constructed 55 of 98 machines
+        Constructed 56 of 101 machines
+        Constructed 57 of 101 machines
+        Constructed 58 of 103 machines
+        Constructed 59 of 103 machines
+        Constructed 60 of 103 machines
+        Constructed 61 of 103 machines
+        Constructed 62 of 103 machines
+        Constructed 63 of 103 machines
+        Constructed 64 of 104 machines
+        Constructed 65 of 104 machines
+        Constructed 66 of 107 machines
+        Constructed 67 of 107 machines
+        Constructed 68 of 107 machines
+        Constructed 69 of 109 machines
+        Constructed 70 of 109 machines
+        Constructed 71 of 110 machines
+        Constructed 72 of 110 machines
+        Constructed 73 of 110 machines
+        Constructed 74 of 111 machines
+        Constructed 75 of 114 machines
+        Constructed 76 of 114 machines
+        Constructed 77 of 114 machines
+        Constructed 78 of 114 machines
+        Constructed 79 of 115 machines
+        Constructed 80 of 116 machines
+        Constructed 81 of 116 machines
+        Constructed 82 of 117 machines
+        Constructed 83 of 119 machines
+        Constructed 84 of 119 machines
+        Constructed 85 of 119 machines
+        Enumerated to 23 states and 36 transitions
+        Enumerated to 20 states and 30 transitions
+        Enumerated to 22 states and 34 transitions
+        Reduced 4 states to 4 states
+        Reduced 4 states to 4 equivalence classes
+        Constructed 86 of 119 machines
+        Reduced 6 states to 6 states
+        Constructed 4 equivalence classes
+        Constructed 4 equivalence classes
+        Reduced 6 states to 4 equivalence classes
+        Constructed 87 of 119 machines
+        Reduced 23 states to 23 states
+        Constructed 9 equivalence classes
+        Constructed 9 equivalence classes
+        Reduced 23 states to 9 equivalence classes
+        Constructed 88 of 119 machines
+        Reduced 20 states to 20 states
+        Constructed 7 equivalence classes
+        Constructed 7 equivalence classes
+        Reduced 20 states to 7 equivalence classes
+        Constructed 89 of 119 machines
+        Reduced 22 states to 22 states
+        Constructed 8 equivalence classes
+        Constructed 8 equivalence classes
+        Reduced 22 states to 8 equivalence classes
+        Constructed 90 of 119 machines
+        Constructed 91 of 119 machines
+        Constructed 92 of 119 machines
+        Constructed 93 of 119 machines
+        Constructed 94 of 119 machines
+        Constructed 95 of 119 machines
+        Constructed 96 of 119 machines
+        Constructed 97 of 119 machines
+        Constructed 98 of 119 machines
+        Constructed 99 of 119 machines
+        Constructed 100 of 119 machines
+        Constructed 101 of 119 machines
+        Constructed 102 of 119 machines
+        Constructed 103 of 125 machines
+        Constructed 104 of 125 machines
+        Constructed 105 of 125 machines
+        Constructed 106 of 125 machines
+        Constructed 107 of 125 machines
+        Constructed 108 of 125 machines
+        Constructed 109 of 125 machines
+        Enumerated to 28 states and 53 transitions
+        Reduced 28 states to 28 states
+        Constructed 14 equivalence classes
+        Constructed 14 equivalence classes
+        Reduced 28 states to 14 equivalence classes
+        Constructed 110 of 125 machines
+        Constructed 111 of 125 machines
+        Constructed 112 of 126 machines
+        Constructed 113 of 126 machines
+        Enumerated to 14 states and 29 transitions
+        Reduced 14 states to 14 states
+        Constructed 10 equivalence classes
+        Constructed 10 equivalence classes
+        Reduced 14 states to 10 equivalence classes
+        Constructed 114 of 126 machines
+        Constructed 115 of 126 machines
+        Constructed 116 of 126 machines
+        Constructed 117 of 126 machines
+        Constructed 118 of 126 machines
+        Constructed 119 of 126 machines
+        Constructed 120 of 126 machines
+        Constructed 121 of 126 machines
+        Constructed 122 of 130 machines
+        Constructed 123 of 130 machines
+        Constructed 124 of 130 machines
+        Constructed 125 of 130 machines
+        Constructed 126 of 130 machines
+        Enumerated to 20 states and 66 transitions
+        Diamond elimination complete: 20 states
+        Constructed 127 of 130 machines
+        Constructed 9 equivalence classes
+        Constructed 12 equivalence classes
+        Constructed 13 equivalence classes
+        Constructed 14 equivalence classes
+        Constructed 15 equivalence classes
+        Constructed 16 equivalence classes
+        Constructed 17 equivalence classes
+        Constructed 18 equivalence classes
+        Constructed 18 equivalence classes
+        Reduced 20 states to 18 equivalence classes
+        Constructed 128 of 130 machines
+        Constructed 129 of 130 machines
+        Constructed 130 of 132 machines
+        Constructed 131 of 132 machines
+        Constructed 132 of 132 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.001 seconds at 9000 state pairs and 15000 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.002 seconds at 6500 state pairs and 9500 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.002 seconds at 7500 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.003 seconds at 5333.33 state pairs and 7666.67 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController ; RUN({r__}) :[deadlock free]:
+    Log:
+            Found 3 processes including 1 names
+        Visited 2 processes and discovered 0 recursive names
+        Constructed 1 of 2 machines
+        Visited 1 processes generating 3 machines
+        Constructed 0 states with 1 transitions
+        Constructed 1 states with 1 transitions
+        Constructed 2 of 5 machines
+        Reduced 1 states to 1 equivalence classes
+        Constructed 3 of 5 machines
+        Constructed 4 of 5 machines
+        Constructed 5 of 8 machines
+        Constructed 6 of 8 machines
+        Constructed 7 of 8 machines
+        Constructed 8 of 8 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.001 seconds at 9000 state pairs and 15000 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.002 seconds at 6500 state pairs and 9500 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.003 seconds at 5333.33 state pairs and 7666.67 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController :[deterministic]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 1 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 2 machines
+        Visited 1 processes generating 2 machines
+        Constructed 2 of 3 machines
+        Enumerated to 16 states and 22 transitions
+        Determinisation complete: 16 states
+        Constructed 3 of 3 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Failed
+        Visited States: 3
+        Visited Transitions: 5
+        Visited Plys: 1
+        Estimated Total Storage: 336MB
+        Counterexample (Determinism Counterexample)
+            Specification Debug:
+                Trace: <ADSController::powerLoss.in>
+            Implementation Debug:
+                P_ADSController (Trace Behaviour):
+                    Trace: <ADSController::powerLoss.in>
+                    Error Event: ADSController::enterFailSafe.out
+P_ADSController :[divergence free]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 2 machines
+        Constructed 2 of 2 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.001 seconds at 9000 state pairs and 15000 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.002 seconds at 6500 state pairs and 9500 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.003 seconds at 5333.33 state pairs and 7666.67 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Ctrl :[deadlock free]:
+    Log:
+            Found 285 processes including 47 names
+        Visited 238 processes and discovered 29 recursive names
+        Constructed 0 states with 1 transitions
+        Constructed 2 states with 2 transitions
+        Constructed 1 of 16 machines
+        Constructed 0 states with 2 transitions
+        Constructed 0 states with 1 transitions
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 3 transitions
+        Reduced 2 states to 2 equivalence classes
+        Constructed 4 states with 5 transitions
+        Constructed 2 of 17 machines
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 2 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 3 of 17 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 4 of 17 machines
+        Constructed 5 of 17 machines
+        Reduced 2 states to 2 equivalence classes
+        Constructed 6 of 17 machines
+        Reduced 3 states to 3 equivalence classes
+        Reduced 4 states to 4 equivalence classes
+        Constructed 7 of 17 machines
+        Constructed 8 of 17 machines
+        Constructed 9 of 17 machines
+        Constructed 10 of 17 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 11 of 17 machines
+        Constructed 12 of 17 machines
+        Constructed 13 of 17 machines
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 14 of 17 machines
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 0 states with 3 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 15 of 51 machines
+        Constructed 0 states with 3 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 16 of 53 machines
+        Constructed 0 states with 1 transitions
+        Constructed 1 states with 1 transitions
+        Constructed 0 states with 3 transitions
+        Constructed 0 states with 1 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 17 of 53 machines
+        Constructed 18 of 53 machines
+        Constructing high-level wrapper
+        Reduced 3 states to 3 equivalence classes
+        Constructed 19 of 54 machines
+        Reduced 1 states to 1 equivalence classes
+        Constructed 0 states with 2 transitions
+        Constructed 20 of 54 machines
+        Constructed 3 states with 3 transitions
+        Constructed 21 of 54 machines
+        Constructed 0 states with 3 transitions
+        Constructed 2 states with 5 transitions
+        Constructed 22 of 55 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 23 of 55 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 24 of 55 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 25 of 55 machines
+        Constructed 26 of 55 machines
+        Constructed 27 of 55 machines
+        Constructed 28 of 56 machines
+        Constructed 29 of 56 machines
+        Constructed 30 of 56 machines
+        Constructed 31 of 56 machines
+        Constructed 32 of 56 machines
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 33 of 57 machines
+        Reduced 2 states to 2 equivalence classes
+        Constructed 34 of 57 machines
+        Constructed 35 of 59 machines
+        Constructed 36 of 61 machines
+        Constructed 37 of 74 machines
+        Constructed 0 states with 1 transitions
+        Constructed 38 of 76 machines
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 39 of 78 machines
+        Constructed 40 of 78 machines
+        Constructed 41 of 78 machines
+        Constructed 42 of 78 machines
+        Constructed 43 of 78 machines
+        Constructing high-level wrapper
+        Constructed 0 formats
+        Constructed 4 formats
+        Constructed 44 of 87 machines
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 45 of 87 machines
+        Constructed 46 of 87 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 47 of 90 machines
+        Constructed 48 of 90 machines
+        Constructed 0 states with 6 transitions
+        Constructed 4 states with 13 transitions
+        Constructed 49 of 91 machines
+        Constructed 50 of 91 machines
+        Constructed 51 of 92 machines
+        Constructed 52 of 92 machines
+        Constructed 53 of 97 machines
+        Constructed 54 of 97 machines
+        Constructed 55 of 100 machines
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 56 of 101 machines
+        Constructed 57 of 101 machines
+        Constructed 58 of 101 machines
+        Constructed 0 formats
+        Constructed 4 formats
+        Constructed 59 of 101 machines
+        Constructed 60 of 104 machines
+        Constructed 61 of 110 machines
+        Constructed 62 of 110 machines
+        Constructed 63 of 110 machines
+        Constructed 64 of 110 machines
+        Constructed 65 of 110 machines
+        Constructed 66 of 110 machines
+        Constructed 0 formats
+        Constructed 4 formats
+        Constructed 67 of 110 machines
+        Constructed 68 of 110 machines
+        Constructed 69 of 110 machines
+        Constructed 70 of 112 machines
+        Constructed 71 of 123 machines
+        Constructed 72 of 124 machines
+        Constructed 73 of 124 machines
+        Constructed 74 of 124 machines
+        Constructed 75 of 125 machines
+        Visited 81 processes generating 103 machines
+        Constructed 76 of 125 machines
+        Constructed 77 of 125 machines
+        Constructed 78 of 125 machines
+        Constructed 79 of 125 machines
+        Constructed 80 of 125 machines
+        Constructed 81 of 125 machines
+        Constructed 82 of 126 machines
+        Constructed 83 of 126 machines
+        Constructed 84 of 128 machines
+        Constructed 85 of 128 machines
+        Constructed 86 of 132 machines
+        Constructed 87 of 132 machines
+        Constructed 88 of 132 machines
+        Constructed 89 of 136 machines
+        Constructed 90 of 138 machines
+        Constructed 91 of 138 machines
+        Constructed 92 of 138 machines
+        Constructed 93 of 138 machines
+        Constructed 94 of 138 machines
+        Constructed 95 of 138 machines
+        Enumerated to 4 states and 6 transitions
+        Enumerated to 23 states and 36 transitions
+        Reduced 4 states to 4 states
+        Reduced 4 states to 4 equivalence classes
+        Enumerated to 31 states and 46 transitions
+        Constructed 96 of 138 machines
+        Reduced 3 states to 3 states
+        Reduced 3 states to 3 equivalence classes
+        Constructed 97 of 138 machines
+        Reduced 4 states to 4 states
+        Reduced 4 states to 4 equivalence classes
+        Constructed 98 of 138 machines
+        Reduced 23 states to 23 states
+        Constructed 9 equivalence classes
+        Constructed 9 equivalence classes
+        Reduced 23 states to 9 equivalence classes
+        Constructed 99 of 138 machines
+        Constructed 100 of 138 machines
+        Reduced 31 states to 31 states
+        Constructed 7 equivalence classes
+        Constructed 7 equivalence classes
+        Reduced 31 states to 7 equivalence classes
+        Enumerated to 33 states and 50 transitions
+        Constructed 101 of 138 machines
+        Reduced 33 states to 33 states
+        Constructed 8 equivalence classes
+        Constructed 8 equivalence classes
+        Reduced 33 states to 8 equivalence classes
+        Constructed 102 of 138 machines
+        Constructed 103 of 138 machines
+        Constructed 104 of 138 machines
+        Constructed 105 of 138 machines
+        Constructed 106 of 138 machines
+        Constructed 107 of 138 machines
+        Constructed 108 of 138 machines
+        Constructed 109 of 138 machines
+        Constructed 110 of 138 machines
+        Constructed 111 of 138 machines
+        Constructed 112 of 138 machines
+        Constructed 113 of 138 machines
+        Constructed 114 of 138 machines
+        Constructed 115 of 145 machines
+        Constructed 116 of 145 machines
+        Constructed 117 of 145 machines
+        Constructed 118 of 145 machines
+        Constructed 119 of 145 machines
+        Constructed 120 of 145 machines
+        Constructed 121 of 145 machines
+        Constructed 122 of 145 machines
+        Enumerated to 29 states and 57 transitions
+        Reduced 29 states to 29 states
+        Constructed 14 equivalence classes
+        Constructed 14 equivalence classes
+        Reduced 29 states to 14 equivalence classes
+        Constructed 123 of 145 machines
+        Constructed 124 of 145 machines
+        Constructed 125 of 146 machines
+        Constructed 126 of 146 machines
+        Enumerated to 14 states and 29 transitions
+        Reduced 14 states to 14 states
+        Constructed 10 equivalence classes
+        Constructed 10 equivalence classes
+        Reduced 14 states to 10 equivalence classes
+        Constructed 127 of 146 machines
+        Constructed 128 of 146 machines
+        Constructed 129 of 146 machines
+        Constructed 130 of 146 machines
+        Constructed 131 of 146 machines
+        Constructed 132 of 146 machines
+        Constructed 133 of 146 machines
+        Constructed 134 of 146 machines
+        Constructed 135 of 150 machines
+        Constructed 136 of 150 machines
+        Constructed 137 of 150 machines
+        Constructed 138 of 150 machines
+        Constructed 139 of 150 machines
+        Enumerated to 20 states and 66 transitions
+        Diamond elimination complete: 20 states
+        Constructed 140 of 150 machines
+        Constructed 9 equivalence classes
+        Constructed 12 equivalence classes
+        Constructed 13 equivalence classes
+        Constructed 14 equivalence classes
+        Constructed 15 equivalence classes
+        Constructed 16 equivalence classes
+        Constructed 17 equivalence classes
+        Constructed 18 equivalence classes
+        Constructed 18 equivalence classes
+        Reduced 20 states to 18 equivalence classes
+        Constructed 141 of 150 machines
+        Constructed 142 of 150 machines
+        Constructed 143 of 150 machines
+        Constructed 144 of 150 machines
+        Constructed 145 of 150 machines
+        Constructed 146 of 153 machines
+        Constructed 147 of 153 machines
+        Constructed 148 of 153 machines
+        Constructed 149 of 153 machines
+        Enumerated to 54 states and 146 transitions
+        Diamond elimination complete: 52 states
+        Constructed 150 of 153 machines
+        Constructed 10 equivalence classes
+        Constructed 15 equivalence classes
+        Constructed 18 equivalence classes
+        Constructed 21 equivalence classes
+        Constructed 24 equivalence classes
+        Constructed 31 equivalence classes
+        Constructed 36 equivalence classes
+        Constructed 41 equivalence classes
+        Constructed 44 equivalence classes
+        Constructed 46 equivalence classes
+        Constructed 48 equivalence classes
+        Constructed 50 equivalence classes
+        Constructed 52 equivalence classes
+        Reduced 52 states to 52 equivalence classes
+        Constructed 151 of 153 machines
+        Constructed 152 of 153 machines
+        Constructed 153 of 155 machines
+        Constructed 154 of 155 machines
+        Constructed 155 of 155 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0.001 seconds at 5000 state pairs and 8000 transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.002 seconds at 4500 state pairs and 7500 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.003 seconds at 4333.33 state pairs and 6333.33 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.004 seconds at 4000 state pairs and 5750 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Ctrl ; RUN({r__}) :[deadlock free]:
+    Log:
+            Found 1 processes including 0 names
+        Visited 1 processes and discovered 0 recursive names
+        Constructed 1 of 2 machines
+        Constructed 2 of 2 machines
+        Visited 1 processes generating 3 machines
+        Reduced 1 states to 1 equivalence classes
+        Constructed 3 of 5 machines
+        Constructed 4 of 5 machines
+        Constructed 5 of 8 machines
+        Constructed 6 of 8 machines
+        Constructed 7 of 8 machines
+        Constructed 8 of 8 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.002 seconds at 4500 state pairs and 7500 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.003 seconds at 4333.33 state pairs and 6333.33 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.003 seconds at 5333.33 state pairs and 7666.67 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Ctrl :[deterministic]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 1 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 2 machines
+        Visited 1 processes generating 2 machines
+        Constructed 2 of 3 machines
+        Enumerated to 16 states and 22 transitions
+        Determinisation complete: 16 states
+        Constructed 3 of 3 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Failed
+        Visited States: 3
+        Visited Transitions: 5
+        Visited Plys: 1
+        Estimated Total Storage: 336MB
+        Counterexample (Determinism Counterexample)
+            Specification Debug:
+                Trace: <ADSController_Ctrl::powerLoss.in>
+            Implementation Debug:
+                P_ADSController_Ctrl (Trace Behaviour):
+                    Trace: <ADSController_Ctrl::powerLoss.in>
+                    Error Event: ADSController_Ctrl::enterFailSafe.out
+P_ADSController_Ctrl :[divergence free]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 2 machines
+        Constructed 2 of 2 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.002 seconds at 4500 state pairs and 7500 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.003 seconds at 4333.33 state pairs and 6333.33 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.004 seconds at 4000 state pairs and 5750 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Ctrl_stm_ref0 :[deadlock free]:
+    Log:
+            Found 2 processes including 1 names
+        Visited 1 processes and discovered 0 recursive names
+        Constructed 1 of 2 machines
+        Constructed 2 of 2 machines
+        Visited 1 processes generating 3 machines
+        Reduced 2 states to 2 equivalence classes
+        Constructed 3 of 5 machines
+        Constructed 4 of 5 machines
+        Constructed 5 of 7 machines
+        Constructed 6 of 7 machines
+        Constructed 7 of 7 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.001 seconds at 9000 state pairs and 15000 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.002 seconds at 6500 state pairs and 9500 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.003 seconds at 5333.33 state pairs and 7666.67 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Ctrl_stm_ref0 ; RUN({r__}) :[deadlock free]:
+    Log:
+            Found 1 processes including 0 names
+        Visited 1 processes and discovered 0 recursive names
+        Constructed 1 of 2 machines
+        Constructed 2 of 2 machines
+        Visited 1 processes generating 3 machines
+        Reduced 1 states to 1 equivalence classes
+        Constructed 3 of 5 machines
+        Constructed 4 of 5 machines
+        Constructed 5 of 8 machines
+        Constructed 6 of 8 machines
+        Constructed 7 of 8 machines
+        Constructed 8 of 8 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.002 seconds at 3500 state pairs and 5500 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.002 seconds at 4000 state pairs and 6000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.003 seconds at 3000 state pairs and 5000 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.003 seconds at 3666.67 state pairs and 5666.67 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.003 seconds at 4333.33 state pairs and 6333.33 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.004 seconds at 3750 state pairs and 5500 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.004 seconds at 4000 state pairs and 5750 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Ctrl_stm_ref0 :[deterministic]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 1 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 2 machines
+        Visited 1 processes generating 2 machines
+        Constructed 2 of 3 machines
+        Enumerated to 16 states and 22 transitions
+        Determinisation complete: 16 states
+        Constructed 3 of 3 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Failed
+        Visited States: 3
+        Visited Transitions: 5
+        Visited Plys: 1
+        Estimated Total Storage: 336MB
+        Counterexample (Determinism Counterexample)
+            Specification Debug:
+                Trace: <ADSController_Ctrl::stm_ref0::powerLoss.in>
+            Implementation Debug:
+                P_ADSController_Ctrl_stm_ref0 (Trace Behaviour):
+                    Trace: <ADSController_Ctrl::stm_ref0::powerLoss.in>
+                    Error Event: ADSController_Ctrl::stm_ref0::enterFailSafe.out
+P_ADSController_Ctrl_stm_ref0 :[divergence free]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 2 machines
+        Constructed 2 of 2 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.001 seconds at 9000 state pairs and 15000 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.002 seconds at 6500 state pairs and 9500 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.003 seconds at 5333.33 state pairs and 7666.67 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Module :[deadlock free]:
+    Log:
+            Found 291 processes including 46 names
+        Visited 245 processes and discovered 29 recursive names
+        Constructed 0 states with 1 transitions
+        Constructed 0 states with 1 transitions
+        Constructed 3 states with 2 transitions
+        Constructed 2 states with 2 transitions
+        Constructed 1 of 18 machines
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 2 of 23 machines
+        Constructed 3 of 24 machines
+        Constructed 4 of 24 machines
+        Constructed 5 of 24 machines
+        Reduced 3 states to 3 equivalence classes
+        Reduced 1 states to 1 equivalence classes
+        Constructed 6 of 38 machines
+        Constructed 7 of 38 machines
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 0 states with 3 transitions
+        Constructed 8 of 46 machines
+        Constructed 3 states with 4 transitions
+        Reduced 2 states to 2 equivalence classes
+        Constructed 9 of 46 machines
+        Constructed 0 states with 2 transitions
+        Reduced 2 states to 2 equivalence classes
+        Constructed 10 of 48 machines
+        Constructed 0 states with 2 transitions
+        Constructed 4 states with 5 transitions
+        Constructed 0 states with 3 transitions
+        Constructed 3 states with 3 transitions
+        Reduced 3 states to 3 equivalence classes
+        Reduced 3 states to 3 equivalence classes
+        Constructed 3 states with 4 transitions
+        Constructed 11 of 48 machines
+        Constructed 0 states with 1 transitions
+        Reduced 3 states to 3 equivalence classes
+        Constructing high-level wrapper
+        Constructed 12 of 48 machines
+        Constructed 13 of 48 machines
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 14 of 48 machines
+        Constructed 15 of 48 machines
+        Constructed 16 of 48 machines
+        Reduced 4 states to 4 equivalence classes
+        Constructed 17 of 49 machines
+        Constructed 18 of 49 machines
+        Constructed 19 of 49 machines
+        Constructed 20 of 49 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 21 of 49 machines
+        Constructed 0 states with 3 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 22 of 49 machines
+        Constructed 23 of 50 machines
+        Constructed 24 of 50 machines
+        Constructed 25 of 50 machines
+        Constructed 26 of 53 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 27 of 82 machines
+        Constructed 0 states with 3 transitions
+        Constructed 2 states with 5 transitions
+        Constructed 28 of 82 machines
+        Constructed 0 states with 1 transitions
+        Constructed 0 states with 2 transitions
+        Constructed 3 states with 3 transitions
+        Constructed 29 of 83 machines
+        Constructed 30 of 83 machines
+        Constructed 31 of 85 machines
+        Reduced 3 states to 3 equivalence classes
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Constructed 0 states with 1 transitions
+        Constructing high-level wrapper
+        Reduced 3 states to 3 equivalence classes
+        Constructed 32 of 85 machines
+        Constructed 33 of 85 machines
+        Constructing high-level wrapper
+        Constructed 34 of 85 machines
+        Constructed 35 of 88 machines
+        Constructed 36 of 88 machines
+        Constructed 37 of 88 machines
+        Constructed 38 of 88 machines
+        Constructed 39 of 88 machines
+        Constructed 40 of 88 machines
+        Reduced 2 states to 2 equivalence classes
+        Constructed 41 of 96 machines
+        Constructed 42 of 96 machines
+        Constructed 0 states with 2 transitions
+        Constructed 0 states with 6 transitions
+        Constructed 3 states with 4 transitions
+        Constructed 43 of 97 machines
+        Constructed 44 of 97 machines
+        Constructed 4 states with 13 transitions
+        Constructed 45 of 97 machines
+        Constructed 46 of 97 machines
+        Constructed 47 of 97 machines
+        Constructed 48 of 101 machines
+        Constructed 49 of 101 machines
+        Constructed 50 of 104 machines
+        Constructed 51 of 107 machines
+        Constructed 52 of 107 machines
+        Visited 89 processes generating 112 machines
+        Constructed 53 of 115 machines
+        Constructed 54 of 115 machines
+        Constructed 0 formats
+        Constructed 4 formats
+        Constructed 55 of 115 machines
+        Constructed 0 formats
+        Constructed 56 of 115 machines
+        Constructed 4 formats
+        Constructed 57 of 115 machines
+        Constructed 0 formats
+        Constructed 4 formats
+        Constructed 58 of 115 machines
+        Constructed 59 of 115 machines
+        Constructed 60 of 115 machines
+        Constructed 61 of 115 machines
+        Constructed 62 of 125 machines
+        Constructed 63 of 126 machines
+        Constructed 64 of 126 machines
+        Constructed 65 of 126 machines
+        Constructed 66 of 127 machines
+        Constructed 67 of 128 machines
+        Constructed 68 of 131 machines
+        Constructed 69 of 131 machines
+        Constructed 70 of 131 machines
+        Constructed 71 of 131 machines
+        Constructed 72 of 131 machines
+        Constructed 73 of 132 machines
+        Constructed 74 of 132 machines
+        Constructed 75 of 132 machines
+        Constructed 76 of 132 machines
+        Constructed 77 of 132 machines
+        Constructed 78 of 132 machines
+        Constructed 79 of 134 machines
+        Constructed 80 of 136 machines
+        Constructed 81 of 136 machines
+        Constructed 82 of 136 machines
+        Constructed 83 of 139 machines
+        Constructed 84 of 139 machines
+        Constructed 85 of 139 machines
+        Constructed 86 of 142 machines
+        Constructed 87 of 142 machines
+        Constructed 88 of 143 machines
+        Constructed 89 of 143 machines
+        Constructed 90 of 146 machines
+        Constructed 91 of 146 machines
+        Constructed 92 of 146 machines
+        Constructed 93 of 146 machines
+        Constructed 94 of 146 machines
+        Constructed 95 of 146 machines
+        Constructed 96 of 146 machines
+        Enumerated to 4 states and 6 transitions
+        Enumerated to 31 states and 46 transitions
+        Enumerated to 23 states and 36 transitions
+        Reduced 3 states to 3 states
+        Reduced 3 states to 3 equivalence classes
+        Constructed 97 of 146 machines
+        Enumerated to 33 states and 50 transitions
+        Reduced 4 states to 4 states
+        Reduced 4 states to 4 equivalence classes
+        Constructed 98 of 146 machines
+        Reduced 2 states to 2 states
+        Reduced 2 states to 2 equivalence classes
+        Constructed 99 of 146 machines
+        Reduced 4 states to 4 states
+        Reduced 4 states to 4 equivalence classes
+        Constructed 100 of 146 machines
+        Reduced 31 states to 31 states
+        Constructed 7 equivalence classes
+        Constructed 7 equivalence classes
+        Reduced 31 states to 7 equivalence classes
+        Constructed 101 of 146 machines
+        Reduced 23 states to 23 states
+        Constructed 9 equivalence classes
+        Constructed 9 equivalence classes
+        Reduced 23 states to 9 equivalence classes
+        Constructed 102 of 146 machines
+        Reduced 33 states to 33 states
+        Constructed 8 equivalence classes
+        Constructed 8 equivalence classes
+        Reduced 33 states to 8 equivalence classes
+        Constructed 103 of 146 machines
+        Constructed 104 of 146 machines
+        Constructed 105 of 146 machines
+        Constructed 106 of 146 machines
+        Constructed 107 of 146 machines
+        Constructed 108 of 146 machines
+        Constructed 109 of 146 machines
+        Constructed 110 of 146 machines
+        Constructed 111 of 146 machines
+        Constructed 112 of 146 machines
+        Constructed 113 of 146 machines
+        Constructed 114 of 146 machines
+        Constructed 115 of 146 machines
+        Constructed 116 of 153 machines
+        Constructed 117 of 153 machines
+        Constructed 118 of 153 machines
+        Constructed 119 of 153 machines
+        Constructed 120 of 153 machines
+        Constructed 121 of 153 machines
+        Constructed 122 of 153 machines
+        Constructed 123 of 153 machines
+        Enumerated to 29 states and 57 transitions
+        Reduced 29 states to 29 states
+        Constructed 14 equivalence classes
+        Constructed 14 equivalence classes
+        Reduced 29 states to 14 equivalence classes
+        Constructed 124 of 153 machines
+        Constructed 125 of 153 machines
+        Constructed 126 of 154 machines
+        Constructed 127 of 154 machines
+        Enumerated to 14 states and 29 transitions
+        Reduced 14 states to 14 states
+        Constructed 10 equivalence classes
+        Constructed 10 equivalence classes
+        Reduced 14 states to 10 equivalence classes
+        Constructed 128 of 154 machines
+        Constructed 129 of 154 machines
+        Constructed 130 of 154 machines
+        Constructed 131 of 154 machines
+        Constructed 132 of 154 machines
+        Constructed 133 of 154 machines
+        Constructed 134 of 154 machines
+        Constructed 135 of 154 machines
+        Constructed 136 of 158 machines
+        Constructed 137 of 158 machines
+        Constructed 138 of 158 machines
+        Constructed 139 of 158 machines
+        Constructed 140 of 158 machines
+        Enumerated to 20 states and 66 transitions
+        Diamond elimination complete: 20 states
+        Constructed 141 of 158 machines
+        Constructed 9 equivalence classes
+        Constructed 12 equivalence classes
+        Constructed 13 equivalence classes
+        Constructed 14 equivalence classes
+        Constructed 15 equivalence classes
+        Constructed 16 equivalence classes
+        Constructed 17 equivalence classes
+        Constructed 18 equivalence classes
+        Constructed 18 equivalence classes
+        Reduced 20 states to 18 equivalence classes
+        Constructed 142 of 158 machines
+        Constructed 143 of 158 machines
+        Constructed 144 of 158 machines
+        Constructed 145 of 158 machines
+        Constructed 146 of 158 machines
+        Constructed 147 of 161 machines
+        Constructed 148 of 161 machines
+        Constructed 149 of 161 machines
+        Constructed 150 of 161 machines
+        Enumerated to 54 states and 146 transitions
+        Diamond elimination complete: 52 states
+        Constructed 151 of 161 machines
+        Constructed 10 equivalence classes
+        Constructed 15 equivalence classes
+        Constructed 18 equivalence classes
+        Constructed 21 equivalence classes
+        Constructed 24 equivalence classes
+        Constructed 31 equivalence classes
+        Constructed 36 equivalence classes
+        Constructed 41 equivalence classes
+        Constructed 44 equivalence classes
+        Constructed 46 equivalence classes
+        Constructed 48 equivalence classes
+        Constructed 50 equivalence classes
+        Constructed 52 equivalence classes
+        Reduced 52 states to 52 equivalence classes
+        Constructed 152 of 161 machines
+        Constructed 153 of 161 machines
+        Constructed 154 of 161 machines
+        Constructed 155 of 161 machines
+        Constructed 156 of 161 machines
+        Constructed 157 of 161 machines
+        Constructed 158 of 161 machines
+        Constructed 159 of 165 machines
+        Constructed 160 of 165 machines
+        Constructed 161 of 165 machines
+        Constructed 162 of 165 machines
+        Constructed 163 of 165 machines
+        Enumerated to 16 states and 22 transitions
+        Diamond elimination complete: 16 states
+        Constructed 164 of 165 machines
+        Constructed 9 equivalence classes
+        Constructed 10 equivalence classes
+        Constructed 11 equivalence classes
+        Constructed 12 equivalence classes
+        Constructed 13 equivalence classes
+        Constructed 14 equivalence classes
+        Constructed 15 equivalence classes
+        Constructed 16 equivalence classes
+        Reduced 16 states to 16 equivalence classes
+        Constructed 165 of 165 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.002 seconds at 4500 state pairs and 7500 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.002 seconds at 6500 state pairs and 9500 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.003 seconds at 5333.33 state pairs and 7666.67 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Module ; RUN({r__}) :[deadlock free]:
+    Log:
+            Found 1 processes including 0 names
+        Visited 1 processes and discovered 0 recursive names
+        Visited 1 processes generating 0 machines
+        Constructed 0 states with 3 transitions
+        Constructed 17 states with 25 transitions
+        Constructed 1 of 1 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 9 state pairs and 15 transitions in 0.001 seconds at 9000 state pairs and 15000 transitions per second using 503MB total storage.
+        On ply 7 - visited 10 state pairs and 18 transitions in 0.002 seconds at 5000 state pairs and 9000 transitions per second using 503MB total storage.
+        On ply 8 - visited 12 state pairs and 20 transitions in 0.002 seconds at 6000 state pairs and 10000 transitions per second using 503MB total storage.
+        On ply 9 - visited 14 state pairs and 22 transitions in 0.002 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 10 - visited 16 state pairs and 25 transitions in 0.003 seconds at 5333.33 state pairs and 8333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 17 state pairs and 26 transitions in 0.003 seconds at 5666.67 state pairs and 8666.67 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 17
+        Visited Transitions: 26
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Module :[deterministic]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 1 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 1 machines
+        Visited 1 processes generating 1 machines
+        Determinisation complete: 16 states
+        Constructed 2 of 2 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Failed
+        Visited States: 3
+        Visited Transitions: 5
+        Visited Plys: 1
+        Estimated Total Storage: 336MB
+        Counterexample (Determinism Counterexample)
+            Specification Debug:
+                Trace: <ADSController_Module::powerLoss.in>
+            Implementation Debug:
+                ADSController_Module::O__(0) (Trace Behaviour):
+                    Trace: <ADSController_Module::powerLoss.in>
+                    Error Event: ADSController_Module::enterFailSafe.out
+P_ADSController_Module :[divergence free]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 1 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.002 seconds at 4500 state pairs and 7500 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.003 seconds at 4333.33 state pairs and 6333.33 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.004 seconds at 4000 state pairs and 5750 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Module_ctrl_ref0 :[deadlock free]:
+    Log:
+            Found 2 processes including 1 names
+        Visited 1 processes and discovered 0 recursive names
+        Constructed 1 of 1 machines
+        Constructed 2 of 2 machines
+        Visited 1 processes generating 3 machines
+        Reduced 2 states to 2 equivalence classes
+        Constructed 3 of 5 machines
+        Constructed 4 of 5 machines
+        Constructed 5 of 7 machines
+        Constructed 6 of 7 machines
+        Constructed 7 of 7 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0.001 seconds at 5000 state pairs and 8000 transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.002 seconds at 4500 state pairs and 7500 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.003 seconds at 4333.33 state pairs and 6333.33 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.004 seconds at 4000 state pairs and 5750 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Module_ctrl_ref0 ; RUN({r__}) :[deadlock free]:
+    Log:
+            Found 1 processes including 0 names
+        Visited 1 processes and discovered 0 recursive names
+        Constructed 1 of 2 machines
+        Constructed 2 of 2 machines
+        Visited 1 processes generating 3 machines
+        Reduced 1 states to 1 equivalence classes
+        Constructed 3 of 5 machines
+        Constructed 4 of 5 machines
+        Constructed 5 of 8 machines
+        Constructed 6 of 8 machines
+        Constructed 7 of 8 machines
+        Constructed 8 of 8 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.001 seconds at 8000 state pairs and 12000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.002 seconds at 4500 state pairs and 7500 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.003 seconds at 4333.33 state pairs and 6333.33 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.004 seconds at 4000 state pairs and 5750 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+P_ADSController_Module_ctrl_ref0 :[deterministic]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 1 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 2 machines
+        Visited 1 processes generating 2 machines
+        Constructed 2 of 3 machines
+        Enumerated to 16 states and 22 transitions
+        Determinisation complete: 16 states
+        Constructed 3 of 3 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Failed
+        Visited States: 3
+        Visited Transitions: 5
+        Visited Plys: 1
+        Estimated Total Storage: 336MB
+        Counterexample (Determinism Counterexample)
+            Specification Debug:
+                Trace: <ADSController_Module::ctrl_ref0::powerLoss.in>
+            Implementation Debug:
+                P_ADSController_Module_ctrl_ref0 (Trace Behaviour):
+                    Trace: <ADSController_Module::ctrl_ref0::powerLoss.in>
+                    Error Event: ADSController_Module::ctrl_ref0::enterFailSafe.out
+P_ADSController_Module_ctrl_ref0 :[divergence free]:
+    Log:
+            Found 1 processes including 1 names
+        Visited 0 processes and discovered 0 recursive names
+        Visited 0 processes generating 0 machines
+        Constructed 1 of 2 machines
+        Constructed 2 of 2 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 3 state pairs and 6 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 5 state pairs and 8 transitions in 0.001 seconds at 5000 state pairs and 8000 transitions per second using 503MB total storage.
+        On ply 5 - visited 7 state pairs and 11 transitions in 0.001 seconds at 7000 state pairs and 11000 transitions per second using 503MB total storage.
+        On ply 6 - visited 8 state pairs and 12 transitions in 0.002 seconds at 4000 state pairs and 6000 transitions per second using 503MB total storage.
+        On ply 7 - visited 9 state pairs and 15 transitions in 0.002 seconds at 4500 state pairs and 7500 transitions per second using 503MB total storage.
+        On ply 8 - visited 11 state pairs and 17 transitions in 0.002 seconds at 5500 state pairs and 8500 transitions per second using 503MB total storage.
+        On ply 9 - visited 13 state pairs and 19 transitions in 0.003 seconds at 4333.33 state pairs and 6333.33 transitions per second using 503MB total storage.
+        On ply 10 - visited 15 state pairs and 22 transitions in 0.003 seconds at 5000 state pairs and 7333.33 transitions per second using 503MB total storage.
+        On ply 11 - visited 16 state pairs and 23 transitions in 0.004 seconds at 4000 state pairs and 5750 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Passed
+        Visited States: 16
+        Visited Transitions: 23
+        Visited Plys: 10
+        Estimated Total Storage: 336MB
+ADS_ResponseNormal [FD= ADS_ResponseView:
+    Log:
+            Found 12 processes including 4 names
+        Found 5 processes including 2 names
+        Visited 9 processes and discovered 4 recursive names
+        Visited 3 processes and discovered 0 recursive names
+        Visited 1 processes generating 1 machines
+        Constructed 0 states with 2 transitions
+        Constructed 4 states with 6 transitions
+        Constructed 1 of 4 machines
+        Visited 2 processes generating 6 machines
+        Constructed 2 of 6 machines
+        Constructed 0 states with 0 transitions
+        Constructed 1 states with 0 transitions
+        Constructed 3 of 8 machines
+        Reduced 1 states to 1 equivalence classes
+        Constructed 4 of 8 machines
+        Constructed 5 of 8 machines
+        Constructed 6 of 8 machines
+        Constructed 7 of 11 machines
+        Constructed 8 of 11 machines
+        Constructed 9 of 11 machines
+        Constructed 10 of 11 machines
+        Constructed 0 states
+        Normalised to 4 states
+        Reduced 4 states to 4 equivalence classes
+        Constructed 11 of 11 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 4 state pairs and 7 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 7 state pairs and 10 transitions in 0.001 seconds at 7000 state pairs and 10000 transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Failed
+        Visited States: 10
+        Visited Transitions: 13
+        Visited Plys: 3
+        Estimated Total Storage: 336MB
+        Counterexample (Trace Counterexample)
+            Specification Debug:
+                Trace: <ADSController::powerLoss.in>
+                Available Events: {ADSController::enterFailSafe.out}
+            Implementation Debug:
+                ADS_ResponseView (Trace Behaviour):
+                    Trace: <ADSController::powerLoss.in, τ, τ>
+                    Error Event: ADSController::powerLoss.in
+ADS_AlternationStart(ADS_InitialBed) [FD= ADS_AlternationView:
+    Log:
+            Found 22 processes including 6 names
+        Found 3 processes including 1 names
+        Visited 17 processes and discovered 6 recursive names
+        Visited 2 processes and discovered 0 recursive names
+        Visited 1 processes generating 1 machines
+        Constructed 1 of 4 machines
+        Constructed 0 states with 2 transitions
+        Constructed 8 states with 12 transitions
+        Constructed 2 of 4 machines
+        Visited 2 processes generating 6 machines
+        Constructed 3 of 6 machines
+        Reduced 1 states to 1 equivalence classes
+        Constructed 4 of 6 machines
+        Constructed 5 of 8 machines
+        Constructed 6 of 8 machines
+        Constructed 7 of 11 machines
+        Constructed 8 of 11 machines
+        Constructed 9 of 11 machines
+        Constructed 10 of 11 machines
+        Constructed 0 states
+        Normalised to 8 states
+        Constructed 5 equivalence classes
+        Constructed 6 equivalence classes
+        Constructed 7 equivalence classes
+        Constructed 8 equivalence classes
+        Reduced 8 states to 8 equivalence classes
+        Constructed 11 of 11 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 3 - visited 4 state pairs and 7 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        On ply 4 - visited 7 state pairs and 10 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Failed
+        Visited States: 10
+        Visited Transitions: 13
+        Visited Plys: 3
+        Estimated Total Storage: 336MB
+        Counterexample (Trace Counterexample)
+            Specification Debug:
+                Trace: <ADSController::powerLoss.in>
+                Available Events: {ADSController::backupRestored.in}
+            Implementation Debug:
+                ADS_AlternationView (Trace Behaviour):
+                    Trace: <ADSController::powerLoss.in, τ, τ>
+                    Error Event: ADSController::powerLoss.in
+ADS_CommandNormal [FD= ADS_CommandView:
+    Log:
+            Found 15 processes including 3 names
+        Found 3 processes including 1 names
+        Visited 13 processes and discovered 3 recursive names
+        Visited 2 processes and discovered 0 recursive names
+        Visited 1 processes generating 1 machines
+        Constructed 0 states with 2 transitions
+        Constructed 8 states with 10 transitions
+        Visited 2 processes generating 6 machines
+        Constructed 1 of 6 machines
+        Constructed 2 of 6 machines
+        Constructed 3 of 7 machines
+        Reduced 1 states to 1 equivalence classes
+        Constructed 4 of 8 machines
+        Constructed 5 of 8 machines
+        Constructed 6 of 8 machines
+        Constructed 7 of 11 machines
+        Constructed 8 of 11 machines
+        Constructed 9 of 11 machines
+        Constructed 10 of 11 machines
+        Constructed 0 states
+        Normalised to 8 states
+        Constructed 7 equivalence classes
+        Constructed 7 equivalence classes
+        Reduced 8 states to 7 equivalence classes
+        Constructed 11 of 11 machines
+        Parallel BTree Explorer using 10 workers, 28 to 28 bytes per state
+        Next level storage overhead is 4.02934 bytes per state (402.934 MB per 100 million states)
+        Using BTree blocks of size 8 KiB and next-level blocks of size 8 KiB
+        On ply 1
+        On ply 2 - visited 1 state pairs and 4 transitions in 0 seconds at inf state pairs and inf transitions per second using 503MB total storage.
+        Finished
+        Reconstructing counterexamples
+    Result: Failed
+        Visited States: 4
+        Visited Transitions: 6
+        Visited Plys: 1
+        Estimated Total Storage: 336MB
+        Counterexample (Trace Counterexample)
+            Specification Debug:
+                Trace: <ADSController::powerLoss.in>
+                Available Events: {ADSController::enterFailSafe.out}
+            Implementation Debug:
+                ADS_CommandView (Trace Behaviour):
+                    Trace: <ADSController::powerLoss.in>
+                    Error Event: ADSController::raiseAlarm.out
+

@@ -1,0 +1,85 @@
+{
+  "reviewedCommit": "dcb16270e6d7f87516892ab13bc736c4986fc707",
+  "baselines": [
+    {
+      "solution": "Sn7",
+      "runner": "dafny",
+      "verdict": "PASS",
+      "detail": "9 verified, 0 errors",
+      "seconds": 0.95
+    },
+    {
+      "solution": "Sn8",
+      "runner": "isabelle",
+      "verdict": "PASS",
+      "detail": "Finished ADSController_Check",
+      "seconds": 35.64
+    },
+    {
+      "solution": "Sn9",
+      "runner": "fdr",
+      "verdict": "PASS",
+      "detail": "22 assertions passed, 0 failed",
+      "seconds": 1.27
+    }
+  ],
+  "survivingReviewFaults": [
+    {
+      "mutant": "REVIEW_D_NO_START",
+      "description": "DewpointHigh no longer starts a changeover",
+      "runner": "dafny",
+      "verdict": "PASS",
+      "detail": "9 verified, 0 errors",
+      "seconds": 0.92
+    },
+    {
+      "mutant": "REVIEW_D_NO_RECOVERY",
+      "description": "BackupRestored no longer leaves FailSafe",
+      "runner": "dafny",
+      "verdict": "PASS",
+      "detail": "9 verified, 0 errors",
+      "seconds": 0.96
+    },
+    {
+      "mutant": "REVIEW_D_EARLY_SWAP",
+      "description": "Duty bed changes before ChangeoverComplete",
+      "runner": "dafny",
+      "verdict": "PASS",
+      "detail": "9 verified, 0 errors",
+      "seconds": 0.95
+    },
+    {
+      "mutant": "REVIEW_I_NO_POWERLOSS",
+      "description": "Remove both power-loss operations from the executable machine; keep R1/R3 and the unused operation lemmas",
+      "runner": "isabelle",
+      "verdict": "PASS",
+      "detail": "Finished ADSController_Check",
+      "seconds": 30.8
+    }
+  ],
+  "cspBoundaryChecks": {
+    "exit": 0,
+    "passed": 27,
+    "failed": 0,
+    "checks": [
+      "actual first completion changes A to B",
+      "actual model rejects first write of A",
+      "alternation spec accepts first write of A",
+      "traces check accepts no write after completion",
+      "FD check rejects no write after completion"
+    ]
+  },
+  "timedCSP": {
+    "exit": 0,
+    "timedOut": false,
+    "seconds": 1.81,
+    "passed": 23,
+    "failed": 7
+  },
+  "unitTests": {
+    "run": 13,
+    "failed": 1,
+    "failure": "Power-loss test expects 26 assertions; current 22 production plus 5 property checks pass 27."
+  },
+  "modelFilesEditedByReview": false
+}

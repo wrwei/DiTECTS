@@ -1,0 +1,22 @@
+# mutant-D2 Sn7 -> ADS Controller Proof - Dafny via dafny
+# command: dafny verify ./ADSController.dfy
+# exit: 4  timedOut: False  seconds: 1.05
+
+ADSController.dfy(48,40): Error: a postcondition could not be proved on this return path
+   |
+48 |         else if (event == DewpointHigh) {
+   |                                         ^
+
+ADSController.dfy(41,21): Related location: this is the postcondition that could not be proved
+   |
+41 |         ensures Valid()
+   |                      ^
+
+ADSController.dfy(26,28): Related location: this proposition could not be proved
+   |
+26 |         activeDryer == BedA || activeDryer == BedB
+   |                             ^^
+
+
+Dafny program verifier finished with 5 verified, 1 error
+

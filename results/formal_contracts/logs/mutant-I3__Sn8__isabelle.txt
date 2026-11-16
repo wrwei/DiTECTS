@@ -1,0 +1,38 @@
+# mutant-I3 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-66207-84770 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/formal-contracts-2026-11-15/full:~/ads-experiments/formal-contracts-2026-11-15/full -w ~/ads-experiments/formal-contracts-2026-11-15/full/work/mutant-I3__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/formal-contracts-2026-11-15/full/work/mutant-I3__Sn8
+# exit: 1  timedOut: False  seconds: 38.92
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to apply proof method (line 347 of "~/ads-experiments/formal-contracts-2026-11-15/full/work/mutant-I3__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ADSController_axioms ⟹
+***     deadlock_free
+***      (z_machine Init ADSController_inv
+***        [zop_event initialToNormalOperation InitialToNormalOperation_type
+***          InitialToNormalOperation_pre initialToNormalOperation_Out
+***          InitialToNormalOperation,
+***         zop_event normalOperationToFailSafe NormalOperationToFailSafe_type
+***          NormalOperationToFailSafe_pre normalOperationToFailSafe_Out
+***          NormalOperationToFailSafe,
+***         zop_event normalOperationToChangeover
+***          NormalOperationToChangeover_type NormalOperationToChangeover_pre
+***          normalOperationToChangeover_Out NormalOperationToChangeover,
+***         zop_event changeoverToFailSafe ChangeoverToFailSafe_type
+***          ChangeoverToFailSafe_pre changeoverToFailSafe_Out
+***          ChangeoverToFailSafe,
+***         zop_event changeoverToNormalOperation
+***          ChangeoverToNormalOperation_type ChangeoverToNormalOperation_pre
+***          changeoverToNormalOperation_Out ChangeoverToNormalOperation,
+***         zop_event failSafeToNormalOperation FailSafeToNormalOperation_type
+***          FailSafeToNormalOperation_pre failSafeToNormalOperation_Out
+***          FailSafeToNormalOperation]
+***        (λ_. False))
+*** At command "apply" (line 347 of "~/ads-experiments/formal-contracts-2026-11-15/full/work/mutant-I3__Sn8/ADSController_Beh.thy")
+*** Failed to apply initial proof method (line 195 of "~/ads-experiments/formal-contracts-2026-11-15/full/work/mutant-I3__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ❙{True❙} ⟨Init⟩⇩a ❙{ADSController_inv❙}
+*** At command "by" (line 195 of "~/ads-experiments/formal-contracts-2026-11-15/full/work/mutant-I3__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:33 elapsed time, 0:00:29 cpu time, factor 0.88
+

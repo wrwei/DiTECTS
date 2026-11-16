@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<!--
+  Change impact analysis over the ADS element identity space.
+
+  GENERATED FILE — do not edit impact-app.html directly. Edit this template
+  (impact-app.template.html) and run build_app.py, which substitutes the
+  namespace data for the placeholder in the script block below.
+
+  The data is embedded rather than fetched because a browser opening a local
+  file blocks XHR/fetch against a sibling file (same-origin policy for
+  file://). Embedding is what lets a reviewer open this with no web server,
+  no build step, and no network.
+
+  The traversal is the same breadth-first search as impact.py, including the
+  edge ordering, so both report identical depths and identical via-kinds. The
+  self-check panel asserts that against the figures published in the article.
+-->
+<meta charset="utf-8">
+<title>ADS change impact analysis</title>
+<style>
+  :root {
+    --ink: #22262b; --soft: #6b7280; --hair: #d8dce1; --bg: #fbfbfc;
+    --requirements: #3b6ea5; --design: #1f7a6c; --safety-case: #b4494e;
+    --failure-analysis: #a86a2e; --executable-evidence: #6b5b95;
+    --digital-twin: #2f7d95;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  header {
+    padding: 18px 24px 14px; border-bottom: 1px solid var(--hair); background: #fff;
+  }
+  h1 { margin: 0 0 3px; font-size: 17px; font-weight: 600; }
+  .sub { color: var(--soft); font-size: 12.5px; }
+  main { max-width: 1080px; margin: 0 auto; padding: 20px 24px 60px; }
+  .panel {
+    background: #fff; border: 1px solid var(--hair); border-radius: 6px;
+    padding: 16px 18px; margin-bottom: 18px;
+  }
+  .panel h2 {
+    margin: 0 0 12px; font-size: 12px; font-weight: 600; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--soft);
+  }
+  .row { display: flex; gap: 14px; align-items: flex-end; flex-wrap: wrap; }
+  label { display: block; font-size: 11.5px; color: var(--soft); margin-bottom: 4px; }
+  input[type=text], select {
+    font: inherit; padding: 7px 9px; border: 1px solid var(--hair);
+    border-radius: 4px; background: #fff; color: inherit; min-width: 200px;
+  }
+  input[type=range] { width: 190px; }
+  .hint { font-size: 11.5px; color: var(--soft); margin-top: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th {
+    text-align: left; font-weight: 600; font-size: 11px; letter-spacing: .05em;
+    text-transform: uppercase; color: var(--soft);
+    border-bottom: 1px solid var(--hair); padding: 6px 8px;
+  }
+  td { padding: 5px 8px; border-bottom: 1px solid #eef0f2; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .depth-head td {
+    background: #f4f6f8; font-weight: 600; font-size: 11.5px;
+    color: var(--soft); letter-spacing: .04em;
+  }
+  .tag {
+    display: inline-block; padding: 1px 7px; border-radius: 9px;
+    font-size: 10.5px; font-weight: 600; color: #fff; white-space: nowrap;
+  }
+  code, .mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px;
+  }
+  .muted { color: var(--soft); }
+  .counts { display: flex; gap: 26px; flex-wrap: wrap; margin-bottom: 4px; }
+  .counts div span { display: block; font-size: 21px; font-weight: 600; }
+  .counts div small { color: var(--soft); font-size: 11px; }
+  .check { font-size: 12.5px; }
+  .check td { padding: 3px 8px; border: none; }
+  .ok { color: #1f7a45; font-weight: 600; }
+  .bad { color: #b4262c; font-weight: 600; }
+  .legend { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+  .hop { padding: 2px 0; }
+  .hop .arrow { color: var(--soft); }
+  datalist { position: absolute; }
+</style>
+
+<header>
+  <h1>ADS change impact analysis</h1>
+  <div class="sub">
+    Breadth-first traversal over the element identity space. Same graph and same
+    traversal as <code>impact.py</code>; no server, no network, no build step.
+  </div>
+</header>
+
+<main>
+  <div class="panel">
+    <h2>Query</h2>
+    <div class="row">
+      <div>
+        <label for="start">Changed element</label>
+        <input type="text" id="start" list="elements" value="dryerA"
+               placeholder="label or id, e.g. dryerA" autocomplete="off">
+        <datalist id="elements"></datalist>
+      </div>
+      <div>
+        <label for="depth">Traversal depth: <b id="depthLabel">unbounded</b></label>
+        <input type="range" id="depth" min="0" max="8" value="0">
+      </div>
+      <div>
+        <label for="target">Shortest path to (optional)</label>
+        <input type="text" id="target" list="elements" placeholder="e.g. G1"
+               autocomplete="off">
+      </div>
+    </div>
+    <div class="hint" id="hint"></div>
+  </div>
+
+  <div class="panel" id="resultPanel">
+    <h2>Impact set</h2>
+    <div class="counts" id="counts"></div>
+    <div class="legend" id="legend"></div>
+    <div id="result" style="margin-top:14px"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Self-check against the published figures</h2>
+    <div class="check" id="selfcheck"></div>
+    <div class="hint">
+      Computed in this browser from the embedded namespace. Each row states a
+      figure reported in the article and the value this traversal produces; a
+      mismatch means the deposited data and the article disagree.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>The graph</h2>
+    <div id="graphStats"></div>
+    <div class="hint" id="provenance"></div>
+  </div>
+</main>
+
+<script>
+"use strict";
+const NS = __NAMESPACE_JSON__;
+
+// ---------------------------------------------------------------------------
+// Index. Adjacency is built in file order, appending both directions per edge,
+// exactly as impact.py does, so shortest paths agree hop for hop.
+// ---------------------------------------------------------------------------
+const node = new Map(NS.nodes.map(n => [n.id, n]));
+const adj = new Map();
+for (const e of NS.edges) {
+  if (!adj.has(e.source)) adj.set(e.source, []);
+  if (!adj.has(e.target)) adj.set(e.target, []);
+  adj.get(e.source).push([e.target, e.kind, e.name || null]);
+  adj.get(e.target).push([e.source, e.kind, e.name || null]);
+}
+const neighbours = id => adj.get(id) || [];
+
+// impact.py iterates `sorted(adj[u])`, i.e. Python tuple order over
+// (target_id, kind, name). Replicated so the recorded via-kind matches.
+function sortedNeighbours(id) {
+  return neighbours(id).slice().sort((a, b) => {
+    for (let i = 0; i < 3; i++) {
+      const x = a[i] === null ? "" : a[i], y = b[i] === null ? "" : b[i];
+      if (x < y) return -1;
+      if (x > y) return 1;
+    }
+    return 0;
+  });
+}
+
+// Accepts an id, a label, or a short name. Requirements are labelled by
+// declaredName (dischargeLimit) but cited in the article by short name
+// (REQ-TRIT-014), so both must resolve or a reader cannot reproduce the
+// published traversals.
+function resolve(query) {
+  if (!query) return null;
+  if (node.has(query)) return query;
+  for (const key of ["label", "shortName"]) {
+    const exact = NS.nodes.filter(n => n[key] === query);
+    if (exact.length === 1) return exact[0].id;
+  }
+  const lowered = query.toLowerCase();
+  for (const key of ["label", "shortName"]) {
+    const loose = NS.nodes.filter(n => (n[key] || "").toLowerCase() === lowered);
+    if (loose.length === 1) return loose[0].id;
+  }
+  return null;
+}
+
+// Breadth-first closure: [{depth, id, via}]. maxDepth null = unbounded.
+function impact(start, maxDepth) {
+  const seen = new Set([start]);
+  let frontier = [start], out = [], depth = 0;
+  while (frontier.length && (maxDepth === null || depth < maxDepth)) {
+    depth += 1;
+    const next = [];
+    for (const u of frontier) {
+      for (const [v, kind] of sortedNeighbours(u)) {
+        if (!seen.has(v)) {
+          seen.add(v); next.push(v); out.push({ depth, id: v, via: kind });
+        }
+      }
+    }
+    frontier = next;
+  }
+  return out;
+}
+
+// Shortest path, unsorted adjacency — matches impact.py's path().
+function shortestPath(start, target) {
+  const prev = new Map([[start, null]]);
+  const queue = [start];
+  let head = 0;
+  while (head < queue.length) {
+    const u = queue[head++];
+    if (u === target) break;
+    for (const [v, kind, name] of neighbours(u)) {
+      if (!prev.has(v)) { prev.set(v, [u, kind, name]); queue.push(v); }
+    }
+  }
+  if (!prev.has(target)) return null;
+  const out = [];
+  let cur = target;
+  while (prev.get(cur)) {
+    const [u, kind, name] = prev.get(cur);
+    out.push({ id: cur, kind, name });
+    cur = u;
+  }
+  return out.reverse();
+}
+
+// ---------------------------------------------------------------------------
+// Rendering
+// ---------------------------------------------------------------------------
+const concerns = [...new Set(NS.nodes.map(n => n.concern))].sort();
+const colourOf = c => `var(--${c})`;
+const esc = s => String(s === null || s === undefined ? "" : s)
+  .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const nameOf = id => (node.get(id) || {}).label || id;
+
+function tag(concern) {
+  return `<span class="tag" style="background:${colourOf(concern)}">${esc(concern)}</span>`;
+}
+
+function renderLegend() {
+  document.getElementById("legend").innerHTML = concerns
+    .map(c => tag(c)).join(" ");
+}
+
+function renderRows(hits) {
+  if (hits.length === 0) return `<p class="muted">Nothing reached.</p>`;
+  const byDepth = new Map();
+  for (const h of hits) {
+    if (!byDepth.has(h.depth)) byDepth.set(h.depth, []);
+    byDepth.get(h.depth).push(h);
+  }
+  let html = `<table><thead><tr><th>Element</th><th>Concern</th>`
+           + `<th>Reached via</th><th>Statement</th></tr></thead><tbody>`;
+  for (const d of [...byDepth.keys()].sort((a, b) => a - b)) {
+    const group = byDepth.get(d).slice()
+      .sort((a, b) => String(nameOf(a.id)).localeCompare(String(nameOf(b.id))));
+    html += `<tr class="depth-head"><td colspan="4">depth ${d}`
+          + ` &nbsp;(${group.length})</td></tr>`;
+    for (const h of group) {
+      const n = node.get(h.id);
+      const label = n.label || `<span class="muted mono">${esc(h.id)}</span>`;
+      const notation = n.notation ? ` <span class="muted">(${esc(n.notation)})</span>`
+                     : n.shortName ? ` <span class="muted">${esc(n.shortName)}</span>` : "";
+      html += `<tr><td class="mono">${esc(label)}${notation}</td>`
+            + `<td>${tag(n.concern)}</td>`
+            + `<td class="mono muted">${esc(h.via)}</td>`
+            + `<td class="muted">${esc((n.text || "").slice(0, 70))}</td></tr>`;
+    }
+  }
+  return html + `</tbody></table>`;
+}
+
+function renderPath(hops, start) {
+  let html = `<div class="hop mono"><b>${esc(nameOf(start))}</b></div>`;
+  hops.forEach((h, i) => {
+    const via = h.kind + (h.name ? "/" + h.name : "");
+    html += `<div class="hop mono">&nbsp;&nbsp;${i + 1}. `
+          + `<span class="arrow">-[${esc(via)}]&rarr;</span> `
+          + `<b>${esc(nameOf(h.id))}</b> ${tag(node.get(h.id).concern)}</div>`;
+  });
+  return html;
+}
+
+function counts(hits) {
+  const byConcern = new Map();
+  for (const h of hits) {
+    const c = node.get(h.id).concern;
+    byConcern.set(c, (byConcern.get(c) || 0) + 1);
+  }
+  return `<div><span>${hits.length}</span><small>elements reached</small></div>`
+       + `<div><span>${byConcern.size}</span><small>concerns spanned</small></div>`
+       + `<div><span>${hits.length ? Math.max(...hits.map(h => h.depth)) : 0}</span>`
+       + `<small>deepest hop</small></div>`;
+}
+
+function run() {
+  const startQ = document.getElementById("start").value.trim();
+  const targetQ = document.getElementById("target").value.trim();
+  const slider = Number(document.getElementById("depth").value);
+  const maxDepth = slider === 0 ? null : slider;
+  document.getElementById("depthLabel").textContent =
+    maxDepth === null ? "unbounded" : String(maxDepth);
+
+  const start = resolve(startQ);
+  const hint = document.getElementById("hint");
+  if (!start) {
+    hint.innerHTML = startQ
+      ? `<span class="bad">No element matches “${esc(startQ)}”.</span>`
+        + ` Try a label such as <code>dryerA</code>, <code>Sn1</code> or <code>G2</code>.`
+      : `Enter an element label to see what a change to it reaches.`;
+    document.getElementById("counts").innerHTML = "";
+    document.getElementById("result").innerHTML = "";
+    return;
+  }
+  hint.innerHTML = `Starting from <b>${esc(nameOf(start))}</b>`
+    + ` <span class="muted mono">${esc(start)}</span>`
+    + (node.get(start).uuid
+        ? ` &middot; element UUID <span class="muted mono">${esc(node.get(start).uuid)}</span>`
+        : ` &middot; <span class="muted">no element UUID (not an authored model element)</span>`);
+
+  if (targetQ) {
+    const target = resolve(targetQ);
+    if (!target) {
+      document.getElementById("result").innerHTML =
+        `<p class="bad">No element matches “${esc(targetQ)}”.</p>`;
+      document.getElementById("counts").innerHTML = "";
+      return;
+    }
+    const hops = shortestPath(start, target);
+    document.getElementById("counts").innerHTML = hops
+      ? `<div><span>${hops.length}</span><small>hops to ${esc(nameOf(target))}</small></div>`
+      : "";
+    document.getElementById("result").innerHTML = hops
+      ? renderPath(hops, start)
+      : `<p class="muted">${esc(nameOf(start))} does not reach ${esc(nameOf(target))}.</p>`;
+    return;
+  }
+
+  const hits = impact(start, maxDepth);
+  document.getElementById("counts").innerHTML = counts(hits);
+  document.getElementById("result").innerHTML = renderRows(hits);
+}
+
+// ---------------------------------------------------------------------------
+// Self-check. Each expectation is a figure stated in the article.
+// ---------------------------------------------------------------------------
+function selfCheck() {
+  const dryerA = resolve("dryerA");
+  const at = d => impact(dryerA, d).length;
+  const firstDepthOf = label => {
+    const id = resolve(label);
+    const hit = impact(dryerA, null).find(h => h.id === id);
+    return hit ? hit.depth : null;
+  };
+  const traceEdges = NS.edges.filter(e => e.kind === "traceability");
+  // A link with several targets contributes one edge per target, all carrying
+  // the link's name, so links are counted by name and edges separately.
+  const traceLinks = new Set(traceEdges.map(e => e.name));
+  const pairs = new Set(traceEdges.map(
+    e => node.get(e.source).concern + "\u2192" + node.get(e.target).concern));
+
+  const rows = [
+    ["Depth 1 from dryerA", 8, at(1)],
+    ["Depth 2 from dryerA", 22, at(2)],
+    ["Depth 4 from dryerA", 72, at(4)],
+    ["Depth 5 from dryerA", 95, at(5)],
+    ["Unbounded closure", 133, at(null)],
+    ["Top goal G1 first reached at depth", 4, firstDepthOf("G1")],
+    ["Cross-concern typed links", 87, traceLinks.size],
+    ["Link endpoint pairs (traceability edges)", 107, traceEdges.length],
+    ["Concern pairs carrying links", 8, pairs.size],
+    ["Elements in the identity space", 134, NS.nodes.length],
+    ["Edges the traversal follows", 216, NS.edges.length],
+    // The article cites requirements by short name; if these stop resolving a
+    // reader cannot reproduce the traversals it reports.
+    ["REQ-TRIT-014 reached at depth", 5, firstDepthOf("REQ-TRIT-014")],
+    ["REQ-ADS-002 reached at depth", 3, firstDepthOf("REQ-ADS-002")],
+    ["REQ-ADS-005 reached at depth", 1, firstDepthOf("REQ-ADS-005")],
+  ];
+  const failed = rows.filter(r => r[1] !== r[2]).length;
+  let html = `<table><tbody>`;
+  for (const [what, expected, got] of rows) {
+    const pass = expected === got;
+    html += `<tr><td>${esc(what)}</td>`
+          + `<td class="mono muted">article: ${expected}</td>`
+          + `<td class="mono">computed: ${got === null ? "not reached" : got}</td>`
+          + `<td class="${pass ? "ok" : "bad"}">${pass ? "agrees" : "MISMATCH"}</td></tr>`;
+  }
+  html += `</tbody></table>`;
+  html = (failed === 0
+    ? `<p class="ok">All ${rows.length} published figures reproduce from the deposited data.</p>`
+    : `<p class="bad">${failed} of ${rows.length} figures do not reproduce.</p>`) + html;
+  document.getElementById("selfcheck").innerHTML = html;
+}
+
+function graphStats() {
+  const byConcern = new Map(), byKind = new Map();
+  for (const n of NS.nodes) byConcern.set(n.concern, (byConcern.get(n.concern) || 0) + 1);
+  for (const e of NS.edges) byKind.set(e.kind, (byKind.get(e.kind) || 0) + 1);
+  const withUuid = NS.nodes.filter(n => n.uuid).length;
+  const cell = m => [...m.entries()].sort((a, b) => b[1] - a[1])
+    .map(([k, v]) => `<tr><td>${esc(k)}</td><td class="mono">${v}</td></tr>`).join("");
+  document.getElementById("graphStats").innerHTML =
+      `<div class="counts">`
+    + `<div><span>${NS.nodes.length}</span><small>elements</small></div>`
+    + `<div><span>${NS.edges.length}</span><small>edges</small></div>`
+    + `<div><span>${withUuid}</span><small>with an element UUID</small></div>`
+    + `</div>`
+    + `<div class="row" style="align-items:flex-start;gap:40px;margin-top:8px">`
+    + `<table style="width:auto"><thead><tr><th>Concern</th><th>Elements</th></tr></thead>`
+    + `<tbody>${cell(byConcern)}</tbody></table>`
+    + `<table style="width:auto"><thead><tr><th>Edge kind</th><th>Count</th></tr></thead>`
+    + `<tbody>${cell(byKind)}</tbody></table></div>`;
+  document.getElementById("provenance").textContent =
+    (NS.provenance || "") + " " + (NS.concerns || "");
+}
+
+document.getElementById("elements").innerHTML = [...new Set(
+    NS.nodes.flatMap(n => [n.label, n.shortName]).filter(Boolean))]
+  .sort()
+  .map(l => `<option value="${esc(l)}">`).join("");
+for (const id of ["start", "target", "depth"]) {
+  document.getElementById(id).addEventListener("input", run);
+}
+renderLegend(); run(); selfCheck(); graphStats();
+</script>

@@ -1,0 +1,54 @@
+{
+  "gsn-safety-case.elements": [
+    {
+      "_id": "6a96509a7a882e24b8eb4c29",
+      "__t": "Solution",
+      "name": "6a96509a7a882e24b8eb4c70",
+      "description": "6a96509a7a882e24b8eb4c71",
+      "graphNode": "6a96509a7a882e24b8eb4c6f"
+    },
+    {
+      "_id": "6a96509a7a882e24b8eb4c70",
+      "__t": "LangString",
+      "lang": "en",
+      "content": "Sn7"
+    },
+    {
+      "_id": "6a96509a7a882e24b8eb4c71",
+      "__t": "Description",
+      "content": "6a96509a7a882e24b8eb4c90"
+    },
+    {
+      "_id": "6a96509a7a882e24b8eb4c90",
+      "__t": "MultiLangString",
+      "value": [
+        "6a96509a7a882e24b8eb4ca9"
+      ]
+    },
+    {
+      "_id": "6a96509a7a882e24b8eb4ca9",
+      "__t": "ExpressionLangString",
+      "content": "Dafny proof: one-live-bed invariant + PowerLoss => FailSafe postconditions"
+    }
+  ],
+  "traceability.links": [
+    {
+      "_id": "6a96509a7a882e24b8eb5ba6",
+      "name": "Sn7-to-Dafny",
+      "source": "6a96509a7a882e24b8eb4c29",
+      "targets": [
+        "6a96509a7a882e24b8eb5ba7"
+      ],
+      "projectID": "6a9650997a882e24b8eb4767"
+    }
+  ],
+  "models": [
+    {
+      "_id": "6a96509a7a882e24b8eb5ba7",
+      "name": "ADS Controller Proof - Dafny",
+      "type": "Dafny Model",
+      "model": "6a96509a7a882e24b8eb54f3",
+      "editor": "formal-viewer"
+    }
+  ]
+}

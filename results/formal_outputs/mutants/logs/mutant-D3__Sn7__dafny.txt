@@ -1,0 +1,17 @@
+# mutant-D3 Sn7 -> ADS Controller Proof - Dafny via dafny
+# command: dafny verify ./ADSController.dfy
+# exit: 4  timedOut: False  seconds: 0.91
+
+ADSController.dfy(109,59): Error: a postcondition could not be proved on this return path
+    |
+109 |         if (event == BackupRestored || event == PowerLoss) {
+    |                                                            ^
+
+ADSController.dfy(105,44): Related location: this is the postcondition that could not be proved
+    |
+105 |         ensures event == PowerLoss ==> mode == FailSafe   // REQ-ADS-007 (already FailSafe; stays)
+    |                                             ^^
+
+
+Dafny program verifier finished with 10 verified, 1 error
+

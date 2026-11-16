@@ -1,0 +1,8 @@
+# stale-ST1-tCycle Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-66207-85242 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/formal-contracts-2026-11-15/full:~/ads-experiments/formal-contracts-2026-11-15/full -w ~/ads-experiments/formal-contracts-2026-11-15/full/work/stale-ST1-tCycle__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/formal-contracts-2026-11-15/full/work/stale-ST1-tCycle__Sn8
+# exit: 0  timedOut: False  seconds: 40.09
+
+Running ADSController_Check ...
+Finished ADSController_Check (0:00:23 elapsed time, 0:00:31 cpu time, factor 1.34)
+0:00:34 elapsed time, 0:00:31 cpu time, factor 0.90
+

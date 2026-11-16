@@ -1,0 +1,8 @@
+# baseline Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-92791-20191 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/reverify-review4/baseline:~/ads-experiments/reverify-review4/baseline -w ~/ads-experiments/reverify-review4/baseline/work/baseline__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/reverify-review4/baseline/work/baseline__Sn8
+# exit: 0  timedOut: False  seconds: 49.08
+
+Running ADSController_Check ...
+Finished ADSController_Check (0:00:32 elapsed time, 0:00:51 cpu time, factor 1.60)
+0:00:43 elapsed time, 0:00:51 cpu time, factor 1.17
+

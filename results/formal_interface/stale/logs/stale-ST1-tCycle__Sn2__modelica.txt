@@ -1,0 +1,26 @@
+# stale-ST1-tCycle Sn2 -> ADS Changeover Transient_Modelica via modelica
+# command: docker run --rm --init --pull never --name reverify-omc-83467-4551 -e HOME=/tmp -v ~/ads-experiments/reverify-review3/stale/work/stale-ST1-tCycle__Sn2:~/ads-experiments/reverify-review3/stale/work/stale-ST1-tCycle__Sn2 -w ~/ads-experiments/reverify-review3/stale/work/stale-ST1-tCycle__Sn2/simulation/modelica openmodelica/openmodelica:v1.26.9-minimal timeout -k 30 630 omc reverify_verdict.mos
+# exit: 0  timedOut: False  seconds: 0.9
+
+true
+""
+record SimulationResult
+    resultFile = "",
+    simulationOptions = "startTime = 0.0, stopTime = 2e4, numberOfIntervals = 2000, tolerance = 1e-6, method = 'dassl', fileNamePrefix = 'ADSChangeover_verdict', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "Simulation execution failed for model: ADSChangeover
+LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_ASSERT        | info    | [~/ads-experiments/reverify-review3/stale/work/stale-ST1-tCycle__Sn2/simulation/modelica/ADSChangeover.mo:123:3-123:122:writable]
+|                 | |       | The following assertion has been violated at time 8320.000000
+|                 | |       | ((DF >= DFtarget)) --> \"Detritiation continuity violated: plant DF fell below the authorised target during changeover\"
+LOG_ASSERT        | error   | No event found, but assert was triggered. Throwing now!
+",
+    timeFrontend = 0.0022457080000000003,
+    timeBackend = 0.00185275,
+    timeSimCode = 0.014472292000000001,
+    timeTemplates = 0.016273458,
+    timeCompile = 0.47411712599999994,
+    timeSimulation = 0.016359500000000003,
+    timeTotal = 0.525849084
+end SimulationResult;
+""
+

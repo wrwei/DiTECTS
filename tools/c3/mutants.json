@@ -1,0 +1,761 @@
+[
+ {
+  "id": "D1",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "altered transition target",
+  "requirement": "REQ-ADS-007",
+  "description": "PowerLoss during Changeover no longer enters FailSafe (controller stays in Changeover)",
+  "expected": "FAIL: ensures event == PowerLoss ==> mode == FailSafe",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "(method transitionFromChangeover[\\s\\S]*?if \\(event == PowerLoss\\) \\{\\s*mode := )FailSafe",
+    "replace": "$1Changeover",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "D2",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "weakened invariant (bed taken offline)",
+  "requirement": "REQ-ADS-002",
+  "description": "Changeover takes the duty bed offline (new Dryer value NoBed) before the standby bed is live",
+  "expected": "FAIL: ensures Valid()",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "datatype Dryer = BedA \\| BedB",
+    "replace": "datatype Dryer = BedA | BedB | NoBed",
+    "expectCount": 1
+   },
+   {
+    "file": "ADSController.dfy",
+    "pattern": "(mode := Changeover;)",
+    "replace": "$1 activeDryer := NoBed;",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "D3",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "widened exit guard",
+  "requirement": "REQ-ADS-007",
+  "description": "FailSafe is left on PowerLoss as well as BackupRestored",
+  "expected": "FAIL: ensures event == PowerLoss ==> mode == FailSafe",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "if \\(event == BackupRestored\\)",
+    "replace": "if (event == BackupRestored || event == PowerLoss)",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "D4",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "weakened precondition",
+  "requirement": "REQ-ADS-007",
+  "description": "requires mode == FailSafe removed from transitionFromFailSafe",
+  "expected": "FAIL: postcondition no longer provable without the precondition",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "requires mode == FailSafe\\r?\\n\\s*",
+    "replace": "",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "D5",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "dispatch error",
+  "requirement": "REQ-ADS-006",
+  "description": "step() dispatches Changeover events to the NormalOperation handler",
+  "expected": "FAIL: precondition mode == NormalOperation violated",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "(else if \\(mode == Changeover\\) \\{\\s*)transitionFromChangeover\\(event\\);",
+    "replace": "$1transitionFromNormalOperation(event);",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "D6",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "deleted action",
+  "requirement": "REQ-ADS-006",
+  "description": "ChangeoverComplete returns to NormalOperation without swapping the duty bed",
+  "expected": "FAIL: ensures event == ChangeoverComplete ==> activeDryer == nextDryer(old(activeDryer))",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "\\r?\\n\\s*activeDryer := nextDryer\\(activeDryer\\);",
+    "replace": "",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "DC1",
+  "solution": "Sn7",
+  "class": "control",
+  "operator": "spec strengthening that holds",
+  "description": "Add a true postcondition: DewpointHigh in NormalOperation leads to Changeover",
+  "expected": "PASS",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "(method transitionFromNormalOperation[\\s\\S]*?)(\\n    \\{)",
+    "replace": "$1\n        ensures event == DewpointHigh ==> mode == Changeover$2",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "DC2",
+  "solution": "Sn7",
+  "class": "control",
+  "operator": "reorder clauses + comment",
+  "description": "Swap the order of the two requires clauses of transitionFromNormalOperation and edit a comment",
+  "expected": "PASS",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "requires mode == NormalOperation(\\r?\\n)(\\s*)requires Valid\\(\\)",
+    "replace": "requires Valid()$1$2requires mode == NormalOperation",
+    "expectCount": 1
+   },
+   {
+    "file": "ADSController.dfy",
+    "pattern": "// Auto-generated Dafny verification code from Java source",
+    "replace": "// Auto-generated Dafny verification code from Java source (C3 benign control edit)",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "J1",
+  "solution": "Sn10",
+  "class": "fault",
+  "operator": "altered transition target",
+  "requirement": "REQ-ADS-007",
+  "description": "PowerLoss during Changeover emits EnterFailSafe but the mode stays Changeover",
+  "expected": "FAIL: \"PowerLoss from Changeover also enters FailSafe\"",
+  "edits": [
+   {
+    "file": "src/main/java/ads/controller/ADSController.java",
+    "pattern": "(\\} else if \\(currentMode == ADSMode\\.Changeover\\) \\{\\s*if \\(event instanceof InputEvent\\.PowerLoss\\) \\{\\s*actuator\\.apply\\(new OutputEvent\\.EnterFailSafe\\(\\)\\);\\s*currentMode = ADSMode\\.)FailSafe",
+    "replace": "$1Changeover",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "J2",
+  "solution": "Sn10",
+  "class": "fault",
+  "operator": "broken alternation",
+  "requirement": "REQ-ADS-006",
+  "description": "nextDryer(BedA) returns BedA: changeover never swaps the duty bed",
+  "expected": "FAIL: alternation tests",
+  "edits": [
+   {
+    "file": "src/main/java/ads/sensor/DryerFunctions.java",
+    "pattern": "return Dryer\\.BedB;",
+    "replace": "return Dryer.BedA;",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "J3",
+  "solution": "Sn10",
+  "class": "fault",
+  "operator": "widened exit guard",
+  "requirement": "REQ-ADS-007",
+  "description": "FailSafe is also left on DewpointHigh",
+  "expected": "FAIL: \"FailSafe is only left on BackupRestored\"",
+  "edits": [
+   {
+    "file": "src/main/java/ads/controller/ADSController.java",
+    "pattern": "if \\(event instanceof InputEvent\\.BackupRestored\\)",
+    "replace": "if (event instanceof InputEvent.BackupRestored || event instanceof InputEvent.DewpointHigh)",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "J4",
+  "solution": "Sn10",
+  "class": "fault",
+  "operator": "premature action (changeover sequencing)",
+  "requirement": "REQ-ADS-002/006",
+  "description": "Duty bed is swapped when changeover starts (DewpointHigh) instead of when it completes",
+  "expected": "FAIL: \"bed does not swap until the changeover completes\"",
+  "edits": [
+   {
+    "file": "src/main/java/ads/controller/ADSController.java",
+    "pattern": "(actuator\\.apply\\(new OutputEvent\\.StartChangeover\\(\\)\\);)",
+    "replace": "$1\n                activeDryer = dryers.nextDryer(activeDryer);",
+    "expectCount": 1
+   },
+   {
+    "file": "src/main/java/ads/controller/ADSController.java",
+    "pattern": "activeDryer = dryers\\.nextDryer\\(activeDryer\\);(\\s*currentMode = ADSMode\\.NormalOperation;)",
+    "replace": "$1",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "JC1",
+  "solution": "Sn10",
+  "class": "control",
+  "operator": "rename private field",
+  "description": "Rename private field dryers -> dryerFunctions throughout ADSController",
+  "expected": "PASS",
+  "edits": [
+   {
+    "file": "src/main/java/ads/controller/ADSController.java",
+    "pattern": "\\bdryers\\b",
+    "replace": "dryerFunctions"
+   }
+  ]
+ },
+ {
+  "id": "JC2",
+  "solution": "Sn10",
+  "class": "control",
+  "operator": "equivalent control flow",
+  "description": "Final \"else if (currentMode == ADSMode.FailSafe)\" replaced by plain \"else\" (enum has exactly three values, field never null)",
+  "expected": "PASS",
+  "edits": [
+   {
+    "file": "src/main/java/ads/controller/ADSController.java",
+    "pattern": "\\} else if \\(currentMode == ADSMode\\.FailSafe\\) \\{",
+    "replace": "} else {",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "F1",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "introduced nondeterminism",
+  "requirement": "REQ-ADS-007",
+  "description": "Second powerLoss transition from NormalOperation targeting Changeover (nondeterministic response to power loss)",
+  "expected": "FAIL: :[deterministic]",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\[\\] dbisim\\(\\(true\\)&\\(powerLoss__!NID_NormalOperation\\.in -> SKIP ;  share__choice\\(exit -> SKIP\\) ; \\(share__choice\\(exited -> SKIP\\) ; SKIP ; FailSafe::enter -> SKIP\\)\\)\\))",
+    "replace": "$1 [] dbisim((true)&(powerLoss__!NID_NormalOperation.in -> SKIP ;  share__choice(exit -> SKIP) ; (share__choice(exited -> SKIP) ; SKIP ; Changeover::enter -> SKIP)))"
+   }
+  ]
+ },
+ {
+  "id": "F2",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted recovery transition",
+  "requirement": "REQ-ADS-007",
+  "description": "backupRestored transition out of FailSafe deleted (FailSafe becomes a sink)",
+  "expected": "FAIL: :[deadlock-free]",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "\\r?\\n[\\t ]*\\[\\] dbisim\\(\\(true\\)&\\(backupRestored__!NID_FailSafe\\.in[^\\r\\n]*",
+    "replace": ""
+   }
+  ]
+ },
+ {
+  "id": "F3",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "altered transition target",
+  "requirement": "REQ-ADS-007",
+  "description": "powerLoss in Changeover leads to NormalOperation instead of FailSafe",
+  "expected": "FAIL: power-loss response protocol refinement",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(powerLoss__!NID_Changeover\\.in -> SKIP ;  share__choice\\(exit -> SKIP\\) ; \\(share__choice\\(exited -> SKIP\\) ; SKIP ; )FailSafe::enter",
+    "replace": "$1NormalOperation::enter"
+   }
+  ]
+ },
+ {
+  "id": "F4",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "altered function",
+  "requirement": "REQ-ADS-006",
+  "description": "nextDryer always returns BedA: changeover never swaps the duty bed",
+  "expected": "FAIL: ADS_AlternationStart [T= ADS_AlternationView",
+  "edits": [
+   {
+    "file": "instantiations.csp",
+    "pattern": "nextDryer\\(current\\) = if current == Dryer_BedA then Dryer_BedB else Dryer_BedA",
+    "replace": "nextDryer(current) = Dryer_BedA",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "FC1",
+  "solution": "Sn9",
+  "class": "control",
+  "operator": "reorder external choice",
+  "description": "Swap the order of the two NormalOperation transitions ([] is commutative)",
+  "expected": "PASS",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\[\\] dbisim\\(\\(true\\)&\\(powerLoss__!NID_NormalOperation\\.in[^\\r\\n]*)(\\r?\\n[\\t ]*)(\\[\\] dbisim\\(\\(true\\)&\\(dewpointHigh__!NID_NormalOperation\\.in[^\\r\\n]*)",
+    "replace": "$3$2$1"
+   }
+  ]
+ },
+ {
+  "id": "I1",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered update (triggers)",
+  "requirement": "REQ-ADS-007 (R1)",
+  "description": "NormalOperationToFailSafe leaves dewpointHigh enabled in FailSafe",
+  "expected": "FAIL: \"NormalOperationToFailSafe() preserves R1\"",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(zoperation NormalOperationToFailSafe =[\\s\\S]*?triggers\\\\<Zprime> = )\\{backupRestored\\}",
+    "replace": "$1{backupRestored, dewpointHigh}",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I2",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered initial state",
+  "requirement": "REQ-ADS-002 (R2)",
+  "description": "New Dryer value Offline; Init puts no bed on duty",
+  "expected": "FAIL: \"Init establishes R2\"",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "enumtype Dryer = BedA \\| BedB",
+    "replace": "enumtype Dryer = BedA | BedB | Offline",
+    "expectCount": 1
+   },
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "\\[activeDryer\\\\<leadsto> BedA",
+    "replace": "[activeDryer\\<leadsto> Offline",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I3",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered initial state (invariant)",
+  "requirement": "state invariant",
+  "description": "Init starts with an empty trace, violating inv tr \\<noteq> []",
+  "expected": "FAIL: Init_inv",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": ",tr\\\\<leadsto> \\[State initial\\]",
+    "replace": ",tr\\<leadsto> []",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I4",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "deleted operation",
+  "requirement": "deadlock-freedom",
+  "description": "FailSafeToNormalOperation removed from the machine operations (no exit from FailSafe)",
+  "expected": "FAIL: ADSController_deadlock_free",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": ",\\n    zop_event failSafeToNormalOperation FailSafeToNormalOperation_type FailSafeToNormalOperation_pre failSafeToNormalOperation_Out FailSafeToNormalOperation\\]",
+    "replace": "]",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I5",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "deleted update",
+  "requirement": "REQ-ADS-006",
+  "description": "ChangeoverToNormalOperation no longer updates activeDryer (the duty bed never alternates)",
+  "expected": "FAIL: ChangeoverToNormalOperation_alternates",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "\\r?\\n\\s*,activeDryer\\\\<Zprime> = nextDryer activeDryer",
+    "replace": "",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "IC1",
+  "solution": "Sn8",
+  "class": "control",
+  "operator": "text/comment edit",
+  "description": "Edit the introduction text block",
+  "expected": "PASS",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "text \\\\<open> This theory file is to model the ADSController state machine in Z Machine notations\\.\\\\<close>",
+    "replace": "text \\<open> This theory models the ADSController state machine in Z Machine notation (C3 control edit).\\<close>",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "D7",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "review diagnostic",
+  "description": "DewpointHigh no longer starts a changeover",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "\\ \\ \\ \\ \\ \\ \\ \\ else\\ if\\ \\(event\\ ==\\ DewpointHigh\\)\\ \\{\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ mode\\ :=\\ Changeover;\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ //\\ action:\\ RaiseAlarm\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\}",
+    "replace": "        // REVIEW: ignore the dewpoint alarm.",
+    "expectCount": 1
+   }
+  ],
+  "requirement": "REQ-ADS-006",
+  "expected": "FAIL: complete transition and bed-preservation postconditions"
+ },
+ {
+  "id": "D8",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "review diagnostic",
+  "description": "BackupRestored no longer leaves FailSafe",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "\\ \\ \\ \\ \\ \\ \\ \\ if\\ \\(event\\ ==\\ BackupRestored\\)\\ \\{\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ mode\\ :=\\ NormalOperation;\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ //\\ action:\\ RestoreNormal\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\}",
+    "replace": "        // REVIEW: ignore backup restoration.",
+    "expectCount": 1
+   }
+  ],
+  "requirement": "REQ-ADS-007",
+  "expected": "FAIL: complete transition and bed-preservation postconditions"
+ },
+ {
+  "id": "D9",
+  "solution": "Sn7",
+  "class": "fault",
+  "operator": "review diagnostic",
+  "description": "Duty bed changes before ChangeoverComplete",
+  "edits": [
+   {
+    "file": "ADSController.dfy",
+    "pattern": "\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ mode\\ :=\\ Changeover;\\\n\\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ //\\ action:\\ RaiseAlarm",
+    "replace": "            mode := Changeover;\n            activeDryer := nextDryer(activeDryer);\n            // action: RaiseAlarm",
+    "expectCount": 1
+   }
+  ],
+  "requirement": "REQ-ADS-002/006",
+  "expected": "FAIL: complete transition and bed-preservation postconditions"
+ },
+ {
+  "id": "I6",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "deleted input operations",
+  "requirement": "REQ-ADS-007",
+  "description": "Remove both power-loss operations from the executable machine while retaining their definitions and the stored trigger set",
+  "expected": "FAIL: executable input availability",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "\\ \\ \\ \\ zop_event\\ normalOperationToFailSafe\\ NormalOperationToFailSafe_type\\ NormalOperationToFailSafe_pre\\ normalOperationToFailSafe_Out\\ NormalOperationToFailSafe,\\\n",
+    "replace": "",
+    "expectCount": 1
+   },
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "\\ \\ \\ \\ zop_event\\ changeoverToFailSafe\\ ChangeoverToFailSafe_type\\ ChangeoverToFailSafe_pre\\ changeoverToFailSafe_Out\\ ChangeoverToFailSafe,\\\n",
+    "replace": "",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I7",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered transition target",
+  "requirement": "REQ-ADS-002/006",
+  "description": "NormalOperationToChangeover enters FailSafe (with the FailSafe trigger set) instead of Changeover",
+  "expected": "FAIL: NormalOperationToChangeover_destination",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(pre \"st= NormalOperation\"\\n  update \"\\[st\\\\<Zprime>= )Changeover",
+    "replace": "$1FailSafe",
+    "expectCount": 1
+   },
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(\\[Event startChangeover\\] @ \\[State )Changeover(\\]\\n\\s*,triggers\\\\<Zprime> = )\\{powerLoss, changeoverComplete\\}",
+    "replace": "$1FailSafe$2{backupRestored}",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I8",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "premature action",
+  "requirement": "REQ-ADS-006",
+  "description": "NormalOperationToChangeover swaps the duty bed when changeover starts (bed swaps twice per cycle)",
+  "expected": "FAIL: NormalOperationToChangeover_destination",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(,triggers\\\\<Zprime> = \\{powerLoss, changeoverComplete\\})",
+    "replace": "$1\n         ,activeDryer\\<Zprime> = nextDryer activeDryer",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I9",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered transition target",
+  "requirement": "REQ-ADS-007",
+  "description": "FailSafeToNormalOperation enters Changeover (with the Changeover trigger set) instead of NormalOperation",
+  "expected": "FAIL: FailSafeToNormalOperation_destination",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(pre \"st= FailSafe\"\\n  update \"\\[st\\\\<Zprime>= )NormalOperation",
+    "replace": "$1Changeover",
+    "expectCount": 1
+   },
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(\\[Event restoreNormal\\] @ \\[State )NormalOperation(\\]\\n\\s*,triggers\\\\<Zprime> = )\\{powerLoss, dewpointHigh\\}",
+    "replace": "$1Changeover$2{powerLoss, changeoverComplete}",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "F5",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted output action",
+  "requirement": "REQ-ADS-007",
+  "description": "FailSafe exit no longer emits restoreNormal",
+  "expected": "FAIL: ADS_CommandNormal [FD= ADS_CommandView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "true&\\(share__choice\\(restoreNormal\\.out -> SKIP\\)\\) ; ",
+    "replace": ""
+   }
+  ]
+ },
+ {
+  "id": "F6",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted output action",
+  "requirement": "REQ-ADS-002",
+  "description": "Dewpoint alarm no longer emits raiseAlarm",
+  "expected": "FAIL: ADS_CommandNormal [FD= ADS_CommandView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "raiseAlarm\\.out -> SKIP\\)\\);true",
+    "replace": "SKIP));true"
+   }
+  ]
+ },
+ {
+  "id": "J5",
+  "solution": "Sn10",
+  "class": "fault",
+  "operator": "deleted output action",
+  "requirement": "REQ-ADS-002",
+  "description": "Dewpoint alarm no longer emits RaiseAlarm",
+  "expected": "FAIL: dewpointHighStartsChangeover",
+  "edits": [
+   {
+    "file": "src/main/java/ads/controller/ADSController.java",
+    "pattern": "\\n\\s*actuator\\.apply\\(new OutputEvent\\.RaiseAlarm\\(\\)\\);",
+    "replace": "",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I10",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "widened precondition",
+  "requirement": "REQ-ADS-007",
+  "description": "Startup (InitialToNormalOperation) is also enabled in FailSafe, so FailSafe can be left without backupRestored",
+  "expected": "FAIL: ADSController_offered_by_mode",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "pre \"st= initial\"",
+    "replace": "pre \"st= initial \\<or> st= FailSafe\"",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I11",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered initial state (trace)",
+  "requirement": "state invariant",
+  "description": "Init records only powerLoss in the trace, with no state entry",
+  "expected": "FAIL: Init_inv",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "tr\\\\<leadsto> \\[State initial\\]",
+    "replace": "tr\\<leadsto> [Event powerLoss]",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "F7",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "wrong event direction",
+  "requirement": "REQ-ADS-006",
+  "description": "Startup performs raiseAlarm.in (an input on an output channel) before entering NormalOperation",
+  "expected": "FAIL: ADS_CommandNormal [FD= ADS_CommandView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "i0 -> SKIP ;  \\(\\(SKIP ; NormalOperation::enter -> SKIP\\)\\)",
+    "replace": "i0 -> SKIP ;  ((raiseAlarm.in -> SKIP ; NormalOperation::enter -> SKIP))"
+   }
+  ]
+ },
+ {
+  "id": "I12",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered handler binding",
+  "requirement": "REQ-ADS-007",
+  "description": "The power-loss channel in NormalOperation runs the changeover operation (handler binding swapped in the executable operation list)",
+  "expected": "FAIL: ADSController_handler_targets",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(zop_event normalOperationToFailSafe NormalOperationToFailSafe_type NormalOperationToFailSafe_pre normalOperationToFailSafe_Out )NormalOperationToFailSafe",
+    "replace": "$1NormalOperationToChangeover",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "F8",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted output command",
+  "requirement": "REQ-ADS-007",
+  "description": "The composed module no longer emits enterFailSafe on entering FailSafe",
+  "expected": "FAIL: ADS_ModuleCommandNormal [FD= ADS_ModuleCommandView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\n\\t{6}Active \\t\\t= true&\\()share__choice\\(enterFailSafe\\.out -> SKIP\\)(\\) ; )",
+    "replace": "$1SKIP$2",
+    "expectCount": 2
+   }
+  ]
+ },
+ {
+  "id": "F9",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted bed swap",
+  "requirement": "REQ-ADS-006",
+  "description": "The composed module writes the current bed instead of the other bed on changeover completion",
+  "expected": "FAIL: ADS_ModuleAlternationStart(ADS_InitialBed) [FD= ADS_ModuleAlternationView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\n\\t{6} \\t \\[\\] dbisim\\(\\(true\\)&\\(changeoverComplete__!NID_Changeover\\.in[^\\n]*?)set_activeDryer!nextDryer\\(activeDryer\\)",
+    "replace": "$1set_activeDryer!activeDryer",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "F10",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted output command",
+  "requirement": "REQ-ADS-007",
+  "description": "The controller no longer emits enterFailSafe on entering FailSafe",
+  "expected": "FAIL: ADS_CtrlCommandNormal [FD= ADS_CtrlCommandView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\n\\t{5}Active \\t\\t= true&\\()share__choice\\(enterFailSafe\\.out -> SKIP\\)(\\) ; )",
+    "replace": "$1SKIP$2",
+    "expectCount": 2
+   }
+  ]
+ },
+ {
+  "id": "F11",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted bed swap",
+  "requirement": "REQ-ADS-006",
+  "description": "The controller writes the current bed instead of the other bed on changeover completion",
+  "expected": "FAIL: ADS_CtrlAlternationStart(ADS_InitialBed) [FD= ADS_CtrlAlternationView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "(\\n\\t{5} \\t \\[\\] dbisim\\(\\(true\\)&\\(changeoverComplete__!NID_Changeover\\.in[^\\n]*?)set_activeDryer!nextDryer\\(activeDryer\\)",
+    "replace": "$1set_activeDryer!activeDryer",
+    "expectCount": 1
+   }
+  ]
+ }
+]

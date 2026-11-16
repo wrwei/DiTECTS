@@ -1,0 +1,52 @@
+[
+ {
+  "id": "I10",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "widened precondition",
+  "requirement": "REQ-ADS-007",
+  "description": "Startup (InitialToNormalOperation) is also enabled in FailSafe, so FailSafe can be left without backupRestored",
+  "expected": "FAIL: ADSController_offered_by_mode",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "pre \"st= initial\"",
+    "replace": "pre \"st= initial \\<or> st= FailSafe\"",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "I11",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered initial state (trace)",
+  "requirement": "state invariant",
+  "description": "Init records only powerLoss in the trace, with no state entry",
+  "expected": "FAIL: Init_inv",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "tr\\\\<leadsto> \\[State initial\\]",
+    "replace": "tr\\<leadsto> [Event powerLoss]",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "F7",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "wrong event direction",
+  "requirement": "REQ-ADS-006",
+  "description": "Startup performs raiseAlarm.in (an input on an output channel) before entering NormalOperation",
+  "expected": "FAIL: ADS_CommandNormal [FD= ADS_CommandView",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "i0 -> SKIP ;  \\(\\(SKIP ; NormalOperation::enter -> SKIP\\)\\)",
+    "replace": "i0 -> SKIP ;  ((raiseAlarm.in -> SKIP ; NormalOperation::enter -> SKIP))"
+   }
+  ]
+ }
+]

@@ -1,0 +1,7 @@
+# baseline Sn7 -> ADS Controller Proof - Dafny via dafny
+# command: dafny verify ./ADSController.dfy
+# exit: 0  timedOut: False  seconds: 0.94
+
+
+Dafny program verifier finished with 9 verified, 0 errors
+

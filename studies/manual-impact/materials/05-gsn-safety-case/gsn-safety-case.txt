@@ -1,0 +1,27 @@
+node | type | text
+G1 | Goal | ADS maintains stack tritium release within the authorised limit and ALARP (discharges REQ-TRIT-014)
+C1 | Context | ADS design model (02-design.sysml)
+C2 | Context | Authorised discharge limits and the ALARP duty
+A1 | Assumption | Generic reliability data is representative pending fusion-specific data
+S1 | Strategy | Argument over identified failure modes (FMEDA)
+S2 | Strategy | Argument over defence-in-depth functions
+G2 | Goal | Dryer breakthrough is detected and mitigated before the authorised limit is challenged
+G3 | Goal | Bed changeover preserves the detritiation function
+G4 | Goal | Loss of off-site power leads to a fail-safe state with timely recovery
+G5 | Goal | Detritiation capacity is adequate (DF >= 1000, REQ-ADS-001)
+G6 | Goal | Monitoring is independent (REQ-ADS-008) and calibrated (REQ-ADS-011)
+G7 | Goal | The regeneration path is contained (REQ-ADS-009)
+Sn1 | Solution | FMEDA row 7 + dual-bed changeover test results
+Sn2 | Solution | Changeover proof-test records (future: FMU transient evidence)
+Sn3 | Solution | UPS discharge-test records + FMEDA rows 15/17
+Sn4 | Solution | DF design calculation + recombiner efficiency data (row 3)
+Sn5 | Solution | Calibration records + stack-monitor independence analysis (rows 12/14)
+Sn6 | Solution | Regeneration-path design verification (row 6)
+S3 | Strategy | Argument that the controller's changeover and fail-safe logic is formally verified and its implementation tested
+G8 | Goal | The ADS controller correctly sequences bed changeover and enters fail-safe on power loss (REQ-ADS-002/006/007), with no deadlock
+Sn7 | Solution | Dafny proof: one-live-bed invariant + PowerLoss => FailSafe postconditions
+Sn8 | Solution | Isabelle/HOL proof: invariant preservation, R1 (FailSafe exits only on backup), R2 (one live bed), deadlock-freedom
+Sn9 | Solution | FDR/CSP refinement + determinism/deadlock/livelock checks generated from RoboChart
+Sn10 | Solution | Java JUnit suite: 12 controller scenarios + dryer alternation
+A2 | Assumption | REQ-TRIT-007 (confinement barriers) and REQ-TRIT-021 (inventory cap) are plant-level requirements allocated to the plant confinement and inventory safety cases, outside the ADS argument
+Sn11 | Solution | Blower flow-alarm and standby-restart test records + FMEDA rows 1/2

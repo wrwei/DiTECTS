@@ -1,0 +1,41 @@
+{
+  "runs": [
+    {
+      "condition": "protocols and property checks",
+      "initialBed": "Dryer_BedA",
+      "passed": 35,
+      "failed": 0,
+      "seconds": 1.25,
+      "log": "protocol-Dryer_BedA.txt"
+    },
+    {
+      "condition": "protocols and property checks",
+      "initialBed": "Dryer_BedB",
+      "passed": 35,
+      "failed": 0,
+      "seconds": 0.88,
+      "log": "protocol-Dryer_BedB.txt"
+    },
+    {
+      "condition": "timed closed-memory interface",
+      "passed": 30,
+      "failed": 0,
+      "seconds": 1.5,
+      "log": "timed-csp.txt"
+    }
+  ],
+  "sources": {
+    "formal/csp/file_robochart_controller_coreassertions.csp": "0bcaa8bd7ed19b837cd01d6bb1d773b6475b4f45ff434115ec1b802d06329165",
+    "formal/csp/tests/powerloss_response.csp": "8c8ad119c5509898e1880001ebdf60dad9bded3a74eba4aebf7e6e6e14f4bff6",
+    "formal/csp/tests/bed_alternation.csp": "f0390b90c491b9b8f8174bb7c8e2f17c96782f7cc1f830f4215a37274fd3db6c",
+    "formal/csp/timed/file_robochart_controller_coreassertions.csp": "5dd0ef4851cd00d19e18c0851e3855afdb9ab25761dbd38178abce3c19475d99"
+  },
+  "scope": "Untimed input/output protocols and timed process properties under the stated memory interface. No 30-second restart or physical bed availability claim.",
+  "generatedAt": "2026-11-15T15:21:05.620053+00:00",
+  "regressionTests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "passed": 17,
+    "failed": 0,
+    "log": "regression-tests.txt"
+  }
+}

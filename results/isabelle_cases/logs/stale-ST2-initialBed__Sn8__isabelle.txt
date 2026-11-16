@@ -1,0 +1,8 @@
+# stale-ST2-initialBed Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-32808-88361 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/stale-ST2-initialBed__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/stale-ST2-initialBed__Sn8
+# exit: 0  timedOut: False  seconds: 37.2
+
+Running ADSController_Check ...
+Finished ADSController_Check (0:00:20 elapsed time, 0:00:26 cpu time, factor 1.30)
+0:00:31 elapsed time, 0:00:26 cpu time, factor 0.84
+

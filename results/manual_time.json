@@ -1,0 +1,204 @@
+{
+ "model": {
+  "P_s": 1.1,
+  "M_s": 1.35,
+  "bounds": {
+   "low": {
+    "K": 0.2,
+    "wpm": 300,
+    "find_in_files": true
+   },
+   "high": {
+    "K": 0.28,
+    "wpm": 200,
+    "find_in_files": false
+   }
+  },
+  "sources": [
+   "Card, Moran and Newell (1980) Commun. ACM 23(7):396-410",
+   "Rayner et al. (2016) Psychol. Sci. Public Interest 17(1):4-34"
+  ]
+ },
+ "scenarios": {
+  "REQ-ADS-007": {
+   "EXACT": {
+    "low": {
+     "search_s": 1057.3,
+     "inspect_hits_s": 845.3,
+     "read_s": 1907.8,
+     "record_s": 351.2,
+     "total_h": 1.16,
+     "hits": 345,
+     "segments_read": 131,
+     "terms": 185
+    },
+    "high": {
+     "search_s": 14287.3,
+     "inspect_hits_s": 845.3,
+     "read_s": 2861.7,
+     "record_s": 434.9,
+     "total_h": 5.12,
+     "hits": 345,
+     "segments_read": 131,
+     "terms": 185
+    }
+   },
+   "thread_review_h": {
+    "low": 0.58,
+    "high": 0.84
+   },
+   "LENIENT": {
+    "low": {
+     "search_s": 1174.3,
+     "inspect_hits_s": 1506.8,
+     "read_s": 2003.6,
+     "record_s": 386.6,
+     "total_h": 1.41,
+     "hits": 615,
+     "segments_read": 153,
+     "terms": 205
+    },
+    "high": {
+     "search_s": 15873.5,
+     "inspect_hits_s": 1506.8,
+     "read_s": 3005.4,
+     "record_s": 478.0,
+     "total_h": 5.8,
+     "hits": 615,
+     "segments_read": 153,
+     "terms": 205
+    }
+   }
+  },
+  "dryerA": {
+   "EXACT": {
+    "low": {
+     "search_s": 1057.3,
+     "inspect_hits_s": 845.3,
+     "read_s": 1907.8,
+     "record_s": 353.8,
+     "total_h": 1.16,
+     "hits": 345,
+     "segments_read": 131,
+     "terms": 185
+    },
+    "high": {
+     "search_s": 14287.3,
+     "inspect_hits_s": 845.3,
+     "read_s": 2861.7,
+     "record_s": 438.5,
+     "total_h": 5.12,
+     "hits": 345,
+     "segments_read": 131,
+     "terms": 185
+    }
+   },
+   "thread_review_h": {
+    "low": 0.58,
+    "high": 0.84
+   },
+   "LENIENT": {
+    "low": {
+     "search_s": 1174.3,
+     "inspect_hits_s": 1506.8,
+     "read_s": 2003.6,
+     "record_s": 389.1,
+     "total_h": 1.41,
+     "hits": 615,
+     "segments_read": 153,
+     "terms": 205
+    },
+    "high": {
+     "search_s": 15873.5,
+     "inspect_hits_s": 1506.8,
+     "read_s": 3005.4,
+     "record_s": 481.6,
+     "total_h": 5.8,
+     "hits": 615,
+     "segments_read": 153,
+     "terms": 205
+    }
+   }
+  },
+  "controller": {
+   "EXACT": {
+    "low": {
+     "search_s": 1057.3,
+     "inspect_hits_s": 845.3,
+     "read_s": 1907.8,
+     "record_s": 353.0,
+     "total_h": 1.16,
+     "hits": 345,
+     "segments_read": 131,
+     "terms": 185
+    },
+    "high": {
+     "search_s": 14287.3,
+     "inspect_hits_s": 845.3,
+     "read_s": 2861.7,
+     "record_s": 437.4,
+     "total_h": 5.12,
+     "hits": 345,
+     "segments_read": 131,
+     "terms": 185
+    }
+   },
+   "thread_review_h": {
+    "low": 0.58,
+    "high": 0.84
+   },
+   "LENIENT": {
+    "low": {
+     "search_s": 1174.3,
+     "inspect_hits_s": 1506.8,
+     "read_s": 2003.6,
+     "record_s": 388.4,
+     "total_h": 1.41,
+     "hits": 615,
+     "segments_read": 153,
+     "terms": 205
+    },
+    "high": {
+     "search_s": 15873.5,
+     "inspect_hits_s": 1506.8,
+     "read_s": 3005.4,
+     "record_s": 480.5,
+     "total_h": 5.8,
+     "hits": 615,
+     "segments_read": 153,
+     "terms": 205
+    }
+   }
+  }
+ },
+ "all_starts": {
+  "EXACT": {
+   "low": {
+    "median_h": 1.16,
+    "max_h": 1.16
+   },
+   "high": {
+    "median_h": 5.12,
+    "max_h": 5.14
+   }
+  },
+  "thread_review": {
+   "low": {
+    "median_h": 0.58
+   },
+   "high": {
+    "median_h": 0.84
+   }
+  },
+  "LENIENT": {
+   "low": {
+    "median_h": 1.41,
+    "max_h": 1.42
+   },
+   "high": {
+    "median_h": 5.8,
+    "max_h": 5.84
+   }
+  }
+ }
+}

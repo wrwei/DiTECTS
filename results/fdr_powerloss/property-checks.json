@@ -1,0 +1,14 @@
+{
+  "assertionsPassed": 26,
+  "assertionsFailed": 0,
+  "productionAssertions": 21,
+  "additionalChecks": 5,
+  "checks": [
+    "power loss in normal operation",
+    "power loss during changeover",
+    "power loss after recovery",
+    "a stopped response admits legal trace prefixes",
+    "the stopped response fails failures-divergences refinement"
+  ],
+  "coreAssertionsSHA256": "82a03e5e03adaf6245882dff41989e7e4ef9261c172b156194eaf77aa5bd97b7"
+}

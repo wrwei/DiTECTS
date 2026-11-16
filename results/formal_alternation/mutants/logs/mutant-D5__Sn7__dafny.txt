@@ -1,0 +1,17 @@
+# mutant-D5 Sn7 -> ADS Controller Proof - Dafny via dafny
+# command: dafny verify ./ADSController.dfy
+# exit: 4  timedOut: False  seconds: 1.0
+
+ADSController.dfy(110,41): Error: a precondition for this call could not be proved
+    |
+110 |             transitionFromNormalOperation(event);
+    |                                          ^
+
+ADSController.dfy(51,22): Related location: this is the precondition that could not be proved
+   |
+51 |         requires mode == NormalOperation
+   |                       ^^
+
+
+Dafny program verifier finished with 8 verified, 1 error
+

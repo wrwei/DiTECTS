@@ -1,0 +1,17 @@
+# mutant-D6 Sn7 -> ADS Controller Proof - Dafny via dafny
+# command: dafny verify ./ADSController.dfy
+# exit: 4  timedOut: False  seconds: 0.94
+
+ADSController.dfy(80,46): Error: a postcondition could not be proved on this return path
+   |
+80 |         else if (event == ChangeoverComplete) {
+   |                                               ^
+
+ADSController.dfy(72,60): Related location: this is the postcondition that could not be proved
+   |
+72 |         ensures event == ChangeoverComplete ==> activeDryer == nextDryer(old(activeDryer))   // REQ-ADS-006
+   |                                                             ^^
+
+
+Dafny program verifier finished with 8 verified, 1 error
+

@@ -1,0 +1,11 @@
+# mutant-I4 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-89436-28500 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/reverify-binding/all:~/ads-experiments/reverify-binding/all -w ~/ads-experiments/reverify-binding/all/work/mutant-I4__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/reverify-binding/all/work/mutant-I4__Sn8
+# exit: 137  timedOut: False  seconds: 1748.66
+
+Running ADSController_Check ...
+/tmp/isabelle-/bash_script581879862995860514: line 1:   184 Killed                  "$POLYML_EXE" -q --minheap 500 --gcthreads 0 --exportstats --eval \(PolyML.SaveState.loadHierarchy\ \[\"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/Pure\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/HOL\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/HOL-Eisbach\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/Optics\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/Shallow-Expressions\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/Shallow-Expressions-Z\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/Interaction_Trees\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/ITree_UTP\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/ITree_VCG\",\ \"/opt/isabelle/heaps/polyml-5.9_x86_64_32-linux/Z_Machines\"\]\;\ PolyML.print_depth\ 0\) --eval Options.load_default\ \(\) --eval Resources.init_session_env\ \(\) --eval Command_Line.tool\ \(fn\ \(\)\ \=\>\ \(Isabelle_Process.init_build\ \(\)\)\)\;
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+
+Unfinished session(s): ADSController_Check
+0:29:03 elapsed time, 0:32:14 cpu time, factor 1.11
+

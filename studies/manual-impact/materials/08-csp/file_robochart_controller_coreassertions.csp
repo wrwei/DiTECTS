@@ -1,0 +1,220 @@
+
+--
+-- RoboChart generator version <unknown>
+-- Automatically generated on 08-06-2026 16:29:52
+--
+-- Iterated compression status: true
+-- Assertions compression status: true
+--
+
+include "file_robochart_controller.csp"
+
+-- Component-level processes are checked without an external writer of the
+-- shared variable activeDryer, as in ADSController_Module, where no other
+-- component writes it. With an external writer, a write between the
+-- controller's read of activeDryer and its changeover update makes the
+-- written bed depend on interleaving, so the open components are not
+-- deterministic.
+
+-- generate ADSController
+P_ADSController = let
+	id__ = 0
+	
+	
+	
+within
+	ADSController::O__(
+		id__
+	) [| {|ADSController::set_EXT_activeDryer|} |] SKIP
+assert P_ADSController :[deadlock-free]	
+assert P_ADSController;RUN({r__}) :[deadlock-free]
+assert P_ADSController :[deterministic]
+assert P_ADSController :[divergence-free]
+
+
+-- generate ADSController_Ctrl
+P_ADSController_Ctrl = let
+	id__ = 0
+	
+	
+	
+		
+within
+	ADSController_Ctrl::O__(id__) [| {|ADSController_Ctrl::set_EXT_activeDryer|} |] SKIP
+
+assert P_ADSController_Ctrl :[deadlock-free]	
+assert P_ADSController_Ctrl;RUN({r__}) :[deadlock-free]
+assert P_ADSController_Ctrl :[deterministic]
+assert P_ADSController_Ctrl :[divergence-free]
+
+-- generate ADSController_Ctrl_stm_ref0
+P_ADSController_Ctrl_stm_ref0 = let
+	id__ = 0
+	
+	
+	
+within
+	ADSController_Ctrl::stm_ref0::O__(
+		id__
+	) [| {|ADSController_Ctrl::stm_ref0::set_EXT_activeDryer|} |] SKIP
+assert P_ADSController_Ctrl_stm_ref0 :[deadlock-free]	
+assert P_ADSController_Ctrl_stm_ref0;RUN({r__}) :[deadlock-free]
+assert P_ADSController_Ctrl_stm_ref0 :[deterministic]
+assert P_ADSController_Ctrl_stm_ref0 :[divergence-free]
+
+-- generate ADSController_Module
+P_ADSController_Module = let
+	id__ = 0
+	
+	
+	
+		
+	
+within
+	ADSController_Module::O__(id__)
+assert P_ADSController_Module :[deadlock-free]	
+assert P_ADSController_Module;RUN({r__}) :[deadlock-free]
+assert P_ADSController_Module :[deterministic]
+assert P_ADSController_Module :[divergence-free]
+
+-- generate ADSController_Module_ctrl_ref0
+P_ADSController_Module_ctrl_ref0 = let
+	id__ = 0
+	
+	
+	
+		
+within
+	ADSController_Module::ctrl_ref0::O__(id__) [| {|ADSController_Module::ctrl_ref0::set_EXT_activeDryer|} |] SKIP
+
+assert P_ADSController_Module_ctrl_ref0 :[deadlock-free]	
+assert P_ADSController_Module_ctrl_ref0;RUN({r__}) :[deadlock-free]
+assert P_ADSController_Module_ctrl_ref0 :[deterministic]
+assert P_ADSController_Module_ctrl_ref0 :[divergence-free]
+
+
+-- REQ-ADS-007: an accepted power-loss input must be followed by the fail-safe
+-- entry action before another controller input. This is an untimed protocol.
+ADS_ResponseEvents = {ADSController::powerLoss.in, ADSController::dewpointHigh.in,
+  ADSController::changeoverComplete.in, ADSController::backupRestored.in,
+  ADSController::enterFailSafe.out}
+
+ADS_ResponseNormal = ADSController::powerLoss.in -> ADS_ResponsePending
+  [] ADSController::dewpointHigh.in -> ADS_ResponseChangeover
+ADS_ResponseChangeover = ADSController::powerLoss.in -> ADS_ResponsePending
+  [] ADSController::changeoverComplete.in -> ADS_ResponseNormal
+ADS_ResponsePending = ADSController::enterFailSafe.out -> ADS_ResponseFailSafe
+ADS_ResponseFailSafe = ADSController::backupRestored.in -> ADS_ResponseNormal
+
+-- Block external shutdown and memory writes; hide the remaining finite actions.
+ADS_ResponseView =
+  (P_ADSController [| {|ADSController::terminate, ADSController::set_EXT_activeDryer|} |] STOP)
+    \ diff(ADSController::sem__events, ADS_ResponseEvents)
+
+assert ADS_ResponseNormal [FD= ADS_ResponseView
+
+-- REQ-ADS-006: the first and every later completed changeover select the
+-- other bed. Retain controller inputs so unrelated input loops stay visible.
+ADS_OtherBed(d) = if d == Dryer_BedA then Dryer_BedB else Dryer_BedA
+ADS_AlternationStart(d) = ADSController::powerLoss.in -> ADS_BedFailSafe(d)
+  [] ADSController::dewpointHigh.in -> ADS_BedChangeover(d)
+ADS_BedChangeover(d) = ADSController::powerLoss.in -> ADS_BedFailSafe(d)
+  [] ADSController::changeoverComplete.in ->
+       ADSController::set_activeDryer!ADS_OtherBed(d) ->
+       ADS_AlternationStart(ADS_OtherBed(d))
+ADS_BedFailSafe(d) = ADSController::backupRestored.in -> ADS_AlternationStart(d)
+
+ADS_AlternationView =
+  (P_ADSController [| {|ADSController::terminate, ADSController::set_EXT_activeDryer|} |] STOP)
+    \ diff(ADSController::sem__events,
+            union({ADSController::powerLoss.in, ADSController::dewpointHigh.in,
+                   ADSController::changeoverComplete.in, ADSController::backupRestored.in},
+                  {|ADSController::set_activeDryer|}))
+
+assert ADS_AlternationStart(ADS_InitialBed) [FD= ADS_AlternationView
+
+-- Controller commands: each accepted input is followed by its output commands,
+-- in order, before the next input (raiseAlarm then startChangeover on a
+-- dewpoint alarm; enterFailSafe on power loss; restoreNormal on backup
+-- restoration; no command on changeover completion). Untimed protocol.
+-- All eight public channels stay visible in both directions, so an event in
+-- the wrong direction (for example raiseAlarm.in) is outside the protocol.
+ADS_CommandEvents = {|ADSController::powerLoss, ADSController::dewpointHigh,
+  ADSController::changeoverComplete, ADSController::backupRestored,
+  ADSController::enterFailSafe, ADSController::raiseAlarm,
+  ADSController::startChangeover, ADSController::restoreNormal|}
+
+ADS_CommandNormal = ADSController::powerLoss.in -> ADSController::enterFailSafe.out -> ADS_CommandFailSafe
+  [] ADSController::dewpointHigh.in -> ADSController::raiseAlarm.out ->
+       ADSController::startChangeover.out -> ADS_CommandChangeover
+ADS_CommandChangeover = ADSController::powerLoss.in -> ADSController::enterFailSafe.out -> ADS_CommandFailSafe
+  [] ADSController::changeoverComplete.in -> ADS_CommandNormal
+ADS_CommandFailSafe = ADSController::backupRestored.in -> ADSController::restoreNormal.out -> ADS_CommandNormal
+
+ADS_CommandView =
+  (P_ADSController [| {|ADSController::terminate, ADSController::set_EXT_activeDryer|} |] STOP)
+    \ diff(ADSController::sem__events, ADS_CommandEvents)
+
+assert ADS_CommandNormal [FD= ADS_CommandView
+
+-- Ctrl: the command and bed protocols on this level's own copy of the state
+-- machine, so a fault confined to that copy is not masked by the other levels.
+ADS_CtrlCommandEvents = {|ADSController_Ctrl::powerLoss, ADSController_Ctrl::dewpointHigh,
+  ADSController_Ctrl::changeoverComplete, ADSController_Ctrl::backupRestored,
+  ADSController_Ctrl::enterFailSafe, ADSController_Ctrl::raiseAlarm,
+  ADSController_Ctrl::startChangeover, ADSController_Ctrl::restoreNormal|}
+
+ADS_CtrlCommandNormal = ADSController_Ctrl::powerLoss.in -> ADSController_Ctrl::enterFailSafe.out -> ADS_CtrlCommandFailSafe
+  [] ADSController_Ctrl::dewpointHigh.in -> ADSController_Ctrl::raiseAlarm.out ->
+       ADSController_Ctrl::startChangeover.out -> ADS_CtrlCommandChangeover
+ADS_CtrlCommandChangeover = ADSController_Ctrl::powerLoss.in -> ADSController_Ctrl::enterFailSafe.out -> ADS_CtrlCommandFailSafe
+  [] ADSController_Ctrl::changeoverComplete.in -> ADS_CtrlCommandNormal
+ADS_CtrlCommandFailSafe = ADSController_Ctrl::backupRestored.in -> ADSController_Ctrl::restoreNormal.out -> ADS_CtrlCommandNormal
+
+ADS_CtrlCommandView = (P_ADSController_Ctrl [| {|ADSController_Ctrl::terminate|} |] STOP) \ diff(Events, ADS_CtrlCommandEvents)
+
+assert ADS_CtrlCommandNormal [FD= ADS_CtrlCommandView
+
+ADS_CtrlAlternationStart(d) = ADSController_Ctrl::powerLoss.in -> ADS_CtrlBedFailSafe(d)
+  [] ADSController_Ctrl::dewpointHigh.in -> ADS_CtrlBedChangeover(d)
+ADS_CtrlBedChangeover(d) = ADSController_Ctrl::powerLoss.in -> ADS_CtrlBedFailSafe(d)
+  [] ADSController_Ctrl::changeoverComplete.in -> ADSController_Ctrl::set_activeDryer!ADS_OtherBed(d) ->
+       ADS_CtrlAlternationStart(ADS_OtherBed(d))
+ADS_CtrlBedFailSafe(d) = ADSController_Ctrl::backupRestored.in -> ADS_CtrlAlternationStart(d)
+
+ADS_CtrlAlternationView = (P_ADSController_Ctrl [| {|ADSController_Ctrl::terminate|} |] STOP) \
+  diff(Events, union({ADSController_Ctrl::powerLoss.in, ADSController_Ctrl::dewpointHigh.in,
+                       ADSController_Ctrl::changeoverComplete.in, ADSController_Ctrl::backupRestored.in}, {|ADSController_Ctrl::set_activeDryer|}))
+
+assert ADS_CtrlAlternationStart(ADS_InitialBed) [FD= ADS_CtrlAlternationView
+
+-- Module: the command and bed protocols on this level's own copy of the state
+-- machine, so a fault confined to that copy is not masked by the other levels.
+ADS_ModuleCommandEvents = {|ADSController_Module::powerLoss, ADSController_Module::dewpointHigh,
+  ADSController_Module::changeoverComplete, ADSController_Module::backupRestored,
+  ADSController_Module::enterFailSafe, ADSController_Module::raiseAlarm,
+  ADSController_Module::startChangeover, ADSController_Module::restoreNormal|}
+
+ADS_ModuleCommandNormal = ADSController_Module::powerLoss.in -> ADSController_Module::enterFailSafe.out -> ADS_ModuleCommandFailSafe
+  [] ADSController_Module::dewpointHigh.in -> ADSController_Module::raiseAlarm.out ->
+       ADSController_Module::startChangeover.out -> ADS_ModuleCommandChangeover
+ADS_ModuleCommandChangeover = ADSController_Module::powerLoss.in -> ADSController_Module::enterFailSafe.out -> ADS_ModuleCommandFailSafe
+  [] ADSController_Module::changeoverComplete.in -> ADS_ModuleCommandNormal
+ADS_ModuleCommandFailSafe = ADSController_Module::backupRestored.in -> ADSController_Module::restoreNormal.out -> ADS_ModuleCommandNormal
+
+ADS_ModuleCommandView = P_ADSController_Module \ diff(Events, ADS_ModuleCommandEvents)
+
+assert ADS_ModuleCommandNormal [FD= ADS_ModuleCommandView
+
+ADS_ModuleAlternationStart(d) = ADSController_Module::powerLoss.in -> ADS_ModuleBedFailSafe(d)
+  [] ADSController_Module::dewpointHigh.in -> ADS_ModuleBedChangeover(d)
+ADS_ModuleBedChangeover(d) = ADSController_Module::powerLoss.in -> ADS_ModuleBedFailSafe(d)
+  [] ADSController_Module::changeoverComplete.in -> ADSController_Module::ctrl_ref0::set_activeDryer!ADS_OtherBed(d) ->
+       ADS_ModuleAlternationStart(ADS_OtherBed(d))
+ADS_ModuleBedFailSafe(d) = ADSController_Module::backupRestored.in -> ADS_ModuleAlternationStart(d)
+
+ADS_ModuleAlternationView = P_ADSController_Module \
+  diff(Events, union({ADSController_Module::powerLoss.in, ADSController_Module::dewpointHigh.in,
+                       ADSController_Module::changeoverComplete.in, ADSController_Module::backupRestored.in}, {|ADSController_Module::ctrl_ref0::set_activeDryer|}))
+
+assert ADS_ModuleAlternationStart(ADS_InitialBed) [FD= ADS_ModuleAlternationView

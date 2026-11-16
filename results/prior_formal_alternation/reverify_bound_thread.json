@@ -1,0 +1,1412 @@
+{
+  "generatedAt": "2026-11-15T08:42:17+00:00",
+  "condition": "baseline + mutants + stale (composed; explicit state cases and CSP power-loss protocol)",
+  "repo": ".",
+  "namespace": "namespace/ads-namespace.json",
+  "sources": {
+    "baseline": {
+      "isabelle": "2026-11-15T08:20:08+0000",
+      "otherFourTargets": "2026-11-15T08:21:22+0000",
+      "fdr": "2026-11-15T08:38:34+0000"
+    },
+    "mutants": {
+      "isabelle": "2026-11-15T08:20:08+0000",
+      "otherTargets": "all (2026-11-14T19:58:48+0000)",
+      "fdr": "2026-11-15T08:38:34+0000"
+    },
+    "stale": {
+      "isabelle": "2026-11-15T08:20:08+0000",
+      "otherTargets": "rerun-stale (2026-11-15T00:08:12+0000)",
+      "fdr": "2026-11-15T08:38:34+0000"
+    },
+    "note": "The five unmodified targets pass. On 15 November 2026, the Isabelle proof was re-run in Docker using explicit state cases, and the CSP suite was re-run in FDR after an untimed power-loss protocol refinement was added. The final suite detects all 16 selected faults; all six controls pass. Full new results and logs are in results/isabelle_cases/, results/fdr_powerloss/ and results/verification_baseline/. Each new checker was also re-run for both change scenarios. Dafny and Java mutant/control results and the non-Isabelle/non-FDR scenario results are retained from the earlier bound-thread run because those artefacts are unchanged. The earlier killed I4 attempt and the earlier surviving F3 result are retained under sources.proofUpdate.previousI4 and sources.cspResponseUpdate.previousF3. These additions address gaps found in the initial run; the final detection total is not an independent estimate of fault-detection performance.",
+    "previousRunGeneratedAt": "2026-11-15T00:08:12+0000",
+    "proofUpdate": {
+      "date": "2026-11-15",
+      "file": "formal/isabelle/ADSController_Beh.thy",
+      "previousProof": "by (metis St.exhaust_disc)",
+      "currentProof": "by (case_tac st; auto)",
+      "modelDefinitionsChanged": false,
+      "theorySHA256": "59bb8c5a6b9402c084fe144cded780ae45f134e5051024335bb2c89184642fac",
+      "results": "results/isabelle_cases/reverify_results.json",
+      "previousI4": {
+        "tag": "mutant-I4",
+        "solution": "Sn8",
+        "link": "Sn8-to-Isabelle",
+        "target": "ADS Controller Behaviour",
+        "runner": "isabelle",
+        "command": "docker run --rm --init --name reverify-isa-89436-28500 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/reverify-binding/all:~/ads-experiments/reverify-binding/all -w ~/ads-experiments/reverify-binding/all/work/mutant-I4__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/reverify-binding/all/work/mutant-I4__Sn8",
+        "exit": 137,
+        "verdict": "NOT_ASSESSED",
+        "detail": "Killed",
+        "seconds": 1748.66,
+        "artefactChanged": true,
+        "log": "logs/mutant-I4__Sn8__isabelle.log",
+        "mutant": "I4",
+        "class": "fault",
+        "operator": "deleted operation",
+        "description": "FailSafeToNormalOperation removed from the machine operations (no exit from FailSafe)",
+        "outcome": "not assessed",
+        "archivedLog": "prior_bound_thread/logs/mutant-I4__Sn8__isabelle.txt"
+      },
+      "previousClassificationCorrection": {
+        "date": "2026-11-15",
+        "mutant": "I4",
+        "previousVerdict": "FAIL",
+        "previousOutcome": "detected",
+        "reason": "Checker process killed before its time budget; no proof result. Reclassified from the original output without re-running the checker."
+      }
+    },
+    "cspResponseUpdate": {
+      "date": "2026-11-15",
+      "file": "formal/csp/file_robochart_controller_coreassertions.csp",
+      "assertion": "ADS_ResponseNormal [FD= ADS_ResponseView",
+      "checks": "Untimed controller input/output protocol, including the enterFailSafe action after accepted powerLoss.",
+      "environment": "External terminate and set_EXT_activeDryer events are blocked; other non-protocol events are hidden.",
+      "controllerDefinitionsChanged": false,
+      "assertionCountBefore": 20,
+      "assertionCountAfter": 21,
+      "previousF3": {
+        "tag": "mutant-F3",
+        "solution": "Sn9",
+        "link": "Sn9-to-FDR",
+        "target": "ADS Controller Refinement",
+        "runner": "fdr",
+        "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+        "exit": 0,
+        "verdict": "PASS",
+        "detail": "20 assertions passed, 0 failed",
+        "seconds": 0.67,
+        "artefactChanged": true,
+        "log": "logs/mutant-F3__Sn9__fdr.log",
+        "mutant": "F3",
+        "class": "fault",
+        "operator": "altered transition target",
+        "description": "powerLoss in Changeover leads to NormalOperation instead of FailSafe",
+        "outcome": "survived",
+        "archivedLog": "prior_bound_thread/logs/mutant-F3__Sn9__fdr.txt"
+      },
+      "results": "results/fdr_powerloss/reverify_results.json",
+      "coreAssertionsSHA256": "82a03e5e03adaf6245882dff41989e7e4ef9261c172b156194eaf77aa5bd97b7"
+    },
+    "retainedLogs": "results/prior_bound_thread/logs.json"
+  },
+  "toolVersions": {
+    "python": "3.9.6",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpus": 10,
+    "dafny": "4.11.0",
+    "gradle": "Gradle 9.0.0",
+    "java": "java version \"21.0.10\" 2026-01-20 LTS",
+    "fdr": "4.2.7 (6ecbe5a21b71ab020e8fcaeccfe5ebaad0599f4f)",
+    "isabelle": "docker image isabelle-runtime:22.04",
+    "openmodelica": {
+      "image": "openmodelica/openmodelica:v1.26.9-minimal",
+      "repoDigests": [
+        "openmodelica/openmodelica@sha256:18dc2bd10cf7814960437b61981fc26eb23688240479deef761127ef66a2326e"
+      ],
+      "imageId": "sha256:18dc2bd10cf7814960437b61981fc26eb23688240479deef761127ef66a2326e",
+      "architecture": "arm64",
+      "available": true,
+      "omc": "OpenModelica 1.26.9"
+    }
+  },
+  "evidenceLinks": [
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-DualBedChangeover",
+      "target": "dryerA",
+      "targetId": "6a9650997a882e24b8eb48ab",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-DualBedChangeover",
+      "target": "dryerB",
+      "targetId": "6a9650997a882e24b8eb48c0",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-DualBedChangeover",
+      "target": "changeoverValves",
+      "targetId": "6a9650997a882e24b8eb48d2",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FMEA",
+      "target": "FMEDA row 7",
+      "targetId": "6a96509a7a882e24b8eb4ce5",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FMEA-BedAvailability",
+      "target": "FMEDA row 5",
+      "targetId": "6a96509a7a882e24b8eb4cde",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FMEA-BedAvailability",
+      "target": "FMEDA row 8",
+      "targetId": "6a96509a7a882e24b8eb4ce4",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FMEA-BedAvailability",
+      "target": "FMEDA row 9",
+      "targetId": "6a96509a7a882e24b8eb4ce6",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FTA-BedAvailability",
+      "target": "BE-05",
+      "targetId": "1c7e0157c257a016d0fcc2a9",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FTA-BedAvailability",
+      "target": "BE-08",
+      "targetId": "a8886f64c5698007eb768894",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FTA-BedAvailability",
+      "target": "BE-09",
+      "targetId": "6a9658e07a882e24b8eb5d26",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FTA-Breakthrough",
+      "target": "BE-07",
+      "targetId": "6a9658e07a882e24b8eb5d16",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn1",
+      "solutionId": "6a96509a7a882e24b8eb4c10",
+      "link": "Sn1-to-FTA-Breakthrough",
+      "target": "IE-04",
+      "targetId": "6a9658e07a882e24b8eb5dc6",
+      "targetKind": "FTAIntermediateEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn2",
+      "solutionId": "6a96509a7a882e24b8eb4c11",
+      "link": "Sn2-to-FMEA-Valves",
+      "target": "FMEDA row 10",
+      "targetId": "6a96509a7a882e24b8eb4cdd",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn2",
+      "solutionId": "6a96509a7a882e24b8eb4c11",
+      "link": "Sn2-to-FTA-ChangeoverValves",
+      "target": "BE-10",
+      "targetId": "6a9658e07a882e24b8eb5d36",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn2",
+      "solutionId": "6a96509a7a882e24b8eb4c11",
+      "link": "Sn2-to-FTA-ValveLeak",
+      "target": "BE-11",
+      "targetId": "6a9658e07a882e24b8eb5d46",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn2",
+      "solutionId": "6a96509a7a882e24b8eb4c11",
+      "link": "Sn2-to-Modelica",
+      "target": "ADS Changeover Transient_Modelica",
+      "targetId": "6a96509a7a882e24b8eb4cc9",
+      "targetKind": "ModelicaModel",
+      "runner": "modelica"
+    },
+    {
+      "solution": "Sn2",
+      "solutionId": "6a96509a7a882e24b8eb4c11",
+      "link": "Sn2-to-changeoverValves",
+      "target": "changeoverValves",
+      "targetId": "6a9650997a882e24b8eb48d2",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn3",
+      "solutionId": "6a96509a7a882e24b8eb4c12",
+      "link": "Sn3-to-FMEA1",
+      "target": "FMEDA row 15",
+      "targetId": "6a96509a7a882e24b8eb4ce0",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn3",
+      "solutionId": "6a96509a7a882e24b8eb4c12",
+      "link": "Sn3-to-FMEA2",
+      "target": "FMEDA row 17",
+      "targetId": "6a96509a7a882e24b8eb4cd9",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn3",
+      "solutionId": "6a96509a7a882e24b8eb4c12",
+      "link": "Sn3-to-FTA-LOOP",
+      "target": "BE-15",
+      "targetId": "6a9658e07a882e24b8eb5d76",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn3",
+      "solutionId": "6a96509a7a882e24b8eb4c12",
+      "link": "Sn3-to-FTA-LOOP",
+      "target": "BE-17",
+      "targetId": "6a9658e07a882e24b8eb5d86",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn3",
+      "solutionId": "6a96509a7a882e24b8eb4c12",
+      "link": "Sn3-to-FTA-LOOP",
+      "target": "IE-07",
+      "targetId": "6a9658e17a882e24b8eb5df6",
+      "targetKind": "FTAIntermediateEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn3",
+      "solutionId": "6a96509a7a882e24b8eb4c12",
+      "link": "Sn3-to-backupSupply",
+      "target": "backupSupply",
+      "targetId": "6a9650997a882e24b8eb48fa",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn4",
+      "solutionId": "6a96509a7a882e24b8eb4c13",
+      "link": "Sn4-to-DFDesign",
+      "target": "ads",
+      "targetId": "6a9650997a882e24b8eb4870",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn4",
+      "solutionId": "6a96509a7a882e24b8eb4c13",
+      "link": "Sn4-to-DFDesign",
+      "target": "recombiner",
+      "targetId": "6a9650997a882e24b8eb489d",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn4",
+      "solutionId": "6a96509a7a882e24b8eb4c13",
+      "link": "Sn4-to-FMEA",
+      "target": "FMEDA row 3",
+      "targetId": "6a96509a7a882e24b8eb4ce7",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn4",
+      "solutionId": "6a96509a7a882e24b8eb4c13",
+      "link": "Sn4-to-FMEA-Heater",
+      "target": "FMEDA row 4",
+      "targetId": "6a96509a7a882e24b8eb4ce8",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn4",
+      "solutionId": "6a96509a7a882e24b8eb4c13",
+      "link": "Sn4-to-FTA-Conversion",
+      "target": "BE-03",
+      "targetId": "6a9658e07a882e24b8eb5ce6",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn4",
+      "solutionId": "6a96509a7a882e24b8eb4c13",
+      "link": "Sn4-to-FTA-Conversion",
+      "target": "BE-04",
+      "targetId": "6a9658e07a882e24b8eb5cf6",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn4",
+      "solutionId": "6a96509a7a882e24b8eb4c13",
+      "link": "Sn4-to-FTA-Conversion",
+      "target": "IE-05",
+      "targetId": "6a9658e17a882e24b8eb5dd6",
+      "targetKind": "FTAIntermediateEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn5",
+      "solutionId": "6a96509a7a882e24b8eb4c14",
+      "link": "Sn5-to-FMEA1",
+      "target": "FMEDA row 12",
+      "targetId": "6a96509a7a882e24b8eb4ce2",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn5",
+      "solutionId": "6a96509a7a882e24b8eb4c14",
+      "link": "Sn5-to-FMEA2",
+      "target": "FMEDA row 14",
+      "targetId": "6a96509a7a882e24b8eb4ce9",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn5",
+      "solutionId": "6a96509a7a882e24b8eb4c14",
+      "link": "Sn5-to-FTA-MonitoringIndependence",
+      "target": "BE-12",
+      "targetId": "6a9658e07a882e24b8eb5d56",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn5",
+      "solutionId": "6a96509a7a882e24b8eb4c14",
+      "link": "Sn5-to-FTA-MonitoringIndependence",
+      "target": "BE-14",
+      "targetId": "6a9658e07a882e24b8eb5d66",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn5",
+      "solutionId": "6a96509a7a882e24b8eb4c14",
+      "link": "Sn5-to-FTA-MonitoringIndependence",
+      "target": "IE-08",
+      "targetId": "6a9658e17a882e24b8eb5e06",
+      "targetKind": "FTAIntermediateEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn5",
+      "solutionId": "6a96509a7a882e24b8eb4c14",
+      "link": "Sn5-to-Monitors",
+      "target": "dewpointMonitor",
+      "targetId": "6a9650997a882e24b8eb48e6",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn5",
+      "solutionId": "6a96509a7a882e24b8eb4c14",
+      "link": "Sn5-to-Monitors",
+      "target": "stackMonitor",
+      "targetId": "6a9650997a882e24b8eb48f0",
+      "targetKind": "SPartUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn6",
+      "solutionId": "6a96509a7a882e24b8eb4c15",
+      "link": "Sn6-to-FMEA",
+      "target": "FMEDA row 6",
+      "targetId": "6a96509a7a882e24b8eb4cdf",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn6",
+      "solutionId": "6a96509a7a882e24b8eb4c15",
+      "link": "Sn6-to-FTA-RegenPath",
+      "target": "BE-06",
+      "targetId": "6a9658e07a882e24b8eb5d06",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn6",
+      "solutionId": "6a96509a7a882e24b8eb4c15",
+      "link": "Sn6-to-RegenerationPath",
+      "target": "dryerARegenReturn",
+      "targetId": "6a9650997a882e24b8eb4927",
+      "targetKind": "SInterfaceUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn6",
+      "solutionId": "6a96509a7a882e24b8eb4c15",
+      "link": "Sn6-to-RegenerationPath",
+      "target": "interfaceEdge",
+      "targetId": "6a9650997a882e24b8eb492b",
+      "targetKind": "SInterfaceUsage",
+      "runner": null
+    },
+    {
+      "solution": "Sn7",
+      "solutionId": "6a96509a7a882e24b8eb4c29",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "targetId": "6a96509a7a882e24b8eb5ba7",
+      "targetKind": "Dafny Model",
+      "runner": "dafny"
+    },
+    {
+      "solution": "Sn8",
+      "solutionId": "6a96509a7a882e24b8eb4c2a",
+      "link": "Sn8-to-Isabelle",
+      "target": "ADS Controller Behaviour",
+      "targetId": "6a96509a7a882e24b8eb5ba9",
+      "targetKind": "Isabelle Model",
+      "runner": "isabelle"
+    },
+    {
+      "solution": "Sn9",
+      "solutionId": "6a96509a7a882e24b8eb4c2b",
+      "link": "Sn9-to-FDR",
+      "target": "ADS Controller Refinement",
+      "targetId": "6a96509a7a882e24b8eb5bab",
+      "targetKind": "FDR Model",
+      "runner": "fdr"
+    },
+    {
+      "solution": "Sn10",
+      "solutionId": "6a96509a7a882e24b8eb4c2c",
+      "link": "Sn10-to-Java",
+      "target": "ADS Controller Implementation",
+      "targetId": "6a96509a7a882e24b8eb5b9b",
+      "targetKind": "Java Model",
+      "runner": "gradle"
+    },
+    {
+      "solution": "Sn11",
+      "solutionId": "6e34b3c6d75cfbd9474db3d0",
+      "link": "Sn11-to-FMEA",
+      "target": "FMEDA row 1",
+      "targetId": "6a96509a7a882e24b8eb4cda",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn11",
+      "solutionId": "6e34b3c6d75cfbd9474db3d0",
+      "link": "Sn11-to-FMEA",
+      "target": "FMEDA row 2",
+      "targetId": "6a96509a7a882e24b8eb4cdb",
+      "targetKind": "FMEARow",
+      "runner": null
+    },
+    {
+      "solution": "Sn11",
+      "solutionId": "6e34b3c6d75cfbd9474db3d0",
+      "link": "Sn11-to-FTA-MotiveFlow",
+      "target": "BE-01",
+      "targetId": "6a9658e07a882e24b8eb5cd6",
+      "targetKind": "FTABasicEvent",
+      "runner": null
+    },
+    {
+      "solution": "Sn11",
+      "solutionId": "6e34b3c6d75cfbd9474db3d0",
+      "link": "Sn11-to-blower",
+      "target": "blower",
+      "targetId": "6a9650997a882e24b8eb487e",
+      "targetKind": "SPartUsage",
+      "runner": null
+    }
+  ],
+  "baseline": [
+    {
+      "tag": "baseline",
+      "solution": "Sn2",
+      "link": "Sn2-to-Modelica",
+      "target": "ADS Changeover Transient_Modelica",
+      "runner": "modelica",
+      "command": "docker run --rm --init --pull never --name reverify-omc-33020-84805 -e HOME=/tmp -v ~/ads-experiments/isabelle-paper-update-2026-11-15/other-baselines/work/baseline__Sn2:~/ads-experiments/isabelle-paper-update-2026-11-15/other-baselines/work/baseline__Sn2 -w ~/ads-experiments/isabelle-paper-update-2026-11-15/other-baselines/work/baseline__Sn2/simulation/modelica openmodelica/openmodelica:v1.26.9-minimal timeout -k 30 630 omc reverify_verdict.mos",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "bound tCycle=7000, tSat=4000, DFtarget=1000; simulation completed, assertion not fired; min DF 1390.2 at t = 7000 s over 0-20000 s",
+      "seconds": 1.26,
+      "artefactChanged": false,
+      "log": "verification_baseline/logs/baseline__Sn2__modelica.txt",
+      "bindingsApplied": [
+        {
+          "parameter": "ADSChangeover.tCycle",
+          "attribute": "ADSDesign::ADSController::changeoverPeriod",
+          "from": "models/sysml/02-design.sysml",
+          "value": 7000.0,
+          "previous": 7000.0,
+          "changed": false
+        },
+        {
+          "parameter": "ADSChangeover.tSat",
+          "attribute": "ADSDesign::MolecularSieveDryer::saturationTimeConstant",
+          "from": "models/sysml/02-design.sysml",
+          "value": 4000.0,
+          "previous": 4000.0,
+          "changed": false
+        },
+        {
+          "parameter": "ADSChangeover.DFtarget",
+          "attribute": "'ADS Requirements'::detritiationCapacity::minDecontaminationFactor",
+          "from": "models/sysml/01-requirements.sysml",
+          "value": 1000.0,
+          "previous": 1000.0,
+          "changed": false
+        }
+      ],
+      "simulated": {
+        "samples": 2004,
+        "tEnd": 20000.0,
+        "minDF": 1390.1915,
+        "minDFAt": 7000.0
+      }
+    },
+    {
+      "tag": "baseline",
+      "solution": "Sn7",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "runner": "dafny",
+      "command": "dafny verify ./ADSController.dfy",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "6 verified, 0 errors",
+      "seconds": 1.11,
+      "artefactChanged": false,
+      "log": "verification_baseline/logs/baseline__Sn7__dafny.txt"
+    },
+    {
+      "tag": "baseline",
+      "solution": "Sn8",
+      "link": "Sn8-to-Isabelle",
+      "target": "ADS Controller Behaviour",
+      "runner": "isabelle",
+      "command": "docker run --rm --init --name reverify-isa-32808-11325 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/baseline__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/baseline__Sn8",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "Finished ADSController_Check",
+      "seconds": 41.77,
+      "artefactChanged": false,
+      "log": "isabelle_cases/logs/baseline__Sn8__isabelle.txt"
+    },
+    {
+      "tag": "baseline",
+      "solution": "Sn9",
+      "link": "Sn9-to-FDR",
+      "target": "ADS Controller Refinement",
+      "runner": "fdr",
+      "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "21 assertions passed, 0 failed",
+      "seconds": 0.88,
+      "artefactChanged": false,
+      "log": "fdr_powerloss/logs/baseline__Sn9__fdr.txt"
+    },
+    {
+      "tag": "baseline",
+      "solution": "Sn10",
+      "link": "Sn10-to-Java",
+      "target": "ADS Controller Implementation",
+      "runner": "gradle",
+      "command": "gradle test --offline --no-daemon --console=plain",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
+      "seconds": 4.15,
+      "artefactChanged": false,
+      "log": "verification_baseline/logs/baseline__Sn10__gradle.txt"
+    }
+  ],
+  "mutants": [
+    {
+      "tag": "mutant-D1",
+      "solution": "Sn7",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "runner": "dafny",
+      "command": "dafny verify ./ADSController.dfy",
+      "exit": 4,
+      "verdict": "FAIL",
+      "detail": "5 verified, 1 errors",
+      "seconds": 1.1,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-D1__Sn7__dafny.txt",
+      "mutant": "D1",
+      "class": "fault",
+      "operator": "altered transition target",
+      "description": "PowerLoss during Changeover no longer enters FailSafe (controller stays in Changeover)",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-D2",
+      "solution": "Sn7",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "runner": "dafny",
+      "command": "dafny verify ./ADSController.dfy",
+      "exit": 4,
+      "verdict": "FAIL",
+      "detail": "5 verified, 1 errors",
+      "seconds": 1.05,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-D2__Sn7__dafny.txt",
+      "mutant": "D2",
+      "class": "fault",
+      "operator": "weakened invariant (bed taken offline)",
+      "description": "Changeover takes the duty bed offline (new Dryer value NoBed) before the standby bed is live",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-D3",
+      "solution": "Sn7",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "runner": "dafny",
+      "command": "dafny verify ./ADSController.dfy",
+      "exit": 4,
+      "verdict": "FAIL",
+      "detail": "5 verified, 1 errors",
+      "seconds": 1.0,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-D3__Sn7__dafny.txt",
+      "mutant": "D3",
+      "class": "fault",
+      "operator": "widened exit guard",
+      "description": "FailSafe is left on PowerLoss as well as BackupRestored",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-D4",
+      "solution": "Sn7",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "runner": "dafny",
+      "command": "dafny verify ./ADSController.dfy",
+      "exit": 4,
+      "verdict": "FAIL",
+      "detail": "5 verified, 1 errors",
+      "seconds": 0.9,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-D4__Sn7__dafny.txt",
+      "mutant": "D4",
+      "class": "fault",
+      "operator": "weakened precondition",
+      "description": "requires mode == FailSafe removed from transitionFromFailSafe",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-D5",
+      "solution": "Sn7",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "runner": "dafny",
+      "command": "dafny verify ./ADSController.dfy",
+      "exit": 4,
+      "verdict": "FAIL",
+      "detail": "5 verified, 1 errors",
+      "seconds": 0.86,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-D5__Sn7__dafny.txt",
+      "mutant": "D5",
+      "class": "fault",
+      "operator": "dispatch error",
+      "description": "step() dispatches Changeover events to the NormalOperation handler",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-DC1",
+      "solution": "Sn7",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "runner": "dafny",
+      "command": "dafny verify ./ADSController.dfy",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "6 verified, 0 errors",
+      "seconds": 0.88,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-DC1__Sn7__dafny.txt",
+      "mutant": "DC1",
+      "class": "control",
+      "operator": "spec strengthening that holds",
+      "description": "Add a true postcondition: DewpointHigh in NormalOperation leads to Changeover",
+      "outcome": "control passed"
+    },
+    {
+      "tag": "mutant-DC2",
+      "solution": "Sn7",
+      "link": "Sn7-to-Dafny",
+      "target": "ADS Controller Proof - Dafny",
+      "runner": "dafny",
+      "command": "dafny verify ./ADSController.dfy",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "6 verified, 0 errors",
+      "seconds": 0.91,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-DC2__Sn7__dafny.txt",
+      "mutant": "DC2",
+      "class": "control",
+      "operator": "reorder clauses + comment",
+      "description": "Swap the order of the two requires clauses of transitionFromNormalOperation and edit a comment",
+      "outcome": "control passed"
+    },
+    {
+      "tag": "mutant-J1",
+      "solution": "Sn10",
+      "link": "Sn10-to-Java",
+      "target": "ADS Controller Implementation",
+      "runner": "gradle",
+      "command": "gradle test --offline --no-daemon --console=plain",
+      "exit": 1,
+      "verdict": "FAIL",
+      "detail": "14 tests, 13 passed, 1 failed, 0 skipped",
+      "seconds": 3.54,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-J1__Sn10__gradle.txt",
+      "mutant": "J1",
+      "class": "fault",
+      "operator": "altered transition target",
+      "description": "PowerLoss during Changeover emits EnterFailSafe but the mode stays Changeover",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-J2",
+      "solution": "Sn10",
+      "link": "Sn10-to-Java",
+      "target": "ADS Controller Implementation",
+      "runner": "gradle",
+      "command": "gradle test --offline --no-daemon --console=plain",
+      "exit": 1,
+      "verdict": "FAIL",
+      "detail": "14 tests, 10 passed, 4 failed, 0 skipped",
+      "seconds": 3.21,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-J2__Sn10__gradle.txt",
+      "mutant": "J2",
+      "class": "fault",
+      "operator": "broken alternation",
+      "description": "nextDryer(BedA) returns BedA: changeover never swaps the duty bed",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-J3",
+      "solution": "Sn10",
+      "link": "Sn10-to-Java",
+      "target": "ADS Controller Implementation",
+      "runner": "gradle",
+      "command": "gradle test --offline --no-daemon --console=plain",
+      "exit": 1,
+      "verdict": "FAIL",
+      "detail": "14 tests, 13 passed, 1 failed, 0 skipped",
+      "seconds": 3.3,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-J3__Sn10__gradle.txt",
+      "mutant": "J3",
+      "class": "fault",
+      "operator": "widened exit guard",
+      "description": "FailSafe is also left on DewpointHigh",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-J4",
+      "solution": "Sn10",
+      "link": "Sn10-to-Java",
+      "target": "ADS Controller Implementation",
+      "runner": "gradle",
+      "command": "gradle test --offline --no-daemon --console=plain",
+      "exit": 1,
+      "verdict": "FAIL",
+      "detail": "14 tests, 12 passed, 2 failed, 0 skipped",
+      "seconds": 3.21,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-J4__Sn10__gradle.txt",
+      "mutant": "J4",
+      "class": "fault",
+      "operator": "premature action (changeover sequencing)",
+      "description": "Duty bed is swapped when changeover starts (DewpointHigh) instead of when it completes",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-JC1",
+      "solution": "Sn10",
+      "link": "Sn10-to-Java",
+      "target": "ADS Controller Implementation",
+      "runner": "gradle",
+      "command": "gradle test --offline --no-daemon --console=plain",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
+      "seconds": 3.39,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-JC1__Sn10__gradle.txt",
+      "mutant": "JC1",
+      "class": "control",
+      "operator": "rename private field",
+      "description": "Rename private field dryers -> dryerFunctions throughout ADSController",
+      "outcome": "control passed"
+    },
+    {
+      "tag": "mutant-JC2",
+      "solution": "Sn10",
+      "link": "Sn10-to-Java",
+      "target": "ADS Controller Implementation",
+      "runner": "gradle",
+      "command": "gradle test --offline --no-daemon --console=plain",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
+      "seconds": 3.15,
+      "artefactChanged": true,
+      "log": "prior_bound_thread/logs/mutant-JC2__Sn10__gradle.txt",
+      "mutant": "JC2",
+      "class": "control",
+      "operator": "equivalent control flow",
+      "description": "Final \"else if (currentMode == ADSMode.FailSafe)\" replaced by plain \"else\" (enum has exactly three values, field never null)",
+      "outcome": "control passed"
+    },
+    {
+      "tag": "mutant-F1",
+      "solution": "Sn9",
+      "link": "Sn9-to-FDR",
+      "target": "ADS Controller Refinement",
+      "runner": "fdr",
+      "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+      "exit": 0,
+      "verdict": "FAIL",
+      "detail": "15 assertions passed, 6 failed",
+      "seconds": 0.76,
+      "artefactChanged": true,
+      "log": "fdr_powerloss/logs/mutant-F1__Sn9__fdr.txt",
+      "mutant": "F1",
+      "class": "fault",
+      "operator": "introduced nondeterminism",
+      "description": "Second powerLoss transition from NormalOperation targeting Changeover (nondeterministic response to power loss)",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-F2",
+      "solution": "Sn9",
+      "link": "Sn9-to-FDR",
+      "target": "ADS Controller Refinement",
+      "runner": "fdr",
+      "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+      "exit": 0,
+      "verdict": "FAIL",
+      "detail": "18 assertions passed, 3 failed",
+      "seconds": 0.75,
+      "artefactChanged": true,
+      "log": "fdr_powerloss/logs/mutant-F2__Sn9__fdr.txt",
+      "mutant": "F2",
+      "class": "fault",
+      "operator": "deleted recovery transition",
+      "description": "backupRestored transition out of FailSafe deleted (FailSafe becomes a sink)",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-F3",
+      "solution": "Sn9",
+      "link": "Sn9-to-FDR",
+      "target": "ADS Controller Refinement",
+      "runner": "fdr",
+      "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+      "exit": 0,
+      "verdict": "FAIL",
+      "detail": "20 assertions passed, 1 failed",
+      "seconds": 0.73,
+      "artefactChanged": true,
+      "log": "fdr_powerloss/logs/mutant-F3__Sn9__fdr.txt",
+      "mutant": "F3",
+      "class": "fault",
+      "operator": "altered transition target",
+      "description": "powerLoss in Changeover leads to NormalOperation instead of FailSafe",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-FC1",
+      "solution": "Sn9",
+      "link": "Sn9-to-FDR",
+      "target": "ADS Controller Refinement",
+      "runner": "fdr",
+      "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "21 assertions passed, 0 failed",
+      "seconds": 0.74,
+      "artefactChanged": true,
+      "log": "fdr_powerloss/logs/mutant-FC1__Sn9__fdr.txt",
+      "mutant": "FC1",
+      "class": "control",
+      "operator": "reorder external choice",
+      "description": "Swap the order of the two NormalOperation transitions ([] is commutative)",
+      "outcome": "control passed"
+    },
+    {
+      "tag": "mutant-I1",
+      "solution": "Sn8",
+      "link": "Sn8-to-Isabelle",
+      "target": "ADS Controller Behaviour",
+      "runner": "isabelle",
+      "command": "docker run --rm --init --name reverify-isa-32808-53102 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I1__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I1__Sn8",
+      "exit": 1,
+      "verdict": "FAIL",
+      "detail": "*** Failed to finish proof (line 169 of \"~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I1__Sn8/ADSController_Beh.thy\"):",
+      "seconds": 40.47,
+      "artefactChanged": true,
+      "log": "isabelle_cases/logs/mutant-I1__Sn8__isabelle.txt",
+      "mutant": "I1",
+      "class": "fault",
+      "operator": "altered update (triggers)",
+      "description": "NormalOperationToFailSafe leaves dewpointHigh enabled in FailSafe",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-I2",
+      "solution": "Sn8",
+      "link": "Sn8-to-Isabelle",
+      "target": "ADS Controller Behaviour",
+      "runner": "isabelle",
+      "command": "docker run --rm --init --name reverify-isa-32808-93577 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I2__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I2__Sn8",
+      "exit": 1,
+      "verdict": "FAIL",
+      "detail": "*** Failed to apply initial proof method (line 188 of \"~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I2__Sn8/ADSController",
+      "seconds": 39.2,
+      "artefactChanged": true,
+      "log": "isabelle_cases/logs/mutant-I2__Sn8__isabelle.txt",
+      "mutant": "I2",
+      "class": "fault",
+      "operator": "altered initial state",
+      "description": "New Dryer value Offline; Init puts no bed on duty",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-I3",
+      "solution": "Sn8",
+      "link": "Sn8-to-Isabelle",
+      "target": "ADS Controller Behaviour",
+      "runner": "isabelle",
+      "command": "docker run --rm --init --name reverify-isa-32808-32787 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I3__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I3__Sn8",
+      "exit": 1,
+      "verdict": "FAIL",
+      "detail": "*** Failed to apply proof method (line 213 of \"~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I3__Sn8/ADSController_Beh.thy",
+      "seconds": 47.12,
+      "artefactChanged": true,
+      "log": "isabelle_cases/logs/mutant-I3__Sn8__isabelle.txt",
+      "mutant": "I3",
+      "class": "fault",
+      "operator": "altered initial state (invariant)",
+      "description": "Init starts with an empty trace, violating inv tr \\<noteq> []",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-I4",
+      "solution": "Sn8",
+      "link": "Sn8-to-Isabelle",
+      "target": "ADS Controller Behaviour",
+      "runner": "isabelle",
+      "command": "docker run --rm --init --name reverify-isa-32808-79909 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I4__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I4__Sn8",
+      "exit": 1,
+      "verdict": "FAIL",
+      "detail": "*** Failed to finish proof (line 214 of \"~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-I4__Sn8/ADSController_Beh.thy\"):",
+      "seconds": 32.67,
+      "artefactChanged": true,
+      "log": "isabelle_cases/logs/mutant-I4__Sn8__isabelle.txt",
+      "mutant": "I4",
+      "class": "fault",
+      "operator": "deleted operation",
+      "description": "FailSafeToNormalOperation removed from the machine operations (no exit from FailSafe)",
+      "outcome": "detected"
+    },
+    {
+      "tag": "mutant-IC1",
+      "solution": "Sn8",
+      "link": "Sn8-to-Isabelle",
+      "target": "ADS Controller Behaviour",
+      "runner": "isabelle",
+      "command": "docker run --rm --init --name reverify-isa-32808-12588 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-IC1__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/mutant-IC1__Sn8",
+      "exit": 0,
+      "verdict": "PASS",
+      "detail": "Finished ADSController_Check",
+      "seconds": 37.95,
+      "artefactChanged": true,
+      "log": "isabelle_cases/logs/mutant-IC1__Sn8__isabelle.txt",
+      "mutant": "IC1",
+      "class": "control",
+      "operator": "text/comment edit",
+      "description": "Edit the introduction text block",
+      "outcome": "control passed"
+    }
+  ],
+  "stale": [
+    {
+      "scenario": "ST1-tCycle",
+      "change": "ADSController::changeoverPeriod 7000 s -> 9000 s (SysML design attribute), propagated to ADSChangeover.tCycle through the sim-binding",
+      "startNodes": [
+        "b337953a31d5259347f343ae"
+      ],
+      "traversal": "namespace/impact.py closure (unbounded)",
+      "flaggedSolutions": [
+        {
+          "solution": "Sn10",
+          "depth": 3
+        },
+        {
+          "solution": "Sn2",
+          "depth": 3
+        },
+        {
+          "solution": "Sn3",
+          "depth": 3
+        },
+        {
+          "solution": "Sn7",
+          "depth": 3
+        },
+        {
+          "solution": "Sn8",
+          "depth": 3
+        },
+        {
+          "solution": "Sn9",
+          "depth": 3
+        },
+        {
+          "solution": "Sn1",
+          "depth": 4
+        },
+        {
+          "solution": "Sn11",
+          "depth": 7
+        },
+        {
+          "solution": "Sn4",
+          "depth": 7
+        },
+        {
+          "solution": "Sn5",
+          "depth": 8
+        },
+        {
+          "solution": "Sn6",
+          "depth": 8
+        }
+      ],
+      "redispatch": [
+        {
+          "tag": "stale-ST1-tCycle",
+          "solution": "Sn2",
+          "link": "Sn2-to-Modelica",
+          "target": "ADS Changeover Transient_Modelica",
+          "runner": "modelica",
+          "command": "docker run --rm --init --pull never --name reverify-omc-3825-93132 -e HOME=/tmp -v ~/ads-experiments/reverify-binding/rerun-stale/work/stale-ST1-tCycle__Sn2:~/ads-experiments/reverify-binding/rerun-stale/work/stale-ST1-tCycle__Sn2 -w ~/ads-experiments/reverify-binding/rerun-stale/work/stale-ST1-tCycle__Sn2/simulation/modelica openmodelica/openmodelica:v1.26.9-minimal timeout -k 30 630 omc reverify_verdict.mos",
+          "exit": 0,
+          "verdict": "FAIL",
+          "detail": "bound tCycle=9000, tSat=4000, DFtarget=1000; assertion fired at t = 8320.0 s: Detritiation continuity violated: plant DF fell below the authorised target during changeover; diagnostic run (assertion as warning): min DF 843.2 at t = 9000 s over 0-20000 s",
+          "seconds": 0.97,
+          "artefactChanged": true,
+          "log": "prior_bound_thread/logs/stale-ST1-tCycle__Sn2__modelica.txt",
+          "bindingsApplied": [
+            {
+              "parameter": "ADSChangeover.tCycle",
+              "attribute": "ADSDesign::ADSController::changeoverPeriod",
+              "from": "models/sysml/02-design.sysml",
+              "value": 9000.0,
+              "previous": 7000.0,
+              "changed": true
+            },
+            {
+              "parameter": "ADSChangeover.tSat",
+              "attribute": "ADSDesign::MolecularSieveDryer::saturationTimeConstant",
+              "from": "models/sysml/02-design.sysml",
+              "value": 4000.0,
+              "previous": 4000.0,
+              "changed": false
+            },
+            {
+              "parameter": "ADSChangeover.DFtarget",
+              "attribute": "'ADS Requirements'::detritiationCapacity::minDecontaminationFactor",
+              "from": "models/sysml/01-requirements.sysml",
+              "value": 1000.0,
+              "previous": 1000.0,
+              "changed": false
+            }
+          ],
+          "simulated": {
+            "samples": 832,
+            "tEnd": 8310.0,
+            "minDF": 1001.9434,
+            "minDFAt": 8310.0
+          },
+          "assertion": {
+            "time": 8320.0,
+            "message": "Detritiation continuity violated: plant DF fell below the authorised target during changeover"
+          },
+          "diagnostic": {
+            "assertionLevel": "warning",
+            "samples": 2004,
+            "tEnd": 20000.0,
+            "minDF": 843.1938,
+            "minDFAt": 9000.0,
+            "note": "second scratch copy with the DF assertion lowered to a warning; not a verdict"
+          }
+        },
+        {
+          "tag": "stale-ST1-tCycle",
+          "solution": "Sn7",
+          "link": "Sn7-to-Dafny",
+          "target": "ADS Controller Proof - Dafny",
+          "runner": "dafny",
+          "command": "dafny verify ./ADSController.dfy",
+          "exit": 0,
+          "verdict": "PASS",
+          "detail": "6 verified, 0 errors",
+          "seconds": 0.95,
+          "artefactChanged": false,
+          "log": "prior_bound_thread/logs/stale-ST1-tCycle__Sn7__dafny.txt"
+        },
+        {
+          "tag": "stale-ST1-tCycle",
+          "solution": "Sn8",
+          "link": "Sn8-to-Isabelle",
+          "target": "ADS Controller Behaviour",
+          "runner": "isabelle",
+          "command": "docker run --rm --init --name reverify-isa-32808-50543 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/stale-ST1-tCycle__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/stale-ST1-tCycle__Sn8",
+          "exit": 0,
+          "verdict": "PASS",
+          "detail": "Finished ADSController_Check",
+          "seconds": 37.81,
+          "artefactChanged": false,
+          "log": "isabelle_cases/logs/stale-ST1-tCycle__Sn8__isabelle.txt"
+        },
+        {
+          "tag": "stale-ST1-tCycle",
+          "solution": "Sn9",
+          "link": "Sn9-to-FDR",
+          "target": "ADS Controller Refinement",
+          "runner": "fdr",
+          "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+          "exit": 0,
+          "verdict": "PASS",
+          "detail": "21 assertions passed, 0 failed",
+          "seconds": 0.76,
+          "artefactChanged": false,
+          "log": "fdr_powerloss/logs/stale-ST1-tCycle__Sn9__fdr.txt"
+        },
+        {
+          "tag": "stale-ST1-tCycle",
+          "solution": "Sn10",
+          "link": "Sn10-to-Java",
+          "target": "ADS Controller Implementation",
+          "runner": "gradle",
+          "command": "gradle test --offline --no-daemon --console=plain",
+          "exit": 0,
+          "verdict": "PASS",
+          "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
+          "seconds": 3.73,
+          "artefactChanged": false,
+          "log": "prior_bound_thread/logs/stale-ST1-tCycle__Sn10__gradle.txt"
+        }
+      ]
+    },
+    {
+      "scenario": "ST2-initialBed",
+      "change": "ADSController.activeDryer default Dryer::BedA -> Dryer::BedB, propagated to the Dafny, Isabelle, CSP and Java artefacts",
+      "startNodes": [
+        "6a9650997a882e24b8eb4978"
+      ],
+      "traversal": "namespace/impact.py closure (unbounded)",
+      "flaggedSolutions": [
+        {
+          "solution": "Sn10",
+          "depth": 2
+        },
+        {
+          "solution": "Sn2",
+          "depth": 2
+        },
+        {
+          "solution": "Sn3",
+          "depth": 2
+        },
+        {
+          "solution": "Sn7",
+          "depth": 2
+        },
+        {
+          "solution": "Sn8",
+          "depth": 2
+        },
+        {
+          "solution": "Sn9",
+          "depth": 2
+        },
+        {
+          "solution": "Sn1",
+          "depth": 3
+        },
+        {
+          "solution": "Sn11",
+          "depth": 6
+        },
+        {
+          "solution": "Sn4",
+          "depth": 6
+        },
+        {
+          "solution": "Sn5",
+          "depth": 7
+        },
+        {
+          "solution": "Sn6",
+          "depth": 7
+        }
+      ],
+      "redispatch": [
+        {
+          "tag": "stale-ST2-initialBed",
+          "solution": "Sn2",
+          "link": "Sn2-to-Modelica",
+          "target": "ADS Changeover Transient_Modelica",
+          "runner": "modelica",
+          "command": "docker run --rm --init --pull never --name reverify-omc-3825-39990 -e HOME=/tmp -v ~/ads-experiments/reverify-binding/rerun-stale/work/stale-ST2-initialBed__Sn2:~/ads-experiments/reverify-binding/rerun-stale/work/stale-ST2-initialBed__Sn2 -w ~/ads-experiments/reverify-binding/rerun-stale/work/stale-ST2-initialBed__Sn2/simulation/modelica openmodelica/openmodelica:v1.26.9-minimal timeout -k 30 630 omc reverify_verdict.mos",
+          "exit": 0,
+          "verdict": "PASS",
+          "detail": "bound tCycle=7000, tSat=4000, DFtarget=1000; simulation completed, assertion not fired; min DF 1390.2 at t = 7000 s over 0-20000 s",
+          "seconds": 0.94,
+          "artefactChanged": false,
+          "log": "prior_bound_thread/logs/stale-ST2-initialBed__Sn2__modelica.txt",
+          "bindingsApplied": [
+            {
+              "parameter": "ADSChangeover.tCycle",
+              "attribute": "ADSDesign::ADSController::changeoverPeriod",
+              "from": "models/sysml/02-design.sysml",
+              "value": 7000.0,
+              "previous": 7000.0,
+              "changed": false
+            },
+            {
+              "parameter": "ADSChangeover.tSat",
+              "attribute": "ADSDesign::MolecularSieveDryer::saturationTimeConstant",
+              "from": "models/sysml/02-design.sysml",
+              "value": 4000.0,
+              "previous": 4000.0,
+              "changed": false
+            },
+            {
+              "parameter": "ADSChangeover.DFtarget",
+              "attribute": "'ADS Requirements'::detritiationCapacity::minDecontaminationFactor",
+              "from": "models/sysml/01-requirements.sysml",
+              "value": 1000.0,
+              "previous": 1000.0,
+              "changed": false
+            }
+          ],
+          "simulated": {
+            "samples": 2004,
+            "tEnd": 20000.0,
+            "minDF": 1390.1915,
+            "minDFAt": 7000.0
+          }
+        },
+        {
+          "tag": "stale-ST2-initialBed",
+          "solution": "Sn7",
+          "link": "Sn7-to-Dafny",
+          "target": "ADS Controller Proof - Dafny",
+          "runner": "dafny",
+          "command": "dafny verify ./ADSController.dfy",
+          "exit": 0,
+          "verdict": "PASS",
+          "detail": "6 verified, 0 errors",
+          "seconds": 1.16,
+          "artefactChanged": true,
+          "log": "prior_bound_thread/logs/stale-ST2-initialBed__Sn7__dafny.txt"
+        },
+        {
+          "tag": "stale-ST2-initialBed",
+          "solution": "Sn8",
+          "link": "Sn8-to-Isabelle",
+          "target": "ADS Controller Behaviour",
+          "runner": "isabelle",
+          "command": "docker run --rm --init --name reverify-isa-32808-88361 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle:~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle -w ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/stale-ST2-initialBed__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/isabelle-paper-update-2026-11-15/isabelle/work/stale-ST2-initialBed__Sn8",
+          "exit": 0,
+          "verdict": "PASS",
+          "detail": "Finished ADSController_Check",
+          "seconds": 37.2,
+          "artefactChanged": true,
+          "log": "isabelle_cases/logs/stale-ST2-initialBed__Sn8__isabelle.txt"
+        },
+        {
+          "tag": "stale-ST2-initialBed",
+          "solution": "Sn9",
+          "link": "Sn9-to-FDR",
+          "target": "ADS Controller Refinement",
+          "runner": "fdr",
+          "command": "/Applications/FDR4.app/Contents/MacOS/refines ./file_robochart_controller_coreassertions.csp",
+          "exit": 0,
+          "verdict": "PASS",
+          "detail": "21 assertions passed, 0 failed",
+          "seconds": 0.71,
+          "artefactChanged": true,
+          "log": "fdr_powerloss/logs/stale-ST2-initialBed__Sn9__fdr.txt"
+        },
+        {
+          "tag": "stale-ST2-initialBed",
+          "solution": "Sn10",
+          "link": "Sn10-to-Java",
+          "target": "ADS Controller Implementation",
+          "runner": "gradle",
+          "command": "gradle test --offline --no-daemon --console=plain",
+          "exit": 1,
+          "verdict": "FAIL",
+          "detail": "14 tests, 7 passed, 7 failed, 0 skipped",
+          "seconds": 3.69,
+          "artefactChanged": true,
+          "log": "prior_bound_thread/logs/stale-ST2-initialBed__Sn10__gradle.txt"
+        }
+      ]
+    }
+  ]
+}

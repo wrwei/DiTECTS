@@ -1,0 +1,22 @@
+# stale-ST2-initialBed Sn2 -> ADS Changeover Transient_Modelica via modelica
+# command: docker run --rm --init --pull never --name reverify-omc-74873-58281 -e HOME=/tmp -v ~/ads-experiments/reverify-outputs/stale/work/stale-ST2-initialBed__Sn2:~/ads-experiments/reverify-outputs/stale/work/stale-ST2-initialBed__Sn2 -w ~/ads-experiments/reverify-outputs/stale/work/stale-ST2-initialBed__Sn2/simulation/modelica openmodelica/openmodelica:v1.26.9-minimal timeout -k 30 630 omc reverify_verdict.mos
+# exit: 0  timedOut: False  seconds: 0.79
+
+true
+""
+record SimulationResult
+    resultFile = "~/ads-experiments/reverify-outputs/stale/work/stale-ST2-initialBed__Sn2/simulation/modelica/ADSChangeover_verdict_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 2e4, numberOfIntervals = 2000, tolerance = 1e-6, method = 'dassl', fileNamePrefix = 'ADSChangeover_verdict', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.002477875,
+    timeBackend = 0.0026447090000000003,
+    timeSimCode = 0.005338791000000001,
+    timeTemplates = 0.010115625000000001,
+    timeCompile = 0.40255345899999995,
+    timeSimulation = 0.01637825,
+    timeTotal = 0.43986333399999994
+end SimulationResult;
+""
+

@@ -1,0 +1,20 @@
+true
+""
+record SimulationResult
+    resultFile = "~/ads-experiments/reverify-review4/stale/work/stale-ST1-tCycle__Sn2__diagnostic/simulation/modelica/ADSChangeover_diagnostic_res.csv",
+    simulationOptions = "startTime = 0.0, stopTime = 2e4, numberOfIntervals = 2000, tolerance = 1e-6, method = 'dassl', fileNamePrefix = 'ADSChangeover_diagnostic', options = '', outputFormat = 'csv', variableFilter = '.*', cflags = '', simflags = ''",
+    messages = "LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+LOG_ASSERT        | info    | [~/ads-experiments/reverify-review4/stale/work/stale-ST1-tCycle__Sn2__diagnostic/simulation/modelica/ADSChangeover.mo:123:3-123:146:writable]
+|                 | |       | The following assertion has been violated at time 8320.000000
+|                 | |       | ((DF >= DFtarget)) --> \"Detritiation continuity violated: plant DF fell below the authorised target during changeover\"
+LOG_SUCCESS       | info    | The simulation finished successfully.
+",
+    timeFrontend = 0.001250625,
+    timeBackend = 0.0014747080000000001,
+    timeSimCode = 0.006322334000000001,
+    timeTemplates = 0.015585000000000002,
+    timeCompile = 0.423776334,
+    timeSimulation = 0.013545666000000001,
+    timeTotal = 0.462268042
+end SimulationResult;
+""

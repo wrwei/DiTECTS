@@ -1,0 +1,114 @@
+[
+ {
+  "id": "IX1",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered transition target",
+  "requirement": "REQ-ADS-002/006",
+  "description": "NormalOperationToChangeover enters FailSafe (with the FailSafe trigger set) instead of Changeover",
+  "expected": "review candidate",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(pre \"st= NormalOperation\"\\n  update \"\\[st\\\\<Zprime>= )Changeover",
+    "replace": "$1FailSafe",
+    "expectCount": 1
+   },
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(\\[Event startChangeover\\] @ \\[State )Changeover(\\]\\n\\s*,triggers\\\\<Zprime> = )\\{powerLoss, changeoverComplete\\}",
+    "replace": "$1FailSafe$2{backupRestored}",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "IX2",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "premature action",
+  "requirement": "REQ-ADS-006",
+  "description": "NormalOperationToChangeover swaps the duty bed when changeover starts (bed swaps twice per cycle)",
+  "expected": "review candidate",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(,triggers\\\\<Zprime> = \\{powerLoss, changeoverComplete\\})",
+    "replace": "$1\n         ,activeDryer\\<Zprime> = nextDryer activeDryer",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "IX3",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "altered transition target",
+  "requirement": "REQ-ADS-007",
+  "description": "FailSafeToNormalOperation enters Changeover (with the Changeover trigger set) instead of NormalOperation",
+  "expected": "review candidate",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(pre \"st= FailSafe\"\\n  update \"\\[st\\\\<Zprime>= )NormalOperation",
+    "replace": "$1Changeover",
+    "expectCount": 1
+   },
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(\\[Event restoreNormal\\] @ \\[State )NormalOperation(\\]\\n\\s*,triggers\\\\<Zprime> = )\\{powerLoss, dewpointHigh\\}",
+    "replace": "$1Changeover$2{powerLoss, changeoverComplete}",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
+  "id": "FX1",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted output action",
+  "requirement": "REQ-ADS-007",
+  "description": "FailSafe exit no longer emits restoreNormal",
+  "expected": "review candidate",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "true&\\(share__choice\\(restoreNormal\\.out -> SKIP\\)\\) ; ",
+    "replace": ""
+   }
+  ]
+ },
+ {
+  "id": "FX2",
+  "solution": "Sn9",
+  "class": "fault",
+  "operator": "deleted output action",
+  "requirement": "REQ-ADS-002",
+  "description": "Dewpoint alarm no longer emits raiseAlarm",
+  "expected": "review candidate",
+  "edits": [
+   {
+    "file": "defs/file_robochart_controller.csp",
+    "pattern": "raiseAlarm\\.out -> SKIP\\)\\);true",
+    "replace": "SKIP));true"
+   }
+  ]
+ },
+ {
+  "id": "JX1",
+  "solution": "Sn10",
+  "class": "fault",
+  "operator": "deleted output action",
+  "requirement": "REQ-ADS-002",
+  "description": "Dewpoint alarm no longer emits RaiseAlarm",
+  "expected": "review candidate",
+  "edits": [
+   {
+    "file": "src/main/java/ads/controller/ADSController.java",
+    "pattern": "\\n\\s*actuator\\.apply\\(new OutputEvent\\.RaiseAlarm\\(\\)\\);",
+    "replace": "",
+    "expectCount": 1
+   }
+  ]
+ }
+]

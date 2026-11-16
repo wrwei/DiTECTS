@@ -1,0 +1,8 @@
+# mutant-IX3 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-72555-98663 --platform linux/amd64 --memory 6g -v <ISABELLE_HOME>:/opt/isabelle:ro -v ~/ads-experiments/review-candidates:~/ads-experiments/review-candidates -w ~/ads-experiments/review-candidates/work/mutant-IX3__Sn8 isabelle-runtime:22.04 timeout -k 30 1860 /opt/isabelle/bin/isabelle build -D ~/ads-experiments/review-candidates/work/mutant-IX3__Sn8
+# exit: 0  timedOut: False  seconds: 40.93
+
+Running ADSController_Check ...
+Finished ADSController_Check (0:00:22 elapsed time, 0:00:30 cpu time, factor 1.35)
+0:00:35 elapsed time, 0:00:30 cpu time, factor 0.86
+

@@ -1,0 +1,38 @@
+# ADS Tritium Release FTA ADS Tritium Release Fault Tree Fault tree for tritium discharge above the authorised limit (REQ-TRIT-014). Basic events and failure rates derive from the ADS FMEA.
+# ADS Tritium Release Failure PSSA NUREG
+
+code | type | name | description
+TE-01 | IntermediateEvent | Tritium discharge to atmosphere exceeds authorised limit | Top event. Challenges REQ-TRIT-014 (discharge within the authorised annual limit, reduced ALARP) and REQ-ADS-001 (decontamination factor >= 1000 at design-basis flow).
+BE-01 | BasicEvent | Blower bearing seizure | FMEA row 1. Lubrication loss; flow stops so no detritiation. Blower 12000 FIT x 50 % bearing seizure.
+BE-03 | BasicEvent | Recombiner catalyst poisoning | FMEA row 3. Siloxane/oil contamination; conversion drops so HT passes the beds unconverted. 2000 FIT x 60 %.
+BE-04 | BasicEvent | Recombiner heater failure | FMEA row 4. Element burnout; low bed temperature so low conversion. 2000 FIT x 40 %.
+BE-06 | BasicEvent | Regeneration-path leak to stack | FMEA row 6. Valve/gasket failure; HTO bypasses collection and reaches the stack directly, defeating the drying train entirely. Condenser 1500 FIT x 30 %.
+BE-07 | BasicEvent | Dryer A sieve breakthrough | FMEA row 7. Bed saturation; HTO passes the bed and stack release rises. Molecular-sieve bed 500 FIT x 70 %.
+BE-09 | BasicEvent | Dryer B regeneration heater failure | FMEA row 9. Element burnout; bed unavailable after regeneration so redundancy is lost. QUANTIFICATION DELIBERATELY UNSET: the FMEA component table gives no FIT figure for a regeneration heater, and an invented rate would be indistinguishable from a measured one. Unset is not zero -- this event is excluded from quantification until a rate is sourced.
+BE-10 | BasicEvent | Changeover valves stuck mid-travel | FMEA row 10. Actuator/stem seizure isolates BOTH beds, so this single failure defeats dual-bed redundancy on its own. Valve set 3000 FIT x 40 %. Proof tested six-monthly.
+BE-11 | BasicEvent | Changeover valve seat leak-through | FMEA row 11. Seat wear; partial bypass of the active bed reduces the decontamination factor. 3000 FIT x 60 %.
+BE-12 | BasicEvent | Dewpoint monitor drift (reads dry) | FMEA row 12. Sensor ageing. SHARED EVENT: this one failure defeats BOTH the mitigation and the detection. It suppresses the automatic dual-bed changeover that row 7 relies on as its safety mechanism, and it leaves breakthrough undetected. Hygrometer 4000 FIT x 50 %. Calibrated quarterly per REQ-ADS-011.
+BE-14 | BasicEvent | Stack monitor loss of signal | FMEA row 14. Detector/HV failure; the release goes unquantified and no independent alarm is raised. Ion chamber 3000 FIT x 100 %.
+BE-15 | BasicEvent | Controller fails on power transition | FMEA row 15. PSU/transition fault; no FailSafe entry during the outage. PLC 1000 FIT x 40 %, expressed per demand because the failure is on the transition, not over time.
+BE-17 | BasicEvent | UPS battery degraded | FMEA row 17. Ageing; restart exceeds 30 s on loss of off-site power, violating REQ-ADS-007. UPS 6000 FIT x 100 %. Periodic discharge test annually.
+IE-01 | IntermediateEvent | Sustained undetected breakthrough | Tritium reaches the stack un-detritiated AND the condition is not detected, so it persists rather than being isolated.
+IE-02 | IntermediateEvent | Detritiation fails to remove tritium | The ADS train does not remove tritiated species from the flow it receives.
+IE-03 | IntermediateEvent | Loss of drying | No molecular-sieve bed is removing HTO from the process flow.
+IE-04 | IntermediateEvent | Both dryer beds unavailable | Dual-bed redundancy exhausted: the duty bed is saturated, the standby bed cannot take over, and the changeover was never commanded.
+IE-05 | IntermediateEvent | Upstream conversion loss | The recombiner fails to convert HT to HTO. Elemental tritium is not captured by a molecular sieve, so it passes the beds regardless of their condition.
+IE-06 | IntermediateEvent | Loss of motive flow | Process gas is not being driven through the detritiation train.
+IE-07 | IntermediateEvent | Loss of control on loss of off-site power | On LOOP the controller does not reach its FailSafe state and the backup supply does not carry it. Challenges REQ-TRIT-030 and REQ-ADS-007.
+IE-08 | IntermediateEvent | Release not detected | Neither the dewpoint channel nor the stack channel raises the condition, so no isolation or operator action follows.
+G-00 | OrGate | TOP | Either a direct bypass of the train, or a sustained breakthrough that nothing catches.
+G-01 | AndGate | Breakthrough AND not detected | Defence in depth: a challenge alone is not a release. It becomes one only when detection also fails, because a detected breakthrough triggers changeover or operator isolation.
+G-02 | OrGate | Any loss of removal | Four independent ways the train stops removing tritium from the flow.
+G-03 | OrGate | Drying lost | Either the valves isolate both beds outright, or both beds are individually unavailable.
+G-04 | AndGate | Both beds out AND no changeover | The duty bed saturates, the standby bed is unavailable, and the dewpoint channel never commands the swap. All three are required: any one of them working preserves drying.
+G-05 | OrGate | Conversion lost | Catalyst or heater. Either way HT is not converted and the sieve cannot capture it.
+G-06 | OrGate | Flow lost | The blower itself, or the control and power that keep it running.
+G-07 | AndGate | Controller AND UPS fail | The UPS exists to carry the controller through the transition, so both must fail before control is lost.
+G-08 | AndGate | Both detection channels fail | Two independent channels: dewpoint at the bed outlet, activity at the stack. Both must fail for the release to go unnoticed -- which is why the dewpoint monitor appearing in G-04 as well matters so much.
+BE-05 | BasicEvent | Condenser cooling water loss | FMEA row 5. High moisture to the duty bed; rapid saturation and early breakthrough. Condenser 1500 FIT x 70 %. Modelled as a duty-bed cause; its common-cause effect on the standby bed after changeover is not modelled.
+BE-08 | BasicEvent | Dryer A bed channelling | FMEA row 8. Partial bypass of the sieve; premature partial breakthrough. Molecular-sieve bed 500 FIT x 30 %.
+IE-09 | IntermediateEvent | Duty bed (dryer A) breakthrough | The duty bed passes HTO: sieve saturation, channelling, or moisture overload from the condenser.
+G-09 | OrGate | Any duty-bed breakthrough cause | Any one cause makes the duty bed break through.
