@@ -1,0 +1,14 @@
+-- Loaded beside coreassertions by tests/test_csp_powerloss.py.
+
+-- Power loss is reachable in both operating states and after recovery.
+assert ADS_ResponseView :[has trace [FD]]: <ADSController::powerLoss.in, ADSController::enterFailSafe.out>
+assert ADS_ResponseView :[has trace [FD]]: <ADSController::dewpointHigh.in, ADSController::powerLoss.in, ADSController::enterFailSafe.out>
+assert ADS_ResponseView :[has trace [FD]]: <ADSController::powerLoss.in, ADSController::enterFailSafe.out, ADSController::backupRestored.in, ADSController::dewpointHigh.in, ADSController::powerLoss.in, ADSController::enterFailSafe.out>
+
+-- A missing response has legal trace prefixes, but fails the stronger check.
+ADS_NoResponseNormal = ADSController::powerLoss.in -> STOP
+  [] ADSController::dewpointHigh.in -> ADS_NoResponseChangeover
+ADS_NoResponseChangeover = ADSController::powerLoss.in -> STOP
+  [] ADSController::changeoverComplete.in -> ADS_NoResponseNormal
+assert ADS_ResponseNormal [T= ADS_NoResponseNormal
+assert not ADS_ResponseNormal [FD= ADS_NoResponseNormal

@@ -1,0 +1,35 @@
+plugins {
+    id 'java-library'
+    id 'application'
+}
+
+group = 'ads'
+version = '0.1.0-SNAPSHOT'
+
+application {
+    // A small driver so `gradle run` demonstrates the controller stepping
+    // through the ADSOperation choreography. The controller itself is a library.
+    mainClass = 'ads.Main'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,90 @@
+{
+ "model": "ADS digital twin",
+ "mesh": {
+  "file": "ads-digital-twin-plant.glb",
+  "sha256": "c1cbde36e43c5c6084acb6347ad83e307f2b7c85a07333d8c9686ebc0770cf8b",
+  "bytes": 875136
+ },
+ "parts": [
+  {
+   "name": "BLOWER",
+   "meshNode": "blower",
+   "designPart": "ADSDesign::ads::blower"
+  },
+  {
+   "name": "RECOMBINER",
+   "meshNode": "recombiner",
+   "designPart": "ADSDesign::ads::recombiner"
+  },
+  {
+   "name": "CONDENSER",
+   "meshNode": "condenser",
+   "designPart": "ADSDesign::ads::condenser"
+  },
+  {
+   "name": "CHANGEOVER",
+   "meshNode": "changeoverValves",
+   "designPart": "ADSDesign::ads::changeoverValves"
+  },
+  {
+   "name": "DRYER A",
+   "meshNode": "dryerA",
+   "designPart": "ADSDesign::ads::dryerA"
+  },
+  {
+   "name": "DRYER B",
+   "meshNode": "dryerB",
+   "designPart": "ADSDesign::ads::dryerB"
+  },
+  {
+   "name": "DEWPOINT",
+   "meshNode": "dewpointMonitor",
+   "designPart": "ADSDesign::ads::dewpointMonitor"
+  },
+  {
+   "name": "STACK MON",
+   "meshNode": "stackMonitor",
+   "designPart": "ADSDesign::ads::stackMonitor"
+  },
+  {
+   "name": "CONTROLLER",
+   "meshNode": "controller",
+   "designPart": "ADSDesign::ads::controller"
+  },
+  {
+   "name": "BACKUP",
+   "meshNode": "backupSupply",
+   "designPart": "ADSDesign::ads::backupSupply"
+  }
+ ],
+ "signals": [
+  {
+   "name": "dewpoint",
+   "unit": "°C",
+   "designAttribute": "ADSDesign::DewpointMonitor::dewpoint",
+   "designPart": "dewpointMonitor"
+  },
+  {
+   "name": "activeDryer",
+   "unit": null,
+   "designAttribute": "ADSDesign::ADSController::activeDryer",
+   "designPart": "controller"
+  },
+  {
+   "name": "releaseRate",
+   "unit": "MBq/h",
+   "designAttribute": "ADSDesign::TritiumStackMonitor::releaseRate",
+   "designPart": "stackMonitor"
+  },
+  {
+   "name": "bedSaturation",
+   "unit": "%",
+   "designAttribute": "ADSDesign::MolecularSieveDryer::bedSaturation",
+   "designPart": null
+  }
+ ],
+ "notes": [
+  "Each part maps a node of the plant mesh to the SysML design part it represents (ten part-mapping links).",
+  "Each signal binds a telemetry quantity to the SysML design attribute it reads (Degree 0 telemetry bindings). No live telemetry is included."
+ ]
+}

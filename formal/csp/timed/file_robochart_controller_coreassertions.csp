@@ -1,0 +1,77 @@
+
+--
+-- RoboChart generator version <unknown>
+-- Automatically generated on 08-06-2026 16:29:52
+--
+-- Iterated compression status: true
+-- Assertions compression status: true
+--
+
+include "file_robochart_controller.csp"
+
+-- Close the shared-memory interface: the module has no external bed writer.
+-- Bed writes are internal communications with memory and are consumed without
+-- delay. Keeping them as open urgent events would let an absent observer stop
+-- time. Inputs and output commands remain visible; all 30 assertions are kept.
+
+-- generate ADSController
+P_ADSController = (ADSController::O__(0) [| {|ADSController::set_EXT_activeDryer|} |] SKIP) \ {|ADSController::set_activeDryer|}
+assert P_ADSController :[deadlock-free]	
+assert P_ADSController;RUN({r__}) :[deadlock-free]
+assert P_ADSController :[deterministic]
+assert P_ADSController :[divergence-free]
+-- timed deadlock free
+assert prioritise(P_ADSController[[tock<-tock,tock<-tock']],<diff(Events,{tock',tock}),{tock}>)\{tock} :[divergence free [FD]]
+
+-- timelock free
+assert RUN({tock}) ||| CHAOS(diff(Events,{|tock|})) [F= P_ADSController
+
+
+-- generate ADSController_Ctrl
+P_ADSController_Ctrl = (ADSController_Ctrl::O__(0) [| {|ADSController_Ctrl::set_EXT_activeDryer|} |] SKIP) \ {|ADSController_Ctrl::set_activeDryer|}
+assert P_ADSController_Ctrl :[deadlock-free]	
+assert P_ADSController_Ctrl;RUN({r__}) :[deadlock-free]
+assert P_ADSController_Ctrl :[deterministic]
+assert P_ADSController_Ctrl :[divergence-free]
+
+-- generate ADSController_Ctrl_stm_ref0
+P_ADSController_Ctrl_stm_ref0 = (ADSController_Ctrl::stm_ref0::O__(0) [| {|ADSController_Ctrl::stm_ref0::set_EXT_activeDryer|} |] SKIP) \ {|ADSController_Ctrl::stm_ref0::set_activeDryer|}
+assert P_ADSController_Ctrl_stm_ref0 :[deadlock-free]	
+assert P_ADSController_Ctrl_stm_ref0;RUN({r__}) :[deadlock-free]
+assert P_ADSController_Ctrl_stm_ref0 :[deterministic]
+assert P_ADSController_Ctrl_stm_ref0 :[divergence-free]
+-- timed deadlock free
+assert prioritise(P_ADSController_Ctrl_stm_ref0[[tock<-tock,tock<-tock']],<diff(Events,{tock',tock}),{tock}>)\{tock} :[divergence free [FD]]
+
+-- timelock free
+assert RUN({tock}) ||| CHAOS(diff(Events,{|tock|})) [F= P_ADSController_Ctrl_stm_ref0
+-- timed deadlock free
+assert prioritise(P_ADSController_Ctrl[[tock<-tock,tock<-tock']],<diff(Events,{tock',tock}),{tock}>)\{tock} :[divergence free [FD]]
+
+-- timelock free
+assert RUN({tock}) ||| CHAOS(diff(Events,{|tock|})) [F= P_ADSController_Ctrl
+
+-- generate ADSController_Module
+P_ADSController_Module = ADSController_Module::O__(0) \ {|ADSController_Module::ctrl_ref0::set_activeDryer|}
+assert P_ADSController_Module :[deadlock-free]	
+assert P_ADSController_Module;RUN({r__}) :[deadlock-free]
+assert P_ADSController_Module :[deterministic]
+assert P_ADSController_Module :[divergence-free]
+
+-- generate ADSController_Module_ctrl_ref0
+P_ADSController_Module_ctrl_ref0 = (ADSController_Module::ctrl_ref0::O__(0) [| {|ADSController_Module::ctrl_ref0::set_EXT_activeDryer|} |] SKIP) \ {|ADSController_Module::ctrl_ref0::set_activeDryer|}
+assert P_ADSController_Module_ctrl_ref0 :[deadlock-free]	
+assert P_ADSController_Module_ctrl_ref0;RUN({r__}) :[deadlock-free]
+assert P_ADSController_Module_ctrl_ref0 :[deterministic]
+assert P_ADSController_Module_ctrl_ref0 :[divergence-free]
+
+-- timed deadlock free
+assert prioritise(P_ADSController_Module_ctrl_ref0[[tock<-tock,tock<-tock']],<diff(Events,{tock',tock}),{tock}>)\{tock} :[divergence free [FD]]
+
+-- timelock free
+assert RUN({tock}) ||| CHAOS(diff(Events,{|tock|})) [F= P_ADSController_Module_ctrl_ref0
+-- timed deadlock free
+assert prioritise(P_ADSController_Module[[tock<-tock,tock<-tock']],<diff(Events,{tock',tock}),{tock}>)\{tock} :[divergence free [FD]]
+
+-- timelock free
+assert RUN({tock}) ||| CHAOS(diff(Events,{|tock|})) [F= P_ADSController_Module

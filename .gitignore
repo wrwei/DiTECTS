@@ -1,0 +1,10 @@
+# build output
+build/
+.gradle/
+*.class
+# tool output
+formal/isabelle/output/
+*.log
+.DS_Store
+__pycache__/
+*.pyc

@@ -1,0 +1,26 @@
+-- Loaded beside coreassertions by tests/test_csp_powerloss.py.
+
+-- A completion must select the other bed, including the first completion.
+assert ADS_AlternationView :[has trace [FD]]: <ADSController::dewpointHigh.in, ADSController::changeoverComplete.in, ADSController::set_activeDryer.ADS_OtherBed(ADS_InitialBed)>
+assert ADS_AlternationView :[has trace [FD]]: <ADSController::dewpointHigh.in, ADSController::changeoverComplete.in, ADSController::set_activeDryer.ADS_OtherBed(ADS_InitialBed), ADSController::dewpointHigh.in, ADSController::changeoverComplete.in, ADSController::set_activeDryer.ADS_InitialBed>
+assert ADS_AlternationView :[has trace [FD]]: <ADSController::dewpointHigh.in, ADSController::changeoverComplete.in, ADSController::set_activeDryer.ADS_OtherBed(ADS_InitialBed), ADSController::powerLoss.in, ADSController::backupRestored.in, ADSController::dewpointHigh.in, ADSController::changeoverComplete.in, ADSController::set_activeDryer.ADS_InitialBed>
+
+ADS_BadFirstWrite = ADSController::dewpointHigh.in ->
+  ADSController::changeoverComplete.in ->
+  ADSController::set_activeDryer.ADS_InitialBed -> STOP
+assert not ADS_AlternationStart(ADS_InitialBed) [T= ADS_BadFirstWrite
+
+-- A legal prefix that stops before writing passes traces but fails FD.
+ADS_MissingWrite = ADS_MissingWriteNormal(ADS_InitialBed)
+ADS_MissingWriteNormal(d) = ADSController::powerLoss.in -> ADS_MissingWriteFailSafe(d)
+  [] ADSController::dewpointHigh.in -> ADS_MissingWriteChangeover(d)
+ADS_MissingWriteChangeover(d) = ADSController::powerLoss.in -> ADS_MissingWriteFailSafe(d)
+  [] ADSController::changeoverComplete.in -> STOP
+ADS_MissingWriteFailSafe(d) = ADSController::backupRestored.in -> ADS_MissingWriteNormal(d)
+assert ADS_AlternationStart(ADS_InitialBed) [T= ADS_MissingWrite
+assert not ADS_AlternationStart(ADS_InitialBed) [FD= ADS_MissingWrite
+
+ADS_EarlyWrite = ADSController::dewpointHigh.in ->
+  ADSController::set_activeDryer.ADS_OtherBed(ADS_InitialBed) -> STOP
+assert not ADS_AlternationStart(ADS_InitialBed) [T= ADS_EarlyWrite
+assert not ADS_AlternationStart(ADS_InitialBed) [T= (ADSController::set_activeDryer.ADS_OtherBed(ADS_InitialBed) -> STOP)

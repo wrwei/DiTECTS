@@ -1,0 +1,497 @@
+{
+ "modelName": "ADS FMEA",
+ "analysisKind": "FMEDA",
+ "description": "ADS FMEA",
+ "columns": [
+  "itemLabel",
+  "function",
+  "failureMode",
+  "effect",
+  "cause",
+  "currentControls",
+  "severity",
+  "occurrence",
+  "detection",
+  "rpn",
+  "recommendedAction",
+  "responsibility",
+  "targetDate",
+  "actionTaken",
+  "revisedSeverity",
+  "revisedOccurrence",
+  "revisedDetection",
+  "revisedRpn",
+  "failureModeRatio",
+  "failureEffectProbability",
+  "failureRate",
+  "missionPhaseTime",
+  "modeCriticality",
+  "safetyRelated",
+  "safetyMechanism",
+  "smCoverage",
+  "singlePointFailureRate",
+  "notes",
+  "traces"
+ ],
+ "rowCount": 17,
+ "rows": [
+  {
+   "@id": "3292d316-1c3d-4e14-8c19-4380346a3616",
+   "rowNumber": 1,
+   "rowOrder": 0,
+   "itemElement": {
+    "@id": "030dc940-4a7c-4361-a4ff-d2e556457d5a",
+    "name": "blower"
+   },
+   "itemLabel": "blower",
+   "failureMode": "Bearing seizure",
+   "effect": "Local: flow stops -> System: no detritiation -> End: potential release accumulation",
+   "cause": "lubrication loss",
+   "currentControls": "flow alarm + standby restart",
+   "severity": 8,
+   "occurrence": 3,
+   "detection": 2,
+   "rpn": 48,
+   "failureModeRatio": 0.5,
+   "failureRate": 12000,
+   "safetyRelated": true,
+   "safetyMechanism": "flow alarm + standby restart",
+   "smCoverage": 0.85,
+   "singlePointFailureRate": 900.0000000000001
+  },
+  {
+   "@id": "fe5c49fd-06fa-43c7-9caa-6f414346f8fa",
+   "rowNumber": 2,
+   "rowOrder": 1,
+   "itemElement": {
+    "@id": "030dc940-4a7c-4361-a4ff-d2e556457d5a",
+    "name": "blower"
+   },
+   "itemLabel": "blower",
+   "failureMode": "Impeller fouling",
+   "effect": "Local: reduced flow -> System: reduced DF -> End: margin erosion",
+   "cause": "particulate ingress",
+   "currentControls": "periodic flow trending",
+   "severity": 5,
+   "occurrence": 4,
+   "detection": 4,
+   "rpn": 80,
+   "failureModeRatio": 0.3,
+   "failureRate": 12000,
+   "safetyRelated": false
+  },
+  {
+   "@id": "dbbfe120-892b-4191-92b5-4c132f771335",
+   "rowNumber": 3,
+   "rowOrder": 2,
+   "itemElement": {
+    "@id": "cbfdf551-c1ca-4c8f-adbe-d348d9d5eb3a",
+    "name": "recombiner"
+   },
+   "itemLabel": "recombiner",
+   "failureMode": "Catalyst poisoning",
+   "effect": "Local: conversion drops -> System: HT passes beds unconverted -> End: release above ALARP target",
+   "cause": "siloxane/oil contamination",
+   "currentControls": "outlet activity trending",
+   "severity": 8,
+   "occurrence": 3,
+   "detection": 5,
+   "rpn": 120,
+   "failureModeRatio": 0.6,
+   "failureRate": 2000,
+   "safetyRelated": true,
+   "safetyMechanism": "outlet activity trending",
+   "smCoverage": 0.6,
+   "singlePointFailureRate": 480,
+   "traces": [
+    {
+     "name": "Sn4-to-FMEA",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn4"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "dfaec895-e04d-44ed-9b7f-017575ab597d",
+   "rowNumber": 4,
+   "rowOrder": 3,
+   "itemElement": {
+    "@id": "cbfdf551-c1ca-4c8f-adbe-d348d9d5eb3a",
+    "name": "recombiner"
+   },
+   "itemLabel": "recombiner",
+   "failureMode": "Heater failure",
+   "effect": "Local: low bed temp -> System: low conversion -> End: DF loss",
+   "cause": "element burnout",
+   "currentControls": "bed temperature alarm",
+   "severity": 7,
+   "occurrence": 3,
+   "detection": 2,
+   "rpn": 42,
+   "failureModeRatio": 0.4,
+   "failureRate": 2000,
+   "safetyRelated": true,
+   "safetyMechanism": "bed temperature alarm",
+   "smCoverage": 0.9,
+   "singlePointFailureRate": 79.99999999999999
+  },
+  {
+   "@id": "b77bf099-c35f-4906-8ec2-798d5c80eace",
+   "rowNumber": 5,
+   "rowOrder": 4,
+   "itemElement": {
+    "@id": "bda3dd8d-8cb0-4b22-be47-15bfc1754f94",
+    "name": "condenser"
+   },
+   "itemLabel": "condenser",
+   "failureMode": "Cooling water loss",
+   "effect": "Local: high moisture to dryers -> System: rapid bed saturation -> End: early breakthrough",
+   "cause": "CW system fault",
+   "currentControls": "outlet temperature alarm",
+   "severity": 6,
+   "occurrence": 3,
+   "detection": 3,
+   "rpn": 54,
+   "failureModeRatio": 0.7,
+   "failureRate": 1500,
+   "safetyRelated": true,
+   "safetyMechanism": "outlet temperature alarm",
+   "smCoverage": 0.8,
+   "singlePointFailureRate": 209.99999999999994
+  },
+  {
+   "@id": "59a45ccf-afa7-4692-accc-1a3e06e02622",
+   "rowNumber": 6,
+   "rowOrder": 5,
+   "itemElement": {
+    "@id": "bda3dd8d-8cb0-4b22-be47-15bfc1754f94",
+    "name": "condenser"
+   },
+   "itemLabel": "condenser",
+   "failureMode": "Regen-path leak to stack",
+   "effect": "Local: HTO bypasses collection -> System: direct stack release -> End: direct stack release",
+   "cause": "valve/gasket failure",
+   "currentControls": "regen-line activity monitor",
+   "severity": 9,
+   "occurrence": 2,
+   "detection": 4,
+   "rpn": 72,
+   "failureModeRatio": 0.3,
+   "failureRate": 1500,
+   "safetyRelated": true,
+   "safetyMechanism": "regen-line activity monitor",
+   "smCoverage": 0.75,
+   "singlePointFailureRate": 112.5,
+   "traces": [
+    {
+     "name": "Sn6-to-FMEA",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn6"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "734b04a0-2b04-43e5-8273-26a3cf93cff7",
+   "rowNumber": 7,
+   "rowOrder": 6,
+   "itemElement": {
+    "@id": "be10ffd3-ca48-4915-bf0e-350d249d47fe",
+    "name": "dryerA"
+   },
+   "itemLabel": "dryerA",
+   "failureMode": "Sieve breakthrough",
+   "effect": "Local: HTO passes bed -> System: stack release rises -> End: authorised-limit challenge",
+   "cause": "bed saturation",
+   "currentControls": "dewpoint monitor + auto dual-bed changeover",
+   "severity": 9,
+   "occurrence": 4,
+   "detection": 2,
+   "rpn": 72,
+   "failureModeRatio": 0.7,
+   "failureRate": 500,
+   "safetyRelated": true,
+   "safetyMechanism": "dewpoint monitor + auto dual-bed changeover",
+   "smCoverage": 0.9,
+   "singlePointFailureRate": 34.99999999999999,
+   "traces": [
+    {
+     "name": "Sn1-to-FMEA",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn1"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "36fa7eb4-5f18-43e1-94fe-f919bba34f79",
+   "rowNumber": 8,
+   "rowOrder": 7,
+   "itemElement": {
+    "@id": "be10ffd3-ca48-4915-bf0e-350d249d47fe",
+    "name": "dryerA"
+   },
+   "itemLabel": "dryerA",
+   "failureMode": "Bed channelling",
+   "effect": "Local: partial bypass -> System: premature partial breakthrough -> End: partial breakthrough",
+   "cause": "packing degradation",
+   "severity": 7,
+   "occurrence": 3,
+   "detection": 4,
+   "rpn": 84,
+   "failureModeRatio": 0.3,
+   "failureRate": 500,
+   "safetyRelated": true,
+   "safetyMechanism": "differential-pressure trending across the bed",
+   "smCoverage": 0.6,
+   "singlePointFailureRate": 60
+  },
+  {
+   "@id": "b7593881-b7e5-4fe2-9493-10efca880882",
+   "rowNumber": 9,
+   "rowOrder": 8,
+   "itemElement": {
+    "@id": "ce4ef408-0c7f-4d07-8ade-257d13f8dae4",
+    "name": "dryerB"
+   },
+   "itemLabel": "dryerB",
+   "failureMode": "Regen heater failure",
+   "effect": "Local: bed unavailable after regen -> System: redundancy lost -> End: redundancy lost",
+   "cause": "element burnout",
+   "currentControls": "regen temperature monitoring",
+   "severity": 6,
+   "occurrence": 3,
+   "detection": 3,
+   "rpn": 54,
+   "failureModeRatio": 1,
+   "failureRate": 500,
+   "safetyRelated": true,
+   "safetyMechanism": "regen temperature monitoring",
+   "smCoverage": 0.8,
+   "singlePointFailureRate": 99.99999999999997
+  },
+  {
+   "@id": "2f3a0d7d-ec31-4921-968b-486cdcdadb39",
+   "rowNumber": 10,
+   "rowOrder": 9,
+   "itemElement": {
+    "@id": "016114b4-f61e-4c8e-a90f-6c90dcf74340",
+    "name": "changeoverValves"
+   },
+   "itemLabel": "changeoverValves",
+   "failureMode": "Stuck mid-travel",
+   "effect": "Local: both beds isolated -> System: total loss of drying -> End: unmitigated release path",
+   "cause": "actuator/stem seizure",
+   "currentControls": "position feedback + periodic proof test",
+   "severity": 10,
+   "occurrence": 2,
+   "detection": 3,
+   "rpn": 60,
+   "failureModeRatio": 0.4,
+   "failureRate": 3000,
+   "safetyRelated": true,
+   "safetyMechanism": "position feedback + periodic proof test",
+   "smCoverage": 0.85,
+   "singlePointFailureRate": 180.00000000000003
+  },
+  {
+   "@id": "35add4ed-ca30-4b84-b071-676d0c3a316b",
+   "rowNumber": 11,
+   "rowOrder": 10,
+   "itemElement": {
+    "@id": "016114b4-f61e-4c8e-a90f-6c90dcf74340",
+    "name": "changeoverValves"
+   },
+   "itemLabel": "changeoverValves",
+   "failureMode": "Seat leak-through",
+   "effect": "Local: partial bypass of active bed -> System: DF reduction -> End: DF reduction",
+   "cause": "seat wear",
+   "currentControls": "periodic leak test",
+   "severity": 6,
+   "occurrence": 4,
+   "detection": 5,
+   "rpn": 120,
+   "failureModeRatio": 0.6,
+   "failureRate": 3000,
+   "safetyRelated": false
+  },
+  {
+   "@id": "8a137ee0-bb27-4437-ba32-f5e7035d9316",
+   "rowNumber": 12,
+   "rowOrder": 11,
+   "itemElement": {
+    "@id": "3ad103b3-0c49-49f1-9e73-5370d3978e0e",
+    "name": "dewpointMonitor"
+   },
+   "itemLabel": "dewpointMonitor",
+   "failureMode": "Drift (reads dry)",
+   "effect": "Local: breakthrough undetected -> System: changeover never triggered -> End: latent release",
+   "cause": "sensor ageing",
+   "currentControls": "calibration interval per REQ-ADS-011",
+   "severity": 9,
+   "occurrence": 3,
+   "detection": 7,
+   "rpn": 189,
+   "failureModeRatio": 0.5,
+   "failureRate": 4000,
+   "safetyRelated": true,
+   "safetyMechanism": "calibration interval per REQ-ADS-011",
+   "smCoverage": 0.5,
+   "singlePointFailureRate": 1000,
+   "traces": [
+    {
+     "name": "Sn5-to-FMEA1",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn5"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "4d13462c-1aca-492b-853f-cb507719fc5e",
+   "rowNumber": 13,
+   "rowOrder": 12,
+   "itemElement": {
+    "@id": "3ad103b3-0c49-49f1-9e73-5370d3978e0e",
+    "name": "dewpointMonitor"
+   },
+   "itemLabel": "dewpointMonitor",
+   "failureMode": "Fail high (reads wet)",
+   "effect": "Local: spurious changeover -> System: availability impact only -> End: availability impact only",
+   "cause": "sensor fault",
+   "currentControls": "cross-check vs dryer outlet trend",
+   "severity": 3,
+   "occurrence": 3,
+   "detection": 2,
+   "rpn": 18,
+   "failureModeRatio": 0.5,
+   "failureRate": 4000,
+   "safetyRelated": false
+  },
+  {
+   "@id": "c0ac0289-4021-4336-b956-ee523425e818",
+   "rowNumber": 14,
+   "rowOrder": 13,
+   "itemElement": {
+    "@id": "21854fa0-e6ba-463f-913a-dc31025945ad",
+    "name": "stackMonitor"
+   },
+   "itemLabel": "stackMonitor",
+   "failureMode": "Loss of signal",
+   "effect": "Local: release unquantified -> System: accountancy gap -> End: regulatory reporting gap",
+   "cause": "detector/HV failure",
+   "currentControls": "independent watchdog + alarm",
+   "severity": 7,
+   "occurrence": 2,
+   "detection": 2,
+   "rpn": 28,
+   "failureModeRatio": 1,
+   "failureRate": 3000,
+   "safetyRelated": true,
+   "safetyMechanism": "independent watchdog + alarm",
+   "smCoverage": 0.9,
+   "singlePointFailureRate": 299.99999999999994,
+   "traces": [
+    {
+     "name": "Sn5-to-FMEA2",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn5"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "1e2240e2-365a-4383-8c48-c304c41c61a0",
+   "rowNumber": 15,
+   "rowOrder": 14,
+   "itemElement": {
+    "@id": "0bfa4288-e199-4fc1-b0cf-8e54faa02fa8",
+    "name": "controller"
+   },
+   "itemLabel": "controller",
+   "failureMode": "Fails on LOOP",
+   "effect": "Local: no FailSafe entry -> System: uncontrolled state during outage -> End: uncontrolled state during outage",
+   "cause": "PSU/transition fault",
+   "currentControls": "watchdog + UPS auto-transfer",
+   "severity": 8,
+   "occurrence": 2,
+   "detection": 3,
+   "rpn": 48,
+   "failureModeRatio": 0.4,
+   "failureRate": 1000,
+   "safetyRelated": true,
+   "safetyMechanism": "watchdog + UPS auto-transfer",
+   "smCoverage": 0.85,
+   "singlePointFailureRate": 60.00000000000001,
+   "traces": [
+    {
+     "name": "Sn3-to-FMEA1",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn3"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "d884b8f2-a35b-4e59-a9a5-a6ba11e0afce",
+   "rowNumber": 16,
+   "rowOrder": 15,
+   "itemElement": {
+    "@id": "0bfa4288-e199-4fc1-b0cf-8e54faa02fa8",
+    "name": "controller"
+   },
+   "itemLabel": "controller",
+   "failureMode": "Spurious changeover",
+   "effect": "Local: unnecessary bed swap -> System: wear -> End: transient DF dip",
+   "cause": "logic/EMC fault",
+   "currentControls": "event logging review",
+   "severity": 3,
+   "occurrence": 3,
+   "detection": 4,
+   "rpn": 36,
+   "failureModeRatio": 0.6,
+   "failureRate": 1000,
+   "safetyRelated": false
+  },
+  {
+   "@id": "1ab52260-556a-4af3-8893-9a06fed915c2",
+   "rowNumber": 17,
+   "rowOrder": 16,
+   "itemElement": {
+    "@id": "ae9fb8e4-5451-41f7-ab59-0f83c3d1d2d8",
+    "name": "backupSupply"
+   },
+   "itemLabel": "backupSupply",
+   "failureMode": "Battery degraded",
+   "effect": "Local: restart > 30 s on LOOP -> System: REQ-ADS-007 violated -> End: REQ-ADS-007 violated",
+   "cause": "ageing",
+   "currentControls": "periodic discharge test",
+   "severity": 7,
+   "occurrence": 3,
+   "detection": 4,
+   "rpn": 84,
+   "failureModeRatio": 1,
+   "failureRate": 6000,
+   "safetyRelated": true,
+   "safetyMechanism": "periodic discharge test",
+   "smCoverage": 0.85,
+   "singlePointFailureRate": 900.0000000000001,
+   "traces": [
+    {
+     "name": "Sn3-to-FMEA2",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn3"
+     }
+    }
+   ]
+  }
+ ]
+}

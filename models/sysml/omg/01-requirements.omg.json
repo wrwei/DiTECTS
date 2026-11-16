@@ -1,0 +1,3656 @@
+{
+ "modelName": "ADS Requirements",
+ "elements": [
+  {
+   "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83",
+   "@type": "Package",
+   "declaredName": "ADS Requirements",
+   "name": "ADS Requirements",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "ownedRelationship": [
+    {
+     "@id": "934f7e18-e3e6-4e5b-986e-91a92fe55b9d"
+    },
+    {
+     "@id": "365dcf7b-6a47-4542-9a7a-e633b41230a3"
+    },
+    {
+     "@id": "63903bc9-65a7-45e6-ae33-6d5117dcf003"
+    },
+    {
+     "@id": "1a7bdb9b-3bd1-4bfa-8a01-e1f1d76064d2"
+    },
+    {
+     "@id": "6a9d65f4-4911-4827-8907-c6cd04887aa1"
+    },
+    {
+     "@id": "36c58b8d-dcef-4fb1-965f-7202442523bd"
+    },
+    {
+     "@id": "879985b1-84b7-4d25-a117-9da467e8d77a"
+    },
+    {
+     "@id": "3f1af726-25db-4471-a4c0-05e1ca7ee60e"
+    },
+    {
+     "@id": "82cde39f-d51b-44dc-9cb3-e446d7382543"
+    },
+    {
+     "@id": "0b7dbf49-c667-483e-bc76-97ee223cf178"
+    },
+    {
+     "@id": "ef87a37f-0a45-4f5e-957a-fbd2fbee1d08"
+    },
+    {
+     "@id": "d7b7f6d7-98f4-4fa5-9f10-b51753bfda0c"
+    },
+    {
+     "@id": "0f74c450-7b28-494a-85a4-b07769540337"
+    },
+    {
+     "@id": "51edcc14-f0c5-41e6-989e-a9ab6dd1ea9e"
+    },
+    {
+     "@id": "7e800689-c61a-4e0d-a557-f59293d6ea31"
+    },
+    {
+     "@id": "9751c60a-01b5-429f-b794-33458718c376"
+    },
+    {
+     "@id": "6edf1892-2a9b-4a84-a494-c932f6faf5b1"
+    },
+    {
+     "@id": "0fcfc8a5-1cc9-4259-ac29-2e6f63f94664"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "934f7e18-e3e6-4e5b-986e-91a92fe55b9d"
+    },
+    {
+     "@id": "365dcf7b-6a47-4542-9a7a-e633b41230a3"
+    },
+    {
+     "@id": "63903bc9-65a7-45e6-ae33-6d5117dcf003"
+    },
+    {
+     "@id": "1a7bdb9b-3bd1-4bfa-8a01-e1f1d76064d2"
+    },
+    {
+     "@id": "6a9d65f4-4911-4827-8907-c6cd04887aa1"
+    },
+    {
+     "@id": "36c58b8d-dcef-4fb1-965f-7202442523bd"
+    },
+    {
+     "@id": "879985b1-84b7-4d25-a117-9da467e8d77a"
+    },
+    {
+     "@id": "3f1af726-25db-4471-a4c0-05e1ca7ee60e"
+    },
+    {
+     "@id": "82cde39f-d51b-44dc-9cb3-e446d7382543"
+    },
+    {
+     "@id": "0b7dbf49-c667-483e-bc76-97ee223cf178"
+    },
+    {
+     "@id": "ef87a37f-0a45-4f5e-957a-fbd2fbee1d08"
+    },
+    {
+     "@id": "d7b7f6d7-98f4-4fa5-9f10-b51753bfda0c"
+    },
+    {
+     "@id": "0f74c450-7b28-494a-85a4-b07769540337"
+    },
+    {
+     "@id": "51edcc14-f0c5-41e6-989e-a9ab6dd1ea9e"
+    },
+    {
+     "@id": "7e800689-c61a-4e0d-a557-f59293d6ea31"
+    },
+    {
+     "@id": "9751c60a-01b5-429f-b794-33458718c376"
+    },
+    {
+     "@id": "6edf1892-2a9b-4a84-a494-c932f6faf5b1"
+    },
+    {
+     "@id": "0fcfc8a5-1cc9-4259-ac29-2e6f63f94664"
+    }
+   ],
+   "ownedFeatureMembership": [
+    {
+     "@id": "0fcfc8a5-1cc9-4259-ac29-2e6f63f94664"
+    }
+   ],
+   "ownedMember": [
+    {
+     "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+    },
+    {
+     "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+    },
+    {
+     "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+    },
+    {
+     "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+    },
+    {
+     "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+    },
+    {
+     "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+    },
+    {
+     "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+    },
+    {
+     "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+    },
+    {
+     "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+    },
+    {
+     "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+    },
+    {
+     "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+    },
+    {
+     "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+    },
+    {
+     "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+    },
+    {
+     "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+    },
+    {
+     "@id": "36478332-e697-4d97-a985-16f36207458d"
+    },
+    {
+     "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+    }
+   ],
+   "isConjugated": false,
+   "documentation": [
+    {
+     "@id": "38e86fa7-c1a4-4f0f-9286-1bb17df2966c"
+    }
+   ]
+  },
+  {
+   "@id": "38e86fa7-c1a4-4f0f-9286-1bb17df2966c",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "934f7e18-e3e6-4e5b-986e-91a92fe55b9d"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "934f7e18-e3e6-4e5b-986e-91a92fe55b9d"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "body": "Requirements for the Atmosphere Detritiation System\n"
+  },
+  {
+   "@id": "934f7e18-e3e6-4e5b-986e-91a92fe55b9d",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "38e86fa7-c1a4-4f0f-9286-1bb17df2966c"
+   },
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "38e86fa7-c1a4-4f0f-9286-1bb17df2966c"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    },
+    {
+     "@id": "38e86fa7-c1a4-4f0f-9286-1bb17df2966c"
+    }
+   ],
+   "target": [
+    {
+     "@id": "38e86fa7-c1a4-4f0f-9286-1bb17df2966c"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "38e86fa7-c1a4-4f0f-9286-1bb17df2966c"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215",
+   "@type": "RequirementDefinition",
+   "declaredName": "RadiologicalReleaseLimit",
+   "name": "RadiologicalReleaseLimit",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "365dcf7b-6a47-4542-9a7a-e633b41230a3"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "f76078d3-28df-4572-8e5d-cc9c27de2bd3"
+    },
+    {
+     "@id": "ffcfe42f-6a7a-46e6-a399-f9e8a0843518"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "f76078d3-28df-4572-8e5d-cc9c27de2bd3"
+    },
+    {
+     "@id": "ffcfe42f-6a7a-46e6-a399-f9e8a0843518"
+    }
+   ],
+   "ownedFeatureMembership": [
+    {
+     "@id": "ffcfe42f-6a7a-46e6-a399-f9e8a0843518"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "365dcf7b-6a47-4542-9a7a-e633b41230a3"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "270fdbd5-14f3-4afa-8967-0c0a701b8765"
+    }
+   ],
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "365dcf7b-6a47-4542-9a7a-e633b41230a3",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "b93a5caa-5105-4367-9b5d-3b2f50713325",
+   "ownedMemberName": "RadiologicalReleaseLimit",
+   "ownedMemberElement": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "memberElementId": "b93a5caa-5105-4367-9b5d-3b2f50713325",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "memberName": "RadiologicalReleaseLimit",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "270fdbd5-14f3-4afa-8967-0c0a701b8765",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "f76078d3-28df-4572-8e5d-cc9c27de2bd3"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "f76078d3-28df-4572-8e5d-cc9c27de2bd3"
+   },
+   "owningNamespace": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "documentedElement": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "body": "Routine tritium discharge to atmosphere shall remain within the authorised annual limit and be reduced ALARP.\n"
+  },
+  {
+   "@id": "f76078d3-28df-4572-8e5d-cc9c27de2bd3",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "270fdbd5-14f3-4afa-8967-0c0a701b8765"
+   },
+   "membershipOwningNamespace": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "memberElement": {
+    "@id": "270fdbd5-14f3-4afa-8967-0c0a701b8765"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+    },
+    {
+     "@id": "270fdbd5-14f3-4afa-8967-0c0a701b8765"
+    }
+   ],
+   "target": [
+    {
+     "@id": "270fdbd5-14f3-4afa-8967-0c0a701b8765"
+    }
+   ],
+   "source": [
+    {
+     "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "270fdbd5-14f3-4afa-8967-0c0a701b8765"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-TRIT-014",
+   "declaredName": "dischargeLimit",
+   "name": "dischargeLimit",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "63903bc9-65a7-45e6-ae33-6d5117dcf003"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "bff5f544-97b0-4148-92d3-04b4c0bec65b"
+    },
+    {
+     "@id": "2fb89362-5bdd-47be-ae67-749d29881228"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "bff5f544-97b0-4148-92d3-04b4c0bec65b"
+    }
+   ],
+   "isConjugated": false,
+   "ownedSpecialization": [
+    {
+     "@id": "2fb89362-5bdd-47be-ae67-749d29881228"
+    }
+   ],
+   "ownedTyping": [
+    {
+     "@id": "2fb89362-5bdd-47be-ae67-749d29881228"
+    }
+   ],
+   "owningRelationship": {
+    "@id": "63903bc9-65a7-45e6-ae33-6d5117dcf003"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "99d34514-6f7f-4137-9b04-b56068238ebb"
+    }
+   ],
+   "requirementDefinition": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "63903bc9-65a7-45e6-ae33-6d5117dcf003",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "6f6a1ce2-683d-48dc-a526-0a1ad6da9f7d",
+   "ownedMemberName": "dischargeLimit",
+   "ownedMemberElement": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "memberElementId": "6f6a1ce2-683d-48dc-a526-0a1ad6da9f7d",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "memberName": "dischargeLimit",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "99d34514-6f7f-4137-9b04-b56068238ebb",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "bff5f544-97b0-4148-92d3-04b4c0bec65b"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "bff5f544-97b0-4148-92d3-04b4c0bec65b"
+   },
+   "owningNamespace": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "documentedElement": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "body": "* Routine tritium discharge to the atmosphere via the ADS stack shall remain within the authorised annual limit and be reduced as low as reasonably practicable (ALARP). "
+  },
+  {
+   "@id": "bff5f544-97b0-4148-92d3-04b4c0bec65b",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "99d34514-6f7f-4137-9b04-b56068238ebb"
+   },
+   "membershipOwningNamespace": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "memberElement": {
+    "@id": "99d34514-6f7f-4137-9b04-b56068238ebb"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+    },
+    {
+     "@id": "99d34514-6f7f-4137-9b04-b56068238ebb"
+    }
+   ],
+   "target": [
+    {
+     "@id": "99d34514-6f7f-4137-9b04-b56068238ebb"
+    }
+   ],
+   "source": [
+    {
+     "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "99d34514-6f7f-4137-9b04-b56068238ebb"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-TRIT-007",
+   "declaredName": "confinementIntegrity",
+   "name": "confinementIntegrity",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "1a7bdb9b-3bd1-4bfa-8a01-e1f1d76064d2"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "a52a5dde-4245-44e7-b0f5-c47d30a1780d"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "a52a5dde-4245-44e7-b0f5-c47d30a1780d"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "1a7bdb9b-3bd1-4bfa-8a01-e1f1d76064d2"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "386e04d5-2635-44a1-9585-cd7df516cb96"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "1a7bdb9b-3bd1-4bfa-8a01-e1f1d76064d2",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "1994af60-3e2e-4b5c-b138-fc18a8763255",
+   "ownedMemberName": "confinementIntegrity",
+   "ownedMemberElement": {
+    "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+   },
+   "memberElementId": "1994af60-3e2e-4b5c-b138-fc18a8763255",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+   },
+   "memberName": "confinementIntegrity",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "386e04d5-2635-44a1-9585-cd7df516cb96",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "a52a5dde-4245-44e7-b0f5-c47d30a1780d"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "a52a5dde-4245-44e7-b0f5-c47d30a1780d"
+   },
+   "owningNamespace": {
+    "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+   },
+   "documentedElement": {
+    "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+   },
+   "body": "At least two independent confinement barriers shall be maintained between tritium inventory and the environment under all credible conditions.\n"
+  },
+  {
+   "@id": "a52a5dde-4245-44e7-b0f5-c47d30a1780d",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "386e04d5-2635-44a1-9585-cd7df516cb96"
+   },
+   "membershipOwningNamespace": {
+    "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+   },
+   "memberElement": {
+    "@id": "386e04d5-2635-44a1-9585-cd7df516cb96"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+    },
+    {
+     "@id": "386e04d5-2635-44a1-9585-cd7df516cb96"
+    }
+   ],
+   "target": [
+    {
+     "@id": "386e04d5-2635-44a1-9585-cd7df516cb96"
+    }
+   ],
+   "source": [
+    {
+     "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "9578e1df-fccc-449a-b3e7-08fc3f494148"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "386e04d5-2635-44a1-9585-cd7df516cb96"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-TRIT-021",
+   "declaredName": "inventoryCap",
+   "name": "inventoryCap",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "6a9d65f4-4911-4827-8907-c6cd04887aa1"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "be4bc161-52a0-4a34-978b-17ff27a7c883"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "be4bc161-52a0-4a34-978b-17ff27a7c883"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "6a9d65f4-4911-4827-8907-c6cd04887aa1"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "6d51d668-0185-4683-b3f0-1d79b29ef541"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "6a9d65f4-4911-4827-8907-c6cd04887aa1",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "a9a4af55-b151-4afe-be9f-0ae6b0d9825d",
+   "ownedMemberName": "inventoryCap",
+   "ownedMemberElement": {
+    "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+   },
+   "memberElementId": "a9a4af55-b151-4afe-be9f-0ae6b0d9825d",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+   },
+   "memberName": "inventoryCap",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "6d51d668-0185-4683-b3f0-1d79b29ef541",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "be4bc161-52a0-4a34-978b-17ff27a7c883"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "be4bc161-52a0-4a34-978b-17ff27a7c883"
+   },
+   "owningNamespace": {
+    "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+   },
+   "documentedElement": {
+    "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+   },
+   "body": "The tritium inventory held in any single processing location shall not exceed the authorised cap.\n"
+  },
+  {
+   "@id": "be4bc161-52a0-4a34-978b-17ff27a7c883",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "6d51d668-0185-4683-b3f0-1d79b29ef541"
+   },
+   "membershipOwningNamespace": {
+    "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+   },
+   "memberElement": {
+    "@id": "6d51d668-0185-4683-b3f0-1d79b29ef541"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+    },
+    {
+     "@id": "6d51d668-0185-4683-b3f0-1d79b29ef541"
+    }
+   ],
+   "target": [
+    {
+     "@id": "6d51d668-0185-4683-b3f0-1d79b29ef541"
+    }
+   ],
+   "source": [
+    {
+     "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "d07f6c12-94be-4a37-b10c-dc9c3d44dcb2"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "6d51d668-0185-4683-b3f0-1d79b29ef541"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-TRIT-030",
+   "declaredName": "detritiationAvailability",
+   "name": "detritiationAvailability",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "36c58b8d-dcef-4fb1-965f-7202442523bd"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "2d006627-053d-4faa-9174-769d5233a333"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "2d006627-053d-4faa-9174-769d5233a333"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "36c58b8d-dcef-4fb1-965f-7202442523bd"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "011f82f9-cdd4-4024-8ea2-b011a7379813"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "36c58b8d-dcef-4fb1-965f-7202442523bd",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "3d894b4e-6622-4735-981d-79ac9b398e86",
+   "ownedMemberName": "detritiationAvailability",
+   "ownedMemberElement": {
+    "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+   },
+   "memberElementId": "3d894b4e-6622-4735-981d-79ac9b398e86",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+   },
+   "memberName": "detritiationAvailability",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "011f82f9-cdd4-4024-8ea2-b011a7379813",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "2d006627-053d-4faa-9174-769d5233a333"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "2d006627-053d-4faa-9174-769d5233a333"
+   },
+   "owningNamespace": {
+    "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+   },
+   "documentedElement": {
+    "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+   },
+   "body": "Atmosphere detritiation shall remain available in all plant states, including loss of off-site power.\n"
+  },
+  {
+   "@id": "2d006627-053d-4faa-9174-769d5233a333",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "011f82f9-cdd4-4024-8ea2-b011a7379813"
+   },
+   "membershipOwningNamespace": {
+    "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+   },
+   "memberElement": {
+    "@id": "011f82f9-cdd4-4024-8ea2-b011a7379813"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+    },
+    {
+     "@id": "011f82f9-cdd4-4024-8ea2-b011a7379813"
+    }
+   ],
+   "target": [
+    {
+     "@id": "011f82f9-cdd4-4024-8ea2-b011a7379813"
+    }
+   ],
+   "source": [
+    {
+     "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "29b0fc80-e569-4ff0-9384-c32e67ab9149"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "011f82f9-cdd4-4024-8ea2-b011a7379813"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "2682f889-39f3-4a35-80d0-9c46c3315818",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-001",
+   "declaredName": "detritiationCapacity",
+   "name": "detritiationCapacity",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "879985b1-84b7-4d25-a117-9da467e8d77a"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "4111e38d-aec7-4553-acc7-4165b7157d84"
+    },
+    {
+     "@id": "6f0c0886-a7df-423a-ae51-d2ca7d673053"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "4111e38d-aec7-4553-acc7-4165b7157d84"
+    }
+   ],
+   "isConjugated": false,
+   "ownedSpecialization": [
+    {
+     "@id": "6f0c0886-a7df-423a-ae51-d2ca7d673053"
+    }
+   ],
+   "ownedTyping": [
+    {
+     "@id": "6f0c0886-a7df-423a-ae51-d2ca7d673053"
+    }
+   ],
+   "owningRelationship": {
+    "@id": "879985b1-84b7-4d25-a117-9da467e8d77a"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "09ec715b-88a5-463c-8a9e-56ff37da390c"
+    }
+   ],
+   "requirementDefinition": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "879985b1-84b7-4d25-a117-9da467e8d77a",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "c2829c0f-4173-490a-a961-8f775f3c8e14",
+   "ownedMemberName": "detritiationCapacity",
+   "ownedMemberElement": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "memberElementId": "c2829c0f-4173-490a-a961-8f775f3c8e14",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "memberName": "detritiationCapacity",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "09ec715b-88a5-463c-8a9e-56ff37da390c",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "4111e38d-aec7-4553-acc7-4165b7157d84"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "4111e38d-aec7-4553-acc7-4165b7157d84"
+   },
+   "owningNamespace": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "documentedElement": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "body": "The ADS shall achieve a decontamination factor of at least 1000 for tritiated species at design-basis flow.\n"
+  },
+  {
+   "@id": "4111e38d-aec7-4553-acc7-4165b7157d84",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "09ec715b-88a5-463c-8a9e-56ff37da390c"
+   },
+   "membershipOwningNamespace": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "memberElement": {
+    "@id": "09ec715b-88a5-463c-8a9e-56ff37da390c"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+    },
+    {
+     "@id": "09ec715b-88a5-463c-8a9e-56ff37da390c"
+    }
+   ],
+   "target": [
+    {
+     "@id": "09ec715b-88a5-463c-8a9e-56ff37da390c"
+    }
+   ],
+   "source": [
+    {
+     "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "09ec715b-88a5-463c-8a9e-56ff37da390c"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-002",
+   "declaredName": "changeoverContinuity",
+   "name": "changeoverContinuity",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "3f1af726-25db-4471-a4c0-05e1ca7ee60e"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "8ae85aec-0671-4365-8a2e-6b5af7ecba88"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "8ae85aec-0671-4365-8a2e-6b5af7ecba88"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "3f1af726-25db-4471-a4c0-05e1ca7ee60e"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "24e1fd2f-57dc-4d92-bb90-61a4f692e926"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "3f1af726-25db-4471-a4c0-05e1ca7ee60e",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "ea16a3d2-f9e9-4a0f-8d71-da5048fb8373",
+   "ownedMemberName": "changeoverContinuity",
+   "ownedMemberElement": {
+    "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+   },
+   "memberElementId": "ea16a3d2-f9e9-4a0f-8d71-da5048fb8373",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+   },
+   "memberName": "changeoverContinuity",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "24e1fd2f-57dc-4d92-bb90-61a4f692e926",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "8ae85aec-0671-4365-8a2e-6b5af7ecba88"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "8ae85aec-0671-4365-8a2e-6b5af7ecba88"
+   },
+   "owningNamespace": {
+    "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+   },
+   "documentedElement": {
+    "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+   },
+   "body": "Dryer-bed changeover shall complete without loss of the detritiation function.\n"
+  },
+  {
+   "@id": "8ae85aec-0671-4365-8a2e-6b5af7ecba88",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "24e1fd2f-57dc-4d92-bb90-61a4f692e926"
+   },
+   "membershipOwningNamespace": {
+    "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+   },
+   "memberElement": {
+    "@id": "24e1fd2f-57dc-4d92-bb90-61a4f692e926"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+    },
+    {
+     "@id": "24e1fd2f-57dc-4d92-bb90-61a4f692e926"
+    }
+   ],
+   "target": [
+    {
+     "@id": "24e1fd2f-57dc-4d92-bb90-61a4f692e926"
+    }
+   ],
+   "source": [
+    {
+     "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "9e69adb7-d1dc-4251-9b88-72c276305d42"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "24e1fd2f-57dc-4d92-bb90-61a4f692e926"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-003",
+   "declaredName": "monitoringAndAlarm",
+   "name": "monitoringAndAlarm",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "82cde39f-d51b-44dc-9cb3-e446d7382543"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "b05fb037-f881-4dd5-90e3-260e3dedde4b"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "b05fb037-f881-4dd5-90e3-260e3dedde4b"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "82cde39f-d51b-44dc-9cb3-e446d7382543"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "1b2e9d0b-bfca-4f4d-947b-327a5924cd94"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "82cde39f-d51b-44dc-9cb3-e446d7382543",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "b397f93d-ddfa-4c4d-8795-973b694fcf41",
+   "ownedMemberName": "monitoringAndAlarm",
+   "ownedMemberElement": {
+    "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+   },
+   "memberElementId": "b397f93d-ddfa-4c4d-8795-973b694fcf41",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+   },
+   "memberName": "monitoringAndAlarm",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "1b2e9d0b-bfca-4f4d-947b-327a5924cd94",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "b05fb037-f881-4dd5-90e3-260e3dedde4b"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "b05fb037-f881-4dd5-90e3-260e3dedde4b"
+   },
+   "owningNamespace": {
+    "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+   },
+   "documentedElement": {
+    "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+   },
+   "body": "Outlet dewpoint and stack tritium activity shall be continuously monitored with alarm thresholds.\n"
+  },
+  {
+   "@id": "b05fb037-f881-4dd5-90e3-260e3dedde4b",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "1b2e9d0b-bfca-4f4d-947b-327a5924cd94"
+   },
+   "membershipOwningNamespace": {
+    "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+   },
+   "memberElement": {
+    "@id": "1b2e9d0b-bfca-4f4d-947b-327a5924cd94"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+    },
+    {
+     "@id": "1b2e9d0b-bfca-4f4d-947b-327a5924cd94"
+    }
+   ],
+   "target": [
+    {
+     "@id": "1b2e9d0b-bfca-4f4d-947b-327a5924cd94"
+    }
+   ],
+   "source": [
+    {
+     "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "825753a8-c7c1-4151-99db-e7cfbd23572a"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "1b2e9d0b-bfca-4f4d-947b-327a5924cd94"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-004",
+   "declaredName": "recombinerEfficiency",
+   "name": "recombinerEfficiency",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "0b7dbf49-c667-483e-bc76-97ee223cf178"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "45217b31-2a15-4f9e-ab57-39677b2a8bd5"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "45217b31-2a15-4f9e-ab57-39677b2a8bd5"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "0b7dbf49-c667-483e-bc76-97ee223cf178"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "e48c8f28-899b-41d1-bd49-7fd53bc4c093"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "0b7dbf49-c667-483e-bc76-97ee223cf178",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "febbd792-8d10-4603-a359-3578852d2558",
+   "ownedMemberName": "recombinerEfficiency",
+   "ownedMemberElement": {
+    "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+   },
+   "memberElementId": "febbd792-8d10-4603-a359-3578852d2558",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+   },
+   "memberName": "recombinerEfficiency",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "e48c8f28-899b-41d1-bd49-7fd53bc4c093",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "45217b31-2a15-4f9e-ab57-39677b2a8bd5"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "45217b31-2a15-4f9e-ab57-39677b2a8bd5"
+   },
+   "owningNamespace": {
+    "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+   },
+   "documentedElement": {
+    "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+   },
+   "body": "The catalytic recombiner shall convert at least 99.9% of elemental tritium (HT) to HTO at operating temperature.\n"
+  },
+  {
+   "@id": "45217b31-2a15-4f9e-ab57-39677b2a8bd5",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "e48c8f28-899b-41d1-bd49-7fd53bc4c093"
+   },
+   "membershipOwningNamespace": {
+    "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+   },
+   "memberElement": {
+    "@id": "e48c8f28-899b-41d1-bd49-7fd53bc4c093"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+    },
+    {
+     "@id": "e48c8f28-899b-41d1-bd49-7fd53bc4c093"
+    }
+   ],
+   "target": [
+    {
+     "@id": "e48c8f28-899b-41d1-bd49-7fd53bc4c093"
+    }
+   ],
+   "source": [
+    {
+     "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "9eb672a7-1981-4ba8-b696-4fa4bf1b5e0a"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "e48c8f28-899b-41d1-bd49-7fd53bc4c093"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "c395ce14-a2df-4903-b5e0-451585b2b067",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-005",
+   "declaredName": "dryerCapacityMargin",
+   "name": "dryerCapacityMargin",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "ef87a37f-0a45-4f5e-957a-fbd2fbee1d08"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "f71dc076-6f68-467c-9cfd-db9c654aee84"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "f71dc076-6f68-467c-9cfd-db9c654aee84"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "ef87a37f-0a45-4f5e-957a-fbd2fbee1d08"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "f9426186-3542-4ce8-91de-52bbc633c191"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "ef87a37f-0a45-4f5e-957a-fbd2fbee1d08",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "d1928064-c8ae-40da-a0b0-44063add3823",
+   "ownedMemberName": "dryerCapacityMargin",
+   "ownedMemberElement": {
+    "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+   },
+   "memberElementId": "d1928064-c8ae-40da-a0b0-44063add3823",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+   },
+   "memberName": "dryerCapacityMargin",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "f9426186-3542-4ce8-91de-52bbc633c191",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "f71dc076-6f68-467c-9cfd-db9c654aee84"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "f71dc076-6f68-467c-9cfd-db9c654aee84"
+   },
+   "owningNamespace": {
+    "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+   },
+   "documentedElement": {
+    "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+   },
+   "body": "A single molecular-sieve bed shall hold at least 24 hours of design-basis moisture load before breakthrough.\n"
+  },
+  {
+   "@id": "f71dc076-6f68-467c-9cfd-db9c654aee84",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "f9426186-3542-4ce8-91de-52bbc633c191"
+   },
+   "membershipOwningNamespace": {
+    "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+   },
+   "memberElement": {
+    "@id": "f9426186-3542-4ce8-91de-52bbc633c191"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+    },
+    {
+     "@id": "f9426186-3542-4ce8-91de-52bbc633c191"
+    }
+   ],
+   "target": [
+    {
+     "@id": "f9426186-3542-4ce8-91de-52bbc633c191"
+    }
+   ],
+   "source": [
+    {
+     "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "c395ce14-a2df-4903-b5e0-451585b2b067"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "f9426186-3542-4ce8-91de-52bbc633c191"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-006",
+   "declaredName": "dryerRedundancy",
+   "name": "dryerRedundancy",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "d7b7f6d7-98f4-4fa5-9f10-b51753bfda0c"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "bc1ba1c7-9032-4dd0-87bb-bb04a78595c2"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "bc1ba1c7-9032-4dd0-87bb-bb04a78595c2"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "d7b7f6d7-98f4-4fa5-9f10-b51753bfda0c"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "7228bf79-5ad1-4e36-a657-81605bf5c6ff"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "d7b7f6d7-98f4-4fa5-9f10-b51753bfda0c",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "f2af8d0c-f6ef-48e7-abf3-b9a0b30da960",
+   "ownedMemberName": "dryerRedundancy",
+   "ownedMemberElement": {
+    "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+   },
+   "memberElementId": "f2af8d0c-f6ef-48e7-abf3-b9a0b30da960",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+   },
+   "memberName": "dryerRedundancy",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "7228bf79-5ad1-4e36-a657-81605bf5c6ff",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "bc1ba1c7-9032-4dd0-87bb-bb04a78595c2"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "bc1ba1c7-9032-4dd0-87bb-bb04a78595c2"
+   },
+   "owningNamespace": {
+    "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+   },
+   "documentedElement": {
+    "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+   },
+   "body": "Two independent dryer beds shall be provided, with automatic changeover initiated on dewpoint alarm.\n"
+  },
+  {
+   "@id": "bc1ba1c7-9032-4dd0-87bb-bb04a78595c2",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "7228bf79-5ad1-4e36-a657-81605bf5c6ff"
+   },
+   "membershipOwningNamespace": {
+    "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+   },
+   "memberElement": {
+    "@id": "7228bf79-5ad1-4e36-a657-81605bf5c6ff"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+    },
+    {
+     "@id": "7228bf79-5ad1-4e36-a657-81605bf5c6ff"
+    }
+   ],
+   "target": [
+    {
+     "@id": "7228bf79-5ad1-4e36-a657-81605bf5c6ff"
+    }
+   ],
+   "source": [
+    {
+     "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "d1a5b0ff-1906-4d19-9e92-07f8a0c7de31"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "7228bf79-5ad1-4e36-a657-81605bf5c6ff"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-007",
+   "declaredName": "lossOfPowerResponse",
+   "name": "lossOfPowerResponse",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "0f74c450-7b28-494a-85a4-b07769540337"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "fcce8814-0969-40bc-be53-3bcc20bf9186"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "fcce8814-0969-40bc-be53-3bcc20bf9186"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "0f74c450-7b28-494a-85a4-b07769540337"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "308f4542-511b-4682-9897-1300aa93cc39"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "0f74c450-7b28-494a-85a4-b07769540337",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "a1258b25-ebb2-4b93-9fad-89d18b62e1d1",
+   "ownedMemberName": "lossOfPowerResponse",
+   "ownedMemberElement": {
+    "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+   },
+   "memberElementId": "a1258b25-ebb2-4b93-9fad-89d18b62e1d1",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+   },
+   "memberName": "lossOfPowerResponse",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "308f4542-511b-4682-9897-1300aa93cc39",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "fcce8814-0969-40bc-be53-3bcc20bf9186"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "fcce8814-0969-40bc-be53-3bcc20bf9186"
+   },
+   "owningNamespace": {
+    "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+   },
+   "documentedElement": {
+    "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+   },
+   "body": "On loss of off-site power the ADS shall enter a fail-safe state and restart on the backup supply within 30 seconds.\n"
+  },
+  {
+   "@id": "fcce8814-0969-40bc-be53-3bcc20bf9186",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "308f4542-511b-4682-9897-1300aa93cc39"
+   },
+   "membershipOwningNamespace": {
+    "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+   },
+   "memberElement": {
+    "@id": "308f4542-511b-4682-9897-1300aa93cc39"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+    },
+    {
+     "@id": "308f4542-511b-4682-9897-1300aa93cc39"
+    }
+   ],
+   "target": [
+    {
+     "@id": "308f4542-511b-4682-9897-1300aa93cc39"
+    }
+   ],
+   "source": [
+    {
+     "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "b35b12d4-7f37-4161-b84f-9dc52adc58c8"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "308f4542-511b-4682-9897-1300aa93cc39"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-008",
+   "declaredName": "stackMonitorIndependence",
+   "name": "stackMonitorIndependence",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "51edcc14-f0c5-41e6-989e-a9ab6dd1ea9e"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "38eeb675-c009-4129-96bf-e8982fafc1f3"
+    },
+    {
+     "@id": "e56674be-e959-4e5b-9f48-31eac6a3eb4b"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "38eeb675-c009-4129-96bf-e8982fafc1f3"
+    },
+    {
+     "@id": "e56674be-e959-4e5b-9f48-31eac6a3eb4b"
+    }
+   ],
+   "ownedFeatureMembership": [
+    {
+     "@id": "e56674be-e959-4e5b-9f48-31eac6a3eb4b"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "51edcc14-f0c5-41e6-989e-a9ab6dd1ea9e"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "d6df2c6b-3995-4273-a8aa-f4557f9617c3"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "51edcc14-f0c5-41e6-989e-a9ab6dd1ea9e",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "8f430643-a160-4d28-8001-4a22faf3b09c",
+   "ownedMemberName": "stackMonitorIndependence",
+   "ownedMemberElement": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "memberElementId": "8f430643-a160-4d28-8001-4a22faf3b09c",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "memberName": "stackMonitorIndependence",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "d6df2c6b-3995-4273-a8aa-f4557f9617c3",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "38eeb675-c009-4129-96bf-e8982fafc1f3"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "38eeb675-c009-4129-96bf-e8982fafc1f3"
+   },
+   "owningNamespace": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "documentedElement": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "body": "Stack tritium monitoring shall be independent of the ADS process-control system. ss\n"
+  },
+  {
+   "@id": "38eeb675-c009-4129-96bf-e8982fafc1f3",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "d6df2c6b-3995-4273-a8aa-f4557f9617c3"
+   },
+   "membershipOwningNamespace": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "memberElement": {
+    "@id": "d6df2c6b-3995-4273-a8aa-f4557f9617c3"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+    },
+    {
+     "@id": "d6df2c6b-3995-4273-a8aa-f4557f9617c3"
+    }
+   ],
+   "target": [
+    {
+     "@id": "d6df2c6b-3995-4273-a8aa-f4557f9617c3"
+    }
+   ],
+   "source": [
+    {
+     "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "d6df2c6b-3995-4273-a8aa-f4557f9617c3"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-009",
+   "declaredName": "regenerationContainment",
+   "name": "regenerationContainment",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "7e800689-c61a-4e0d-a557-f59293d6ea31"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "469589fa-2c2e-42e1-8604-09e02776b2c7"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "469589fa-2c2e-42e1-8604-09e02776b2c7"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "7e800689-c61a-4e0d-a557-f59293d6ea31"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "645331bf-dd81-40f7-a3a6-bf54521874c7"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "7e800689-c61a-4e0d-a557-f59293d6ea31",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "d81f0865-2930-4be8-be67-5502965bb5d9",
+   "ownedMemberName": "regenerationContainment",
+   "ownedMemberElement": {
+    "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+   },
+   "memberElementId": "d81f0865-2930-4be8-be67-5502965bb5d9",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+   },
+   "memberName": "regenerationContainment",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "645331bf-dd81-40f7-a3a6-bf54521874c7",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "469589fa-2c2e-42e1-8604-09e02776b2c7"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "469589fa-2c2e-42e1-8604-09e02776b2c7"
+   },
+   "owningNamespace": {
+    "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+   },
+   "documentedElement": {
+    "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+   },
+   "body": "Tritiated water desorbed during bed regeneration shall be routed to the tritiated-water collection system, never to the stack.\n"
+  },
+  {
+   "@id": "469589fa-2c2e-42e1-8604-09e02776b2c7",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "645331bf-dd81-40f7-a3a6-bf54521874c7"
+   },
+   "membershipOwningNamespace": {
+    "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+   },
+   "memberElement": {
+    "@id": "645331bf-dd81-40f7-a3a6-bf54521874c7"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+    },
+    {
+     "@id": "645331bf-dd81-40f7-a3a6-bf54521874c7"
+    }
+   ],
+   "target": [
+    {
+     "@id": "645331bf-dd81-40f7-a3a6-bf54521874c7"
+    }
+   ],
+   "source": [
+    {
+     "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "e714d944-1f14-4d50-9ef4-f7d9f1bdd777"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "645331bf-dd81-40f7-a3a6-bf54521874c7"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "36478332-e697-4d97-a985-16f36207458d",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-010",
+   "declaredName": "changeoverProofTest",
+   "name": "changeoverProofTest",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "9751c60a-01b5-429f-b794-33458718c376"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "8de0df57-a5d1-405f-8bfe-5de09e949424"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "8de0df57-a5d1-405f-8bfe-5de09e949424"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "9751c60a-01b5-429f-b794-33458718c376"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "d47a6e28-a8c0-46dc-87ce-eb8059845fc6"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "9751c60a-01b5-429f-b794-33458718c376",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "9c0242b4-c5d3-4379-894a-91451e757250",
+   "ownedMemberName": "changeoverProofTest",
+   "ownedMemberElement": {
+    "@id": "36478332-e697-4d97-a985-16f36207458d"
+   },
+   "memberElementId": "9c0242b4-c5d3-4379-894a-91451e757250",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "36478332-e697-4d97-a985-16f36207458d"
+   },
+   "memberName": "changeoverProofTest",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "36478332-e697-4d97-a985-16f36207458d"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "36478332-e697-4d97-a985-16f36207458d"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "d47a6e28-a8c0-46dc-87ce-eb8059845fc6",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "8de0df57-a5d1-405f-8bfe-5de09e949424"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "8de0df57-a5d1-405f-8bfe-5de09e949424"
+   },
+   "owningNamespace": {
+    "@id": "36478332-e697-4d97-a985-16f36207458d"
+   },
+   "documentedElement": {
+    "@id": "36478332-e697-4d97-a985-16f36207458d"
+   },
+   "body": "The changeover logic shall be periodically testable without taking the ADS out of service.\n"
+  },
+  {
+   "@id": "8de0df57-a5d1-405f-8bfe-5de09e949424",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "d47a6e28-a8c0-46dc-87ce-eb8059845fc6"
+   },
+   "membershipOwningNamespace": {
+    "@id": "36478332-e697-4d97-a985-16f36207458d"
+   },
+   "memberElement": {
+    "@id": "d47a6e28-a8c0-46dc-87ce-eb8059845fc6"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "36478332-e697-4d97-a985-16f36207458d"
+    },
+    {
+     "@id": "d47a6e28-a8c0-46dc-87ce-eb8059845fc6"
+    }
+   ],
+   "target": [
+    {
+     "@id": "d47a6e28-a8c0-46dc-87ce-eb8059845fc6"
+    }
+   ],
+   "source": [
+    {
+     "@id": "36478332-e697-4d97-a985-16f36207458d"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "36478332-e697-4d97-a985-16f36207458d"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "d47a6e28-a8c0-46dc-87ce-eb8059845fc6"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "63afabd1-02d4-4319-90ba-a5711c916666",
+   "@type": "RequirementUsage",
+   "declaredShortName": "REQ-ADS-011",
+   "declaredName": "dewpointAccuracy",
+   "name": "dewpointAccuracy",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "6edf1892-2a9b-4a84-a494-c932f6faf5b1"
+   },
+   "ownedRelationship": [
+    {
+     "@id": "d78ec357-8996-488a-8627-e6253e60fe89"
+    }
+   ],
+   "ownedMembership": [
+    {
+     "@id": "d78ec357-8996-488a-8627-e6253e60fe89"
+    }
+   ],
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "6edf1892-2a9b-4a84-a494-c932f6faf5b1"
+   },
+   "owningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "documentation": [
+    {
+     "@id": "5c311422-5dfe-4423-b692-92acf906be0c"
+    }
+   ],
+   "mayTimeVary": false,
+   "isReference": false,
+   "isModelLevelEvaluable": false
+  },
+  {
+   "@id": "6edf1892-2a9b-4a84-a494-c932f6faf5b1",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElementId": "2ec39912-7152-4c54-8b3c-a496edb1ddd1",
+   "ownedMemberName": "dewpointAccuracy",
+   "ownedMemberElement": {
+    "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+   },
+   "memberElementId": "2ec39912-7152-4c54-8b3c-a496edb1ddd1",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberElement": {
+    "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+   },
+   "memberName": "dewpointAccuracy",
+   "visibility": "public",
+   "target": [
+    {
+     "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+    }
+   ],
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "5c311422-5dfe-4423-b692-92acf906be0c",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "d78ec357-8996-488a-8627-e6253e60fe89"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "d78ec357-8996-488a-8627-e6253e60fe89"
+   },
+   "owningNamespace": {
+    "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+   },
+   "documentedElement": {
+    "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+   },
+   "body": "Outlet dewpoint shall be measured within +/-2 degrees C with a defined calibration interval.\n"
+  },
+  {
+   "@id": "d78ec357-8996-488a-8627-e6253e60fe89",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "5c311422-5dfe-4423-b692-92acf906be0c"
+   },
+   "membershipOwningNamespace": {
+    "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+   },
+   "memberElement": {
+    "@id": "5c311422-5dfe-4423-b692-92acf906be0c"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+    },
+    {
+     "@id": "5c311422-5dfe-4423-b692-92acf906be0c"
+    }
+   ],
+   "target": [
+    {
+     "@id": "5c311422-5dfe-4423-b692-92acf906be0c"
+    }
+   ],
+   "source": [
+    {
+     "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "63afabd1-02d4-4319-90ba-a5711c916666"
+   },
+   "ownedRelatedElement": [
+    {
+     "@id": "5c311422-5dfe-4423-b692-92acf906be0c"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "2fb89362-5bdd-47be-ae67-749d29881228",
+   "@type": "FeatureTyping",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "typedFeature": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "type": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "owningFeature": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "general": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "specific": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "owningType": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "target": [
+    {
+     "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+    }
+   ],
+   "source": [
+    {
+     "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "7efc8c65-838e-44fa-9bae-3151d38d9efa"
+   },
+   "isImplied": false
+  },
+  {
+   "@id": "6f0c0886-a7df-423a-ae51-d2ca7d673053",
+   "@type": "FeatureTyping",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "typedFeature": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "type": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "owningFeature": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "general": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "specific": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "owningType": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "target": [
+    {
+     "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+    }
+   ],
+   "source": [
+    {
+     "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "2682f889-39f3-4a35-80d0-9c46c3315818"
+   },
+   "isImplied": false
+  },
+  {
+   "@id": "0fcfc8a5-1cc9-4259-ac29-2e6f63f94664",
+   "@type": "FeatureMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "owningType": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "ownedMemberElementId": "78265727-d46e-44b8-ab41-2436bcd143dc",
+   "ownedMemberName": "RequirementUsage17810016991888944",
+   "memberElementId": "78265727-d46e-44b8-ab41-2436bcd143dc",
+   "membershipOwningNamespace": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "memberName": "RequirementUsage17810016991888944",
+   "visibility": "public",
+   "source": [
+    {
+     "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "6aa14906-16c1-4e33-bb75-9e5aa1fc3d83"
+   },
+   "isImplied": false
+  },
+  {
+   "@id": "e56674be-e959-4e5b-9f48-31eac6a3eb4b",
+   "@type": "FeatureMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "owningType": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "ownedMemberElementId": "f0611462-da64-4813-8520-db38d7ebc910",
+   "ownedMemberName": "attribute",
+   "memberElementId": "f0611462-da64-4813-8520-db38d7ebc910",
+   "membershipOwningNamespace": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "memberName": "attribute",
+   "visibility": "public",
+   "source": [
+    {
+     "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "43969a1e-31a4-4fd9-939b-39b1b1b5475d"
+   },
+   "isImplied": false
+  },
+  {
+   "@id": "b41987f7-b40a-4d0d-99c7-8bf41d4a9d96",
+   "@type": "Documentation",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "owningMembership": {
+    "@id": "046590f2-2888-422a-bc69-fdd49446548d"
+   },
+   "isConjugated": false,
+   "owningRelationship": {
+    "@id": "046590f2-2888-422a-bc69-fdd49446548d"
+   }
+  },
+  {
+   "@id": "046590f2-2888-422a-bc69-fdd49446548d",
+   "@type": "OwningMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "ownedMemberElement": {
+    "@id": "b41987f7-b40a-4d0d-99c7-8bf41d4a9d96"
+   },
+   "memberElement": {
+    "@id": "b41987f7-b40a-4d0d-99c7-8bf41d4a9d96"
+   },
+   "visibility": "public",
+   "relatedElement": [
+    {
+     "@id": "b41987f7-b40a-4d0d-99c7-8bf41d4a9d96"
+    }
+   ],
+   "target": [
+    {
+     "@id": "b41987f7-b40a-4d0d-99c7-8bf41d4a9d96"
+    }
+   ],
+   "ownedRelatedElement": [
+    {
+     "@id": "b41987f7-b40a-4d0d-99c7-8bf41d4a9d96"
+    }
+   ],
+   "isImplied": false
+  },
+  {
+   "@id": "ffcfe42f-6a7a-46e6-a399-f9e8a0843518",
+   "@type": "SubjectMembership",
+   "isImpliedIncluded": false,
+   "isAbstract": false,
+   "isSufficient": false,
+   "isComposite": false,
+   "isEnd": false,
+   "isOrdered": false,
+   "isUnique": true,
+   "isReadOnly": false,
+   "isDerived": false,
+   "isPortion": false,
+   "isVariable": false,
+   "isConstant": false,
+   "isVariation": false,
+   "isIndividual": false,
+   "isConjugated": false,
+   "owningType": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "ownedMemberElementId": "e83f56f4-79d0-4537-a9a7-c679ce88703c",
+   "ownedMemberName": "subject",
+   "memberElementId": "e83f56f4-79d0-4537-a9a7-c679ce88703c",
+   "membershipOwningNamespace": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "memberName": "subject",
+   "visibility": "public",
+   "source": [
+    {
+     "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+    }
+   ],
+   "owningRelatedElement": {
+    "@id": "d8dbc636-4076-42a2-9e1d-cb1548b68215"
+   },
+   "isImplied": false
+  }
+ ],
+ "unresolvedRefCount": 6,
+ "unresolvedRefs": [
+  "6a9650997a882e24b8eb47ca",
+  "6a9650997a882e24b8eb47cb",
+  "6a9650997a882e24b8eb4768",
+  "6a9650997a882e24b8eb47cc",
+  "6a9650997a882e24b8eb47cd",
+  "6a9650997a882e24b8eb47ce"
+ ]
+}

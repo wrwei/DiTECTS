@@ -1,0 +1,74 @@
+Licensing and third-party components
+====================================
+
+The engineering artefacts in this repository are dual-licensed by area.
+
+Executable artefacts -- Apache-2.0 (LICENSE-Apache-2.0)
+-------------------------------------------------------
+  formal/dafny/          Dafny proof
+  formal/isabelle/       Isabelle/HOL theory and session ROOT
+  formal/csp/            CSP models, EXCEPT the RoboChart libraries listed below
+  implementation/java/   Java controller and JUnit suite
+  simulation/modelica/   OpenModelica changeover transient
+
+Engineering models and documentation -- CC-BY-4.0 (LICENSE)
+-----------------------------------------------------------
+  models/sysml/          Requirements and design, SysML v2 textual notation and OMG interchange JSON
+  models/safety-case/    GSN safety case
+  models/fmeda/          Failure analysis as JSON
+  models/fta/            Fault tree as JSON
+  models/digital-twin/   Digital-twin part mappings, signal bindings and plant mesh
+  models/traceability/   Completion overlay (authored trace links and analysis records)
+  README.md, NOTICE, .gitignore
+
+Third-party: RoboChart CSP semantic libraries -- EPL-2.0
+--------------------------------------------------------
+Copyright (c) 2019, 2020 University of York and others
+SPDX-License-Identifier: EPL-2.0
+Eclipse Public License 2.0 -- http://www.eclipse.org/legal/epl-2.0
+Contributor named in the file headers: Alvaro Miyazawa
+
+  formal/csp/defs/core_defs.csp
+  formal/csp/defs/function_toolkit_defs.csp
+  formal/csp/defs/relation_toolkit_defs.csp
+  formal/csp/defs/robochart_defs.csp
+  formal/csp/defs/sequence_toolkit_defs.csp
+  formal/csp/defs/set_toolkit_defs.csp
+  formal/csp/defs/state_defs.csp
+  formal/csp/timed/defs/core_defs.csp
+  formal/csp/timed/defs/core_timed_defs.csp
+  formal/csp/timed/defs/function_toolkit_defs.csp
+  formal/csp/timed/defs/relation_toolkit_defs.csp
+  formal/csp/timed/defs/robochart_defs.csp
+  formal/csp/timed/defs/sequence_toolkit_defs.csp
+  formal/csp/timed/defs/set_toolkit_defs.csp
+  formal/csp/timed/defs/state_defs.csp
+  formal/csp/timed/defs/state_timed_defs.csp
+
+These files carry their own copyright headers and SPDX identifiers, retained
+unmodified. They are the CSP semantic definitions the RoboChart generator
+requires. The generated ADS process definitions that include them are part of
+this work and are Apache-2.0.
+
+Note on per-file headers
+------------------------
+Source files carry no added SPDX headers. Every exported file in this
+repository has the content of the project export (line endings normalised to
+LF), and the accompanying article reproduces excerpts verbatim, so inserting
+licence headers would break both. The two SysML files additionally carry the
+three attributes the completion overlay records (changeoverPeriod,
+saturationTimeConstant, minDecontaminationFactor), pending re-export. Licensing is
+therefore declared by area in this file.
+
+Build-time dependencies
+-----------------------
+JUnit Jupiter (junit-jupiter, EPL-2.0), declared in
+implementation/java/build.gradle and resolved from Maven Central at build time.
+
+The Isabelle Z_Machines session, declared in formal/isabelle/ROOT.
+
+OpenModelica (OSMC Public License / GPL-3.0), used through the official Docker
+image openmodelica/openmodelica in the case-study repository's re-verification
+(tag and digest recorded with its results) to simulate simulation/modelica/.
+
+None of these is redistributed here.

@@ -1,0 +1,987 @@
+
+--
+-- RoboChart generator version <unknown>
+-- Automatically generated on 08-06-2026 16:29:52
+--
+-- Iterated compression status: true
+-- Assertions compression status: true
+--
+
+	module ADSController_Ctrl
+		shared_variable_events = {|
+			set_EXT_activeDryer
+		|}
+		
+	exports
+		transparent diamond
+		transparent sbisim
+		transparent dbisim
+		transparent chase
+
+		-- declaring controller events
+		channel powerLoss: InOut
+		channel dewpointHigh: InOut
+		channel changeoverComplete: InOut
+		channel backupRestored: InOut
+		channel enterFailSafe: InOut
+		channel raiseAlarm: InOut
+		channel startChangeover: InOut
+		channel restoreNormal: InOut
+		
+		channel set_activeDryer: Dryer
+		channel get_activeDryer: Dryer
+		
+		channel set_EXT_activeDryer: Dryer
+		
+		-- declaring call and ret events for undefined operations
+		
+		-- declaring controller termination channel
+		channel terminate
+		
+		-- channel set with all visible events
+		sem__events = {|
+			terminate
+		,	powerLoss,
+			dewpointHigh,
+			changeoverComplete,
+			backupRestored,
+			enterFailSafe,
+			raiseAlarm,
+			startChangeover,
+			restoreNormal
+		,	set_EXT_activeDryer, set_activeDryer
+		|}
+		
+		-- set of visible memory events
+		visibleMemoryEvents = {|get_activeDryer,set_activeDryer|}
+
+		-- defined operations
+	
+		-- declaring machines
+		module stm_ref0
+		exports
+			transparent diamond
+			transparent sbisim
+			transparent dbisim
+			transparent chase
+		
+			-- Transition identifiers
+			-- declaring identifiers of transitions
+			datatype NIDS = 
+			              NID_Changeover|
+			              NID_NormalOperation|
+			              NID_FailSafe|
+			              NID_i0
+			
+			channel internal__ : NIDS
+			
+			-- Flow channels		
+			channel interrupt
+			channel exited
+			channel exit
+			channel terminate
+			
+			-- Variable channels
+			channel get_activeDryer, set_activeDryer, setL_activeDryer, setR_activeDryer: Dryer
+			
+			-- Shared variable channels
+			channel set_EXT_activeDryer: Dryer
+			
+			-- Local variable channels for defined operations that are required by the state machine
+			
+			-- Declaring state machine events
+			channel powerLoss__: NIDS.InOut
+			channel powerLoss: InOut
+			channel dewpointHigh__: NIDS.InOut
+			channel dewpointHigh: InOut
+			channel changeoverComplete__: NIDS.InOut
+			channel changeoverComplete: InOut
+			channel backupRestored__: NIDS.InOut
+			channel backupRestored: InOut
+			channel enterFailSafe__: NIDS.InOut
+			channel enterFailSafe: InOut
+			channel raiseAlarm__: NIDS.InOut
+			channel raiseAlarm: InOut
+			channel startChangeover__: NIDS.InOut
+			channel startChangeover: InOut
+			channel restoreNormal__: NIDS.InOut
+			channel restoreNormal: InOut
+			
+			-- Declaring call and ret events for undefined operations
+			
+			enterSS = {|
+			Changeover::enter,
+			NormalOperation::enter,
+			FailSafe::enter,
+			i0::enter
+			|}
+			
+			enteredSS = 	{|
+			Changeover::entered,
+			NormalOperation::entered,
+			FailSafe::entered
+			|}
+			
+			internal_events = union(enteredSS,union(enterSS,{|interrupt,exited|}))
+			
+			shared_variable_events = {|
+				set_EXT_activeDryer
+			|}
+			
+			-- channel set with all visible events
+			sem__events = {|
+				terminate
+			,	set_EXT_activeDryer, set_activeDryer
+			,	powerLoss,
+				dewpointHigh,
+				changeoverComplete,
+				backupRestored,
+				enterFailSafe,
+				raiseAlarm,
+				startChangeover,
+				restoreNormal
+				|}
+			
+			channel clockReset, clockResetL, clockResetR 
+			
+			localClockResets = {||}
+			
+			
+			channel get_CLID_Changeover : core_clock_type 
+			channel get_CLID_FailSafe : core_clock_type 
+			channel get_CLID_NormalOperation : core_clock_type 
+			--channel increment__
+			
+			CLID_Changeover_clock_type(id__) = 
+				let
+					max = (clock_type_max(Union({
+			}))+1)
+				ctype = {0..max}
+			within
+				if member(max,core_clock_type) then ctype else error("core_clock_type is not wide enough")
+			
+			CLID_FailSafe_clock_type(id__) = 
+				let
+					max = (clock_type_max(Union({
+			}))+1)
+				ctype = {0..max}
+			within
+				if member(max,core_clock_type) then ctype else error("core_clock_type is not wide enough")
+			
+			CLID_NormalOperation_clock_type(id__) = 
+				let
+					max = (clock_type_max(Union({
+			}))+1)
+				ctype = {0..max}
+			within
+				if member(max,core_clock_type) then ctype else error("core_clock_type is not wide enough")
+			
+			
+		
+				-- Nodes --
+				-- declaring all nodes
+				
+				----------------------------------------------------------------------
+				-- State: Changeover
+				module Changeover
+				
+				enterSS = {}
+				
+				enteredSS = {}
+				
+				exports
+				
+					--  Declarations
+					
+					channel enter, entered, interrupt
+					channel enteredL, enteredR
+					
+									
+					
+					--channel increment__
+					
+					
+					--	Nodes
+					-- declaring all nodes
+					
+					
+					Timed(OneStep) {
+						--	Rule: behaviours(Node)
+						--  Note that FDR has problems with efficiently compiling the process below
+						-- 	if using a different recursion pattern.
+						D__(id__) = 
+						dbisim(let
+							-- IMPLEMENTATION NOTE: 
+							-- The following should be defined as: Inactive = share__choice(Activation [] Termination),
+							-- however FDR struggles with that form in certain cases. So we use the exception operator
+							-- instead to 'terminate'.
+							
+							Inactive 	= share__choice(enter -> SKIP [] terminate -> SKIP) ; Active
+							
+							Termination = terminate -> SKIP
+							
+							Active 		= true&(share__choice(raiseAlarm.out -> SKIP));true&(share__choice(startChangeover.out -> SKIP)) ; 
+									 	  Behaviour ; 
+									 	  share__choice(exit -> SKIP) ; SKIP ; 
+									 	  share__choice(exited -> SKIP) ; Inactive
+						
+							Behaviour 	= entered -> During
+							During 		= ((SKIP ; SStop) /\ interrupt -> SKIP)
+						within
+							Inactive [| {terminate} |> SKIP)
+							
+						VS_O__(id__) = 
+						dbisim(let
+							Inactive 	= share__choice(enter -> SKIP [] terminate -> SKIP) ; Active
+							
+							Termination = terminate -> SKIP
+							
+							Active 		= true&(share__choice(raiseAlarm.out -> SKIP));true&(share__choice(startChangeover.out -> SKIP)) ; 
+									 	  Behaviour ; 
+									 	  share__choice(exit -> SKIP) ; SKIP ; 
+									 	  share__choice(exited -> SKIP) ; Inactive
+						
+							Behaviour 	= entered -> During
+							During 		= ((SKIP ; SStop) /\ interrupt -> SKIP)
+						within
+							Inactive [| {terminate} |> SKIP)
+						
+						
+						-- Clocks
+						
+						StateClocks(id__) = terminate -> SKIP
+						
+						stateClockSync = {||}
+					}
+				
+				endmodule
+				----------------------------------------------------------------------
+				
+				
+				----------------------------------------------------------------------
+				-- State: NormalOperation
+				module NormalOperation
+				
+				enterSS = {}
+				
+				enteredSS = {}
+				
+				exports
+				
+					--  Declarations
+					
+					channel enter, entered, interrupt
+					channel enteredL, enteredR
+					
+									
+					
+					--channel increment__
+					
+					
+					--	Nodes
+					-- declaring all nodes
+					
+					
+					Timed(OneStep) {
+						--	Rule: behaviours(Node)
+						--  Note that FDR has problems with efficiently compiling the process below
+						-- 	if using a different recursion pattern.
+						D__(id__) = 
+						dbisim(let
+							-- IMPLEMENTATION NOTE: 
+							-- The following should be defined as: Inactive = share__choice(Activation [] Termination),
+							-- however FDR struggles with that form in certain cases. So we use the exception operator
+							-- instead to 'terminate'.
+							
+							Inactive 	= share__choice(enter -> SKIP [] terminate -> SKIP) ; Active
+							
+							Termination = terminate -> SKIP
+							
+							Active 		= SKIP ; 
+									 	  Behaviour ; 
+									 	  share__choice(exit -> SKIP) ; SKIP ; 
+									 	  share__choice(exited -> SKIP) ; Inactive
+						
+							Behaviour 	= entered -> During
+							During 		= ((SKIP ; SStop) /\ interrupt -> SKIP)
+						within
+							Inactive [| {terminate} |> SKIP)
+							
+						VS_O__(id__) = 
+						dbisim(let
+							Inactive 	= share__choice(enter -> SKIP [] terminate -> SKIP) ; Active
+							
+							Termination = terminate -> SKIP
+							
+							Active 		= SKIP ; 
+									 	  Behaviour ; 
+									 	  share__choice(exit -> SKIP) ; SKIP ; 
+									 	  share__choice(exited -> SKIP) ; Inactive
+						
+							Behaviour 	= entered -> During
+							During 		= ((SKIP ; SStop) /\ interrupt -> SKIP)
+						within
+							Inactive [| {terminate} |> SKIP)
+						
+						
+						-- Clocks
+						
+						StateClocks(id__) = terminate -> SKIP
+						
+						stateClockSync = {||}
+					}
+				
+				endmodule
+				----------------------------------------------------------------------
+				
+				
+				----------------------------------------------------------------------
+				-- State: FailSafe
+				module FailSafe
+				
+				enterSS = {}
+				
+				enteredSS = {}
+				
+				exports
+				
+					--  Declarations
+					
+					channel enter, entered, interrupt
+					channel enteredL, enteredR
+					
+									
+					
+					--channel increment__
+					
+					
+					--	Nodes
+					-- declaring all nodes
+					
+					
+					Timed(OneStep) {
+						--	Rule: behaviours(Node)
+						--  Note that FDR has problems with efficiently compiling the process below
+						-- 	if using a different recursion pattern.
+						D__(id__) = 
+						dbisim(let
+							-- IMPLEMENTATION NOTE: 
+							-- The following should be defined as: Inactive = share__choice(Activation [] Termination),
+							-- however FDR struggles with that form in certain cases. So we use the exception operator
+							-- instead to 'terminate'.
+							
+							Inactive 	= share__choice(enter -> SKIP [] terminate -> SKIP) ; Active
+							
+							Termination = terminate -> SKIP
+							
+							Active 		= true&(share__choice(enterFailSafe.out -> SKIP)) ; 
+									 	  Behaviour ; 
+									 	  share__choice(exit -> SKIP) ; SKIP ; 
+									 	  share__choice(exited -> SKIP) ; Inactive
+						
+							Behaviour 	= entered -> During
+							During 		= ((SKIP ; SStop) /\ interrupt -> SKIP)
+						within
+							Inactive [| {terminate} |> SKIP)
+							
+						VS_O__(id__) = 
+						dbisim(let
+							Inactive 	= share__choice(enter -> SKIP [] terminate -> SKIP) ; Active
+							
+							Termination = terminate -> SKIP
+							
+							Active 		= true&(share__choice(enterFailSafe.out -> SKIP)) ; 
+									 	  Behaviour ; 
+									 	  share__choice(exit -> SKIP) ; SKIP ; 
+									 	  share__choice(exited -> SKIP) ; Inactive
+						
+							Behaviour 	= entered -> During
+							During 		= ((SKIP ; SStop) /\ interrupt -> SKIP)
+						within
+							Inactive [| {terminate} |> SKIP)
+						
+						
+						-- Clocks
+						
+						StateClocks(id__) = terminate -> SKIP
+						
+						stateClockSync = {||}
+					}
+				
+				endmodule
+				----------------------------------------------------------------------
+				
+				
+				----------------------------------------------------------------------
+				-- Initial: i0
+				module i0
+				exports
+				
+					channel enter, interrupt
+					
+					Timed(OneStep) {
+						D__(id__) = 
+							dbisim(let
+								Inactive 	= share__choice(enter -> SKIP [] terminate -> SKIP) ; Active
+								
+								Termination = terminate -> SKIP
+								
+								Active 		= share__choice(interrupt -> SKIP) ; Inactive
+							within
+								Inactive [| {terminate} |> SKIP)
+						
+						VS_O__(id__) = D__(id__)
+					}
+				
+				endmodule
+				----------------------------------------------------------------------
+				
+				-- END of Nodes --
+				
+				Timed(OneStep) {
+				-- Operation calls --
+				-- Only the undefined operations are declared here.
+				-- If the state machine is in isolation, all required operations will be undefined.
+				-- If it is in the context of a controller, the required operations not provided by the
+				-- controller will be declared here, and the defined operations will be defined in the
+				-- context of the Controller module, and therefore within scope of the state machine module.
+				
+				-- END of Operation calls --
+			
+				-- STM processes
+				STM(id__) = -- RULE: [[stm:StateMachineDef]]_STM^nops : CSPProcess
+				( 
+					(
+						(
+							(IteratedStateful(id__) \ {terminate} ; share__choice(terminate -> SKIP))
+						 	[[ share__ <- x__ | x__ <- {|set_EXT_activeDryer|} ]]
+						)
+					[| {share__} |]
+					SKIP
+					)
+					[| union(sharedVarSync,{terminate}) |]
+					dbisim(sharedVarMemory(id__))
+				)\sharedVarHide
+				
+				STM_VS_O(id__) = -- RULE: [[stm:StateMachineDef]]_STM^nops : CSPProcess
+				( 
+					(
+						(
+							(IteratedStateful_VS_O(id__) \ {terminate} ; share__choice(terminate -> SKIP))
+						 	[[ share__ <- x__ | x__ <- {|set_EXT_activeDryer|} ]]
+						)
+					[| {share__} |]
+					SKIP
+					)
+					[| union(sharedVarSync,{terminate}) |]
+					dbisim(sharedVarMemory(id__))
+				)\sharedVarHide
+				
+				-- Transitions
+				Transitions(id__) = ((let
+					Trans = TimeOut_1(
+						 (share__ -> SKIP
+						 [] dbisim((true)&(internal__!NID_i0 -> SKIP ;  ((SKIP ; NormalOperation::enter -> SKIP))))
+						 [] dbisim((true)&(powerLoss__!NID_NormalOperation.in -> SKIP ;  share__choice(exit -> SKIP) ; (share__choice(exited -> SKIP) ; SKIP ; FailSafe::enter -> SKIP)))
+						 [] dbisim((true)&(dewpointHigh__!NID_NormalOperation.in -> SKIP ;  share__choice(exit -> SKIP) ; (share__choice(exited -> SKIP) ; SKIP ; Changeover::enter -> SKIP)))
+						 [] dbisim((true)&(powerLoss__!NID_Changeover.in -> SKIP ;  share__choice(exit -> SKIP) ; (share__choice(exited -> SKIP) ; SKIP ; FailSafe::enter -> SKIP)))
+						 [] dbisim((true)&(changeoverComplete__!NID_Changeover.in -> SKIP ;  share__choice(exit -> SKIP) ; (share__choice(exited -> SKIP) ; share__choice(share__choice(get_activeDryer?activeDryer -> true & (share__choice(set_activeDryer!nextDryer(activeDryer) -> SKIP)))) ; NormalOperation::enter -> SKIP)))
+						 [] dbisim((true)&(backupRestored__!NID_FailSafe.in -> SKIP ;  share__choice(exit -> SKIP) ; (share__choice(exited -> SKIP) ; true&(share__choice(restoreNormal.out -> SKIP)) ; NormalOperation::enter -> SKIP)))
+						 []
+						 (interrupt -> share__choice(exit -> SKIP) ; share__choice(exited -> terminate -> SKIP))
+						 []
+						 terminate -> SKIP
+						 )
+					,SKIP);Trans
+				within
+					Trans [|{terminate}|> SKIP
+				)
+				)
+				
+				-- Stateful
+				-- RULE: Stateful(stm:StateMachineBody) : CSPProcess
+				
+				-- Named process definitions
+				MachineBody(id__) = 
+					dbisim((
+					let
+						finalNodesEntered = {||}
+					within
+						(dbisim((dbisim((let
+							-- IMPLEMENTATION NOTE:
+							-- Here the 'enter' channel set is calculated explicitly because of the use of CSPM 
+							-- modules for defining the semantics of each node.
+							enterSS = {|
+							Changeover::enter,
+							NormalOperation::enter,
+							FailSafe::enter,
+							i0::enter
+							|}
+							hideSet = union(enterSS,{|exit,exited,internal__|})
+						within 
+							((let
+								-- IMPLEMENTATION NOTE: the channel set 'enter' is calculated explicitly
+								-- because CSPM modules are used for the semantics of Node.
+								flowevts = union(enterSS,{|exit,exited,interrupt|})
+								transSync = {|internal__.NID_i0,powerLoss__.NID_NormalOperation.in,dewpointHigh__.NID_NormalOperation.in,powerLoss__.NID_Changeover.in,changeoverComplete__.NID_Changeover.in,backupRestored__.NID_FailSafe.in|}
+							within
+								((
+								 (((-- RULE composeNodes(nc:NodeContainer)^nops : CSPProcess
+								   Changeover::D__(id__)
+								   [| { share__, terminate } |] (
+								   NormalOperation::D__(id__)
+								   [| { share__, terminate } |] (
+								   FailSafe::D__(id__)
+								   [| { share__, terminate } |] (
+								   i0::D__(id__)
+								   )
+								   )
+								   )
+								 )
+								 [[Changeover::interrupt <- x__ | x__ <- {|interrupt,powerLoss__.NID_Changeover.in,changeoverComplete__.NID_Changeover.in|}]]
+								 [[NormalOperation::interrupt <- x__ | x__ <- {|interrupt,powerLoss__.NID_NormalOperation.in,dewpointHigh__.NID_NormalOperation.in|}]]
+								 [[FailSafe::interrupt <- x__ | x__ <- {|interrupt,backupRestored__.NID_FailSafe.in|}]]
+								 [[i0::interrupt <- x__ | x__ <- {|internal__.NID_i0|}]]
+								 )
+								  [[ share__ <- x__ | x__ <- {| share__ |} ]] 
+								 )
+								 [| union(union(union(flowevts,transSync),{terminate}),{|share__
+								|}) |]
+								 ((i0::enter -> Transitions(id__))
+								  [[ share__ <- x__ | x__ <- {| share__ |} ]]
+								 )
+								)
+								)
+							)
+							 \ hideSet)
+							[[
+								powerLoss__.x____ <- powerLoss,
+								dewpointHigh__.x____ <- dewpointHigh,
+								changeoverComplete__.x____ <- changeoverComplete,
+								backupRestored__.x____ <- backupRestored,
+								enterFailSafe__.x____ <- enterFailSafe,
+								raiseAlarm__.x____ <- raiseAlarm,
+								startChangeover__.x____ <- startChangeover,
+								restoreNormal__.x____ <- restoreNormal
+								| x____ <- NIDS
+							]]
+						)
+						)
+						 [| union(stateClockSync,{terminate}) |]
+						 StateClocks(id__)
+						)\diff(stateClockSync,enteredSS))
+						 [| {| interrupt |} |] SKIP)
+					)
+					)
+				
+				Behaviour(id__) = 
+					dbisim((let
+						stateClockSync = {|get_CLID_Changeover,Changeover::entered,get_CLID_FailSafe,FailSafe::entered,get_CLID_NormalOperation,NormalOperation::entered|}
+					 within
+						(MachineBody(id__) [| union(stateClockSync,{terminate}) |] StateClocks(id__)) \ union(stateClockSync,enteredSS)
+					)
+					)
+				
+				IteratedBehaviour(id__) = 
+					dbisim((let
+						stateClockSync = {|get_CLID_Changeover,Changeover::entered,get_CLID_FailSafe,FailSafe::entered,get_CLID_NormalOperation,NormalOperation::entered|}
+					 within
+						(dbisim(
+							sbisim(
+								dbisim(
+									sbisim(
+										dbisim(
+											sbisim(
+												MachineBody(id__)
+												[| {|get_CLID_NormalOperation,NormalOperation::entered,terminate|} |]
+												dbisim(Clock_CLID_NormalOperation(id__,0))
+											)\{|get_CLID_NormalOperation|}
+										)
+										[| {|get_CLID_FailSafe,FailSafe::entered,terminate|} |]
+										dbisim(Clock_CLID_FailSafe(id__,0))
+									)\{|get_CLID_FailSafe|}
+								)
+								[| {|get_CLID_Changeover,Changeover::entered,terminate|} |]
+								dbisim(Clock_CLID_Changeover(id__,0))
+							)\{|get_CLID_Changeover|}
+						)
+						) \ union(stateClockSync,enteredSS)
+					)
+					)
+				
+				Stateful(id__) = 
+					((let
+						getsetLocalChannels = {||}
+						clockSync = {||}
+					within
+						(Behaviour(id__) 
+						 [| union(union(getsetLocalChannels,clockSync),{terminate}) |] 
+						 (varMemory(id__) [| {terminate} |] Clocks(id__))
+					 	)\union(getsetLocalChannels,clockSync)
+					)
+					)
+				
+				IteratedStateful(id__) =
+					(IteratedBehaviour(id__))
+				
+				-- Visible counterparts
+				MachineBody_VS_O(id__) = 
+					dbisim((
+					let
+						finalNodesEntered = {||}
+					within
+						(dbisim((dbisim((let
+							-- IMPLEMENTATION NOTE:
+							-- Here the 'enter' channel set is calculated explicitly because of the use of CSPM 
+							-- modules for defining the semantics of each node.
+							enterSS = {|
+							Changeover::enter,
+							NormalOperation::enter,
+							FailSafe::enter,
+							i0::enter
+							|}
+							hideSet = union(enterSS,{|exit,exited,internal__|})
+						within 
+							((let
+								-- IMPLEMENTATION NOTE: the channel set 'enter' is calculated explicitly
+								-- because CSPM modules are used for the semantics of Node.
+								flowevts = union(enterSS,{|exit,exited,interrupt|})
+								transSync = {|internal__.NID_i0,powerLoss__.NID_NormalOperation.in,dewpointHigh__.NID_NormalOperation.in,powerLoss__.NID_Changeover.in,changeoverComplete__.NID_Changeover.in,backupRestored__.NID_FailSafe.in|}
+							within
+								((
+								 (((-- RULE composeNodes(nc:NodeContainer)^nops : CSPProcess
+								   Changeover::VS_O__(id__)
+								   [| { share__, terminate } |] (
+								   NormalOperation::VS_O__(id__)
+								   [| { share__, terminate } |] (
+								   FailSafe::VS_O__(id__)
+								   [| { share__, terminate } |] (
+								   i0::VS_O__(id__)
+								   )
+								   )
+								   )
+								 )
+								 [[Changeover::interrupt <- x__ | x__ <- {|interrupt,powerLoss__.NID_Changeover.in,changeoverComplete__.NID_Changeover.in|}]]
+								 [[NormalOperation::interrupt <- x__ | x__ <- {|interrupt,powerLoss__.NID_NormalOperation.in,dewpointHigh__.NID_NormalOperation.in|}]]
+								 [[FailSafe::interrupt <- x__ | x__ <- {|interrupt,backupRestored__.NID_FailSafe.in|}]]
+								 [[i0::interrupt <- x__ | x__ <- {|internal__.NID_i0|}]]
+								 )
+								  [[ share__ <- x__ | x__ <- {| share__ |} ]] 
+								 )
+								 [| union(union(union(flowevts,transSync),{terminate}),{|share__
+								|}) |]
+								 ((i0::enter -> Transitions(id__))
+								  [[ share__ <- x__ | x__ <- {| share__ |} ]]
+								 )
+								)
+								)
+							)
+							 \ hideSet)
+							[[
+								powerLoss__.x____ <- powerLoss,
+								dewpointHigh__.x____ <- dewpointHigh,
+								changeoverComplete__.x____ <- changeoverComplete,
+								backupRestored__.x____ <- backupRestored,
+								enterFailSafe__.x____ <- enterFailSafe,
+								raiseAlarm__.x____ <- raiseAlarm,
+								startChangeover__.x____ <- startChangeover,
+								restoreNormal__.x____ <- restoreNormal
+								| x____ <- NIDS
+							]]
+						)
+						)
+						 [| union(stateClockSync,{terminate}) |]
+						 StateClocks(id__)
+						)\diff(stateClockSync,enteredSS))
+						 [| {| interrupt |} |] SKIP)
+					)
+					)
+				
+				Behaviour_VS_O(id__) = 
+					dbisim((let
+						stateClockSync = {|get_CLID_Changeover,Changeover::entered,get_CLID_FailSafe,FailSafe::entered,get_CLID_NormalOperation,NormalOperation::entered|}
+					 within
+						(MachineBody_VS_O(id__) [| union(stateClockSync,{terminate}) |] StateClocks(id__)) \ diff(union(stateClockSync,enteredSS),enteredSS)
+					)
+					)
+				
+				IteratedBehaviour_VS_O(id__) = 
+					dbisim((let
+						stateClockSync = {|get_CLID_Changeover,Changeover::entered,get_CLID_FailSafe,FailSafe::entered,get_CLID_NormalOperation,NormalOperation::entered|}
+					 within
+						(dbisim(
+							sbisim(
+								dbisim(
+									sbisim(
+										dbisim(
+											sbisim(
+												MachineBody_VS_O(id__)
+												[| {|get_CLID_NormalOperation,NormalOperation::entered,terminate|} |]
+												dbisim(Clock_CLID_NormalOperation(id__,0))
+											)\{|get_CLID_NormalOperation|}
+										)
+										[| {|get_CLID_FailSafe,FailSafe::entered,terminate|} |]
+										dbisim(Clock_CLID_FailSafe(id__,0))
+									)\{|get_CLID_FailSafe|}
+								)
+								[| {|get_CLID_Changeover,Changeover::entered,terminate|} |]
+								dbisim(Clock_CLID_Changeover(id__,0))
+							)\{|get_CLID_Changeover|}
+						)
+						) \ diff(union(stateClockSync,enteredSS),enteredSS)
+					)
+					)
+				
+				Stateful_VS_O(id__) = 
+					dbisim((let
+						getsetLocalChannels = {||}
+						clockSync = {||}
+					within
+						(Behaviour_VS_O(id__) 
+						 [| union(union(getsetLocalChannels,clockSync),{terminate}) |] 
+						 (varMemory(id__) [| {terminate} |] Clocks(id__))
+					 	)\union(getsetLocalChannels,clockSync)
+					)
+					)
+				
+				IteratedStateful_VS_O(id__) =
+					(IteratedBehaviour_VS_O(id__))
+				
+				-- END
+				
+				-- Memory
+				-- Memory variables
+				
+				-- varMemory process
+				varMemory(id__) = terminate -> SKIP
+				
+				getsetLocalChannels = {||}
+				
+				-- Definition of the behaviour of state machines (default, optimised, visible, visible and optimised)
+				FVS__(id__) = STM_VS_O(id__) \ localClockResets
+				D__(id__) = timed_priority(STM(id__) \ union(internal_events,localClockResets))
+				O__(id__) = dbisim(D__(id__))
+				VS__(id__) = FVS__(id__)
+				VS_O__(id__) = dbisim(FVS__(id__))
+				HEXT__(id__) = O__(id__) [|shared_variable_events|] SKIP
+				FVS_C__(id__) = dbisim(timed_priority(STM(id__) \ internal_events))
+				HUP__(id__) = timed_priority(O__(id__) [|{share__}|] SKIP)
+				
+				-- Clocks
+				
+				Clocks(id__) = terminate -> SKIP
+				
+				clockSync = {||}
+				
+				Clock_CLID_Changeover(id__,x__) = 
+					TimeOut_1(
+						Changeover::entered -> Clock_CLID_Changeover(id__,0)
+						[]
+						get_CLID_Changeover!x__ -> Clock_CLID_Changeover(id__,x__)
+						[]
+						terminate -> SKIP,Clock_CLID_Changeover(id__,clock_type_plus(x__,1,CLID_Changeover_clock_type(id__))))
+				Clock_CLID_FailSafe(id__,x__) = 
+					TimeOut_1(
+						FailSafe::entered -> Clock_CLID_FailSafe(id__,0)
+						[]
+						get_CLID_FailSafe!x__ -> Clock_CLID_FailSafe(id__,x__)
+						[]
+						terminate -> SKIP,Clock_CLID_FailSafe(id__,clock_type_plus(x__,1,CLID_FailSafe_clock_type(id__))))
+				Clock_CLID_NormalOperation(id__,x__) = 
+					TimeOut_1(
+						NormalOperation::entered -> Clock_CLID_NormalOperation(id__,0)
+						[]
+						get_CLID_NormalOperation!x__ -> Clock_CLID_NormalOperation(id__,x__)
+						[]
+						terminate -> SKIP,Clock_CLID_NormalOperation(id__,clock_type_plus(x__,1,CLID_NormalOperation_clock_type(id__))))
+				
+				StateClocks(id__) = dbisim(Clock_CLID_Changeover(id__,0))
+				[| { terminate } |] (
+				dbisim(Clock_CLID_FailSafe(id__,0))
+				[| { terminate } |] (
+				dbisim(Clock_CLID_NormalOperation(id__,0))
+				)
+				)
+				
+				stateClockSync = {|get_CLID_Changeover,Changeover::entered,get_CLID_FailSafe,FailSafe::entered,get_CLID_NormalOperation,NormalOperation::entered|}
+				
+				-- Shared memory
+				-- Shared memory variables
+				Memory_activeDryer(activeDryer) =
+					get_activeDryer!activeDryer -> Memory_activeDryer(activeDryer)
+					[]
+					set_activeDryer?x__ -> Memory_activeDryer(x__)
+					[]
+					set_EXT_activeDryer?x__ -> Memory_activeDryer(x__)
+					[]
+					terminate -> SKIP
+				
+				-- sharedVarMemory process
+				sharedVarMemory(id__) = Memory_activeDryer(Dryer_BedA)
+				
+				sharedVarSync = {|get_activeDryer,set_activeDryer,set_EXT_activeDryer|}
+				
+				sharedVarHide = {|get_activeDryer|}
+				}
+		endmodule
+		
+		Timed(OneStep) {
+				-- undefined operations
+				
+				-- declaring controller memory
+				Memory(id__, activeDryer) = (
+				set_EXT_activeDryer?x__ -> stm_ref0::set_EXT_activeDryer!x__ -> 
+				Memory(id__,x__)
+				)
+				
+				D__(id__) = prioritise(	((
+						stm_ref0::D__(id__)[[
+							stm_ref0::terminate <- terminate,
+							stm_ref0::powerLoss <- powerLoss,
+							stm_ref0::dewpointHigh <- dewpointHigh,
+							stm_ref0::changeoverComplete <- changeoverComplete,
+							stm_ref0::backupRestored <- backupRestored,
+							stm_ref0::enterFailSafe <- enterFailSafe,
+							stm_ref0::raiseAlarm <- raiseAlarm,
+							stm_ref0::startChangeover <- startChangeover,
+							stm_ref0::restoreNormal <- restoreNormal,
+							stm_ref0::set_activeDryer <- set_activeDryer,
+							stm_ref0::get_activeDryer <- get_activeDryer
+						]]
+					)
+						[|
+							union(
+								{|
+								|},
+								{|
+									stm_ref0::set_EXT_activeDryer
+								|}
+							)
+						|]
+					Memory(id__, Dryer_BedA)
+				)
+				\ union(
+					{|
+					|},
+					{|
+						stm_ref0::set_EXT_activeDryer
+					|}
+				)
+				[|{|terminate|}|>SKIP
+				,<visibleMemoryEvents,{tock}>)
+				
+				-- VS version
+				VS__(id__) = prioritise(	((
+						stm_ref0::VS__(id__)[[
+							stm_ref0::terminate <- terminate,
+							stm_ref0::powerLoss <- powerLoss,
+							stm_ref0::dewpointHigh <- dewpointHigh,
+							stm_ref0::changeoverComplete <- changeoverComplete,
+							stm_ref0::backupRestored <- backupRestored,
+							stm_ref0::enterFailSafe <- enterFailSafe,
+							stm_ref0::raiseAlarm <- raiseAlarm,
+							stm_ref0::startChangeover <- startChangeover,
+							stm_ref0::restoreNormal <- restoreNormal,
+							stm_ref0::set_activeDryer <- set_activeDryer,
+							stm_ref0::get_activeDryer <- get_activeDryer
+						]]
+					)
+						[|
+							union(
+								{|
+								|},
+								{|
+									stm_ref0::set_EXT_activeDryer
+								|}
+							)
+						|]
+					Memory(id__, Dryer_BedA)
+				)
+				\ union(
+					{|
+					|},
+					{|
+						stm_ref0::set_EXT_activeDryer
+					|}
+				)
+				[|{|terminate|}|>SKIP
+				,<visibleMemoryEvents,{tock}>)
+			
+				-- O version (optimised) THESE TWO PROCESSES SHOULD BE KEPT IN SYNC WITH THE ABOVE TWO
+				O__(id__) = dbisim(prioritise(	((
+						stm_ref0::O__(id__)[[
+							stm_ref0::terminate <- terminate,
+							stm_ref0::powerLoss <- powerLoss,
+							stm_ref0::dewpointHigh <- dewpointHigh,
+							stm_ref0::changeoverComplete <- changeoverComplete,
+							stm_ref0::backupRestored <- backupRestored,
+							stm_ref0::enterFailSafe <- enterFailSafe,
+							stm_ref0::raiseAlarm <- raiseAlarm,
+							stm_ref0::startChangeover <- startChangeover,
+							stm_ref0::restoreNormal <- restoreNormal,
+							stm_ref0::set_activeDryer <- set_activeDryer,
+							stm_ref0::get_activeDryer <- get_activeDryer
+						]]
+					)
+						[|
+							union(
+								{|
+								|},
+								{|
+									stm_ref0::set_EXT_activeDryer
+								|}
+							)
+						|]
+					dbisim(Memory(id__, Dryer_BedA))
+				)
+				\ union(
+					{|
+					|},
+					{|
+						stm_ref0::set_EXT_activeDryer
+					|}
+				)
+				[|{|terminate|}|>SKIP
+				,<visibleMemoryEvents,{tock}>))
+								
+				-- VS_O version
+				VS_O__(id__) = dbisim(prioritise(	((
+						stm_ref0::VS_O__(id__)[[
+							stm_ref0::terminate <- terminate,
+							stm_ref0::powerLoss <- powerLoss,
+							stm_ref0::dewpointHigh <- dewpointHigh,
+							stm_ref0::changeoverComplete <- changeoverComplete,
+							stm_ref0::backupRestored <- backupRestored,
+							stm_ref0::enterFailSafe <- enterFailSafe,
+							stm_ref0::raiseAlarm <- raiseAlarm,
+							stm_ref0::startChangeover <- startChangeover,
+							stm_ref0::restoreNormal <- restoreNormal,
+							stm_ref0::set_activeDryer <- set_activeDryer,
+							stm_ref0::get_activeDryer <- get_activeDryer
+						]]
+					)
+						[|
+							union(
+								{|
+								|},
+								{|
+									stm_ref0::set_EXT_activeDryer
+								|}
+							)
+						|]
+					dbisim(Memory(id__, Dryer_BedA))
+				)
+				\ union(
+					{|
+					|},
+					{|
+						stm_ref0::set_EXT_activeDryer
+					|}
+				)
+				[|{|terminate|}|>SKIP
+				,<visibleMemoryEvents,{tock}>))
+			
+				HEXT(id__) = O__(id__) [|shared_variable_events|] SKIP			
+		}
+
+	endmodule

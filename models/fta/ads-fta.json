@@ -1,0 +1,767 @@
+{
+ "modelName": "ADS Tritium Release FTA",
+ "faultTreeName": "ADS Tritium Release Fault Tree",
+ "description": "Fault tree for tritium discharge above the authorised limit (REQ-TRIT-014). Basic events and failure rates derive from the ADS FMEA.",
+ "elementCount": 35,
+ "countsByType": {
+  "IntermediateEvent": 10,
+  "FaultTree": 1,
+  "BasicEvent": 14,
+  "OrGate": 6,
+  "AndGate": 4
+ },
+ "elements": [
+  {
+   "@id": "TE-01",
+   "@type": "IntermediateEvent",
+   "name": "Tritium discharge to atmosphere exceeds authorised limit",
+   "description": "Top event. Challenges REQ-TRIT-014 (discharge within the authorised annual limit, reduced ALARP) and REQ-ADS-001 (decontamination factor >= 1000 at design-basis flow).",
+   "faultCategory": "Unspecified",
+   "traces": [
+    {
+     "name": "G1-to-FTA-TopEvent",
+     "endpoint": {
+      "type": "Goal",
+      "name": "G1"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "6018aebd-d429-4355-9106-604abc76a121",
+   "@type": "FaultTree",
+   "name": "ADS Tritium Release",
+   "topEvent": {
+    "@id": "TE-01",
+    "name": "Tritium discharge to atmosphere exceeds authorised limit"
+   },
+   "polarity": "Failure",
+   "purpose": "PSSA",
+   "demandMode": "LowDemand",
+   "severity": "Unclassified",
+   "assuranceScheme": "None",
+   "rateBudgetUnit": "PerHour",
+   "notation": "NUREG"
+  },
+  {
+   "@id": "BE-01",
+   "@type": "BasicEvent",
+   "name": "Blower bearing seizure",
+   "description": "FMEA row 1. Lubrication loss; flow stops so no detritiation. Blower 12000 FIT x 50 % bearing seizure.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 6e-06,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn11-to-FTA-MotiveFlow",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn11"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-03",
+   "@type": "BasicEvent",
+   "name": "Recombiner catalyst poisoning",
+   "description": "FMEA row 3. Siloxane/oil contamination; conversion drops so HT passes the beds unconverted. 2000 FIT x 60 %.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 1.2e-06,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn4-to-FTA-Conversion",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn4"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-04",
+   "@type": "BasicEvent",
+   "name": "Recombiner heater failure",
+   "description": "FMEA row 4. Element burnout; low bed temperature so low conversion. 2000 FIT x 40 %.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 8e-07,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn4-to-FTA-Conversion",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn4"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-06",
+   "@type": "BasicEvent",
+   "name": "Regeneration-path leak to stack",
+   "description": "FMEA row 6. Valve/gasket failure; HTO bypasses collection and reaches the stack directly, defeating the drying train entirely. Condenser 1500 FIT x 30 %.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 4.5e-07,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn6-to-FTA-RegenPath",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn6"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-07",
+   "@type": "BasicEvent",
+   "name": "Dryer A sieve breakthrough",
+   "description": "FMEA row 7. Bed saturation; HTO passes the bed and stack release rises. Molecular-sieve bed 500 FIT x 70 %.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 3.5e-07,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn1-to-FTA-Breakthrough",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn1"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-09",
+   "@type": "BasicEvent",
+   "name": "Dryer B regeneration heater failure",
+   "description": "FMEA row 9. Element burnout; bed unavailable after regeneration so redundancy is lost. QUANTIFICATION DELIBERATELY UNSET: the FMEA component table gives no FIT figure for a regeneration heater, and an invented rate would be indistinguishable from a measured one. Unset is not zero -- this event is excluded from quantification until a rate is sourced.",
+   "faultCategory": "Unspecified",
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn1-to-FTA-BedAvailability",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn1"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-10",
+   "@type": "BasicEvent",
+   "name": "Changeover valves stuck mid-travel",
+   "description": "FMEA row 10. Actuator/stem seizure isolates BOTH beds, so this single failure defeats dual-bed redundancy on its own. Valve set 3000 FIT x 40 %. Proof tested six-monthly.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "TestedRepairable",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 1.2e-06,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testInterval": 4380,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn2-to-FTA-ChangeoverValves",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn2"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-11",
+   "@type": "BasicEvent",
+   "name": "Changeover valve seat leak-through",
+   "description": "FMEA row 11. Seat wear; partial bypass of the active bed reduces the decontamination factor. 3000 FIT x 60 %.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 1.8e-06,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn2-to-FTA-ValveLeak",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn2"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-12",
+   "@type": "BasicEvent",
+   "name": "Dewpoint monitor drift (reads dry)",
+   "description": "FMEA row 12. Sensor ageing. SHARED EVENT: this one failure defeats BOTH the mitigation and the detection. It suppresses the automatic dual-bed changeover that row 7 relies on as its safety mechanism, and it leaves breakthrough undetected. Hygrometer 4000 FIT x 50 %. Calibrated quarterly per REQ-ADS-011.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "TestedRepairable",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 2e-06,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testInterval": 2190,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn5-to-FTA-MonitoringIndependence",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn5"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-14",
+   "@type": "BasicEvent",
+   "name": "Stack monitor loss of signal",
+   "description": "FMEA row 14. Detector/HV failure; the release goes unquantified and no independent alarm is raised. Ion chamber 3000 FIT x 100 %.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 3e-06,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn5-to-FTA-MonitoringIndependence",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn5"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-15",
+   "@type": "BasicEvent",
+   "name": "Controller fails on power transition",
+   "description": "FMEA row 15. PSU/transition fault; no FailSafe entry during the outage. PLC 1000 FIT x 40 %, expressed per demand because the failure is on the transition, not over time.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "Demand",
+    "valueSource": "Literal",
+    "probabilityPerDemand": 0.0004,
+    "demandRateUnit": "PerHour",
+    "rateUnit": "NotApplicable",
+    "dormancySource": "NotStandby",
+    "timeUnit": "NotApplicable",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn3-to-FTA-LOOP",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn3"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-17",
+   "@type": "BasicEvent",
+   "name": "UPS battery degraded",
+   "description": "FMEA row 17. Ageing; restart exceeds 30 s on loss of off-site power, violating REQ-ADS-007. UPS 6000 FIT x 100 %. Periodic discharge test annually.",
+   "faultCategory": "Unspecified",
+   "quantification": {
+    "kind": "TestedRepairable",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 6e-06,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testInterval": 8760,
+    "testedOnline": false
+   },
+   "isoFaultClass": "NotClassified",
+   "traces": [
+    {
+     "name": "Sn3-to-FTA-LOOP",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn3"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "IE-01",
+   "@type": "IntermediateEvent",
+   "name": "Sustained undetected breakthrough",
+   "description": "Tritium reaches the stack un-detritiated AND the condition is not detected, so it persists rather than being isolated.",
+   "faultCategory": "Unspecified"
+  },
+  {
+   "@id": "IE-02",
+   "@type": "IntermediateEvent",
+   "name": "Detritiation fails to remove tritium",
+   "description": "The ADS train does not remove tritiated species from the flow it receives.",
+   "faultCategory": "Unspecified"
+  },
+  {
+   "@id": "IE-03",
+   "@type": "IntermediateEvent",
+   "name": "Loss of drying",
+   "description": "No molecular-sieve bed is removing HTO from the process flow.",
+   "faultCategory": "Unspecified"
+  },
+  {
+   "@id": "IE-04",
+   "@type": "IntermediateEvent",
+   "name": "Both dryer beds unavailable",
+   "description": "Dual-bed redundancy exhausted: the duty bed is saturated, the standby bed cannot take over, and the changeover was never commanded.",
+   "faultCategory": "Unspecified",
+   "traces": [
+    {
+     "name": "Sn1-to-FTA-Breakthrough",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn1"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "IE-05",
+   "@type": "IntermediateEvent",
+   "name": "Upstream conversion loss",
+   "description": "The recombiner fails to convert HT to HTO. Elemental tritium is not captured by a molecular sieve, so it passes the beds regardless of their condition.",
+   "faultCategory": "Unspecified",
+   "traces": [
+    {
+     "name": "Sn4-to-FTA-Conversion",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn4"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "IE-06",
+   "@type": "IntermediateEvent",
+   "name": "Loss of motive flow",
+   "description": "Process gas is not being driven through the detritiation train.",
+   "faultCategory": "Unspecified"
+  },
+  {
+   "@id": "IE-07",
+   "@type": "IntermediateEvent",
+   "name": "Loss of control on loss of off-site power",
+   "description": "On LOOP the controller does not reach its FailSafe state and the backup supply does not carry it. Challenges REQ-TRIT-030 and REQ-ADS-007.",
+   "faultCategory": "Unspecified",
+   "traces": [
+    {
+     "name": "Sn3-to-FTA-LOOP",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn3"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "IE-08",
+   "@type": "IntermediateEvent",
+   "name": "Release not detected",
+   "description": "Neither the dewpoint channel nor the stack channel raises the condition, so no isolation or operator action follows.",
+   "faultCategory": "Unspecified",
+   "traces": [
+    {
+     "name": "Sn5-to-FTA-MonitoringIndependence",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn5"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "G-00",
+   "@type": "OrGate",
+   "name": "TOP",
+   "description": "Either a direct bypass of the train, or a sustained breakthrough that nothing catches.",
+   "outputEvent": {
+    "@id": "TE-01",
+    "name": "Tritium discharge to atmosphere exceeds authorised limit"
+   },
+   "inputs": [
+    {
+     "@id": "BE-06",
+     "name": "Regeneration-path leak to stack"
+    },
+    {
+     "@id": "IE-01",
+     "name": "Sustained undetected breakthrough"
+    }
+   ]
+  },
+  {
+   "@id": "G-01",
+   "@type": "AndGate",
+   "name": "Breakthrough AND not detected",
+   "description": "Defence in depth: a challenge alone is not a release. It becomes one only when detection also fails, because a detected breakthrough triggers changeover or operator isolation.",
+   "outputEvent": {
+    "@id": "IE-01",
+    "name": "Sustained undetected breakthrough"
+   },
+   "inputs": [
+    {
+     "@id": "IE-02",
+     "name": "Detritiation fails to remove tritium"
+    },
+    {
+     "@id": "IE-08",
+     "name": "Release not detected"
+    }
+   ]
+  },
+  {
+   "@id": "G-02",
+   "@type": "OrGate",
+   "name": "Any loss of removal",
+   "description": "Four independent ways the train stops removing tritium from the flow.",
+   "outputEvent": {
+    "@id": "IE-02",
+    "name": "Detritiation fails to remove tritium"
+   },
+   "inputs": [
+    {
+     "@id": "IE-03",
+     "name": "Loss of drying"
+    },
+    {
+     "@id": "IE-05",
+     "name": "Upstream conversion loss"
+    },
+    {
+     "@id": "BE-11",
+     "name": "Changeover valve seat leak-through"
+    },
+    {
+     "@id": "IE-06",
+     "name": "Loss of motive flow"
+    }
+   ]
+  },
+  {
+   "@id": "G-03",
+   "@type": "OrGate",
+   "name": "Drying lost",
+   "description": "Either the valves isolate both beds outright, or both beds are individually unavailable.",
+   "outputEvent": {
+    "@id": "IE-03",
+    "name": "Loss of drying"
+   },
+   "inputs": [
+    {
+     "@id": "BE-10",
+     "name": "Changeover valves stuck mid-travel"
+    },
+    {
+     "@id": "IE-04",
+     "name": "Both dryer beds unavailable"
+    }
+   ]
+  },
+  {
+   "@id": "G-04",
+   "@type": "AndGate",
+   "name": "Both beds out AND no changeover",
+   "description": "The duty bed saturates, the standby bed is unavailable, and the dewpoint channel never commands the swap. All three are required: any one of them working preserves drying.",
+   "outputEvent": {
+    "@id": "IE-04",
+    "name": "Both dryer beds unavailable"
+   },
+   "inputs": [
+    {
+     "@id": "IE-09",
+     "name": "Duty bed (dryer A) breakthrough"
+    },
+    {
+     "@id": "BE-09",
+     "name": "Dryer B regeneration heater failure"
+    },
+    {
+     "@id": "BE-12",
+     "name": "Dewpoint monitor drift (reads dry)"
+    }
+   ],
+   "origin": "completion (patched)"
+  },
+  {
+   "@id": "G-05",
+   "@type": "OrGate",
+   "name": "Conversion lost",
+   "description": "Catalyst or heater. Either way HT is not converted and the sieve cannot capture it.",
+   "outputEvent": {
+    "@id": "IE-05",
+    "name": "Upstream conversion loss"
+   },
+   "inputs": [
+    {
+     "@id": "BE-03",
+     "name": "Recombiner catalyst poisoning"
+    },
+    {
+     "@id": "BE-04",
+     "name": "Recombiner heater failure"
+    }
+   ]
+  },
+  {
+   "@id": "G-06",
+   "@type": "OrGate",
+   "name": "Flow lost",
+   "description": "The blower itself, or the control and power that keep it running.",
+   "outputEvent": {
+    "@id": "IE-06",
+    "name": "Loss of motive flow"
+   },
+   "inputs": [
+    {
+     "@id": "BE-01",
+     "name": "Blower bearing seizure"
+    },
+    {
+     "@id": "IE-07",
+     "name": "Loss of control on loss of off-site power"
+    }
+   ]
+  },
+  {
+   "@id": "G-07",
+   "@type": "AndGate",
+   "name": "Controller AND UPS fail",
+   "description": "The UPS exists to carry the controller through the transition, so both must fail before control is lost.",
+   "outputEvent": {
+    "@id": "IE-07",
+    "name": "Loss of control on loss of off-site power"
+   },
+   "inputs": [
+    {
+     "@id": "BE-15",
+     "name": "Controller fails on power transition"
+    },
+    {
+     "@id": "BE-17",
+     "name": "UPS battery degraded"
+    }
+   ]
+  },
+  {
+   "@id": "G-08",
+   "@type": "AndGate",
+   "name": "Both detection channels fail",
+   "description": "Two independent channels: dewpoint at the bed outlet, activity at the stack. Both must fail for the release to go unnoticed -- which is why the dewpoint monitor appearing in G-04 as well matters so much.",
+   "outputEvent": {
+    "@id": "IE-08",
+    "name": "Release not detected"
+   },
+   "inputs": [
+    {
+     "@id": "BE-12",
+     "name": "Dewpoint monitor drift (reads dry)"
+    },
+    {
+     "@id": "BE-14",
+     "name": "Stack monitor loss of signal"
+    }
+   ]
+  },
+  {
+   "@id": "BE-05",
+   "@type": "BasicEvent",
+   "name": "Condenser cooling water loss",
+   "description": "FMEA row 5. High moisture to the duty bed; rapid saturation and early breakthrough. Condenser 1500 FIT x 70 %. Modelled as a duty-bed cause; its common-cause effect on the standby bed after changeover is not modelled.",
+   "faultCategory": "Unspecified",
+   "isoFaultClass": "NotClassified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 1.05e-06,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "origin": "completion",
+   "review": "pending engineering review",
+   "traces": [
+    {
+     "name": "Sn1-to-FTA-BedAvailability",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn1"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "BE-08",
+   "@type": "BasicEvent",
+   "name": "Dryer A bed channelling",
+   "description": "FMEA row 8. Partial bypass of the sieve; premature partial breakthrough. Molecular-sieve bed 500 FIT x 30 %.",
+   "faultCategory": "Unspecified",
+   "isoFaultClass": "NotClassified",
+   "quantification": {
+    "kind": "Rate",
+    "valueSource": "Literal",
+    "demandRateUnit": "NotApplicable",
+    "operatingFailureRate": 1.5e-07,
+    "rateUnit": "PerHour",
+    "dormancySource": "NotStandby",
+    "exposureTime": 8760,
+    "timeUnit": "Hour",
+    "useRareEventApproximation": false,
+    "testedOnline": false
+   },
+   "origin": "completion",
+   "review": "pending engineering review",
+   "traces": [
+    {
+     "name": "Sn1-to-FTA-BedAvailability",
+     "endpoint": {
+      "type": "Solution",
+      "name": "Sn1"
+     }
+    }
+   ]
+  },
+  {
+   "@id": "IE-09",
+   "@type": "IntermediateEvent",
+   "name": "Duty bed (dryer A) breakthrough",
+   "description": "The duty bed passes HTO: sieve saturation, channelling, or moisture overload from the condenser.",
+   "faultCategory": "Unspecified",
+   "origin": "completion",
+   "review": "pending engineering review"
+  },
+  {
+   "@id": "G-09",
+   "@type": "OrGate",
+   "name": "Any duty-bed breakthrough cause",
+   "description": "Any one cause makes the duty bed break through.",
+   "outputEvent": {
+    "@id": "IE-09",
+    "name": "Duty bed (dryer A) breakthrough"
+   },
+   "inputs": [
+    {
+     "@id": "BE-07",
+     "name": "Dryer A sieve breakthrough"
+    },
+    {
+     "@id": "BE-08",
+     "name": "Dryer A bed channelling"
+    },
+    {
+     "@id": "BE-05",
+     "name": "Condenser cooling water loss"
+    }
+   ],
+   "origin": "completion",
+   "review": "pending engineering review"
+  }
+ ]
+}

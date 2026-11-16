@@ -1,0 +1,19 @@
+
+--
+-- RoboChart generator version <unknown>
+-- Automatically generated on 08-06-2026 16:29:52
+--
+-- Iterated compression status: true
+-- Assertions compression status: true
+--
+
+-- data definitions used by <RoboChart project>/robochart_controller.rct
+datatype Dryer = Dryer_BedA | Dryer_BedB
+Dryer_is(Dryer_BedA,Dryer_BedA) = true
+Dryer_is(_,Dryer_BedA) = false
+Dryer_is(Dryer_BedB,Dryer_BedB) = true
+Dryer_is(_,Dryer_BedB) = false
+
+
+pre_nextDryer(param_current) = true
+	
