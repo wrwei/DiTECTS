@@ -1,0 +1,57 @@
+# Scored: P2
+
+* Found 113 of 133 answer-key elements (85%); G2 found, S1 missed.
+* Working time None min (breaks 0 min); 166 searches logged; 165 element rows.
+* Cumulative found by round: {1: 13, 2: 73, 3: 108, 4: 111, 5: 113}
+* Recall by thread depth: {1: '8/8', 2: '14/14', 3: '25/29', 4: '19/21', 5: '17/23', 6: '12/18', 7: '9/11', 8: '8/8', 9: '1/1'}
+* Rows needing adjudication: 47; rows outside the answer key: 1
+
+  - round 1, 02-design: 'AirPort' (no match)
+  - round 1, 02-design: 'MolecularSieveDryer' (no match)
+  - round 1, 02-design: 'AirInterface' (no match)
+  - round 1, 02-design: 'valvesToDryerA' (no match)
+  - round 1, 02-design: 'dryerASample' (no match)
+  - round 1, 02-design: 'Changeover' (no match)
+  - round 1, 02-design: 'Dryer' (no match)
+  - round 2, 02-design: 'TritiatedAir' (no match)
+  - round 2, 02-design: 'AtmosphereDetritiationSystem' (no match)
+  - round 2, 02-design: 'CirculationBlower' (no match)
+  - round 2, 02-design: 'CatalyticRecombiner' (no match)
+  - round 2, 02-design: 'ChangeoverValveSet' (no match)
+  - round 2, 02-design: 'TritiumStackMonitor' (no match)
+  - round 2, 02-design: 'dewpointOut' (no match)
+  - round 2, 02-design: 'blowerToRecombiner' (no match)
+  - round 2, 02-design: 'recombinerToCondenser' (no match)
+  - round 2, 02-design: 'condenserToValves' (no match)
+  - round 2, 02-design: 'ADSController' (no match)
+  - round 2, 02-design: 'FailSafe' (no match)
+  - round 2, 02-design: 'BedA' (no match)
+  - round 2, 02-design: 'BedB' (no match)
+  - round 2, 02-design: 'NormalOperation' (no match)
+  - round 2, 02-design: 'changeoverComplete' (no match)
+  - round 2, 02-design: 'changeover_complete' (no match)
+  - round 2, 02-design: 'first' (no match)
+  - round 2, 02-design: 'ADSOperation' (no match)
+  - round 2, 02-design: 'calibrationDue' (no match)
+  - round 2, 02-design: 'tritiumActivity' (no match)
+  - round 2, 02-design: 'dewpointLimit' (no match)
+  - round 2, 02-design: 'normal_to_changeover' (no match)
+  - round 2, 02-design: 'changeover_to_failsafe' (no match)
+  - round 2, 02-design: 'swapDutyBed' (no match)
+  - round 2, 02-design: 'powerAvailable' (no match)
+  - round 2, 02-design: 'position' (no match)
+  - round 2, 02-design: 'valvesToDryerB' (no match)
+  - round 2, 02-design: 'dryerBSample' (no match)
+  - round 2, 02-design: 'outletTemperature' (no match)
+  - round 3, 02-design: 'humidity' (no match)
+  - round 3, 02-design: 'flowRate' (no match)
+  - round 3, 02-design: 'conversionEfficiency' (no match)
+  - round 3, 02-design: 'bedTemperature' (no match)
+  - round 3, 02-design: 'upsState' (no match)
+  - round 3, 02-design: 'UPSBackupSupply' (no match)
+  - round 3, 02-design: 'normal_to_failsafe' (no match)
+  - round 3, 02-design: 'failsafe_recovery' (no match)
+  - round 3, 01-requirements: 'RadiologicalReleaseLimit' (no match)
+  - round 4, 02-design: 'charge' (no match)
+
+Missed: A1, A2, C1, G-00, G-02, G-03, G-05, G-09, G4, IE-01, IE-02, IE-03, IE-06, REQ-TRIT-007, REQ-TRIT-021, S1, S2, Sn5, Sn9, interfaceEdge

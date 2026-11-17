@@ -1,0 +1,1979 @@
+{
+ "participant": "P2",
+ "answer_key": {
+  "start": "dryerA",
+  "elements": 133,
+  "source": "namespace/ads-namespace.json"
+ },
+ "found": 113,
+ "recall": 0.8496,
+ "recall_by_depth": {
+  "1": "8/8",
+  "2": "14/14",
+  "3": "25/29",
+  "4": "19/21",
+  "5": "17/23",
+  "6": "12/18",
+  "7": "9/11",
+  "8": "8/8",
+  "9": "1/1"
+ },
+ "cumulative_by_round": {
+  "1": 13,
+  "2": 73,
+  "3": 108,
+  "4": 111,
+  "5": 113
+ },
+ "found_G2": true,
+ "found_S1": false,
+ "rows": 165,
+ "unmatched_rows": [
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "AirPort",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "MolecularSieveDryer",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "AirInterface",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "valvesToDryerA",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "dryerASample",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "Changeover",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "Dryer",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "TritiatedAir",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "AtmosphereDetritiationSystem",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "CirculationBlower",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "CatalyticRecombiner",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "ChangeoverValveSet",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "TritiumStackMonitor",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "dewpointOut",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "blowerToRecombiner",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "recombinerToCondenser",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "condenserToValves",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "ADSController",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "FailSafe",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "BedA",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "BedB",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "NormalOperation",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "changeoverComplete",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "changeover_complete",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "first",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "ADSOperation",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "calibrationDue",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "tritiumActivity",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "dewpointLimit",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "normal_to_changeover",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "changeover_to_failsafe",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "swapDutyBed",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "powerAvailable",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "position",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "valvesToDryerB",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "dryerBSample",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "outletTemperature",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "humidity",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "flowRate",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "conversionEfficiency",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "bedTemperature",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "upsState",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "UPSBackupSupply",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "normal_to_failsafe",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "failsafe_recovery",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "RadiologicalReleaseLimit",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 4,
+   "clock": "",
+   "document": "02-design",
+   "element": "charge",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  }
+ ],
+ "outside_answer_key": [
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "dryerA",
+   "matched": "6a9650997a882e24b8eb48ab",
+   "match": "name",
+   "in_answer_key": false
+  }
+ ],
+ "searches_logged": 166,
+ "working_minutes": null,
+ "break_minutes": 0,
+ "missed": [
+  "A1",
+  "A2",
+  "C1",
+  "G-00",
+  "G-02",
+  "G-03",
+  "G-05",
+  "G-09",
+  "G4",
+  "IE-01",
+  "IE-02",
+  "IE-03",
+  "IE-06",
+  "REQ-TRIT-007",
+  "REQ-TRIT-021",
+  "S1",
+  "S2",
+  "Sn5",
+  "Sn9",
+  "interfaceEdge"
+ ],
+ "matched_rows": [
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "AirPort",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "MolecularSieveDryer",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "dryerA",
+   "matched": "6a9650997a882e24b8eb48ab",
+   "match": "name",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "AirInterface",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "valvesToDryerA",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "dryerARegenReturn",
+   "matched": "6a9650997a882e24b8eb4927",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "dryerASample",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-005",
+   "matched": "6a9650997a882e24b8eb4790",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-006",
+   "matched": "6a9650997a882e24b8eb4794",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "bedSaturation",
+   "matched": "6a9650997a882e24b8eb482f",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "DewpointMonitor",
+   "matched": "6a9650997a882e24b8eb48e6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "dewpoint",
+   "matched": "6a9650997a882e24b8eb4846",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "dewpointMonitor",
+   "matched": "6a9650997a882e24b8eb48e6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "Changeover",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "dewpoint",
+   "matched": "6a9650997a882e24b8eb4846",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 7",
+   "matched": "6a96509a7a882e24b8eb4ce5",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 8",
+   "matched": "6a96509a7a882e24b8eb4ce4",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "Dryer",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-07",
+   "matched": "6a9658e07a882e24b8eb5d16",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-08",
+   "matched": "a8886f64c5698007eb768894",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "Condenser",
+   "matched": "6a9650997a882e24b8eb488c",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "02-design",
+   "element": "condenser",
+   "matched": "6a9650997a882e24b8eb488c",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "IE-09",
+   "matched": "561b87a8f83753d9161a29c5",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 1,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "DRYER A part",
+   "matched": "6a96509a7a882e24b8eb4cd0",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "TritiatedAir",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "AtmosphereDetritiationSystem",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "ads",
+   "matched": "6a9650997a882e24b8eb4870",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "blower",
+   "matched": "6a9650997a882e24b8eb487e",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "recombiner",
+   "matched": "6a9650997a882e24b8eb489d",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "CirculationBlower",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "CatalyticRecombiner",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "dryerB",
+   "matched": "6a9650997a882e24b8eb48c0",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "ChangeoverValveSet",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "changeoverValves",
+   "matched": "6a9650997a882e24b8eb48d2",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "TritiumStackMonitor",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "stackMonitor",
+   "matched": "6a9650997a882e24b8eb48f0",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "dewpointOut",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "saturationTimeConstant",
+   "matched": "3d983bc88f975172593dfea0",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "10-modelica",
+   "element": "ADSChangeover.mo",
+   "matched": "6a96509a7a882e24b8eb4cc9",
+   "match": "executable model",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "10-modelica",
+   "element": "tSat",
+   "matched": "13c384f8531f671f0cd5f6ad",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "blowerToRecombiner",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "recombinerToCondenser",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "condenserToValves",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-002",
+   "matched": "6a9650997a882e24b8eb4784",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-007",
+   "matched": "6a9650997a882e24b8eb4798",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "ADSController",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "controller",
+   "matched": "6a9650997a882e24b8eb4978",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "FailSafe",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "G8",
+   "matched": "6a96509a7a882e24b8eb4c28",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "06-dafny",
+   "element": "ADSController.dfy",
+   "matched": "6a96509a7a882e24b8eb5ba7",
+   "match": "executable model",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "BedA",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "BedB",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "09-java",
+   "element": "ADSController.java",
+   "matched": "6a96509a7a882e24b8eb5b9b",
+   "match": "executable model",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "activeDryer",
+   "matched": "6a9650997a882e24b8eb485d",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "NormalOperation",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "changeoverComplete",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "changeover_complete",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "07-isabelle",
+   "element": "ADSController_Beh.thy",
+   "matched": "6a96509a7a882e24b8eb5ba9",
+   "match": "executable model",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "first",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "08-csp",
+   "element": "file_robochart_controller.csp",
+   "matched": "6a96509a7a882e24b8eb5bab",
+   "match": "executable model",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "ADSOperation",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-003",
+   "matched": "6a9650997a882e24b8eb4788",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "backupSupply",
+   "matched": "6a9650997a882e24b8eb48fa",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-001",
+   "matched": "6a9650997a882e24b8eb4780",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "G3",
+   "matched": "6a96509a7a882e24b8eb4c0b",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn2",
+   "matched": "6a96509a7a882e24b8eb4c11",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "10-modelica",
+   "element": "DFtarget",
+   "matched": "8e07484d89138b0ef4630246",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "10-modelica",
+   "element": "DFfresh",
+   "matched": "6a96509a7a882e24b8eb4cc9",
+   "match": "executable model",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "10-modelica",
+   "element": "tCycle",
+   "matched": "d5723237b215f7b233a22e7f",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "bedSaturation signal",
+   "matched": "473b1281-2236-44a4-b281-7dfe624596f5",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "calibrationDue",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-011",
+   "matched": "6a9650997a882e24b8eb47a8",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 12",
+   "matched": "6a96509a7a882e24b8eb4ce2",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 13",
+   "matched": "6a96509a7a882e24b8eb4ce3",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "dewpoint signal",
+   "matched": "37154c6e-38b3-42fc-a163-2187b0e39fd7",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "DEWPOINT part",
+   "matched": "6a96509a7a882e24b8eb4cd2",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "tritiumActivity",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "dewpointLimit",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "normal_to_changeover",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-12",
+   "matched": "6a9658e07a882e24b8eb5d56",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "IE-08",
+   "matched": "6a9658e17a882e24b8eb5e06",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "G-04",
+   "matched": "6a9658e17a882e24b8eb5e69",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "G-08",
+   "matched": "6a9658e17a882e24b8eb5eb9",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "changeover_to_failsafe",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "minDecontaminationFactor",
+   "matched": "c1746a1c5f8412c5180e8ca1",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-010",
+   "matched": "6a9650997a882e24b8eb47a4",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "changeoverPeriod",
+   "matched": "b337953a31d5259347f343ae",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "swapDutyBed",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "powerAvailable",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "position",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 10",
+   "matched": "6a96509a7a882e24b8eb4cdd",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 11",
+   "matched": "6a96509a7a882e24b8eb4cdc",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 16",
+   "matched": "6a96509a7a882e24b8eb4ce1",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-10",
+   "matched": "6a9658e07a882e24b8eb5d36",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-11",
+   "matched": "6a9658e07a882e24b8eb5d46",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "IE-04",
+   "matched": "6a9658e07a882e24b8eb5dc6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "G-01",
+   "matched": "6a9658e17a882e24b8eb5e2d",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 5",
+   "matched": "6a96509a7a882e24b8eb4cde",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-05",
+   "matched": "1c7e0157c257a016d0fcc2a9",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn1",
+   "matched": "6a96509a7a882e24b8eb4c10",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "S3",
+   "matched": "6a96509a7a882e24b8eb4c27",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "CHANGEOVER part",
+   "matched": "6a96509a7a882e24b8eb4ccf",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "valvesToDryerB",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "dryerBSample",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "02-design",
+   "element": "outletTemperature",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 9",
+   "matched": "6a96509a7a882e24b8eb4ce6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-09",
+   "matched": "6a9658e07a882e24b8eb5d26",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "G2",
+   "matched": "6a96509a7a882e24b8eb4c0a",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn10",
+   "matched": "6a96509a7a882e24b8eb4c2c",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "activeDryer signal",
+   "matched": "45bc6a3e-da49-43f1-96e4-4e945a37090a",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "DRYER B part",
+   "matched": "6a96509a7a882e24b8eb4cd1",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-009",
+   "matched": "6a9650997a882e24b8eb47a0",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 6",
+   "matched": "6a96509a7a882e24b8eb4cdf",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-06",
+   "matched": "6a9658e07a882e24b8eb5d06",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 2,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "CONDENSER part",
+   "matched": "6a96509a7a882e24b8eb4cce",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "humidity",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "flowRate",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 1",
+   "matched": "6a96509a7a882e24b8eb4cda",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 2",
+   "matched": "6a96509a7a882e24b8eb4cdb",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-01",
+   "matched": "6a9658e07a882e24b8eb5cd6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "G-06",
+   "matched": "6a9658e17a882e24b8eb5e91",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn11",
+   "matched": "6e34b3c6d75cfbd9474db3d0",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "BLOWER part",
+   "matched": "6a96509a7a882e24b8eb4ccc",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-004",
+   "matched": "6a9650997a882e24b8eb478c",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "conversionEfficiency",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 3",
+   "matched": "6a96509a7a882e24b8eb4ce7",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "bedTemperature",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 4",
+   "matched": "6a96509a7a882e24b8eb4ce8",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-03",
+   "matched": "6a9658e07a882e24b8eb5ce6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-04",
+   "matched": "6a9658e07a882e24b8eb5cf6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "IE-05",
+   "matched": "6a9658e17a882e24b8eb5dd6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn4",
+   "matched": "6a96509a7a882e24b8eb4c13",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "RECOMBINER part",
+   "matched": "6a96509a7a882e24b8eb4ccd",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "releaseRate",
+   "matched": "6a9650997a882e24b8eb4854",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-ADS-008",
+   "matched": "6a9650997a882e24b8eb479c",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 14",
+   "matched": "6a96509a7a882e24b8eb4ce9",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "STACK MON part",
+   "matched": "6a96509a7a882e24b8eb4cd3",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 17",
+   "matched": "6a96509a7a882e24b8eb4cd9",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-17",
+   "matched": "6a9658e07a882e24b8eb5d86",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-TRIT-030",
+   "matched": "6a9650997a882e24b8eb477c",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "IE-07",
+   "matched": "6a9658e17a882e24b8eb5df6",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "upsState",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "UPSBackupSupply",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "03-fmeda",
+   "element": "row 15",
+   "matched": "6a96509a7a882e24b8eb4ce0",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-15",
+   "matched": "6a9658e07a882e24b8eb5d76",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "G-07",
+   "matched": "6a9658e17a882e24b8eb5ea5",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "CONTROLLER part",
+   "matched": "6a96509a7a882e24b8eb4cd4",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "normal_to_failsafe",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "02-design",
+   "element": "failsafe_recovery",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn7",
+   "matched": "6a96509a7a882e24b8eb4c29",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn8",
+   "matched": "6a96509a7a882e24b8eb4c2a",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "BACKUP part",
+   "matched": "6a96509a7a882e24b8eb4cd5",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "RadiologicalReleaseLimit",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "01-requirements",
+   "element": "REQ-TRIT-014",
+   "matched": "6a9650997a882e24b8eb4770",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "TE-01",
+   "matched": "6a96588b7a882e24b8eb5ca7",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "G5",
+   "matched": "6a96509a7a882e24b8eb4c0d",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "G6",
+   "matched": "6a96509a7a882e24b8eb4c0e",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "G7",
+   "matched": "6a96509a7a882e24b8eb4c0f",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 3,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn6",
+   "matched": "6a96509a7a882e24b8eb4c15",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 4,
+   "clock": "",
+   "document": "11-digital-twin",
+   "element": "releaseRate signal",
+   "matched": "17e99f6d-a9ac-4bd6-b7a9-63783d4f0a26",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 4,
+   "clock": "",
+   "document": "04-fault-tree",
+   "element": "BE-14",
+   "matched": "6a9658e07a882e24b8eb5d66",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 4,
+   "clock": "",
+   "document": "02-design",
+   "element": "charge",
+   "matched": null,
+   "match": "no match",
+   "in_answer_key": false
+  },
+  {
+   "round": 4,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "G1",
+   "matched": "6a96509a7a882e24b8eb4c04",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 5,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "C2",
+   "matched": "6a96509a7a882e24b8eb4c06",
+   "match": "name",
+   "in_answer_key": true
+  },
+  {
+   "round": 5,
+   "clock": "",
+   "document": "05-gsn-safety-case",
+   "element": "Sn3",
+   "matched": "6a96509a7a882e24b8eb4c12",
+   "match": "name",
+   "in_answer_key": true
+  }
+ ]
+}
