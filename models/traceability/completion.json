@@ -11,9 +11,10 @@
     "6a9650997a882e24b8eb4780"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Mirrors SatisfyRequirementUsage ads -> REQ-ADS-001 in the design model.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "1a99f5a90e436a019b3b232f",
@@ -24,9 +25,10 @@
     "6a9650997a882e24b8eb47a4"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Mirrors SatisfyRequirementUsage controller -> REQ-ADS-010 in the design model.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "bf9fbe1a10ecd6de87946fb1",
@@ -37,9 +39,10 @@
     "6a9650997a882e24b8eb4790"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "REQ-ADS-005 constrains each molecular-sieve bed; only dryerA satisfied it.",
-   "platformAction": "add trace link and SysML satisfy"
+   "platformAction": "add trace link and SysML satisfy",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "06029277c08131454dfb2bd3",
@@ -50,9 +53,10 @@
     "6a9650997a882e24b8eb4794"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "REQ-ADS-006 requires two independent beds; the beds, not only the controller, satisfy it.",
-   "platformAction": "add trace link and SysML satisfy"
+   "platformAction": "add trace link and SysML satisfy",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "e58c3f28909f24f867c07a11",
@@ -63,9 +67,10 @@
     "6a9650997a882e24b8eb4794"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "REQ-ADS-006 requires two independent beds; the beds, not only the controller, satisfy it.",
-   "platformAction": "add trace link and SysML satisfy"
+   "platformAction": "add trace link and SysML satisfy",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "922b7b0d9f53dd7b4cc88d2b",
@@ -76,9 +81,10 @@
     "6a9650997a882e24b8eb4780"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "REQ-ADS-001 is stated at design-basis flow, which the blower provides.",
-   "platformAction": "add trace link and SysML satisfy"
+   "platformAction": "add trace link and SysML satisfy",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "09589b4487b1309df2c33690",
@@ -89,9 +95,10 @@
     "6a9650997a882e24b8eb47a4"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "G3 is supported by Sn2, \"Changeover proof-test records\", which is the evidence REQ-ADS-010 calls for.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "ac44fb19d4ab6ba08be4520d",
@@ -102,9 +109,10 @@
     "6a9650997a882e24b8eb478c"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "G5 is supported by Sn4, which cites recombiner efficiency data (FMEDA row 3).",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "e3dbd5c53fdea9defb697745",
@@ -115,9 +123,10 @@
     "6a9650997a882e24b8eb477c"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "REQ-TRIT-030 requires availability including loss of off-site power, which G4 argues.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "2907c51d278da64427cf84a3",
@@ -129,9 +138,10 @@
     "6a9650997a882e24b8eb4778"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "A2 records that these plant-level requirements are argued outside the ADS safety case.",
-   "platformAction": "add Assumption A2 and trace link"
+   "platformAction": "add Assumption A2 and trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "6e6a54ccf0ba442b2746a342",
@@ -144,9 +154,10 @@
     "6a96509a7a882e24b8eb4ce6"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Sn1 (G2: breakthrough detected and mitigated) covers every cause of duty-bed breakthrough and loss of the standby bed: rows 5, 8 and 9 are safety-related and were cited by no Solution.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "c9f4874e0845d225dbc3a1d1",
@@ -159,9 +170,10 @@
     "6a9658e07a882e24b8eb5d26"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The fault-tree events for rows 5, 8 and 9.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "935991f92a4ef3d56fd7c60b",
@@ -173,9 +185,10 @@
     "6a96509a7a882e24b8eb4cdb"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Blower failure modes; row 1 is safety-related (severity 8, single-point failure rate 900 FIT).",
-   "platformAction": "add Solution Sn11 and trace link"
+   "platformAction": "add Solution Sn11 and trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "892d9bb63202fc7b5da72b1c",
@@ -186,9 +199,10 @@
     "6a9658e07a882e24b8eb5cd6"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "BE-01 (blower bearing seizure, under IE-06 loss of motive flow) was cited by no Solution.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "2ad9fecd906ef9785b3fd04f",
@@ -199,9 +213,10 @@
     "6a9658e07a882e24b8eb5d46"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "BE-11 (valve seat leak-through) is a direct cause of IE-02 in the fault tree; proof testing of the changeover valves is its evidence. FMEDA row 11 marks it not safety-related: reconcile.",
-   "platformAction": "add trace link; reconcile FMEDA row 11 safetyRelated with FTA"
+   "platformAction": "add trace link; reconcile FMEDA row 11 safetyRelated with FTA",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "1aa1ce31f70e228088527c61",
@@ -212,9 +227,10 @@
     "6a96509a7a882e24b8eb4ce8"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 4 was covered only through BE-04.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "3b649c93b7797f436242fa73",
@@ -225,9 +241,10 @@
     "6a96509a7a882e24b8eb4cdd"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 10 (severity 10) was covered only through BE-10.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "1c4d5d08e7df180698af9ed0",
@@ -238,9 +255,10 @@
     "6a96509a7a882e24b8eb5ba7"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The Dafny artefact models the ADSController; the design part links to its evidence directly, not only through REQ-ADS-006 > G8.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "b6e330afaa7334cb731ded29",
@@ -251,9 +269,10 @@
     "6a96509a7a882e24b8eb5ba9"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The Isabelle artefact models the ADSController; the design part links to its evidence directly, not only through REQ-ADS-006 > G8.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "e69ee2d583dd351610aa4d69",
@@ -264,9 +283,10 @@
     "6a96509a7a882e24b8eb5bab"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The FDR artefact models the ADSController; the design part links to its evidence directly, not only through REQ-ADS-006 > G8.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "4e1bb81e08ee52b109007520",
@@ -277,9 +297,10 @@
     "6a96509a7a882e24b8eb5b9b"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The Java artefact models the ADSController; the design part links to its evidence directly, not only through REQ-ADS-006 > G8.",
-   "platformAction": "add trace link"
+   "platformAction": "add trace link",
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "32988f9edf9e445f8c5a2423",
@@ -290,7 +311,7 @@
     "6a9650997a882e24b8eb47a8"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 12 (dewpoint monitor drift) names its safety mechanism and current control as the calibration interval REQ-ADS-011 sets; the mechanism realises that requirement.",
    "platformAction": "add trace link",
    "relation": "realises",
@@ -307,7 +328,8 @@
      "field": "currentControls",
      "text": "calibration interval per REQ-ADS-011"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "1cfba5ee09ef3c0ccc5f9639",
@@ -318,7 +340,7 @@
     "6a9650997a882e24b8eb4798"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 17 (UPS battery degraded) states its system and end effect as violation of REQ-ADS-007 (restart within 30 s on loss of off-site power).",
    "platformAction": "add trace link",
    "relation": "challenges",
@@ -329,7 +351,8 @@
      "field": "effect",
      "text": "Local: restart > 30 s on LOOP -> System: REQ-ADS-007 violated -> End: REQ-ADS-007 violated"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "3dd2d20dd4e60ae1173d010b",
@@ -341,7 +364,7 @@
     "6a9650997a882e24b8eb4780"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The top event is the violation of the discharge limit and of the decontamination factor; the tree's own description cites REQ-TRIT-014 for the same event.",
    "platformAction": "add trace link",
    "relation": "challenges",
@@ -358,7 +381,8 @@
      "field": "description",
      "text": "Fault tree for tritium discharge above the authorised limit (REQ-TRIT-014)."
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "e4d1987f10cb68dbe25c15e2",
@@ -369,7 +393,7 @@
     "6a9650997a882e24b8eb47a8"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "BE-12 (dewpoint monitor drift) cites REQ-ADS-011 for the quarterly calibration that bounds the drift; the cited control realises that requirement. The event itself is a loss of the accuracy REQ-ADS-011 demands (see open issue).",
    "platformAction": "add trace link",
    "relation": "realises",
@@ -380,7 +404,8 @@
      "field": "description",
      "text": "Calibrated quarterly per REQ-ADS-011."
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "973450ae615bee0c5e38e1ea",
@@ -391,7 +416,7 @@
     "6a9650997a882e24b8eb4798"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "BE-17 (UPS battery degraded) is the fault-tree counterpart of FMEDA row 17 and violates REQ-ADS-007.",
    "platformAction": "add trace link",
    "relation": "challenges",
@@ -402,7 +427,8 @@
      "field": "description",
      "text": "Ageing; restart exceeds 30 s on loss of off-site power, violating REQ-ADS-007."
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "7760e5f40b1d47ea44141916",
@@ -414,7 +440,7 @@
     "6a9650997a882e24b8eb4798"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "IE-07 (loss of control on loss of off-site power) is the violation of availability through LOOP and of the loss-of-power response.",
    "platformAction": "add trace link",
    "relation": "challenges",
@@ -425,7 +451,8 @@
      "field": "description",
      "text": "Challenges REQ-TRIT-030 and REQ-ADS-007."
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "5f7822ade1a3cf29fd449e58",
@@ -438,7 +465,7 @@
     "6a9650997a882e24b8eb48d2"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "G2's mitigation rests on dual-bed redundancy: the two molecular-sieve beds and the changeover valve set that moves the flow to the standby bed (FMEDA row 7 safety mechanism: auto dual-bed changeover).",
    "platformAction": "add trace link",
    "relation": "architecture",
@@ -455,7 +482,8 @@
      "field": "description",
      "text": "Dryer breakthrough is detected and mitigated before the authorised limit is challenged"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "3df69696e6f53cfc7b8c89ba",
@@ -466,7 +494,7 @@
     "6a9650997a882e24b8eb48d2"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The proof-test records verify the changeover valve set, which the design allocates changeover continuity to (satisfy changeoverContinuity by changeoverValves).",
    "platformAction": "add trace link",
    "relation": "architecture",
@@ -483,7 +511,8 @@
      "field": "description",
      "text": "Bed changeover preserves the detritiation function"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "53d9ad0edf73e106acfd3c75",
@@ -494,7 +523,7 @@
     "6a9650997a882e24b8eb48fa"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "G4 rests on the UPS backup supply carrying the controller, valves and monitors through loss of off-site power; the discharge tests verify it.",
    "platformAction": "add trace link",
    "relation": "architecture",
@@ -511,7 +540,8 @@
      "field": "description",
      "text": "Loss of off-site power leads to a fail-safe state with timely recovery"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "1f7e8ef71f5fc873e82f8df1",
@@ -523,7 +553,7 @@
     "6a9650997a882e24b8eb489d"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The DF design calculation is a calculation over the ADS train (part ads, which satisfies REQ-ADS-001); the efficiency data are the recombiner's.",
    "platformAction": "add trace link",
    "relation": "architecture",
@@ -540,7 +570,8 @@
      "field": "description",
      "text": "Detritiation capacity is adequate (DF >= 1000, REQ-ADS-001)"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "73791c5f1d1798a8fcfac7da",
@@ -552,7 +583,7 @@
     "6a9650997a882e24b8eb48f0"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The independence analysis is of the stack monitor, which the design places outside the control loop; the calibration records are the dewpoint monitor's (row 12, REQ-ADS-011 dewpoint accuracy; the only design element with a calibration attribute).",
    "platformAction": "add trace link",
    "relation": "architecture",
@@ -569,7 +600,8 @@
      "field": "description",
      "text": "Monitoring is independent (REQ-ADS-008) and calibrated (REQ-ADS-011)"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "a3b6adaa8c4dd4ee48303c09",
@@ -581,7 +613,7 @@
     "6a9650997a882e24b8eb492b"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The regeneration path is the two interfaces that return each bed's regeneration stream to the condenser (dryerA.regenOut and dryerB.regenOut to condenser.regenReturn); interfaceEdge is the dryer B return.",
    "platformAction": "add trace link",
    "relation": "architecture",
@@ -598,7 +630,8 @@
      "field": "description",
      "text": "The regeneration path is contained (REQ-ADS-009)"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "4575120ca50b6955976f7b51",
@@ -609,7 +642,7 @@
     "6a9650997a882e24b8eb487e"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "The flow-alarm and standby-restart tests verify the circulation blower.",
    "platformAction": "add trace link",
    "relation": "architecture",
@@ -620,7 +653,8 @@
      "field": "description",
      "text": "Blower flow-alarm and standby-restart test records + FMEDA rows 1/2"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "9ccb4c76183762e26d6f0420",
@@ -631,7 +665,7 @@
     "6a9650997a882e24b8eb487e"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 1 analyses blower: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -642,7 +676,8 @@
      "field": "itemElement",
      "text": "blower"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "fae8f12d756462a013db6987",
@@ -653,7 +688,7 @@
     "6a9650997a882e24b8eb487e"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 2 analyses blower: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -664,7 +699,8 @@
      "field": "itemElement",
      "text": "blower"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "3eccd9aa452f2e30af738e59",
@@ -675,7 +711,7 @@
     "6a9650997a882e24b8eb489d"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 3 analyses recombiner: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -686,7 +722,8 @@
      "field": "itemElement",
      "text": "recombiner"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "260146a53523505c7a7f1252",
@@ -697,7 +734,7 @@
     "6a9650997a882e24b8eb489d"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 4 analyses recombiner: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -708,7 +745,8 @@
      "field": "itemElement",
      "text": "recombiner"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "7956553669d1c9604685203f",
@@ -719,7 +757,7 @@
     "6a9650997a882e24b8eb488c"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 5 analyses condenser: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -730,7 +768,8 @@
      "field": "itemElement",
      "text": "condenser"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "e0c52a15f694c6db02085a0d",
@@ -741,7 +780,7 @@
     "6a9650997a882e24b8eb488c"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 6 analyses condenser: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -752,7 +791,8 @@
      "field": "itemElement",
      "text": "condenser"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "f57d1ce738bd90d11c8e1e77",
@@ -763,7 +803,7 @@
     "6a9650997a882e24b8eb48ab"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 7 analyses dryerA: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -774,7 +814,8 @@
      "field": "itemElement",
      "text": "dryerA"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "73a1307a237e941c129031fa",
@@ -785,7 +826,7 @@
     "6a9650997a882e24b8eb48ab"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 8 analyses dryerA: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -796,7 +837,8 @@
      "field": "itemElement",
      "text": "dryerA"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "48edc67be412dc7022049ff6",
@@ -807,7 +849,7 @@
     "6a9650997a882e24b8eb48c0"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 9 analyses dryerB: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -818,7 +860,8 @@
      "field": "itemElement",
      "text": "dryerB"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "d789b34b671c84374d43a68d",
@@ -829,7 +872,7 @@
     "6a9650997a882e24b8eb48d2"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 10 analyses changeoverValves: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -840,7 +883,8 @@
      "field": "itemElement",
      "text": "changeoverValves"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "3f08789339048263fa4eac16",
@@ -851,7 +895,7 @@
     "6a9650997a882e24b8eb48d2"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 11 analyses changeoverValves: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -862,7 +906,8 @@
      "field": "itemElement",
      "text": "changeoverValves"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "d8058e558b90d4f406c71fab",
@@ -873,7 +918,7 @@
     "6a9650997a882e24b8eb48e6"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 12 analyses dewpointMonitor: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -884,7 +929,8 @@
      "field": "itemElement",
      "text": "dewpointMonitor"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "3ee2b7514fa7cea59b7cfdff",
@@ -895,7 +941,7 @@
     "6a9650997a882e24b8eb48e6"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 13 analyses dewpointMonitor: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -906,7 +952,8 @@
      "field": "itemElement",
      "text": "dewpointMonitor"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "d8f92ea67394ac035e761627",
@@ -917,7 +964,7 @@
     "6a9650997a882e24b8eb48f0"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 14 analyses stackMonitor: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -928,7 +975,8 @@
      "field": "itemElement",
      "text": "stackMonitor"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "2e46b68b1a01df5f440cf801",
@@ -939,7 +987,7 @@
     "6a9650997a882e24b8eb4978"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 15 analyses controller: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -950,7 +998,8 @@
      "field": "itemElement",
      "text": "controller"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "96403a45a04d2f27f2bfc5c4",
@@ -961,7 +1010,7 @@
     "6a9650997a882e24b8eb4978"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 16 analyses controller: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -972,7 +1021,8 @@
      "field": "itemElement",
      "text": "controller"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "fd9ac5ad628f36da4428687d",
@@ -983,7 +1033,7 @@
     "6a9650997a882e24b8eb48fa"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Row 17 analyses backupSupply: its analysed-item field (itemElement) names this design part. The typed link records that relationship in the thread.",
    "platformAction": "add trace link",
    "relation": "analyses",
@@ -994,7 +1044,8 @@
      "field": "itemElement",
      "text": "backupSupply"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "0055c5772cde9aed4299611d",
@@ -1005,7 +1056,7 @@
     "b337953a31d5259347f343ae"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Records as a typed link the Degree 0 value binding tCycle <- ADSController::changeoverPeriod (simulation.bindings, bindingId a0c43a01-542b-58eb-8e0c-ac7c4a13fafc); the binding record carries the value relation.",
    "platformAction": "add trace link",
    "relation": "binds",
@@ -1016,7 +1067,8 @@
      "field": "label",
      "text": "tCycle <- ADSController::changeoverPeriod"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "1f0c25bae95d45b01d149c6f",
@@ -1027,7 +1079,7 @@
     "3d983bc88f975172593dfea0"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Records as a typed link the Degree 0 value binding tSat <- MolecularSieveDryer::saturationTimeConstant (simulation.bindings, bindingId 0cf75a50-6a12-5a5e-af61-81f6d7c8fd29); the binding record carries the value relation.",
    "platformAction": "add trace link",
    "relation": "binds",
@@ -1038,7 +1090,8 @@
      "field": "label",
      "text": "tSat <- MolecularSieveDryer::saturationTimeConstant"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   },
   {
    "_id": "7041e2387aec76dcbbeb4986",
@@ -1049,7 +1102,7 @@
     "c1746a1c5f8412c5180e8ca1"
    ],
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
    "rationale": "Records as a typed link the Degree 0 value binding DFtarget <- detritiationCapacity::minDecontaminationFactor (simulation.bindings, bindingId 52e1e28d-2a5c-591d-ab15-2deb2081264e); the binding record carries the value relation.",
    "platformAction": "add trace link",
    "relation": "binds",
@@ -1060,7 +1113,8 @@
      "field": "label",
      "text": "DFtarget <- detritiationCapacity::minDecontaminationFactor"
     }
-   ]
+   ],
+   "reviewedOn": "2026-11-17"
   }
  ],
  "gsn": {
@@ -1076,7 +1130,8 @@
     "isAbstract": false,
     "uninstantiated": false,
     "origin": "completion",
-    "review": "pending engineering review"
+    "review": "accepted in engineering review",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "4f0e7b6eef548c4642256595",
@@ -1099,7 +1154,8 @@
     "isAbstract": false,
     "uninstantiated": false,
     "origin": "completion",
-    "review": "pending engineering review"
+    "review": "accepted in engineering review",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "5f1225ad91c0c7a8b2751267",
@@ -1167,7 +1223,8 @@
     "graphNode": "a1e7ef00be49513493b41ae6",
     "isPublic": true,
     "origin": "completion",
-    "review": "pending engineering review"
+    "review": "accepted in engineering review",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "a8886f64c5698007eb768894",
@@ -1193,7 +1250,8 @@
     "graphNode": "07f4f0857739d5c34eb8db63",
     "isPublic": true,
     "origin": "completion",
-    "review": "pending engineering review"
+    "review": "accepted in engineering review",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "561b87a8f83753d9161a29c5",
@@ -1206,7 +1264,8 @@
     "graphNode": "14fb1b0624b86798ff7f4d35",
     "isPublic": true,
     "origin": "completion",
-    "review": "pending engineering review"
+    "review": "accepted in engineering review",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "e48ae12a64a8d58132791354",
@@ -1224,7 +1283,8 @@
     "graphNode": "5b0a4e46d22f20d95f6974a1",
     "isPublic": true,
     "origin": "completion",
-    "review": "pending engineering review"
+    "review": "accepted in engineering review",
+    "reviewedOn": "2026-11-17"
    }
   ],
   "patches": [
@@ -1236,8 +1296,9 @@
      "to": "561b87a8f83753d9161a29c5"
     },
     "origin": "completion",
-    "review": "pending engineering review",
-    "rationale": "G-04 now takes the duty-bed breakthrough event IE-09 (BE-07 OR BE-08 OR BE-05) in place of BE-07 alone."
+    "review": "accepted in engineering review",
+    "rationale": "G-04 now takes the duty-bed breakthrough event IE-09 (BE-07 OR BE-08 OR BE-05) in place of BE-07 alone.",
+    "reviewedOn": "2026-11-17"
    }
   ]
  },
@@ -1255,9 +1316,10 @@
     ],
     "sysmlModel": "6a9650997a882e24b8eb47d2",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "Design value of the changeover period, owned by the controller that sequences changeover, so that the simulation's tCycle is set by the design rather than restated in the Modelica source.",
-    "platformAction": "add attribute changeoverPeriod : ScalarValues::Real = 7000 to ADSController in the design model (text in models/sysml/02-design.sysml)"
+    "platformAction": "add attribute changeoverPeriod : ScalarValues::Real = 7000 to ADSController in the design model (text in models/sysml/02-design.sysml)",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "8523dfa89a29f4a99f8ad3d6",
@@ -1288,9 +1350,10 @@
     ],
     "sysmlModel": "6a9650997a882e24b8eb47d2",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "Design value of the bed saturation time constant, owned by the molecular-sieve dryer definition that both beds are typed by, so that the simulation's tSat is set by the design.",
-    "platformAction": "add attribute saturationTimeConstant : ScalarValues::Real = 4000 to MolecularSieveDryer in the design model (text in models/sysml/02-design.sysml)"
+    "platformAction": "add attribute saturationTimeConstant : ScalarValues::Real = 4000 to MolecularSieveDryer in the design model (text in models/sysml/02-design.sysml)",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "60b87675565edb608cc65bf5",
@@ -1321,9 +1384,10 @@
     ],
     "sysmlModel": "6a9650997a882e24b8eb4768",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "The decontamination-factor limit REQ-ADS-001 states in its text, made a value of the requirement, so that the simulation's assertion threshold DFtarget is the requirement's own value.",
-    "platformAction": "add attribute minDecontaminationFactor : ScalarValues::Real = 1000 to detritiationCapacity in the requirements model (text in models/sysml/01-requirements.sysml)"
+    "platformAction": "add attribute minDecontaminationFactor : ScalarValues::Real = 1000 to detritiationCapacity in the requirements model (text in models/sysml/01-requirements.sysml)",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "639122ed2041f08aa74b0b2c",
@@ -1351,9 +1415,10 @@
     "satisfyingFeature": "blower",
     "satisfiedRequirement": "REQ-ADS-001",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "REQ-ADS-001 is stated at design-basis flow, which the blower provides.",
-    "platformAction": "add 'satisfy detritiationCapacity by blower;' to the design model (text in models/sysml/02-design.sysml; not yet in the platform's OMG export)"
+    "platformAction": "add 'satisfy detritiationCapacity by blower;' to the design model (text in models/sysml/02-design.sysml; not yet in the platform's OMG export)",
+    "reviewedOn": "2026-11-17"
    },
    {
     "link": "dryerB-to-dryerCapacityMargin",
@@ -1362,9 +1427,10 @@
     "satisfyingFeature": "dryerB",
     "satisfiedRequirement": "REQ-ADS-005",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "REQ-ADS-005 constrains each molecular-sieve bed; only dryerA satisfied it.",
-    "platformAction": "add 'satisfy dryerCapacityMargin by dryerB;' to the design model (text in models/sysml/02-design.sysml; not yet in the platform's OMG export)"
+    "platformAction": "add 'satisfy dryerCapacityMargin by dryerB;' to the design model (text in models/sysml/02-design.sysml; not yet in the platform's OMG export)",
+    "reviewedOn": "2026-11-17"
    },
    {
     "link": "dryerA-to-dryerRedundancy",
@@ -1373,9 +1439,10 @@
     "satisfyingFeature": "dryerA",
     "satisfiedRequirement": "REQ-ADS-006",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "REQ-ADS-006 requires two independent beds; the beds, not only the controller, satisfy it.",
-    "platformAction": "add 'satisfy dryerRedundancy by dryerA;' to the design model (text in models/sysml/02-design.sysml; not yet in the platform's OMG export)"
+    "platformAction": "add 'satisfy dryerRedundancy by dryerA;' to the design model (text in models/sysml/02-design.sysml; not yet in the platform's OMG export)",
+    "reviewedOn": "2026-11-17"
    },
    {
     "link": "dryerB-to-dryerRedundancy",
@@ -1384,9 +1451,10 @@
     "satisfyingFeature": "dryerB",
     "satisfiedRequirement": "REQ-ADS-006",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "REQ-ADS-006 requires two independent beds; the beds, not only the controller, satisfy it.",
-    "platformAction": "add 'satisfy dryerRedundancy by dryerB;' to the design model (text in models/sysml/02-design.sysml; not yet in the platform's OMG export)"
+    "platformAction": "add 'satisfy dryerRedundancy by dryerB;' to the design model (text in models/sysml/02-design.sysml; not yet in the platform's OMG export)",
+    "reviewedOn": "2026-11-17"
    }
   ]
  },
@@ -1399,9 +1467,10 @@
     "modelicaModel": "6a96509a7a882e24b8eb4cc9",
     "name": "tCycle",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "The changeover period of the transient simulation; its value is the design's ADSController::changeoverPeriod.",
-    "platformAction": "declare parameter tCycle of the Modelica model as a bindable element"
+    "platformAction": "declare parameter tCycle of the Modelica model as a bindable element",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "13c384f8531f671f0cd5f6ad",
@@ -1409,9 +1478,10 @@
     "modelicaModel": "6a96509a7a882e24b8eb4cc9",
     "name": "tSat",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "The bed saturation time constant of the transient simulation; its value is the design's MolecularSieveDryer::saturationTimeConstant.",
-    "platformAction": "declare parameter tSat of the Modelica model as a bindable element"
+    "platformAction": "declare parameter tSat of the Modelica model as a bindable element",
+    "reviewedOn": "2026-11-17"
    },
    {
     "_id": "8e07484d89138b0ef4630246",
@@ -1419,9 +1489,10 @@
     "modelicaModel": "6a96509a7a882e24b8eb4cc9",
     "name": "DFtarget",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "The authorised minimum decontamination factor the simulation's assertion checks; its value is REQ-ADS-001's minDecontaminationFactor.",
-    "platformAction": "declare parameter DFtarget of the Modelica model as a bindable element"
+    "platformAction": "declare parameter DFtarget of the Modelica model as a bindable element",
+    "reviewedOn": "2026-11-17"
    }
   ],
   "bindings": [
@@ -1435,9 +1506,10 @@
     "unit": "s",
     "label": "tCycle <- ADSController::changeoverPeriod",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "Degree 0 value binding: tCycle takes the value of ADSController::changeoverPeriod; the two must be equal (coverage B1).",
-    "platformAction": "add simulation parameter binding"
+    "platformAction": "add simulation parameter binding",
+    "reviewedOn": "2026-11-17"
    },
    {
     "bindingId": "0cf75a50-6a12-5a5e-af61-81f6d7c8fd29",
@@ -1449,9 +1521,10 @@
     "unit": "s",
     "label": "tSat <- MolecularSieveDryer::saturationTimeConstant",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "Degree 0 value binding: tSat takes the value of MolecularSieveDryer::saturationTimeConstant; the two must be equal (coverage B1).",
-    "platformAction": "add simulation parameter binding"
+    "platformAction": "add simulation parameter binding",
+    "reviewedOn": "2026-11-17"
    },
    {
     "bindingId": "52e1e28d-2a5c-591d-ab15-2deb2081264e",
@@ -1463,9 +1536,10 @@
     "unit": "-",
     "label": "DFtarget <- detritiationCapacity::minDecontaminationFactor",
     "origin": "completion",
-    "review": "pending engineering review",
+    "review": "accepted in engineering review",
     "rationale": "Degree 0 value binding: DFtarget takes the value of detritiationCapacity::minDecontaminationFactor; the two must be equal (coverage B1).",
-    "platformAction": "add simulation parameter binding"
+    "platformAction": "add simulation parameter binding",
+    "reviewedOn": "2026-11-17"
    }
   ]
  },

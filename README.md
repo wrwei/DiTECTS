@@ -26,7 +26,8 @@ the typed links added after export, and the digital twin maps a plant mesh to th
 
 `models/sysml/omg/` holds the two SysML models in OMG interchange JSON, as exported by the modelling
 platform. `models/traceability/completion.json` holds the links and records authored after export to
-complete the thread, each with a rationale and the status *pending engineering review*.
+complete the thread, each with a rationale. All were accepted in engineering review on 17 November 2026;
+the completed review sheet is `models/traceability/engineering-review-2026-11-17.xlsx`.
 
 ## Checking the executable models
 

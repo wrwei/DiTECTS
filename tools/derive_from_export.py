@@ -321,7 +321,7 @@ def derive_namespace(x, previous=None):
         "than its trace links: attribute-of (a telemetry-bound attribute to the part usages its owning "
         "definition types) and fta-fmeda (a basic event to the FMEDA row its description names). Edges "
         "and elements with origin 'completion' come from models/traceability/completion.json, authored to "
-        "complete the thread and pending engineering review. A link from a failure-analysis element to a "
+        "complete the thread and accepted in engineering review on 17 November 2026. A link from a failure-analysis element to a "
         "requirement carries a relation: challenges (the failure or event violates the requirement) or realises "
         "(the safety mechanism or control it names implements the requirement). A link from an FMEDA row to a "
         "design part carries the relation analyses and records the part the row's itemElement field names; "

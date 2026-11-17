@@ -686,7 +686,8 @@
     "testedOnline": false
    },
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
+   "reviewedOn": "2026-11-17",
    "traces": [
     {
      "name": "Sn1-to-FTA-BedAvailability",
@@ -717,7 +718,8 @@
     "testedOnline": false
    },
    "origin": "completion",
-   "review": "pending engineering review",
+   "review": "accepted in engineering review",
+   "reviewedOn": "2026-11-17",
    "traces": [
     {
      "name": "Sn1-to-FTA-BedAvailability",
@@ -735,7 +737,8 @@
    "description": "The duty bed passes HTO: sieve saturation, channelling, or moisture overload from the condenser.",
    "faultCategory": "Unspecified",
    "origin": "completion",
-   "review": "pending engineering review"
+   "review": "accepted in engineering review",
+   "reviewedOn": "2026-11-17"
   },
   {
    "@id": "G-09",
@@ -761,7 +764,8 @@
     }
    ],
    "origin": "completion",
-   "review": "pending engineering review"
+   "review": "accepted in engineering review",
+   "reviewedOn": "2026-11-17"
   }
  ]
 }
