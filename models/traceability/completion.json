@@ -214,8 +214,8 @@
    ],
    "origin": "completion",
    "review": "accepted in engineering review",
-   "rationale": "BE-11 (valve seat leak-through) is a direct cause of IE-02 in the fault tree; proof testing of the changeover valves is its evidence. FMEDA row 11 marks it not safety-related: reconcile.",
-   "platformAction": "add trace link; reconcile FMEDA row 11 safetyRelated with FTA",
+   "rationale": "BE-11 (valve seat leak-through) is a direct cause of IE-02 in the fault tree; proof testing of the changeover valves is its evidence. FMEDA row 11 is safety-related, with the periodic leak test as its mechanism (60% coverage).",
+   "platformAction": "add trace link",
    "reviewedOn": "2026-11-17"
   },
   {
@@ -238,11 +238,12 @@
    "description": "",
    "source": "6a96509a7a882e24b8eb4c11",
    "targets": [
-    "6a96509a7a882e24b8eb4cdd"
+    "6a96509a7a882e24b8eb4cdd",
+    "6a96509a7a882e24b8eb4cdc"
    ],
    "origin": "completion",
    "review": "accepted in engineering review",
-   "rationale": "Row 10 (severity 10) was covered only through BE-10.",
+   "rationale": "Rows 10 (stuck mid-travel, severity 10) and 11 (seat leak-through) were covered only through BE-10 and BE-11; proof testing of the changeover valves is the evidence for both.",
    "platformAction": "add trace link",
    "reviewedOn": "2026-11-17"
   },

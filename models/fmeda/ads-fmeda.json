@@ -317,7 +317,10 @@
    "rpn": 120,
    "failureModeRatio": 0.6,
    "failureRate": 3000,
-   "safetyRelated": false
+   "safetyRelated": true,
+   "safetyMechanism": "periodic leak test",
+   "smCoverage": 0.6,
+   "singlePointFailureRate": 720
   },
   {
    "@id": "8a137ee0-bb27-4437-ba32-f5e7035d9316",

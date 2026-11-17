@@ -1,7 +1,7 @@
 {
- "generatedAt": "2026-11-14T19:31:10+0000",
+ "generatedAt": "2026-11-17T15:23:05+0000",
  "condition": "latency",
- "repo": ".",
+ "repo": "/Users/ranwei/Git/DiTECTS",
  "namespace": "namespace/ads-namespace.json",
  "evidenceLinks": [
   {
@@ -118,6 +118,15 @@
    "link": "Sn2-to-FMEA-Valves",
    "target": "FMEDA row 10",
    "targetId": "6a96509a7a882e24b8eb4cdd",
+   "targetKind": "FMEARow",
+   "runner": null
+  },
+  {
+   "solution": "Sn2",
+   "solutionId": "6a96509a7a882e24b8eb4c11",
+   "link": "Sn2-to-FMEA-Valves",
+   "target": "FMEDA row 11",
+   "targetId": "6a96509a7a882e24b8eb4cdc",
    "targetKind": "FMEARow",
    "runner": null
   },
@@ -454,9 +463,9 @@
    "n": 4020,
    "starts": 134,
    "reps": 30,
-   "median_ms": 0.054,
-   "p95_ms": 0.0604,
-   "max_ms": 1.0715,
+   "median_ms": 0.0553,
+   "p95_ms": 0.0638,
+   "max_ms": 0.1735,
    "cone_median": 133.0,
    "cone_max": 133
   },
@@ -464,16 +473,16 @@
    "n": 4020,
    "starts": 134,
    "reps": 30,
-   "median_ms": 0.0245,
-   "p95_ms": 0.0375,
-   "max_ms": 0.0813,
+   "median_ms": 0.0255,
+   "p95_ms": 0.0386,
+   "max_ms": 0.057,
    "cone_median": 75.0,
    "cone_max": 127
   },
-  "index_build_ms": 0.083,
+  "index_build_ms": 0.086,
   "graph": {
    "nodes": 134,
-   "edges": 216
+   "edges": 217
   },
   "host": {
    "python": "3.9.6",

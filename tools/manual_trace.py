@@ -628,7 +628,7 @@ def main():
     ns = tool.load()
     node, adj = tool.index(ns)
     adj_set = {(u, v) for u in adj for v, _, _ in adj[u]}
-    assert len(ns["nodes"]) == 134 and len(ns["edges"]) == 216, "namespace size changed"  # 128/206 before A1
+    assert len(ns["nodes"]) == 134 and len(ns["edges"]) == 217, "namespace size changed"  # 128/206 before A1; 216 before FMEDA row 11 joined Sn2-to-FMEA-Valves (2026-11-17)
 
     # thread side + the dryerA check the article relies on
     depth = {}

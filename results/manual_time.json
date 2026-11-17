@@ -25,7 +25,7 @@
     "low": {
      "search_s": 1057.3,
      "inspect_hits_s": 845.3,
-     "read_s": 1907.8,
+     "read_s": 1909.4,
      "record_s": 351.2,
      "total_h": 1.16,
      "hits": 345,
@@ -35,7 +35,7 @@
     "high": {
      "search_s": 14287.3,
      "inspect_hits_s": 845.3,
-     "read_s": 2861.7,
+     "read_s": 2864.1,
      "record_s": 434.9,
      "total_h": 5.12,
      "hits": 345,
@@ -51,7 +51,7 @@
     "low": {
      "search_s": 1174.3,
      "inspect_hits_s": 1506.8,
-     "read_s": 2003.6,
+     "read_s": 2005.2,
      "record_s": 386.6,
      "total_h": 1.41,
      "hits": 615,
@@ -61,7 +61,7 @@
     "high": {
      "search_s": 15873.5,
      "inspect_hits_s": 1506.8,
-     "read_s": 3005.4,
+     "read_s": 3007.8,
      "record_s": 478.0,
      "total_h": 5.8,
      "hits": 615,
@@ -75,7 +75,7 @@
     "low": {
      "search_s": 1057.3,
      "inspect_hits_s": 845.3,
-     "read_s": 1907.8,
+     "read_s": 1909.4,
      "record_s": 353.8,
      "total_h": 1.16,
      "hits": 345,
@@ -85,7 +85,7 @@
     "high": {
      "search_s": 14287.3,
      "inspect_hits_s": 845.3,
-     "read_s": 2861.7,
+     "read_s": 2864.1,
      "record_s": 438.5,
      "total_h": 5.12,
      "hits": 345,
@@ -101,7 +101,7 @@
     "low": {
      "search_s": 1174.3,
      "inspect_hits_s": 1506.8,
-     "read_s": 2003.6,
+     "read_s": 2005.2,
      "record_s": 389.1,
      "total_h": 1.41,
      "hits": 615,
@@ -111,7 +111,7 @@
     "high": {
      "search_s": 15873.5,
      "inspect_hits_s": 1506.8,
-     "read_s": 3005.4,
+     "read_s": 3007.8,
      "record_s": 481.6,
      "total_h": 5.8,
      "hits": 615,
@@ -125,7 +125,7 @@
     "low": {
      "search_s": 1057.3,
      "inspect_hits_s": 845.3,
-     "read_s": 1907.8,
+     "read_s": 1909.4,
      "record_s": 353.0,
      "total_h": 1.16,
      "hits": 345,
@@ -135,7 +135,7 @@
     "high": {
      "search_s": 14287.3,
      "inspect_hits_s": 845.3,
-     "read_s": 2861.7,
+     "read_s": 2864.1,
      "record_s": 437.4,
      "total_h": 5.12,
      "hits": 345,
@@ -151,7 +151,7 @@
     "low": {
      "search_s": 1174.3,
      "inspect_hits_s": 1506.8,
-     "read_s": 2003.6,
+     "read_s": 2005.2,
      "record_s": 388.4,
      "total_h": 1.41,
      "hits": 615,
@@ -161,7 +161,7 @@
     "high": {
      "search_s": 15873.5,
      "inspect_hits_s": 1506.8,
-     "read_s": 3005.4,
+     "read_s": 3007.8,
      "record_s": 480.5,
      "total_h": 5.8,
      "hits": 615,

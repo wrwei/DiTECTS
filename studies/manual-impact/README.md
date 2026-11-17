@@ -78,4 +78,8 @@ Completed sheets are saved as `results/<code>.xlsx` with participant codes only 
 
 ## Amendments
 
-None.
+* **17 November 2026, after sessions P1 and P2.** FMEDA row 11 was reclassified as safety-related (periodic leak
+  test, 60% coverage) and the completion link `Sn2-to-FMEA-Valves` gained row 11 as a second target. `materials/`
+  is kept as both participants used it, so `materials/03-fmeda/fmeda.csv` still shows row 11 as not safety-related
+  and `build_materials.py --check` reports the materials stale against the current models. The answer key is
+  unchanged (133 elements from `dryerA`, the same depths), and both sessions score the same.

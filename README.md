@@ -15,7 +15,7 @@ the typed links added after export, and the digital twin maps a plant mesh to th
 | Requirements analysis | SysML requirements | `models/sysml/01-requirements.sysml` | 15 requirements (SysML v2 textual notation), e.g. `REQ-TRIT-014` discharge limit, `REQ-ADS-001` DF >= 1000, `REQ-ADS-005` bed capacity, `REQ-ADS-007` loss-of-power response |
 | System design | SysML design | `models/sysml/02-design.sysml` | 10 part definitions, the `ads` composition, the controller state machine (NormalOperation, Changeover, FailSafe), 17 `satisfy` statements |
 | System design | Fault tree | `models/fta/ads-fta.json` | Top event `TE-01` (tritium discharge exceeds the authorised limit), AND/OR gates, basic events |
-| Sub-system design | FMEDA | `models/fmeda/ads-fmeda.json` | 17 rows, 13 safety-related, with safety mechanisms and diagnostic coverage |
+| Sub-system design | FMEDA | `models/fmeda/ads-fmeda.json` | 17 rows, 14 safety-related, with safety mechanisms and diagnostic coverage |
 | Module design | RoboChart controller (CSP) | `formal/csp/` | Generated CSP with untimed and timed assertion suites, checked with FDR4 |
 | Implementation | Java controller and tests | `implementation/java/` | Controller implementation and 14 JUnit tests (Gradle) |
 | Module verification | Dafny proofs | `formal/dafny/ADSController.dfy` | Transition contracts for every mode/input combination, bed selection and alternation |
@@ -43,7 +43,7 @@ the completed review sheet is `models/traceability/engineering-review-2026-11-17
 
 | Path | Contents |
 |---|---|
-| `namespace/ads-namespace.json` | Element identity space: 134 elements and 216 edges derived from the models and the completion overlay |
+| `namespace/ads-namespace.json` | Element identity space: 134 elements and 217 edges derived from the models and the completion overlay |
 | `namespace/impact.py` | Change-impact traversal over the identity space (`python3 namespace/impact.py dryerA --stats`) |
 | `tools/coverage.py` | Coverage checks over the identity space (`--export <dir>` checks the export-only thread) |
 | `tools/manual_trace.py`, `tools/manual_time.py` | Name-search comparison with the traversal and its time estimate |
