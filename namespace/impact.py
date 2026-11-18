@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Impact analysis over the ADS element identity space.
+"""Impact analysis over the ADS thread.
 
 Reads ads-namespace.json: every ADS model element that participates in a
 cross-concern relationship, in one namespace, with the edges between them.

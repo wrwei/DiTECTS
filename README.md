@@ -43,12 +43,12 @@ the completed review sheet is `models/traceability/engineering-review-2026-11-17
 
 | Path | Contents |
 |---|---|
-| `namespace/ads-namespace.json` | Element identity space: 134 elements and 217 edges derived from the models and the completion overlay |
-| `namespace/impact.py` | Change-impact traversal over the identity space (`python3 namespace/impact.py dryerA --stats`) |
-| `tools/coverage.py` | Coverage checks over the identity space (`--export <dir>` checks the export-only thread) |
+| `namespace/ads-namespace.json` | The thread: 134 identity-space elements and 217 edges derived from the models and the completion overlay |
+| `namespace/impact.py` | Change-impact traversal over the thread (`python3 namespace/impact.py dryerA --stats`) |
+| `tools/coverage.py` | Coverage checks over the thread (`--export <dir>` checks the export-only thread) |
 | `tools/manual_trace.py`, `tools/manual_time.py` | Name-search comparison with the traversal and its time estimate |
 | `tools/reverify.py`, `tools/c3/` | Evidence re-verification: baseline, 37 seeded faults and 6 controls, change scenarios, traversal latency |
-| `tools/derive_from_export.py`, `tools/sim_bindings.py` | Derivation of the views and identity space from the platform's project export; simulation value bindings |
+| `tools/derive_from_export.py`, `tools/sim_bindings.py` | Derivation of the views and the thread from the platform's project export; simulation value bindings |
 | `results/` | Recorded outputs of the tools above, with change logs |
 | `studies/manual-impact/` | Protocol, participant materials, recording sheet and scorer for a timed manual change-impact study |
 | `tests/` | Unit and regression tests (`python3 -m pytest tests`) |
