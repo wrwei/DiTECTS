@@ -1,0 +1,15 @@
+[
+ {
+  "id": "SS1-row11-coverage",
+  "description": "FMEDA row 11 (changeoverValves, seat leak-through): diagnostic coverage of its safety mechanism, the periodic leak test",
+  "change": "FMEDA row 11 safety-mechanism coverage 0.6 -> 0.3, as for a longer leak-test interval; single-point failure rate recomputed with the platform formula failureRate x failureModeRatio x (1 - smCoverage): 3000 x 0.6 x 0.7 = 1260 FIT",
+  "edits": [
+   {
+    "file": "models/fmeda/ads-fmeda.json",
+    "pattern": "\"safetyMechanism\":\\ \"periodic\\ leak\\ test\",\\\n\\ \\ \\ \"smCoverage\":\\ 0\\.6,\\\n\\ \\ \\ \"singlePointFailureRate\":\\ 720\\\n",
+    "replace": "\"safetyMechanism\": \"periodic leak test\",\n   \"smCoverage\": 0.3,\n   \"singlePointFailureRate\": 1260\n",
+    "expectCount": 1
+   }
+  ]
+ }
+]

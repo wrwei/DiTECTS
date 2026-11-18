@@ -78,10 +78,11 @@ and the twin model is `models/digital-twin/ads-digital-twin.json`, which the nam
 
 ## Detecting changes to static evidence
 
-`tools/change_detect.py --before <rev> --after <rev>` compares every identified element record under
-`models/` between two revisions and runs `namespace/impact.py` from each changed element, listing the
-Solutions reached and whether any of their evidence can be re-run. `results/change_fmeda_row11.{json,md}`
-applies it to the reclassification of FMEDA row 11 (`e52552d^` to `e52552d`).
+`tools/change_detect.py` runs the scenarios in `tools/c3/static.json`. Each applies its edits to a temporary
+copy of `models/`, compares every identified element record with the deposited models, and runs
+`namespace/impact.py` from each changed element, listing the Solutions and Goals reached, whether they cite
+the element, and whether any executable artefact changed. The repository is not modified. Results are in
+`results/change_static.{json,md}`.
 
 ## Licence
 

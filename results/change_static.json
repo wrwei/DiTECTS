@@ -1,0 +1,192 @@
+[
+ {
+  "scenario": "SS1-row11-coverage",
+  "change": "FMEDA row 11 safety-mechanism coverage 0.6 -> 0.3, as for a longer leak-test interval; single-point failure rate recomputed with the platform formula failureRate x failureModeRatio x (1 - smCoverage): 3000 x 0.6 x 0.7 = 1260 FIT",
+  "filesEdited": [
+   "models/fmeda/ads-fmeda.json"
+  ],
+  "executableArtefactsChanged": [],
+  "elementChanges": [
+   {
+    "file": "models/fmeda/ads-fmeda.json",
+    "id": "35add4ed-ca30-4b84-b071-676d0c3a316b",
+    "change": "changed",
+    "fields": {
+     "singlePointFailureRate": {
+      "from": 720,
+      "to": 1260
+     },
+     "smCoverage": {
+      "from": 0.6,
+      "to": 0.3
+     }
+    },
+    "element": "FMEDA row 11"
+   }
+  ],
+  "flagged": [
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn2",
+    "kind": "Solution",
+    "depth": 1,
+    "cites": true,
+    "runnerEvidence": [
+     "ADS Changeover Transient_Modelica"
+    ]
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "G3",
+    "kind": "Goal",
+    "depth": 2,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn1",
+    "kind": "Solution",
+    "depth": 2,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "G2",
+    "kind": "Goal",
+    "depth": 3,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "G8",
+    "kind": "Goal",
+    "depth": 3,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "G1",
+    "kind": "Goal",
+    "depth": 4,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "G4",
+    "kind": "Goal",
+    "depth": 4,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn10",
+    "kind": "Solution",
+    "depth": 4,
+    "cites": false,
+    "runnerEvidence": [
+     "ADS Controller Implementation"
+    ]
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn4",
+    "kind": "Solution",
+    "depth": 4,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn7",
+    "kind": "Solution",
+    "depth": 4,
+    "cites": false,
+    "runnerEvidence": [
+     "ADS Controller Proof - Dafny"
+    ]
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn8",
+    "kind": "Solution",
+    "depth": 4,
+    "cites": false,
+    "runnerEvidence": [
+     "ADS Controller Behaviour"
+    ]
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn9",
+    "kind": "Solution",
+    "depth": 4,
+    "cites": false,
+    "runnerEvidence": [
+     "ADS Controller Refinement"
+    ]
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "G5",
+    "kind": "Goal",
+    "depth": 5,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn3",
+    "kind": "Solution",
+    "depth": 5,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "G6",
+    "kind": "Goal",
+    "depth": 6,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "G7",
+    "kind": "Goal",
+    "depth": 6,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn11",
+    "kind": "Solution",
+    "depth": 6,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn5",
+    "kind": "Solution",
+    "depth": 6,
+    "cites": false,
+    "runnerEvidence": []
+   },
+   {
+    "from": "FMEDA row 11",
+    "element": "Sn6",
+    "kind": "Solution",
+    "depth": 6,
+    "cites": false,
+    "runnerEvidence": []
+   }
+  ]
+ }
+]
