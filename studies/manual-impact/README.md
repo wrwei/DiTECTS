@@ -83,3 +83,6 @@ Completed sheets are saved as `results/<code>.xlsx` with participant codes only 
   is kept as both participants used it, so `materials/03-fmeda/fmeda.csv` still shows row 11 as not safety-related
   and `build_materials.py --check` reports the materials stale against the current models. The answer key is
   unchanged (133 elements from `dryerA`, the same depths), and both sessions score the same.
+* **18 November 2026, after sessions P1 and P2.** The unmatched rows of both sessions were adjudicated by one
+  author, not by two authors independently as specified under Scoring. The four accepted rows and their reasons
+  are in `results/adjudication.md`; the answer key and the scorer are unchanged.
