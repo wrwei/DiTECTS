@@ -76,6 +76,13 @@ The protocol section of `results/manual_vs_thread.md` was fixed before the first
 the twin model as not deposited, the mesh is `models/digital-twin/ads-digital-twin-plant.glb` (byte-identical)
 and the twin model is `models/digital-twin/ads-digital-twin.json`, which the name-search procedure does not read.
 
+## Detecting changes to static evidence
+
+`tools/change_detect.py --before <rev> --after <rev>` compares every identified element record under
+`models/` between two revisions and runs `namespace/impact.py` from each changed element, listing the
+Solutions reached and whether any of their evidence can be re-run. `results/change_fmeda_row11.{json,md}`
+applies it to the reclassification of FMEDA row 11 (`e52552d^` to `e52552d`).
+
 ## Licence
 
 This repository accompanies a manuscript under peer review and is provided under the
