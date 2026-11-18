@@ -8,7 +8,7 @@ rather than an export in its own right:
   models/fta/ads-fta.json                  fault tree as structured JSON
   models/safety-case/gsn-safety-case.json  GSN argument: identity, type, label, claim
   models/safety-case/evidence-resolution.json  one evidence link, resolved record by record
-  namespace/ads-namespace.json             the thread: identity-space elements and their edges
+  namespace/ads-namespace.json             the impact graph: identity-space elements, typed-link pairs and structural edges
 
 Completion overlay. models/traceability/completion.json holds traceability and analysis content
 authored outside the platform to complete the thread (missing trace links, including links from FMEDA

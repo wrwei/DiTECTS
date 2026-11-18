@@ -17,7 +17,7 @@ Checks
   F5  every requirement identifier cited in failure-analysis text (FMEDA row fields, fault-tree element
       names and descriptions) is backed by a typed link from the citing element to that requirement;
       the fault tree's own description is attributed to its top event
-  C1  the thread is one connected component
+  C1  the impact graph is one connected component
   C2  every telemetry binding reaches the safety case
   E1  the design part each executable artefact models links to it directly
   E2  every design element (or simulation model) a Solution's text names is backed by an evidential

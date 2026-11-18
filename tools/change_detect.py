@@ -6,7 +6,7 @@ it is found by comparison instead. For each scenario in tools/c3/static.json the
 deposited models to a temporary directory, applies the scenario's edits there (the repository is
 not modified), and compares every identified element record in the model files with the
 deposited version by content hash. From each changed element it runs namespace/impact.py over the
-deposited thread and reports the Solutions reached, their depth, whether they cite the
+deposited impact graph and reports the Solutions reached, their depth, whether they cite the
 element, and which of their evidence has a configured runner. It also reports whether any
 executable artefact changed, which decides whether re-running a checker could reveal the change.
 

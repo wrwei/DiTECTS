@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Review-time re-verification over the ADS thread (standard library only).
+"""Review-time re-verification over the ADS impact graph (standard library only).
 
 Follows every safety-case Solution's evidence links in namespace/ads-namespace.json, resolves a
 checker from the target element's kind, runs it on a scratch copy of the artefacts in this
