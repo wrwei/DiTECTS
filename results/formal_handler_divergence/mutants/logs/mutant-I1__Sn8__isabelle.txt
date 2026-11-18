@@ -1,0 +1,25 @@
+# mutant-I1 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-27637-88097 --platform linux/amd64 --memory 5g -v <ISABELLE_HOME>:/opt/isabelle:ro -v <REVERIFY_OUT>/isabelle-a:<REVERIFY_OUT>/isabelle-a -w <REVERIFY_OUT>/isabelle-a/work/mutant-I1__Sn8 isabelle-runtime:22.04 timeout -k 30 360 /opt/isabelle/bin/isabelle build -D <REVERIFY_OUT>/isabelle-a/work/mutant-I1__Sn8
+# exit: 1  timedOut: False  seconds: 66.27
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to apply initial proof method (line 404 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I1__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. H{InputsAgree ∧ ADSController_inv} NormalOperationToFailSafe () {r.
+***     InputsAgree}
+*** At command "by" (line 404 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I1__Sn8/ADSController_Beh.thy")
+*** Failed to finish proof (line 278 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I1__Sn8/ADSController_Beh.thy"):
+*** goal (2 subgoals):
+***  1. ⋀tr. ⟦tr ≠ []; tr ! (length tr - Suc 0) = State NormalOperation;
+***           filter is_State tr ! (length (filter is_State tr) - Suc 0) =
+***           State NormalOperation⟧
+***          ⟹ False
+***  2. ⋀tr. ⟦tr ≠ []; tr ! (length tr - Suc 0) = State NormalOperation;
+***           filter is_State tr ! (length (filter is_State tr) - Suc 0) =
+***           State NormalOperation⟧
+***          ⟹ False
+*** At command "by" (line 278 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I1__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:59 elapsed time, 0:01:18 cpu time, factor 1.32
+

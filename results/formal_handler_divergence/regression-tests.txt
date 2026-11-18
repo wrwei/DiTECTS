@@ -1,0 +1,35 @@
+test_controller_protocols_starting_on_bed_a (test_csp_powerloss.PowerLossPropertyTests) ... ok
+test_controller_protocols_starting_on_bed_b (test_csp_powerloss.PowerLossPropertyTests) ... ok
+test_timed_controller_has_no_timelock_or_nondeterminism (test_csp_powerloss.PowerLossPropertyTests) ... ok
+test_alarm_recovery_and_early_swap_faults_are_rejected (test_formal_contracts.CompleteTransitionContractTests) ... ok
+test_counted_search_scores_117_of_133 (test_manual_study.ManualStudyScorerTests) ... studies/manual-impact/score.py:32: ResourceWarning: unclosed file <_io.TextIOWrapper name='namespace/ads-namespace.json' mode='r' encoding='utf-8'>
+  NS = json.load(open(os.path.join(ROOT, "namespace", "ads-namespace.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+tests/test_manual_study.py:28: ResourceWarning: unclosed file <_io.TextIOWrapper name='results/manual_vs_thread.json' mode='r' encoding='utf-8'>
+  mv = json.load(open(os.path.join(ROOT, "results", "manual_vs_thread.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_self_test (test_manual_study.ManualStudyScorerTests) ... studies/manual-impact/score.py:32: ResourceWarning: unclosed file <_io.TextIOWrapper name='namespace/ads-namespace.json' mode='r' encoding='utf-8'>
+  NS = json.load(open(os.path.join(ROOT, "namespace", "ads-namespace.json"), encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_completed_proof_passes_despite_an_unrelated_theorem_name (test_reverify.CheckerInterruptionTests) ... ok
+test_genuine_proof_failure_stays_a_fault (test_reverify.CheckerInterruptionTests) ... ok
+test_killed_child_is_unassessed_when_wrapper_exits_one (test_reverify.CheckerInterruptionTests) ... ok
+test_killed_isabelle_process_is_unassessed_even_with_failed_session_output (test_reverify.CheckerInterruptionTests) ... ok
+test_killed_mutant_is_not_counted_as_detected (test_reverify.CheckerInterruptionTests) ... ok
+test_memory_failure_with_a_failed_session_is_unassessed (test_reverify.CheckerInterruptionTests) ... ok
+test_signal_exit_is_unassessed_without_output (test_reverify.CheckerInterruptionTests) ... ok
+test_timeout_stays_timeout_when_it_kills_the_checker (test_reverify.CheckerInterruptionTests) ... ok
+test_alternation_check_detects_a_bed_selection_stub (test_reverify.RecordedResultsTests) ... ok
+test_current_docker_run_detects_i4_by_a_proof_failure (test_reverify.RecordedResultsTests) ... ok
+test_destination_and_command_checks_detect_the_review_faults (test_reverify.RecordedResultsTests) ... ok
+test_power_loss_protocol_detects_the_previously_surviving_fault (test_reverify.RecordedResultsTests) ... ok
+test_removing_power_loss_operations_fails_a_proof_in_a_well_formed_theory (test_reverify.RecordedResultsTests) ... ok
+test_report_counts_unassessed_fault_separately (test_reverify.RecordedResultsTests) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 8.801s
+
+OK
+self-test: 133 answer-key elements, 0 name checks failed

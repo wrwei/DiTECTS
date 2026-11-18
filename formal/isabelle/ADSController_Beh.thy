@@ -211,12 +211,31 @@ fun ADSController_channel_target :: "ADSControllerMachine_chan \<Rightarrow> St 
   "ADSController_channel_target (failSafeToNormalOperation_C ()) = Some NormalOperation" |
   "ADSController_channel_target _ = None"
 
-(* The machine runs, for each offered event, an operation that reaches that
-   event's destination: an input cannot be bound to another operation. *)
+(* Every state returned by the selected handler has the event's target mode. *)
 lemma ADSController_handler_targets:
   "\<lbrakk> c \<in> pdom (un_Vis (ADSController_step s)); s' \<in> retvals (pfun_app (un_Vis (ADSController_step s)) c) \<rbrakk>
    \<Longrightarrow> ADSController_channel_target c = Some (lens_get st s')"
   by (simp add: ADSController_step_def ADSController_operations_def z_machine_main_def extchoice_fun_def zop_event_def input_in_where_def inp_in_where_def excl_comb_def dom_prism_fun output_return_def z_defs; expr_simp; auto simp add: prism_fun_def mk_zop_def seq_itree_def kleisli_comp_def assume_def assigns_def proc_ret_def outp_as_inp retvals_inp_in split: if_splits)
+
+(* Accepting an offered event cannot lead to an internal loop. *)
+lemma ADSController_offered_handlers_div_free:
+  assumes "c \<in> pdom (un_Vis (ADSController_step s))"
+  shows "div_free (pfun_app (un_Vis (ADSController_step s)) c)"
+proof -
+  from assms have offered:
+    "c \<in> (if lens_get st s = initial then {initialToNormalOperation_C ()}
+     else if lens_get st s = NormalOperation then {normalOperationToFailSafe_C (), normalOperationToChangeover_C ()}
+     else if lens_get st s = Changeover then {changeoverToFailSafe_C (), changeoverToNormalOperation_C ()}
+     else {failSafeToNormalOperation_C ()})"
+    by (cases "lens_get st s"; simp add: ADSController_offered_by_mode)
+  from offered show ?thesis
+    by (cases "lens_get st s"; simp; (elim disjE)?;
+        simp add: ADSController_step_def ADSController_operations_def z_machine_main_def
+          extchoice_fun_def zop_event_def input_in_where_def inp_in_where_def excl_comb_def
+          dom_prism_fun output_return_def z_defs;
+        expr_simp; auto simp add: prism_fun_def mk_zop_def seq_itree_def kleisli_comp_def assume_def
+          assigns_def proc_ret_def outp_as_inp div_free_bind div_free_inp_in retvals_inp_in)
+qed
 
 subsection \<open> Structural Invariants \<close>
 

@@ -691,6 +691,23 @@
   ]
  },
  {
+  "id": "I13",
+  "solution": "Sn8",
+  "class": "fault",
+  "operator": "divergent handler binding",
+  "requirement": "REQ-ADS-007",
+  "description": "The NormalOperation power-loss input selects ChangeoverToFailSafe without changing its input guard. The handler's precondition is false, so it diverges.",
+  "expected": "FAIL: ADSController_offered_handlers_div_free",
+  "edits": [
+   {
+    "file": "ADSController_Beh.thy",
+    "pattern": "(zop_event normalOperationToFailSafe NormalOperationToFailSafe_type NormalOperationToFailSafe_pre normalOperationToFailSafe_Out )NormalOperationToFailSafe,",
+    "replace": "$1ChangeoverToFailSafe,",
+    "expectCount": 1
+   }
+  ]
+ },
+ {
   "id": "F8",
   "solution": "Sn9",
   "class": "fault",

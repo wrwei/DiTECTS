@@ -1,0 +1,41 @@
+# mutant-I4 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-27637-3115 --platform linux/amd64 --memory 5g -v <ISABELLE_HOME>:/opt/isabelle:ro -v <REVERIFY_OUT>/isabelle-a:<REVERIFY_OUT>/isabelle-a -w <REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8 isabelle-runtime:22.04 timeout -k 30 360 /opt/isabelle/bin/isabelle build -D <REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8
+# exit: 1  timedOut: False  seconds: 60.75
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to finish proof (line 236 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ⟦c = failSafeToNormalOperation_C (); st⇩v s = FailSafe;
+***      failSafeToNormalOperation_C ()
+***      ∈ (if st<s> = initial then {initialToNormalOperation_C ()}
+***         else if st<s> = NormalOperation
+***              then {normalOperationToFailSafe_C (),
+***                    normalOperationToChangeover_C ()}
+***              else if st<s> = Changeover
+***                   then {changeoverToFailSafe_C (),
+***                         changeoverToNormalOperation_C ()}
+***                   else {failSafeToNormalOperation_C ()})⟧
+***     ⟹ div_free
+***         ((λ x ∈ range
+***                  initialToNormalOperation_C | False ∙ diverge)(failSafeToNormalOperation_C
+***                           ())⇩p)
+*** At command "by" (line 231 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8/ADSController_Beh.thy")
+*** Failed to finish proof (line 422 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ⋀tr. ⟦tr ≠ []; tr ! (length tr - Suc 0) = State FailSafe;
+***           filter is_State tr ! (length (filter is_State tr) - Suc 0) =
+***           State FailSafe⟧
+***          ⟹ False
+*** At command "by" (line 422 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8/ADSController_Beh.thy")
+*** Failed to finish proof (line 189 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. st⇩v s = FailSafe ⟹ False
+*** At command "by" (line 187 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8/ADSController_Beh.thy")
+*** Failed to finish proof (line 201 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. st⇩v s = FailSafe ⟹ False
+*** At command "by" (line 199 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I4__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:53 elapsed time, 0:01:18 cpu time, factor 1.46
+

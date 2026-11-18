@@ -1,0 +1,19 @@
+# mutant-I8 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-27638-34856 --platform linux/amd64 --memory 5g -v <ISABELLE_HOME>:/opt/isabelle:ro -v <REVERIFY_OUT>/isabelle-b:<REVERIFY_OUT>/isabelle-b -w <REVERIFY_OUT>/isabelle-b/work/mutant-I8__Sn8 isabelle-runtime:22.04 timeout -k 30 360 /opt/isabelle/bin/isabelle build -D <REVERIFY_OUT>/isabelle-b/work/mutant-I8__Sn8
+# exit: 1  timedOut: False  seconds: 61.03
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to apply initial proof method (line 378 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I8__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. H{$activeDryer = d ∧ $tr = t} NormalOperationToChangeover () {r.
+***     $st = Changeover ∧
+***     $activeDryer = d ∧
+***     $tr =
+***     t @
+***     [Event dewpointHigh, Event raiseAlarm, Event startChangeover,
+***      State Changeover]}
+*** At command "by" (line 378 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I8__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:54 elapsed time, 0:01:06 cpu time, factor 1.21
+

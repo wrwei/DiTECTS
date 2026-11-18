@@ -1,0 +1,50 @@
+# mutant-I6 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-27638-86882 --platform linux/amd64 --memory 5g -v <ISABELLE_HOME>:/opt/isabelle:ro -v <REVERIFY_OUT>/isabelle-b:<REVERIFY_OUT>/isabelle-b -w <REVERIFY_OUT>/isabelle-b/work/mutant-I6__Sn8 isabelle-runtime:22.04 timeout -k 30 360 /opt/isabelle/bin/isabelle build -D <REVERIFY_OUT>/isabelle-b/work/mutant-I6__Sn8
+# exit: 1  timedOut: False  seconds: 56.97
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+...
+***         else if st<s> = NormalOperation
+***              then {normalOperationToFailSafe_C (),
+***                    normalOperationToChangeover_C ()}
+***              else if st<s> = Changeover
+***                   then {changeoverToFailSafe_C (),
+***                         changeoverToNormalOperation_C ()}
+***                   else {failSafeToNormalOperation_C ()});
+***      activeDryer⇩v s ≠ BedA⟧
+***     ⟹ div_free
+***         (((λ x ∈ range initialToNormalOperation_C | False ∙ diverge) ⊕
+***           ((λ x ∈ range normalOperationToChangeover_C | False ∙ diverge) ⊕
+***            ((λ x ∈ range
+***                     changeoverToNormalOperation_C ∙ inp_in
+***                ⦇prism_match =
+***                   λd. if is_changeoverToNormalOperation_Out_C d
+***                       then Some (un_changeoverToNormalOperation_Out_C d)
+***                       else None,
+***                   prism_build = changeoverToNormalOperation_Out_C⦈
+***                {()} ⤜
+***               ✓ ⤜
+***               (λ_. ✓ (s⦇activeDryer⇩v := BedA, st⇩v := NormalOperation,
+***                           tr⇩v :=
+***                             tr⇩v s @
+***                             [Event changeoverComplete,
+***                              State NormalOperation],
+***                           triggers⇩v := {powerLoss, dewpointHigh}⦈))) ⊕
+***             (λ x ∈ range
+***                     failSafeToNormalOperation_C | False ∙ diverge))))(changeoverToFailSafe_C
+***                                  ())⇩p)
+*** At command "by" (line 230 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I6__Sn8/ADSController_Beh.thy")
+*** Failed to finish proof (line 188 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I6__Sn8/ADSController_Beh.thy"):
+*** goal (2 subgoals):
+***  1. st⇩v s = Changeover ⟹ False
+***  2. st⇩v s = NormalOperation ⟹ False
+*** At command "by" (line 186 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I6__Sn8/ADSController_Beh.thy")
+*** Failed to finish proof (line 200 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I6__Sn8/ADSController_Beh.thy"):
+*** goal (2 subgoals):
+***  1. st⇩v s = Changeover ⟹ False
+***  2. st⇩v s = NormalOperation ⟹ False
+*** At command "by" (line 198 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I6__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:49 elapsed time, 0:00:59 cpu time, factor 1.19
+

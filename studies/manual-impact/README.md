@@ -86,3 +86,6 @@ Completed sheets are saved as `results/<code>.xlsx` with participant codes only 
 * **18 November 2026, after sessions P1 and P2.** The unmatched rows of both sessions were adjudicated by one
   author, not by two authors independently as specified under Scoring. The four accepted rows and their reasons
   are in `results/adjudication.md`; the answer key and the scorer are unchanged.
+* **18 November 2026, after sessions P1 and P2.** The executable Isabelle theory gained a proof
+  of freedom from internal divergence after an offered input. The participant materials retain the
+  earlier theory. The answer key and the scripted search results are identical for both versions.

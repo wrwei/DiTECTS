@@ -19,7 +19,7 @@ the typed links added after export, and the digital twin maps a plant mesh to th
 | Module design | RoboChart controller (CSP) | `formal/csp/` | Generated CSP with untimed and timed assertion suites, checked with FDR4 |
 | Implementation | Java controller and tests | `implementation/java/` | Controller implementation and 14 JUnit tests (Gradle) |
 | Module verification | Dafny proofs | `formal/dafny/ADSController.dfy` | Transition contracts for every mode/input combination, bed selection and alternation |
-| Module verification | Isabelle/HOL proofs | `formal/isabelle/` | Controller theory: enabled inputs, operation destinations, recorded commands and bed, deadlock freedom |
+| Module verification | Isabelle/HOL proofs | `formal/isabelle/` | Controller theory: enabled inputs, operation destinations, recorded commands and bed, deadlock freedom, and freedom from internal divergence after offered inputs |
 | Integration verification | Modelica changeover simulation | `simulation/modelica/ADSChangeover.mo` | Simplified decontamination-factor trajectory with the assertion `DF >= DFtarget` |
 | System verification | Digital twin | `models/digital-twin/` | Plant mesh, 10 part mappings to design parts, 4 telemetry signals bound to design attributes |
 | Acceptance | GSN safety case | `models/safety-case/gsn-safety-case.json` | 26 nodes; top claim G1 addresses `REQ-TRIT-014`; Solutions Sn7–Sn10 cite the controller evidence |
@@ -34,7 +34,7 @@ the completed review sheet is `models/traceability/engineering-review-2026-11-17
 | Model | Checker used in the article | Command |
 |---|---|---|
 | Dafny | Dafny 4.11.0 | `dafny verify formal/dafny/ADSController.dfy` |
-| Isabelle/HOL | Isabelle2023 with the Z_Machines session (CyPhyAssure) | `isabelle build -D formal/isabelle` |
+| Isabelle/HOL | Isabelle2023 with the Z_Machines session (CyPhyAssure), in Docker | `python3 tools/reverify.py baseline --only Sn8 --isabelle-docker isabelle-runtime:22.04` |
 | CSP | FDR 4.2.7 | `refines formal/csp/file_robochart_controller_coreassertions.csp` (and `formal/csp/timed/`, `formal/csp/tests/`) |
 | Java | Gradle 9.0.0, JUnit 5.11.4, OpenJDK 21 | `cd implementation/java && gradle test` |
 | Modelica | OpenModelica 1.26.9 | `simulate(ADSChangeover)` over the model's experiment annotation |
@@ -47,7 +47,7 @@ the completed review sheet is `models/traceability/engineering-review-2026-11-17
 | `namespace/impact.py` | Change-impact traversal over the impact graph (`python3 namespace/impact.py dryerA --stats`) |
 | `tools/coverage.py` | Coverage checks over the impact graph (`--export <dir>` checks the export-only thread) |
 | `tools/manual_trace.py`, `tools/manual_time.py` | Name-search comparison with the traversal and its time estimate |
-| `tools/reverify.py`, `tools/c3/` | Evidence re-verification: baseline, 37 seeded faults and 6 controls, change scenarios, traversal latency |
+| `tools/reverify.py`, `tools/c3/` | Evidence re-verification: baseline, 38 seeded faults and 6 controls, change scenarios, traversal latency |
 | `tools/derive_from_export.py`, `tools/sim_bindings.py` | Derivation of the views and the impact graph from the platform's project export; simulation value bindings |
 | `results/` | Recorded outputs of the tools above, with change logs |
 | `studies/manual-impact/` | Protocol, participant materials, recording sheet and scorer for a timed manual change-impact study |
@@ -75,6 +75,19 @@ The protocol section of `results/manual_vs_thread.md` was fixed before the first
 `results/manual_vs_thread.json`; it is left unchanged here. Where it refers to the twin mesh under `demo/` and to
 the twin model as not deposited, the mesh is `models/digital-twin/ads-digital-twin-plant.glb` (byte-identical)
 and the twin model is `models/digital-twin/ads-digital-twin.json`, which the name-search procedure does not read.
+
+To reproduce the Isabelle checks, build the runtime image and run the dispatcher:
+
+```
+docker build --platform linux/amd64 -f tools/c3/Dockerfile.isabelle-runtime -t isabelle-runtime:22.04 .
+python3 tools/reverify.py all --only Sn8 --isabelle-docker isabelle-runtime:22.04 --isabelle-memory 5g --timeout-isabelle 300
+```
+
+Use the CyPhyAssure installation at `~/Isabelle2023-CyPhyAssure` or specify it with `--isabelle-home`.
+The controller proof rules out internal loops after an offered input is accepted. Mutation I13
+exercises this check by giving the NormalOperation power-loss request a handler that requires Changeover.
+The study materials retain the theory used in the participant sessions. See the
+[re-verification results](results/reverify_bound_thread.md) for the recorded outcomes.
 
 ## Detecting changes to static evidence
 

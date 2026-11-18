@@ -1,0 +1,23 @@
+# mutant-I13 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-27637-27673 --platform linux/amd64 --memory 5g -v <ISABELLE_HOME>:/opt/isabelle:ro -v <REVERIFY_OUT>/isabelle-a:<REVERIFY_OUT>/isabelle-a -w <REVERIFY_OUT>/isabelle-a/work/mutant-I13__Sn8 isabelle-runtime:22.04 timeout -k 30 360 /opt/isabelle/bin/isabelle build -D <REVERIFY_OUT>/isabelle-a/work/mutant-I13__Sn8
+# exit: 1  timedOut: False  seconds: 56.38
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to finish proof (line 237 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I13__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ⟦st⇩v s = NormalOperation; c = normalOperationToFailSafe_C ();
+***      normalOperationToFailSafe_C ()
+***      ∈ (if st<s> = initial then {initialToNormalOperation_C ()}
+***         else if st<s> = NormalOperation
+***              then {normalOperationToFailSafe_C (),
+***                    normalOperationToChangeover_C ()}
+***              else if st<s> = Changeover
+***                   then {changeoverToFailSafe_C (),
+***                         changeoverToNormalOperation_C ()}
+***                   else {failSafeToNormalOperation_C ()})⟧
+***     ⟹ False
+*** At command "by" (line 232 of "<REVERIFY_OUT>/isabelle-a/work/mutant-I13__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:50 elapsed time, 0:01:07 cpu time, factor 1.34
+

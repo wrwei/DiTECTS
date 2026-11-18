@@ -107,9 +107,9 @@ class RecordedResultsTests(unittest.TestCase):
         self.assertIn("Failed to finish proof", i4["detail"])
         self.assertTrue((ROOT / "results" / i4["log"]).is_file())
         report = reverify.markdown(result)
-        self.assertIn("| isabelle | 12/12 | 0 | 0 | 0 | 1/1 |", report)
+        self.assertIn("| isabelle | 13/13 | 0 | 0 | 0 | 1/1 |", report)
         self.assertIn("| fdr | 11/11 | 0 | 0 | 0 | 1/1 |", report)
-        self.assertIn("| Total | 37/37 | 0 | 0 | 0 | 6/6 |", report)
+        self.assertIn("| Total | 38/38 | 0 | 0 | 0 | 6/6 |", report)
 
     def test_power_loss_protocol_detects_the_previously_surviving_fault(self):
         result = json.loads((ROOT / "results/reverify_bound_thread.json").read_text())
@@ -162,7 +162,8 @@ class RecordedResultsTests(unittest.TestCase):
 
         expected = {"I7": "NormalOperationToChangeover_destination", "I8": "NormalOperationToChangeover_destination",
                     "I9": "FailSafeToNormalOperation_destination", "I10": "ADSController_offered_by_mode",
-                    "I11": "Init_inv", "I12": "ADSController_handler_targets"}
+                    "I11": "Init_inv", "I12": "ADSController_handler_targets",
+                    "I13": "ADSController_offered_handlers_div_free"}
         for mid, lemma in expected.items():
             with self.subTest(mutant=mid):
                 self.assertEqual(faults[mid]["outcome"], "detected")

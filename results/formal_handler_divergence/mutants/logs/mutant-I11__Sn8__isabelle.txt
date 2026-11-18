@@ -1,0 +1,38 @@
+# mutant-I11 Sn8 -> ADS Controller Behaviour via isabelle
+# command: docker run --rm --init --name reverify-isa-27638-28346 --platform linux/amd64 --memory 5g -v <ISABELLE_HOME>:/opt/isabelle:ro -v <REVERIFY_OUT>/isabelle-b:<REVERIFY_OUT>/isabelle-b -w <REVERIFY_OUT>/isabelle-b/work/mutant-I11__Sn8 isabelle-runtime:22.04 timeout -k 30 360 /opt/isabelle/bin/isabelle build -D <REVERIFY_OUT>/isabelle-b/work/mutant-I11__Sn8
+# exit: 1  timedOut: False  seconds: 58.63
+
+Running ADSController_Check ...
+ADSController_Check FAILED (see also "isabelle build_log -H Error ADSController_Check")
+*** Failed to apply proof method (line 422 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I11__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ADSController_axioms ⟹
+***     deadlock_free
+***      (z_machine Init ADSController_inv
+***        [zop_event initialToNormalOperation InitialToNormalOperation_type
+***          InitialToNormalOperation_pre initialToNormalOperation_Out
+***          InitialToNormalOperation,
+***         zop_event normalOperationToFailSafe NormalOperationToFailSafe_type
+***          NormalOperationToFailSafe_pre normalOperationToFailSafe_Out
+***          NormalOperationToFailSafe,
+***         zop_event normalOperationToChangeover
+***          NormalOperationToChangeover_type NormalOperationToChangeover_pre
+***          normalOperationToChangeover_Out NormalOperationToChangeover,
+***         zop_event changeoverToFailSafe ChangeoverToFailSafe_type
+***          ChangeoverToFailSafe_pre changeoverToFailSafe_Out
+***          ChangeoverToFailSafe,
+***         zop_event changeoverToNormalOperation
+***          ChangeoverToNormalOperation_type ChangeoverToNormalOperation_pre
+***          changeoverToNormalOperation_Out ChangeoverToNormalOperation,
+***         zop_event failSafeToNormalOperation FailSafeToNormalOperation_type
+***          FailSafeToNormalOperation_pre failSafeToNormalOperation_Out
+***          FailSafeToNormalOperation]
+***        (λ_. False))
+*** At command "apply" (line 422 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I11__Sn8/ADSController_Beh.thy")
+*** Failed to apply initial proof method (line 243 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I11__Sn8/ADSController_Beh.thy"):
+*** goal (1 subgoal):
+***  1. ❙{True❙} ⟨Init⟩⇩a ❙{ADSController_inv❙}
+*** At command "by" (line 243 of "<REVERIFY_OUT>/isabelle-b/work/mutant-I11__Sn8/ADSController_Beh.thy")
+Unfinished session(s): ADSController_Check
+0:00:52 elapsed time, 0:01:10 cpu time, factor 1.35
+
