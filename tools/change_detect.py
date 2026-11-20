@@ -32,7 +32,8 @@ def elements(doc):
 
     def walk(o):
         if isinstance(o, dict):
-            i = o.get("@id") or o.get("elementId") or o.get("gid")
+            # "_id" last: the safety-case records carry no other identifier
+            i = o.get("@id") or o.get("elementId") or o.get("gid") or o.get("_id")
             if i and len(o) > 2:
                 out.setdefault(str(i), o)
             for v in o.values():

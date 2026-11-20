@@ -1,0 +1,336 @@
+[
+ {
+  "id": "L1",
+  "group": "Links",
+  "fault": "A Solution's citation of a safety-related FMEDA row is missing (Sn1 to row 7)",
+  "edits": [
+   {
+    "op": "remove-edge",
+    "edge": {
+     "name": "Sn1-to-FMEA"
+    }
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "coverage"
+   ]
+  }
+ },
+ {
+  "id": "L2",
+  "group": "Links",
+  "fault": "A satisfy statement in the design model has no link in the thread (dryerA to REQ-ADS-005)",
+  "edits": [
+   {
+    "op": "remove-edge",
+    "edge": {
+     "name": "dryerA-to-dryerCapacityMargin"
+    }
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "coverage"
+   ]
+  }
+ },
+ {
+  "id": "L3",
+  "group": "Links",
+  "fault": "An evidential link's target identifier matches no element (Sn7's link to the Dafny model)",
+  "edits": [
+   {
+    "op": "retarget-edge",
+    "edge": {
+     "name": "Sn7-to-Dafny"
+    },
+    "end": "target",
+    "to": {
+     "missingId": "000000000000000000000000"
+    }
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "resolution"
+   ]
+  }
+ },
+ {
+  "id": "L4",
+  "group": "Links",
+  "fault": "A failure-analysis row is linked to the wrong design part (row 7 to dryerB; the row analyses dryerA)",
+  "edits": [
+   {
+    "op": "retarget-edge",
+    "edge": {
+     "name": "FMEA-row7-to-dryerA"
+    },
+    "end": "target",
+    "to": "dryerB"
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "coverage"
+   ]
+  }
+ },
+ {
+  "id": "L5",
+  "group": "Links",
+  "fault": "An evidential link points to the wrong executable model (Sn7, a Dafny proof, to the Isabelle model)",
+  "edits": [
+   {
+    "op": "retarget-edge",
+    "edge": {
+     "name": "Sn7-to-Dafny"
+    },
+    "end": "target",
+    "to": "ADS Controller Behaviour"
+   }
+  ],
+  "expect": {
+   "outcome": "not reported"
+  }
+ },
+ {
+  "id": "B1",
+  "group": "Bindings",
+  "fault": "A bound simulation parameter is edited in the simulation source and not in the design (tCycle 7000 to 9000)",
+  "edits": [
+   {
+    "op": "replace-text",
+    "file": "simulation/modelica/ADSChangeover.mo",
+    "pattern": "parameter Real tCycle = 7000\\.0",
+    "replace": "parameter Real tCycle = 9000.0",
+    "expectCount": 1
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "coverage",
+    "freshness"
+   ]
+  }
+ },
+ {
+  "id": "B2",
+  "group": "Bindings",
+  "fault": "A bound simulation parameter is renamed in the simulation source (tCycle to tSwap)",
+  "edits": [
+   {
+    "op": "replace-text",
+    "file": "simulation/modelica/ADSChangeover.mo",
+    "pattern": "\\btCycle\\b",
+    "replace": "tSwap",
+    "expectCount": 15
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "coverage",
+    "freshness"
+   ]
+  }
+ },
+ {
+  "id": "B3",
+  "group": "Bindings",
+  "fault": "A simulation binding joins the wrong design attribute (tCycle to saturationTimeConstant)",
+  "edits": [
+   {
+    "op": "retarget-edge",
+    "edge": {
+     "name": "tCycle-to-changeoverPeriod"
+    },
+    "end": "target",
+    "to": "saturationTimeConstant"
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "coverage"
+   ]
+  }
+ },
+ {
+  "id": "B4",
+  "group": "Bindings",
+  "fault": "A telemetry signal is bound to the wrong design attribute (the dewpoint signal to bedSaturation)",
+  "edits": [
+   {
+    "op": "retarget-edge",
+    "edge": {
+     "kind": "twin-binding",
+     "source": "TwinBinding:dewpoint"
+    },
+    "end": "target",
+    "to": "SAttributeUsage:bedSaturation"
+   }
+  ],
+  "expect": {
+   "outcome": "not reported"
+  }
+ },
+ {
+  "id": "E1",
+  "group": "Stale evidence",
+  "fault": "A proof source is edited after its verdict was recorded (a Dafny postcondition weakened)",
+  "edits": [
+   {
+    "op": "replace-text",
+    "file": "formal/dafny/ADSController.dfy",
+    "pattern": "ensures nextDryer\\(d\\) != d",
+    "replace": "ensures true",
+    "expectCount": 1
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "freshness"
+   ]
+  },
+  "note": "The edited source still verifies: `dafny verify` (Dafny 4.11.0) reports 11 verified, 0 errors on the deposited source and on the edited copy, so re-running the checker would not reveal the edit."
+ },
+ {
+  "id": "S1",
+  "group": "Structural changes",
+  "fault": "A design part is renamed throughout the design model and keeps its identifier (dryerA to dutyDryer); other models are left as they are",
+  "edits": [
+   {
+    "op": "rename-node",
+    "node": "dryerA",
+    "label": "dutyDryer"
+   },
+   {
+    "op": "replace-text",
+    "file": "models/sysml/omg/02-design.omg.json",
+    "pattern": "\"declaredName\": \"dryerA\"",
+    "replace": "\"declaredName\": \"dutyDryer\"",
+    "expectCount": 1
+   },
+   {
+    "op": "replace-text",
+    "file": "models/sysml/omg/02-design.omg.json",
+    "pattern": "\"originalValueExpression\": \"dryerA\"",
+    "replace": "\"originalValueExpression\": \"dutyDryer\"",
+    "expectCount": 2
+   },
+   {
+    "op": "replace-text",
+    "file": "models/sysml/02-design.sysml",
+    "pattern": "\\bdryerA\\b",
+    "replace": "dutyDryer",
+    "expectCount": 3
+   },
+   {
+    "op": "replace-text",
+    "file": "models/traceability/completion.json",
+    "pattern": "\"satisfyingFeature\": \"dryerA\"",
+    "replace": "\"satisfyingFeature\": \"dutyDryer\"",
+    "expectCount": 1
+   },
+   {
+    "op": "replace-text",
+    "file": "models/traceability/completion.json",
+    "pattern": "satisfy dryerRedundancy by dryerA;",
+    "replace": "satisfy dryerRedundancy by dutyDryer;",
+    "expectCount": 2
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "coverage",
+    "comparison"
+   ]
+  }
+ },
+ {
+  "id": "S2",
+  "group": "Structural changes",
+  "fault": "A design part is deleted (dryerB)",
+  "edits": [
+   {
+    "op": "remove-node",
+    "node": "dryerB"
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "resolution"
+   ]
+  }
+ },
+ {
+  "id": "S3",
+  "group": "Structural changes",
+  "fault": "A design part is re-created under a new identifier (dryerB)",
+  "edits": [
+   {
+    "op": "reidentify-node",
+    "node": "dryerB",
+    "id": "ffffffffffffffffffffffff",
+    "uuid": "00000000-0000-4000-8000-000000000001"
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "resolution"
+   ]
+  }
+ },
+ {
+  "id": "S4",
+  "group": "Structural changes",
+  "fault": "A design part is added and not yet linked (a third dryer bed, dryerC)",
+  "edits": [
+   {
+    "op": "copy-node",
+    "node": "dryerA",
+    "id": "eeeeeeeeeeeeeeeeeeeeeeee",
+    "uuid": "00000000-0000-4000-8000-000000000002",
+    "label": "dryerC",
+    "text": "Third molecular-sieve dryer bed"
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "coverage"
+   ]
+  }
+ },
+ {
+  "id": "S5",
+  "group": "Structural changes",
+  "fault": "A Goal's claim is narrowed and its links are left as they are (G3 limited to design-basis flow)",
+  "edits": [
+   {
+    "op": "replace-text",
+    "file": "models/safety-case/gsn-safety-case.json",
+    "pattern": "\"description\": \"Bed changeover preserves the detritiation function\"",
+    "replace": "\"description\": \"Bed changeover preserves the detritiation function at design-basis flow\"",
+    "expectCount": 1
+   }
+  ],
+  "expect": {
+   "outcome": "reported",
+   "by": [
+    "comparison"
+   ]
+  }
+ }
+]

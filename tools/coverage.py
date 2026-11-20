@@ -84,6 +84,19 @@ def main():
     drop = set(filter(None, a.drop_kinds.split(",")))
     if drop:
         ns["edges"] = [e for e in ns["edges"] if e["kind"] not in drop]
+    # Precondition, as in derive_from_export.py: every edge end is an element of the thread. The
+    # checks below index elements by identifier, so they are not run on a thread that fails this.
+    ids = {n["id"]: n for n in ns["nodes"]}
+    name_of = lambda i: (ids[i].get("shortName") or ids[i]["label"]) if i in ids else "?"
+    unresolved = [{"link": e.get("name") or e["kind"], "end": end, "source": name_of(e["source"]), "target": name_of(e["target"])}
+                  for e in ns["edges"] for end in ("source", "target") if e[end] not in ids]
+    if unresolved:
+        print("unresolved endpoints: %d" % len(unresolved))
+        for u in unresolved:
+            print("x  %(link)s: %(source)s -> %(target)s (%(end)s end)" % u)
+        if a.json:
+            json.dump({"unresolved": unresolved}, open(a.json, "w"), indent=1)
+        sys.exit(2)
     node, adj = I.index(ns)
     out_, in_ = collections.defaultdict(list), collections.defaultdict(list)
     for e in ns["edges"]:
