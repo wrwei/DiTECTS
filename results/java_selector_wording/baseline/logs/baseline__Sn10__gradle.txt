@@ -1,6 +1,6 @@
 # baseline Sn10 -> ADS Controller Implementation via gradle
 # command: gradle test --offline --no-daemon --console=plain
-# exit: 0  timedOut: False  seconds: 3.56
+# exit: 0  timedOut: False  seconds: 3.35
 
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.0.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 

@@ -9,7 +9,7 @@ Condition: `Baseline, mutations and change scenarios after adding Isabelle handl
 | Sn7 | ADS Controller Proof - Dafny | dafny | PASS | 1.13 | 11 verified, 0 errors |
 | Sn8 | ADS Controller Behaviour | isabelle | PASS | 70.7 | Finished ADSController_Check |
 | Sn9 | ADS Controller Refinement | fdr | PASS | 1.09 | 27 assertions passed, 0 failed |
-| Sn10 | ADS Controller Implementation | gradle | PASS | 3.56 | 14 tests, 14 passed, 0 failed, 0 skipped |
+| Sn10 | ADS Controller Implementation | gradle | PASS | 3.35 | 14 tests, 14 passed, 0 failed, 0 skipped |
 
 ## Seeded mutants
 | Mutant | Class | Checker | Verdict | Outcome | s | Description |
@@ -22,12 +22,12 @@ Condition: `Baseline, mutations and change scenarios after adding Isabelle handl
 | D6 | fault | dafny | FAIL | detected | 1.03 | ChangeoverComplete returns to NormalOperation without swapping the duty bed |
 | DC1 | control | dafny | PASS | control passed | 1.14 | Add a true postcondition: DewpointHigh in NormalOperation leads to Changeover |
 | DC2 | control | dafny | PASS | control passed | 1.05 | Swap the order of the two requires clauses of transitionFromNormalOperation and edit a comment |
-| J1 | fault | gradle | FAIL | detected | 4.98 | PowerLoss during Changeover emits EnterFailSafe but the mode stays Changeover |
-| J2 | fault | gradle | FAIL | detected | 5.04 | nextDryer(BedA) returns BedA: changeover never swaps the duty bed |
-| J3 | fault | gradle | FAIL | detected | 4.49 | FailSafe is also left on DewpointHigh |
-| J4 | fault | gradle | FAIL | detected | 4.62 | Duty bed is swapped when changeover starts (DewpointHigh) instead of when it completes |
-| JC1 | control | gradle | PASS | control passed | 3.66 | Rename private field dryers -> dryerFunctions throughout ADSController |
-| JC2 | control | gradle | PASS | control passed | 3.97 | Final "else if (currentMode == ADSMode.FailSafe)" replaced by plain "else" (enum has exactly three values, field never null) |
+| J1 | fault | gradle | FAIL | detected | 3.26 | PowerLoss during Changeover emits EnterFailSafe but the mode stays Changeover |
+| J2 | fault | gradle | FAIL | detected | 3.26 | nextDryer(BedA) returns BedA: changeover never swaps the duty bed |
+| J3 | fault | gradle | FAIL | detected | 3.19 | FailSafe is also left on DewpointHigh |
+| J4 | fault | gradle | FAIL | detected | 3.63 | Duty bed is swapped when changeover starts (DewpointHigh) instead of when it completes |
+| JC1 | control | gradle | PASS | control passed | 3.29 | Rename private field dryers -> dryerFunctions throughout ADSController |
+| JC2 | control | gradle | PASS | control passed | 3.45 | Final "else if (currentMode == ADSMode.FailSafe)" replaced by plain "else" (enum has exactly three values, field never null) |
 | F1 | fault | fdr | FAIL | detected | 1.24 | Second powerLoss transition from NormalOperation targeting Changeover (nondeterministic response to power loss) |
 | F2 | fault | fdr | FAIL | detected | 1.03 | backupRestored transition out of FailSafe deleted (FailSafe becomes a sink) |
 | F3 | fault | fdr | FAIL | detected | 1.33 | powerLoss in Changeover leads to NormalOperation instead of FailSafe |
@@ -48,7 +48,7 @@ Condition: `Baseline, mutations and change scenarios after adding Isabelle handl
 | I9 | fault | isabelle | FAIL | detected | 63.88 | FailSafeToNormalOperation enters Changeover (with the Changeover trigger set) instead of NormalOperation |
 | F5 | fault | fdr | FAIL | detected | 1.19 | FailSafe exit no longer emits restoreNormal |
 | F6 | fault | fdr | FAIL | detected | 1.06 | Dewpoint alarm no longer emits raiseAlarm |
-| J5 | fault | gradle | FAIL | detected | 5.47 | Dewpoint alarm no longer emits RaiseAlarm |
+| J5 | fault | gradle | FAIL | detected | 3.46 | Dewpoint alarm no longer emits RaiseAlarm |
 | I10 | fault | isabelle | FAIL | detected | 68.55 | Startup (InitialToNormalOperation) is also enabled in FailSafe, so FailSafe can be left without backupRestored |
 | I11 | fault | isabelle | FAIL | detected | 58.63 | Init records only powerLoss in the trace, with no state entry |
 | F7 | fault | fdr | FAIL | detected | 1.18 | Startup performs raiseAlarm.in (an input on an output channel) before entering NormalOperation |

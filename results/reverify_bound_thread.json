@@ -554,7 +554,7 @@
    "exit": 0,
    "verdict": "PASS",
    "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
-   "seconds": 3.56,
+   "seconds": 3.35,
    "artefactChanged": false,
    "log": "java_selector_wording/baseline/logs/baseline__Sn10__gradle.txt"
   }
@@ -722,9 +722,9 @@
    "exit": 1,
    "verdict": "FAIL",
    "detail": "14 tests, 13 passed, 1 failed, 0 skipped",
-   "seconds": 4.98,
+   "seconds": 3.26,
    "artefactChanged": true,
-   "log": "formal_handler_divergence/mutants/logs/mutant-J1__Sn10__gradle.txt",
+   "log": "java_selector_wording/mutants/logs/mutant-J1__Sn10__gradle.txt",
    "mutant": "J1",
    "class": "fault",
    "operator": "altered transition target",
@@ -741,9 +741,9 @@
    "exit": 1,
    "verdict": "FAIL",
    "detail": "14 tests, 10 passed, 4 failed, 0 skipped",
-   "seconds": 5.04,
+   "seconds": 3.26,
    "artefactChanged": true,
-   "log": "formal_handler_divergence/mutants/logs/mutant-J2__Sn10__gradle.txt",
+   "log": "java_selector_wording/mutants/logs/mutant-J2__Sn10__gradle.txt",
    "mutant": "J2",
    "class": "fault",
    "operator": "broken alternation",
@@ -760,9 +760,9 @@
    "exit": 1,
    "verdict": "FAIL",
    "detail": "14 tests, 13 passed, 1 failed, 0 skipped",
-   "seconds": 4.49,
+   "seconds": 3.19,
    "artefactChanged": true,
-   "log": "formal_handler_divergence/mutants/logs/mutant-J3__Sn10__gradle.txt",
+   "log": "java_selector_wording/mutants/logs/mutant-J3__Sn10__gradle.txt",
    "mutant": "J3",
    "class": "fault",
    "operator": "widened exit guard",
@@ -779,9 +779,9 @@
    "exit": 1,
    "verdict": "FAIL",
    "detail": "14 tests, 12 passed, 2 failed, 0 skipped",
-   "seconds": 4.62,
+   "seconds": 3.63,
    "artefactChanged": true,
-   "log": "formal_handler_divergence/mutants/logs/mutant-J4__Sn10__gradle.txt",
+   "log": "java_selector_wording/mutants/logs/mutant-J4__Sn10__gradle.txt",
    "mutant": "J4",
    "class": "fault",
    "operator": "premature action (changeover sequencing)",
@@ -798,9 +798,9 @@
    "exit": 0,
    "verdict": "PASS",
    "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
-   "seconds": 3.66,
+   "seconds": 3.29,
    "artefactChanged": true,
-   "log": "formal_handler_divergence/mutants/logs/mutant-JC1__Sn10__gradle.txt",
+   "log": "java_selector_wording/mutants/logs/mutant-JC1__Sn10__gradle.txt",
    "mutant": "JC1",
    "class": "control",
    "operator": "rename private field",
@@ -817,9 +817,9 @@
    "exit": 0,
    "verdict": "PASS",
    "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
-   "seconds": 3.97,
+   "seconds": 3.45,
    "artefactChanged": true,
-   "log": "formal_handler_divergence/mutants/logs/mutant-JC2__Sn10__gradle.txt",
+   "log": "java_selector_wording/mutants/logs/mutant-JC2__Sn10__gradle.txt",
    "mutant": "JC2",
    "class": "control",
    "operator": "equivalent control flow",
@@ -1216,9 +1216,9 @@
    "exit": 1,
    "verdict": "FAIL",
    "detail": "14 tests, 13 passed, 1 failed, 0 skipped",
-   "seconds": 5.47,
+   "seconds": 3.46,
    "artefactChanged": true,
-   "log": "formal_handler_divergence/mutants/logs/mutant-J5__Sn10__gradle.txt",
+   "log": "java_selector_wording/mutants/logs/mutant-J5__Sn10__gradle.txt",
    "mutant": "J5",
    "class": "fault",
    "operator": "deleted output action",
@@ -1562,9 +1562,9 @@
      "exit": 0,
      "verdict": "PASS",
      "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
-     "seconds": 5.1,
+     "seconds": 3.3,
      "artefactChanged": false,
-     "log": "formal_handler_divergence/stale/logs/stale-ST1-tCycle__Sn10__gradle.txt"
+     "log": "java_selector_wording/stale/logs/stale-ST1-tCycle__Sn10__gradle.txt"
     }
    ]
   },
@@ -1720,9 +1720,9 @@
      "exit": 1,
      "verdict": "FAIL",
      "detail": "14 tests, 7 passed, 7 failed, 0 skipped",
-     "seconds": 4.3,
+     "seconds": 3.25,
      "artefactChanged": true,
-     "log": "formal_handler_divergence/stale/logs/stale-ST2-initialBed__Sn10__gradle.txt"
+     "log": "java_selector_wording/stale/logs/stale-ST2-initialBed__Sn10__gradle.txt"
     }
    ]
   }
@@ -1770,7 +1770,7 @@
    "implementation/java/src/test/java/ads/controller/ADSControllerTest.java": "8919d5a229168dee78f97535b8bba6f4051f3270a2068bef908331f86aa9ac29"
   },
   "javaWordingUpdate": {
-   "rerunAt": "2026-11-20T07:54:12+0000",
+   "rerunAt": "2026-11-20T07:57:07+0000",
    "previousBaselineSn10": {
     "tag": "baseline",
     "solution": "Sn10",
@@ -1788,7 +1788,19 @@
    "previousSHA256": {
     "implementation/java/src/test/java/ads/controller/ADSControllerTest.java": "453ff4c385c059d652947f872aec818ce24fc8dee9e7587cc4f250e2a952dbd0"
    },
-   "note": "ADSControllerTest.java and DryerFunctionsTest.java were reworded to describe the bed selector (comments, one display name, one method name and one assertion message); no test logic changed. The Sn10 baseline was re-run on the reworded files. The Java mutation and change-scenario results (J1-J5, JC1, JC2, ST2) are from the run recorded above, before the rewording."
+   "note": "ADSControllerTest.java and DryerFunctionsTest.java were reworded to describe the bed selector (comments, one display name, one method name and one assertion message); no test logic changed. The Sn10 baseline, the seven Java mutations (J1-J5, JC1, JC2) and the Sn10 runs of both change scenarios were re-run on the reworded files in one batch. Every verdict and test count equals the earlier run; only the wall-clock times differ. The other four checkers were not re-run.",
+   "previousSeconds": {
+    "baseline Sn10": 4.99,
+    "J1": 4.98,
+    "J2": 5.04,
+    "J3": 4.49,
+    "J4": 4.62,
+    "JC1": 3.66,
+    "JC2": 3.97,
+    "J5": 5.47,
+    "ST1-tCycle Sn10": 5.1,
+    "ST2-initialBed Sn10": 4.3
+   }
   }
  }
 }

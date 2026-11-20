@@ -1,0 +1,41 @@
+# mutant-J2 Sn10 -> ADS Controller Implementation via gradle
+# command: gradle test --offline --no-daemon --console=plain
+# exit: 1  timedOut: False  seconds: 3.26
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.0.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test FAILED
+
+ADSControllerTest > Full choreography: Normal → Changeover → Normal(B) → FailSafe → Normal(B) FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:194
+
+ADSControllerTest > ChangeoverComplete alternates the active bed and returns to NormalOperation FAILED
+    org.opentest4j.AssertionFailedError at ADSControllerTest.java:79
+
+DryerFunctionsTest > nextDryer alternates A → B and B → A FAILED
+    org.opentest4j.AssertionFailedError at DryerFunctionsTest.java:22
+
+DryerFunctionsTest > nextDryer is an involution: applying it twice is the identity FAILED
+    org.opentest4j.AssertionFailedError at DryerFunctionsTest.java:30
+
+14 tests completed, 4 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///Users/ranwei/Git/DiTECTS/reverify-out/work/mutant-J2__Sn10/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to generate a Build Scan (Powered by Develocity).
+
+BUILD FAILED in 3s
+3 actionable tasks: 3 executed
+
