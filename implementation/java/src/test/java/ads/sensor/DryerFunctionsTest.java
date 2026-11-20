@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 /**
  * Tests for {@link DryerFunctions#nextDryer(Dryer)} — the pure changeover
  * selection function. Alternation (and its involution property) is what
- * guarantees the two-bed redundancy of REQ-ADS-006 and underwrites the
- * "exactly one live bed" continuity invariant of REQ-ADS-002.
+ * gives the two-bed alternation of REQ-ADS-006 and keeps the bed selector
+ * well formed for REQ-ADS-002. It says nothing about physical bed availability.
  */
 class DryerFunctionsTest {
 

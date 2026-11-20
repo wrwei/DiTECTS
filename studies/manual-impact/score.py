@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Score a completed recording sheet of the manual change-impact study against the thread's answer key.
 
-The answer key is the unbounded closure from dryerA in namespace/ads-namespace.json (133 elements, computed
+The answer key is the unbounded closure from dryerA in namespace/ads-namespace.json (134 elements, computed
 with namespace/impact.py). Each row of the sheet's Elements tab is matched to one identity-space element:
 by the document it names and its name, compared with the visible names tools/manual_trace.py uses, ignoring
 case, spaces, hyphens and underscores; digital-twin names carry a "part" or "signal" qualifier. Executable models are one element each (any row in 06-dafny to

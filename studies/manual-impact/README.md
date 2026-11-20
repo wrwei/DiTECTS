@@ -52,13 +52,13 @@ and the name as written (case, spaces, hyphens and underscores ignored; twin nam
 * Rows the scorer cannot match are listed in the scored report. Two authors adjudicate each one
   independently, entering the agreed identifier in the sheet's last column; disagreements and their
   resolution are recorded in `results/adjudication.md`. Adjudication happens before recall is reported.
-* The answer key is the thread's unbounded closure from `dryerA`: 133 elements. Recall is found / 133.
+* The answer key is the thread's unbounded closure from `dryerA`: 134 elements. Recall is found / 134.
 
 ## Pre-specified outcomes
 
 For each participant: working time (minutes), rounds, searches logged, elements found and recall, recall by
 thread depth, cumulative elements by round, and whether G2 and S1 were found. Reported alongside, without
-pooling into a single estimate: the counted manual search (117 of 133, 88%; an estimated 1.4 to 5.8 hours).
+pooling into a single estimate: the counted manual search (118 of 134, 88%; an estimated 1.4 to 5.8 hours).
 
 ## Data
 
@@ -73,8 +73,8 @@ Completed sheets are saved as `results/<code>.xlsx` with participant codes only 
 | `build_materials.py` | Builds `materials/` from the deposited models; `--check` verifies it is current |
 | `materials/` | The eleven documents given to participants, with `MANIFEST.txt` checksums |
 | `recording-sheet.xlsx` | Blank recording sheet: Instructions, Session, Search log, Elements |
-| `score.py` | Scores a completed sheet against the 133-element answer key; `--self-test` checks the matcher |
-| `../../tests/test_manual_study.py` | Checks the scorer end to end against the counted manual search (117 of 133) |
+| `score.py` | Scores a completed sheet against the 134-element answer key; `--self-test` checks the matcher |
+| `../../tests/test_manual_study.py` | Checks the scorer end to end against the counted manual search (118 of 134) |
 
 ## Amendments
 
@@ -95,3 +95,9 @@ Completed sheets are saved as `results/<code>.xlsx` with participant codes only 
   descriptions, as both participants used them. No element or link changed, so the answer key is unchanged (133
   elements from `dryerA`, the same depths) and both sessions score the same. The scripted search finds the same
   elements with the same numbers of terms, rounds and file searches.
+* **20 November 2026, after sessions P1 and P2.** The safety case gained Assumption A3, attached to Goal G8:
+  physical availability of the selected bed is a separate obligation outside the controller argument. The
+  answer key therefore has 134 elements (A3 at depth 3 from `dryerA`); the other 133 and their depths are
+  unchanged. `materials/` does not contain A3, so neither participant could record it. Both sheets are
+  scored against the 134-element key: P1 found 40 (30%) and P2 found 113 (84%); against the 133 elements in
+  their materials these are 30% and 85%. The scripted search, run on the current models, finds 118 of 134.

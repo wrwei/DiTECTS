@@ -1,7 +1,7 @@
 """End-to-end check of studies/manual-impact/score.py.
 
 Builds a temporary recording sheet (never deposited) from the counted manual search's found set for dryerA
-(results/manual_vs_thread.json, relaxed matching) and checks that the scorer recovers the same 117 of 133.
+(results/manual_vs_thread.json, relaxed matching) and checks that the scorer recovers the same 118 of 134.
 """
 import json, os, sys, tempfile, unittest, importlib.util
 
@@ -19,7 +19,7 @@ class ManualStudyScorerTests(unittest.TestCase):
         sc = load(os.path.join(ROOT, "studies", "manual-impact", "score.py"), "score")
         self.assertEqual(sc.self_test(), 0)
 
-    def test_counted_search_scores_117_of_133(self):
+    def test_counted_search_scores_118_of_134(self):
         try:
             import openpyxl
         except ImportError:
@@ -51,8 +51,8 @@ class ManualStudyScorerTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             p = os.path.join(d, "TEST.xlsx"); wb.save(p)
             res = sc.score(*sc.read_sheet(p))
-        self.assertEqual(res["found"], 117)
-        self.assertEqual(res["answer_key"]["elements"], 133)
+        self.assertEqual(res["found"], 118)
+        self.assertEqual(res["answer_key"]["elements"], 134)
         self.assertEqual(res["unmatched_rows"], [])
         self.assertFalse(res["found_G2"]); self.assertFalse(res["found_S1"])
         self.assertEqual(res["working_minutes"], 255)

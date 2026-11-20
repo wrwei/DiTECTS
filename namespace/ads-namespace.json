@@ -55,6 +55,15 @@
    "origin": "completion"
   },
   {
+   "id": "4510a3541c68e710a6b70673",
+   "uuid": "6905990a-d9e8-524f-be8d-9da8567ac52a",
+   "concern": "safety-case",
+   "kind": "Assumption",
+   "label": "A3",
+   "text": "Physical availability of the selected bed (regenerated, correctly connected and able to maintain detritiation) is a separate obligation, outside the controller argument; the controller evidence establishes the bed selector only",
+   "origin": "completion"
+  },
+  {
    "id": "45bc6a3e-da49-43f1-96e4-4e945a37090a",
    "uuid": null,
    "concern": "digital-twin",
@@ -2181,6 +2190,12 @@
    "source": "6a96509a7a882e24b8eb4c0d",
    "target": "6e34b3c6d75cfbd9474db3d0",
    "kind": "gsn-SupportedBy",
+   "origin": "completion"
+  },
+  {
+   "source": "6a96509a7a882e24b8eb4c28",
+   "target": "4510a3541c68e710a6b70673",
+   "kind": "gsn-InContextOf",
    "origin": "completion"
   },
   {

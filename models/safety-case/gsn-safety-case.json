@@ -50,5 +50,7 @@
   { "_id": "ba2349c73842715316887a8d", "type": "Assumption", "name": "A2", "origin": "completion",
     "description": "REQ-TRIT-007 (confinement barriers) and REQ-TRIT-021 (inventory cap) are plant-level requirements allocated to the plant confinement and inventory safety cases, outside the ADS argument" },
   { "_id": "6e34b3c6d75cfbd9474db3d0", "type": "Solution", "name": "Sn11", "origin": "completion",
-    "description": "Blower flow-alarm and standby-restart test records + FMEDA rows 1/2" }
+    "description": "Blower flow-alarm and standby-restart test records + FMEDA rows 1/2" },
+  { "_id": "4510a3541c68e710a6b70673", "type": "Assumption", "name": "A3", "origin": "completion",
+    "description": "Physical availability of the selected bed (regenerated, correctly connected and able to maintain detritiation) is a separate obligation, outside the controller argument; the controller evidence establishes the bed selector only" }
 ]

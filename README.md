@@ -22,7 +22,7 @@ the typed links added after export, and the digital twin maps a plant mesh to th
 | Module verification | Isabelle/HOL proofs | `formal/isabelle/` | Controller theory: enabled inputs, operation destinations, recorded commands and bed, deadlock freedom, and freedom from internal divergence after offered inputs |
 | Integration verification | Modelica changeover simulation | `simulation/modelica/ADSChangeover.mo` | Simplified decontamination-factor trajectory with the assertion `DF >= DFtarget` |
 | System verification | Digital twin | `models/digital-twin/` | Plant mesh, 10 part mappings to design parts, 4 telemetry signals bound to design attributes |
-| Acceptance | GSN safety case | `models/safety-case/gsn-safety-case.json` | 26 nodes; top claim G1 addresses `REQ-TRIT-014`; Solutions Sn7–Sn10 cite the controller evidence |
+| Acceptance | GSN safety case | `models/safety-case/gsn-safety-case.json` | 27 nodes; top claim G1 addresses `REQ-TRIT-014`; Solutions Sn7–Sn10 cite the controller evidence |
 
 `models/sysml/omg/` holds the two SysML models in OMG interchange JSON, as exported by the modelling
 platform. `models/traceability/completion.json` holds the links and records authored after export to
@@ -43,7 +43,7 @@ the completed review sheet is `models/traceability/engineering-review-2026-11-17
 
 | Path | Contents |
 |---|---|
-| `namespace/ads-namespace.json` | Impact graph: 134 identity-space elements and 217 edges (128 typed-link pairs, 89 structural) derived from the models and the completion overlay |
+| `namespace/ads-namespace.json` | Impact graph: 135 identity-space elements and 218 edges (128 typed-link pairs, 90 structural) derived from the models and the completion overlay |
 | `namespace/impact.py` | Change-impact traversal over the impact graph (`python3 namespace/impact.py dryerA --stats`) |
 | `tools/coverage.py` | Coverage checks over the impact graph (`--export <dir>` checks the export-only thread) |
 | `tools/manual_trace.py`, `tools/manual_time.py` | Name-search comparison with the traversal and its time estimate |

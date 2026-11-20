@@ -23,150 +23,150 @@
   "REQ-ADS-007": {
    "EXACT": {
     "low": {
-     "search_s": 1057.3,
-     "inspect_hits_s": 845.3,
-     "read_s": 1909.4,
-     "record_s": 351.2,
-     "total_h": 1.16,
-     "hits": 345,
-     "segments_read": 131,
-     "terms": 185
+     "search_s": 1060.9,
+     "inspect_hits_s": 857.5,
+     "read_s": 1958.2,
+     "record_s": 352.9,
+     "total_h": 1.17,
+     "hits": 350,
+     "segments_read": 132,
+     "terms": 186
     },
     "high": {
-     "search_s": 14287.3,
-     "inspect_hits_s": 845.3,
-     "read_s": 2864.1,
-     "record_s": 434.9,
-     "total_h": 5.12,
-     "hits": 345,
-     "segments_read": 131,
-     "terms": 185
+     "search_s": 14332.8,
+     "inspect_hits_s": 857.5,
+     "read_s": 2937.3,
+     "record_s": 436.8,
+     "total_h": 5.16,
+     "hits": 350,
+     "segments_read": 132,
+     "terms": 186
     }
    },
    "thread_review_h": {
-    "low": 0.58,
-    "high": 0.84
+    "low": 0.59,
+    "high": 0.86
    },
    "LENIENT": {
     "low": {
-     "search_s": 1174.3,
-     "inspect_hits_s": 1506.8,
-     "read_s": 2005.2,
-     "record_s": 386.6,
-     "total_h": 1.41,
-     "hits": 615,
-     "segments_read": 153,
-     "terms": 205
+     "search_s": 1177.9,
+     "inspect_hits_s": 1521.5,
+     "read_s": 2054.0,
+     "record_s": 388.3,
+     "total_h": 1.43,
+     "hits": 621,
+     "segments_read": 154,
+     "terms": 206
     },
     "high": {
-     "search_s": 15873.5,
-     "inspect_hits_s": 1506.8,
-     "read_s": 3007.8,
-     "record_s": 478.0,
-     "total_h": 5.8,
-     "hits": 615,
-     "segments_read": 153,
-     "terms": 205
+     "search_s": 15919.0,
+     "inspect_hits_s": 1521.5,
+     "read_s": 3081.0,
+     "record_s": 479.9,
+     "total_h": 5.83,
+     "hits": 621,
+     "segments_read": 154,
+     "terms": 206
     }
    }
   },
   "dryerA": {
    "EXACT": {
     "low": {
-     "search_s": 1057.3,
-     "inspect_hits_s": 845.3,
-     "read_s": 1909.4,
-     "record_s": 353.8,
-     "total_h": 1.16,
-     "hits": 345,
-     "segments_read": 131,
-     "terms": 185
+     "search_s": 1060.9,
+     "inspect_hits_s": 857.5,
+     "read_s": 1958.2,
+     "record_s": 355.5,
+     "total_h": 1.18,
+     "hits": 350,
+     "segments_read": 132,
+     "terms": 186
     },
     "high": {
-     "search_s": 14287.3,
-     "inspect_hits_s": 845.3,
-     "read_s": 2864.1,
-     "record_s": 438.5,
-     "total_h": 5.12,
-     "hits": 345,
-     "segments_read": 131,
-     "terms": 185
+     "search_s": 14332.8,
+     "inspect_hits_s": 857.5,
+     "read_s": 2937.3,
+     "record_s": 440.5,
+     "total_h": 5.16,
+     "hits": 350,
+     "segments_read": 132,
+     "terms": 186
     }
    },
    "thread_review_h": {
-    "low": 0.58,
-    "high": 0.84
+    "low": 0.59,
+    "high": 0.87
    },
    "LENIENT": {
     "low": {
-     "search_s": 1174.3,
-     "inspect_hits_s": 1506.8,
-     "read_s": 2005.2,
-     "record_s": 389.1,
-     "total_h": 1.41,
-     "hits": 615,
-     "segments_read": 153,
-     "terms": 205
+     "search_s": 1177.9,
+     "inspect_hits_s": 1521.5,
+     "read_s": 2054.0,
+     "record_s": 390.9,
+     "total_h": 1.43,
+     "hits": 621,
+     "segments_read": 154,
+     "terms": 206
     },
     "high": {
-     "search_s": 15873.5,
-     "inspect_hits_s": 1506.8,
-     "read_s": 3007.8,
-     "record_s": 481.6,
-     "total_h": 5.8,
-     "hits": 615,
-     "segments_read": 153,
-     "terms": 205
+     "search_s": 15919.0,
+     "inspect_hits_s": 1521.5,
+     "read_s": 3081.0,
+     "record_s": 483.5,
+     "total_h": 5.83,
+     "hits": 621,
+     "segments_read": 154,
+     "terms": 206
     }
    }
   },
   "controller": {
    "EXACT": {
     "low": {
-     "search_s": 1057.3,
-     "inspect_hits_s": 845.3,
-     "read_s": 1909.4,
-     "record_s": 353.0,
-     "total_h": 1.16,
-     "hits": 345,
-     "segments_read": 131,
-     "terms": 185
+     "search_s": 1060.9,
+     "inspect_hits_s": 857.5,
+     "read_s": 1958.2,
+     "record_s": 354.7,
+     "total_h": 1.18,
+     "hits": 350,
+     "segments_read": 132,
+     "terms": 186
     },
     "high": {
-     "search_s": 14287.3,
-     "inspect_hits_s": 845.3,
-     "read_s": 2864.1,
-     "record_s": 437.4,
-     "total_h": 5.12,
-     "hits": 345,
-     "segments_read": 131,
-     "terms": 185
+     "search_s": 14332.8,
+     "inspect_hits_s": 857.5,
+     "read_s": 2937.3,
+     "record_s": 439.3,
+     "total_h": 5.16,
+     "hits": 350,
+     "segments_read": 132,
+     "terms": 186
     }
    },
    "thread_review_h": {
-    "low": 0.58,
-    "high": 0.84
+    "low": 0.59,
+    "high": 0.87
    },
    "LENIENT": {
     "low": {
-     "search_s": 1174.3,
-     "inspect_hits_s": 1506.8,
-     "read_s": 2005.2,
-     "record_s": 388.4,
-     "total_h": 1.41,
-     "hits": 615,
-     "segments_read": 153,
-     "terms": 205
+     "search_s": 1177.9,
+     "inspect_hits_s": 1521.5,
+     "read_s": 2054.0,
+     "record_s": 390.1,
+     "total_h": 1.43,
+     "hits": 621,
+     "segments_read": 154,
+     "terms": 206
     },
     "high": {
-     "search_s": 15873.5,
-     "inspect_hits_s": 1506.8,
-     "read_s": 3007.8,
-     "record_s": 480.5,
-     "total_h": 5.8,
-     "hits": 615,
-     "segments_read": 153,
-     "terms": 205
+     "search_s": 15919.0,
+     "inspect_hits_s": 1521.5,
+     "read_s": 3081.0,
+     "record_s": 482.4,
+     "total_h": 5.83,
+     "hits": 621,
+     "segments_read": 154,
+     "terms": 206
     }
    }
   }
@@ -174,30 +174,30 @@
  "all_starts": {
   "EXACT": {
    "low": {
-    "median_h": 1.16,
-    "max_h": 1.16
+    "median_h": 1.18,
+    "max_h": 1.18
    },
    "high": {
-    "median_h": 5.12,
-    "max_h": 5.14
+    "median_h": 5.16,
+    "max_h": 5.17
    }
   },
   "thread_review": {
    "low": {
-    "median_h": 0.58
+    "median_h": 0.59
    },
    "high": {
-    "median_h": 0.84
+    "median_h": 0.87
    }
   },
   "LENIENT": {
    "low": {
-    "median_h": 1.41,
-    "max_h": 1.42
+    "median_h": 1.43,
+    "max_h": 1.44
    },
    "high": {
-    "median_h": 5.8,
-    "max_h": 5.84
+    "median_h": 5.83,
+    "max_h": 5.88
    }
   }
  }

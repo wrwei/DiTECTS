@@ -628,7 +628,7 @@ def main():
     ns = tool.load()
     node, adj = tool.index(ns)
     adj_set = {(u, v) for u in adj for v, _, _ in adj[u]}
-    assert len(ns["nodes"]) == 134 and len(ns["edges"]) == 217, "namespace size changed"  # 128/206 before A1; 216 before FMEDA row 11 joined Sn2-to-FMEA-Valves (2026-11-17)
+    assert len(ns["nodes"]) == 135 and len(ns["edges"]) == 218, "namespace size changed"  # 134/217 before Assumption A3 (2026-11-20)
 
     # thread side + the dryerA check the article relies on
     depth = {}
@@ -636,7 +636,7 @@ def main():
         depth[s] = {e: d for d, e, _ in tool.impact(node, adj, s, None)}
     dA = tool.resolve(node, "dryerA")
     dryerA_totals = [sum(1 for d in depth[dA].values() if d <= k) for k in DEPTHS] + [len(depth[dA])]
-    assert dryerA_totals == [8, 22, 51, 72, 95, 113, 133], dryerA_totals  # [7, 20, 48, 67, 89, 107, 127] before A1
+    assert dryerA_totals == [8, 22, 52, 73, 96, 114, 134], dryerA_totals  # [8, 22, 51, 72, 95, 113, 133] before Assumption A3
     connected = all(len(depth[s]) == len(node) - 1 for s in node)
 
     engines = {v: Engine(ns, v) for v in VARIANTS}
@@ -961,7 +961,7 @@ LIMITATIONS = [
     "The twin document is reconstructed from the twin elements' labels in namespace/ads-namespace.json, because the procedure reads names, not the twin model file. Mesh names were cross-checked against the GLB.",
     "Manual round k and thread depth k are different units: one round can follow several textual hops, and one thread hop may need several rounds. The fixpoint-vs-depth-k recall is reported alongside for this reason.",
     "Recall is measured against the thread's own closure, which includes links authored to complete the thread (origin 'completion', accepted in engineering review). The comparison therefore shows what text search recovers of this thread, not of an independent ground truth.",
-    "The thread is connected (every unbounded closure is 133 elements). Recall against T_∞ therefore measures coverage of the whole model set, and 'false hits' can only be judged per hop or per depth.",
+    "The thread is connected (every unbounded closure is 134 elements). Recall against T_∞ therefore measures coverage of the whole model set, and 'false hits' can only be judged per hop or per depth.",
     "The stop list, the lexicon and the names of the executable models are fixed choices. Other reasonable choices would move the numbers. They were fixed before the first run and not tuned.",
 ]
 

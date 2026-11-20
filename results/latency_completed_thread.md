@@ -1,4 +1,4 @@
-# Re-verification results (2026-11-17T15:23:05+0000)
+# Re-verification results (2026-11-20T07:36:12+0000)
 
 Condition: `latency`  Repository: `/Users/ranwei/Git/DiTECTS`
 
@@ -7,29 +7,29 @@ Condition: `latency`  Repository: `/Users/ranwei/Git/DiTECTS`
 ```
 {
  "unbounded": {
-  "n": 4020,
-  "starts": 134,
+  "n": 4050,
+  "starts": 135,
   "reps": 30,
-  "median_ms": 0.0553,
-  "p95_ms": 0.0638,
-  "max_ms": 0.1735,
-  "cone_median": 133.0,
-  "cone_max": 133
+  "median_ms": 0.0552,
+  "p95_ms": 0.0617,
+  "max_ms": 0.0938,
+  "cone_median": 134,
+  "cone_max": 134
  },
  "depth5": {
-  "n": 4020,
-  "starts": 134,
+  "n": 4050,
+  "starts": 135,
   "reps": 30,
-  "median_ms": 0.0255,
-  "p95_ms": 0.0386,
-  "max_ms": 0.057,
-  "cone_median": 75.0,
-  "cone_max": 127
+  "median_ms": 0.0254,
+  "p95_ms": 0.039,
+  "max_ms": 0.0595,
+  "cone_median": 76,
+  "cone_max": 128
  },
  "index_build_ms": 0.086,
  "graph": {
-  "nodes": 134,
-  "edges": 217
+  "nodes": 135,
+  "edges": 218
  },
  "host": {
   "python": "3.9.6",

@@ -369,15 +369,15 @@ function selfCheck() {
   const rows = [
     ["Depth 1 from dryerA", 8, at(1)],
     ["Depth 2 from dryerA", 22, at(2)],
-    ["Depth 4 from dryerA", 72, at(4)],
-    ["Depth 5 from dryerA", 95, at(5)],
-    ["Unbounded closure", 133, at(null)],
+    ["Depth 4 from dryerA", 73, at(4)],
+    ["Depth 5 from dryerA", 96, at(5)],
+    ["Unbounded closure", 134, at(null)],
     ["Top goal G1 first reached at depth", 4, firstDepthOf("G1")],
-    ["Cross-concern typed links", 87, traceLinks.size],
-    ["Link endpoint pairs (traceability edges)", 107, traceEdges.length],
-    ["Concern pairs carrying links", 8, pairs.size],
-    ["Elements in the identity space", 134, NS.nodes.length],
-    ["Edges the traversal follows", 216, NS.edges.length],
+    ["Cross-concern typed links", 107, traceLinks.size],
+    ["Link endpoint pairs (traceability edges)", 128, traceEdges.length],
+    ["Concern pairs carrying links", 11, pairs.size],
+    ["Elements in the identity space", 135, NS.nodes.length],
+    ["Edges the traversal follows", 218, NS.edges.length],
     // The article cites requirements by short name; if these stop resolving a
     // reader cannot reproduce the traversals it reports.
     ["REQ-TRIT-014 reached at depth", 5, firstDepthOf("REQ-TRIT-014")],

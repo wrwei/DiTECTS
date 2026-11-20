@@ -24,8 +24,8 @@ import org.junit.jupiter.api.Test;
  * models prove abstractly, at the level of the running implementation, so the
  * proof and the code are checked against one contract:</p>
  * <ul>
- *   <li><b>REQ-ADS-002</b> — exactly one dryer bed is active at all times
- *       (the detritiation function is never lost across a changeover).</li>
+ *   <li><b>REQ-ADS-002</b> — the bed selector always names bed A or bed B
+ *       (selector well-formedness; physical bed availability is not tested here).</li>
  *   <li><b>REQ-ADS-006</b> — a dewpoint alarm initiates a bed changeover and
  *       the beds alternate.</li>
  *   <li><b>REQ-ADS-007</b> — loss of off-site power drives the plant to
@@ -157,11 +157,11 @@ class ADSControllerTest {
         assertEquals(Dryer.BedA, controller.activeDryer());
     }
 
-    // ── Continuity invariant (REQ-ADS-002): exactly one live bed, always ───
+    // ── Selector invariant (REQ-ADS-002): the selector names bed A or bed B, always ───
 
     @Test
-    @DisplayName("Exactly one dryer bed is active after every event (REQ-ADS-002)")
-    void exactlyOneDryerActiveThroughout() {
+    @DisplayName("The bed selector names bed A or bed B after every event (REQ-ADS-002)")
+    void selectorNamesOneBedThroughout() {
         InputEvent[] sequence = {
             new InputEvent.DewpointHigh(),
             new InputEvent.ChangeoverComplete(),   // → BedB
@@ -177,7 +177,7 @@ class ADSControllerTest {
             Dryer d = controller.activeDryer();
             assertNotNull(d, "active dryer must never be null");
             assertTrue(d == Dryer.BedA || d == Dryer.BedB,
-                "exactly one bed (A or B) must be active at all times");
+                "the bed selector must name bed A or bed B at all times");
         }
     }
 

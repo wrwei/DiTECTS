@@ -1,9 +1,9 @@
 # Scored: P2
 
-* Found 113 of 133 answer-key elements (85%); G2 found, S1 missed.
+* Found 113 of 134 answer-key elements (84%); G2 found, S1 missed.
 * Working time None min (breaks 0 min); 166 searches logged; 165 element rows.
 * Cumulative found by round: {1: 13, 2: 73, 3: 108, 4: 111, 5: 113}
-* Recall by thread depth: {1: '8/8', 2: '14/14', 3: '25/29', 4: '19/21', 5: '17/23', 6: '12/18', 7: '9/11', 8: '8/8', 9: '1/1'}
+* Recall by thread depth: {1: '8/8', 2: '14/14', 3: '25/30', 4: '19/21', 5: '17/23', 6: '12/18', 7: '9/11', 8: '8/8', 9: '1/1'}
 * Rows needing adjudication: 47; rows outside the answer key: 1
 
   - round 1, 02-design: 'AirPort' (no match)
@@ -54,4 +54,4 @@
   - round 3, 01-requirements: 'RadiologicalReleaseLimit' (no match)
   - round 4, 02-design: 'charge' (no match)
 
-Missed: A1, A2, C1, G-00, G-02, G-03, G-05, G-09, G4, IE-01, IE-02, IE-03, IE-06, REQ-TRIT-007, REQ-TRIT-021, S1, S2, Sn5, Sn9, interfaceEdge
+Missed: A1, A2, A3, C1, G-00, G-02, G-03, G-05, G-09, G4, IE-01, IE-02, IE-03, IE-06, REQ-TRIT-007, REQ-TRIT-021, S1, S2, Sn5, Sn9, interfaceEdge

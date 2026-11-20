@@ -1167,6 +1167,30 @@
     "_id": "1b960f15d4667b5cecf70113",
     "__t": "LangString",
     "content": "Blower flow-alarm and standby-restart test records + FMEDA rows 1/2"
+   },
+   {
+    "_id": "4510a3541c68e710a6b70673",
+    "gid": "6905990a-d9e8-524f-be8d-9da8567ac52a",
+    "__t": "Assumption",
+    "name": "3facd785119e8a7ebbc6d9f0",
+    "description": "d3420271b89f306ccba14eb8",
+    "graphNode": "91dc823974a4b1074e0726b7",
+    "isCitation": false,
+    "isAbstract": false,
+    "uninstantiated": false,
+    "origin": "completion",
+    "review": "accepted in engineering review",
+    "reviewedOn": "2026-11-20"
+   },
+   {
+    "_id": "3facd785119e8a7ebbc6d9f0",
+    "__t": "LangString",
+    "content": "A3"
+   },
+   {
+    "_id": "d3420271b89f306ccba14eb8",
+    "__t": "LangString",
+    "content": "Physical availability of the selected bed (regenerated, correctly connected and able to maintain detritiation) is a separate obligation, outside the controller argument; the controller evidence establishes the bed selector only"
    }
   ],
   "nodes": [
@@ -1179,6 +1203,11 @@
     "object": "6e34b3c6d75cfbd9474db3d0",
     "nodeId": "6e34b3c6d75cfbd9474db3d0",
     "nodeType": "GSN:Solution"
+   },
+   {
+    "object": "4510a3541c68e710a6b70673",
+    "nodeId": "4510a3541c68e710a6b70673",
+    "nodeType": "GSN:Assumption"
    }
   ],
   "edges": [
@@ -1194,6 +1223,13 @@
     "edgeType": "GSN:SupportedBy-edge",
     "sourceNodeId": "6a96509a7a882e24b8eb4c0d",
     "targetNodeId": "6e34b3c6d75cfbd9474db3d0",
+    "origin": "completion"
+   },
+   {
+    "edgeId": "9ff83d07-1f3f-5232-b7ba-3f71c27b7822",
+    "edgeType": "GSN:InContextOf-edge",
+    "sourceNodeId": "6a96509a7a882e24b8eb4c28",
+    "targetNodeId": "4510a3541c68e710a6b70673",
     "origin": "completion"
    }
   ]
