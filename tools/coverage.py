@@ -42,7 +42,7 @@ import sim_bindings as SB  # noqa: E402
 
 # E2: terms in a Solution's text and the elements they denote (labels in the identity space). Only terms that
 # name or unambiguously denote an element are listed. Deliberately absent: "controller" (the subject of G8's claim,
-# not evidence for it; its verification artefacts link to it directly), "one live bed" / "dryer alternation" /
+# not evidence for it; its verification artefacts link to it directly), "bed swap" / "bed selector" / "dryer alternation" /
 # "backup" in Sn7, Sn8 and Sn10 (properties of the controller's logic, not of the beds or the UPS).
 SOLUTION_TERMS = [
     (r"dual-bed", ["dryerA", "dryerB"]),                       # the two molecular-sieve beds
@@ -54,7 +54,7 @@ SOLUTION_TERMS = [
     (r"calibration", ["dewpointMonitor"]),                     # the only design element with a calibration attribute
     (r"regeneration[- ]path", ["dryerARegenReturn", "interfaceEdge"]),  # dryerA/dryerB regenOut -> condenser.regenReturn
     (r"blower", ["blower"]),
-    (r"FMU transient", ["ADS Changeover Transient_Modelica"]),  # the Modelica changeover transient (simulation evidence)
+    (r"Modelica changeover transient", ["ADS Changeover Transient_Modelica"]),  # simulation evidence named in Sn2
 ]
 
 def omg(path):

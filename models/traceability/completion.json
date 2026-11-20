@@ -496,7 +496,7 @@
    ],
    "origin": "completion",
    "review": "accepted in engineering review",
-   "rationale": "The proof-test records verify the changeover valve set, which the design allocates changeover continuity to (satisfy changeoverContinuity by changeoverValves).",
+   "rationale": "The leak-test records verify the changeover valve set, which the design allocates changeover continuity to (satisfy changeoverContinuity by changeoverValves).",
    "platformAction": "add trace link",
    "relation": "architecture",
    "cites": [
@@ -504,7 +504,7 @@
      "file": "models/safety-case/gsn-safety-case.json",
      "element": "Sn2",
      "field": "description",
-     "text": "Changeover proof-test records (future: FMU transient evidence)"
+     "text": "Modelica changeover transient: DF stays at or above 1000 through each bed swap at the bound changeover period, assuming instantaneous switching and a freshly regenerated bed + changeover-valve leak-test records (FMEDA row 11)"
     },
     {
      "file": "models/safety-case/gsn-safety-case.json",

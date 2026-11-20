@@ -89,3 +89,9 @@ Completed sheets are saved as `results/<code>.xlsx` with participant codes only 
 * **18 November 2026, after sessions P1 and P2.** The executable Isabelle theory gained a proof
   of freedom from internal divergence after an offered input. The participant materials retain the
   earlier theory. The answer key and the scripted search results are identical for both versions.
+* **20 November 2026, after sessions P1 and P2.** The descriptions of Solutions Sn2, Sn7 and Sn8 were reworded
+  to state the evidence used (Sn2) and what the proofs establish (Sn7, Sn8: the bed selector is BedA or BedB,
+  which is well-formedness and not physical bed availability). `materials/05-gsn-safety-case/` keeps the earlier
+  descriptions, as both participants used them. No element or link changed, so the answer key is unchanged (133
+  elements from `dryerA`, the same depths) and both sessions score the same. The scripted search finds the same
+  elements with the same numbers of terms, rounds and file searches.

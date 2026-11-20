@@ -461,7 +461,7 @@
    "concern": "safety-case",
    "kind": "Solution",
    "label": "Sn2",
-   "text": "Changeover proof-test records (future: FMU transient evidence)"
+   "text": "Modelica changeover transient: DF stays at or above 1000 through each bed swap at the bound changeover period, assuming instantaneous switching and a freshly regenerated bed + changeover-valve leak-test records (FMEDA row 11)"
   },
   {
    "id": "6a96509a7a882e24b8eb4c12",
@@ -517,7 +517,7 @@
    "concern": "safety-case",
    "kind": "Solution",
    "label": "Sn7",
-   "text": "Dafny proof: one-live-bed invariant + PowerLoss => FailSafe postconditions"
+   "text": "Dafny proof: transitions follow the mode table; a completed bed swap moves the selector to the other bed; PowerLoss => FailSafe from every mode; the selector is always BedA or BedB (well-formedness, not physical bed availability)"
   },
   {
    "id": "6a96509a7a882e24b8eb4c2a",
@@ -525,7 +525,7 @@
    "concern": "safety-case",
    "kind": "Solution",
    "label": "Sn8",
-   "text": "Isabelle/HOL proof: invariant preservation, R1 (FailSafe exits only on backup), R2 (one live bed), deadlock-freedom"
+   "text": "Isabelle/HOL proof: invariant preservation; R1 (FailSafe exits only on backup); R2 (the bed selector is BedA or BedB: well-formedness, not physical bed availability); a completed bed swap alternates the selector; power loss is accepted in both operating modes and leads to FailSafe; offered handlers are divergence-free; deadlock-freedom"
   },
   {
    "id": "6a96509a7a882e24b8eb4c2b",
