@@ -107,12 +107,24 @@
   "group": "Links",
   "fault": "An evidential link points to the wrong executable model (Sn7, a Dafny proof, to the Isabelle model)",
   "expect": {
-   "outcome": "not reported"
+   "outcome": "reported",
+   "by": [
+    "coverage"
+   ]
   },
-  "outcome": "not reported",
-  "reportedBy": [],
+  "outcome": "reported",
+  "reportedBy": [
+   "coverage"
+  ],
   "resolution": [],
-  "coverage": {},
+  "coverage": {
+   "E3": {
+    "rule": "techniques named in Solution text with no evidential link to a model of that kind",
+    "failing": [
+     "Sn7 -> Dafny Model"
+    ]
+   }
+  },
   "comparison": [],
   "freshness": [],
   "asExpected": true

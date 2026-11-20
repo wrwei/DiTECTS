@@ -11,7 +11,7 @@ repository; the repository is not modified. On the unmodified copy all four chec
 | L2 | A satisfy statement in the design model has no link in the thread (dryerA to REQ-ADS-005) | reported | coverage R3: dryerA->REQ-ADS-005 |
 | L3 | An evidential link's target identifier matches no element (Sn7's link to the Dafny model) | reported | resolution: 1 unresolved endpoints (Sn7-to-Dafny: Sn7 -> ?)<br>coverage: not run |
 | L4 | A failure-analysis row is linked to the wrong design part (row 7 to dryerB; the row analyses dryerA) | reported | coverage F4: row 7 |
-| L5 | An evidential link points to the wrong executable model (Sn7, a Dafny proof, to the Isabelle model) | not reported | no check reports anything |
+| L5 | An evidential link points to the wrong executable model (Sn7, a Dafny proof, to the Isabelle model) | reported | coverage E3: Sn7 -> Dafny Model |
 
 ## Bindings
 
@@ -38,4 +38,4 @@ repository; the repository is not modified. On the unmodified copy all four chec
 | S4 | A design part is added and not yet linked (a third dryer bed, dryerC) | reported | coverage C1: dryerC |
 | S5 | A Goal's claim is narrowed and its links are left as they are (G3 limited to design-basis flow) | reported | comparison: G3 changed (description); reaches 7 Goals and 11 Solutions, nearest Sn2 (depth 1), G1 (depth 2), G2 (depth 2), G4 (depth 2) |
 
-15 examples: 13 reported, 2 not reported.
+15 examples: 14 reported, 1 not reported.

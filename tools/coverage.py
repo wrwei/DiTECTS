@@ -22,6 +22,8 @@ Checks
   E1  the design part each executable artefact models links to it directly
   E2  every design element (or simulation model) a Solution's text names is backed by an evidential
       link from that Solution to it; the terms and the elements they denote are in SOLUTION_TERMS
+  E3  every checking technique a Solution's text names (Dafny, Isabelle, FDR/CSP, JUnit, Modelica) is backed by an
+      evidential link from that Solution to an executable model of that kind; see SOLUTION_TECHNIQUES
   B1  every simulation binding (sim-binding edge or binds link) resolves both ends -- a Modelica parameter owned by a Modelica
       model (parameter-of) and a SysML attribute -- and joins equal values: in the thread (the two nodes'
       `value`) and in the repository files (the SysML text and the Modelica source)
@@ -55,6 +57,15 @@ SOLUTION_TERMS = [
     (r"regeneration[- ]path", ["dryerARegenReturn", "interfaceEdge"]),  # dryerA/dryerB regenOut -> condenser.regenReturn
     (r"blower", ["blower"]),
     (r"Modelica changeover transient", ["ADS Changeover Transient_Modelica"]),  # simulation evidence named in Sn2
+]
+
+# E3: checking techniques named in a Solution's text and the kind of executable model each one runs on.
+SOLUTION_TECHNIQUES = [
+    (r"\bDafny\b", "Dafny Model"),
+    (r"\bIsabelle\b", "Isabelle Model"),
+    (r"\b(FDR|CSP)\b", "FDR Model"),
+    (r"\bJUnit\b", "Java Model"),
+    (r"\bModelica\b", "ModelicaModel"),
 ]
 
 def omg(path):
@@ -216,6 +227,14 @@ def main():
                     if len(ids) != 1 or not any(trace(e) and e["target"] == ids[0] for e in out_[sn["id"]]):
                         e2.append("%s -> %s" % (sn["label"], t))
     res["E2 elements named in Solution text with no evidential link"] = (e2, e2n)
+    e3, e3n = [], 0
+    for sn in kind("Solution"):
+        for pat, model_kind in SOLUTION_TECHNIQUES:
+            if re.search(pat, sn.get("text") or ""):
+                e3n += 1
+                if not any(trace(e) and node[e["target"]]["kind"] == model_kind for e in out_[sn["id"]]):
+                    e3.append("%s -> %s" % (sn["label"], model_kind))
+    res["E3 techniques named in Solution text with no evidential link to a model of that kind"] = (e3, e3n)
 
     # B1: Degree 0 simulation bindings join equal values, in the thread and in the files.
     mo_text = {}

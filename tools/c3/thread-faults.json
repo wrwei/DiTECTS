@@ -96,7 +96,10 @@
    }
   ],
   "expect": {
-   "outcome": "not reported"
+   "outcome": "reported",
+   "by": [
+    "coverage"
+   ]
   }
  },
  {

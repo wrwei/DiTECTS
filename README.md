@@ -102,13 +102,13 @@ the element, and whether any executable artefact changed. The repository is not 
 `tools/thread_faults.py` runs the examples in `tools/c3/thread-faults.json`. Each makes the thread wrong, or lets
 it fall out of step with the models, on a temporary copy of the repository: a missing, unresolved or misdirected
 link, a wrong binding, evidence edited after its verdict was recorded, and a renamed, deleted, re-created or added
-part. Four checks then run on the copy: resolution of every endpoint, the 17 rules of `tools/coverage.py`,
+part. Four checks then run on the copy: resolution of every endpoint, the 18 rules of `tools/coverage.py`,
 comparison of element records with the deposited models (`tools/change_detect.py`), and comparison of each
 evidence file with the hash stored with its recorded verdict in `results/reverify_bound_thread.json`. Each
 example states its expected outcome, and the run fails if an outcome differs. The repository is not modified.
-Results are in `results/thread_faults.{json,md}`: 13 of the 15 examples are reported, and two are not.
+Results are in `results/thread_faults.{json,md}`: 14 of the 15 examples are reported, and one is not.
 
-`tools/coverage.py` now stops with a list of unresolved endpoints when an edge names an element that is not in the
+`tools/coverage.py` stops with a list of unresolved endpoints when an edge names an element that is not in the
 thread, as `tools/derive_from_export.py` does. `tools/change_detect.py` also compares the safety-case records.
 
 ## Licence

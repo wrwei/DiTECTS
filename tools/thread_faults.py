@@ -10,7 +10,7 @@ not modified. Four checks then run on the copy:
 
   resolution  every endpoint of every edge is an element of the thread
               (the precondition of tools/coverage.py and tools/derive_from_export.py)
-  coverage    the 17 rules of tools/coverage.py; skipped when resolution fails
+  coverage    the 18 rules of tools/coverage.py; skipped when resolution fails
   comparison  element records in the model files that differ from the deposited ones
               (tools/change_detect.py), with the Goals and Solutions reached from each
   freshness   evidence files whose content no longer matches the hash stored with their recorded
