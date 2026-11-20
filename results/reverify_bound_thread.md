@@ -9,7 +9,7 @@ Condition: `Baseline, mutations and change scenarios after adding Isabelle handl
 | Sn7 | ADS Controller Proof - Dafny | dafny | PASS | 1.13 | 11 verified, 0 errors |
 | Sn8 | ADS Controller Behaviour | isabelle | PASS | 70.7 | Finished ADSController_Check |
 | Sn9 | ADS Controller Refinement | fdr | PASS | 1.09 | 27 assertions passed, 0 failed |
-| Sn10 | ADS Controller Implementation | gradle | PASS | 4.99 | 14 tests, 14 passed, 0 failed, 0 skipped |
+| Sn10 | ADS Controller Implementation | gradle | PASS | 3.56 | 14 tests, 14 passed, 0 failed, 0 skipped |
 
 ## Seeded mutants
 | Mutant | Class | Checker | Verdict | Outcome | s | Description |

@@ -554,9 +554,9 @@
    "exit": 0,
    "verdict": "PASS",
    "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
-   "seconds": 4.99,
+   "seconds": 3.56,
    "artefactChanged": false,
-   "log": "formal_handler_divergence/baseline/logs/baseline__Sn10__gradle.txt"
+   "log": "java_selector_wording/baseline/logs/baseline__Sn10__gradle.txt"
   }
  ],
  "mutants": [
@@ -1767,7 +1767,28 @@
    "tools/c3/mutants.json": "f27a1b68e030c79ffe59e9c4a7bc90d795f86fcea6de7859160497f1c58d9e0c",
    "tools/c3/stale.json": "c4c84b4ad0027af7debd615686ba5460b23e3fa9b0d5d8a81504d024852affeb",
    "implementation/java/src/main/java/ads/actuator/Actuator.java": "d7ca7a4edd94e1ae6dd30462f52ea4d9eda6845f5e1614492b2902d89743695a",
-   "implementation/java/src/test/java/ads/controller/ADSControllerTest.java": "453ff4c385c059d652947f872aec818ce24fc8dee9e7587cc4f250e2a952dbd0"
+   "implementation/java/src/test/java/ads/controller/ADSControllerTest.java": "8919d5a229168dee78f97535b8bba6f4051f3270a2068bef908331f86aa9ac29"
+  },
+  "javaWordingUpdate": {
+   "rerunAt": "2026-11-20T07:54:12+0000",
+   "previousBaselineSn10": {
+    "tag": "baseline",
+    "solution": "Sn10",
+    "link": "Sn10-to-Java",
+    "target": "ADS Controller Implementation",
+    "runner": "gradle",
+    "command": "gradle test --offline --no-daemon --console=plain",
+    "exit": 0,
+    "verdict": "PASS",
+    "detail": "14 tests, 14 passed, 0 failed, 0 skipped",
+    "seconds": 4.99,
+    "artefactChanged": false,
+    "log": "formal_handler_divergence/baseline/logs/baseline__Sn10__gradle.txt"
+   },
+   "previousSHA256": {
+    "implementation/java/src/test/java/ads/controller/ADSControllerTest.java": "453ff4c385c059d652947f872aec818ce24fc8dee9e7587cc4f250e2a952dbd0"
+   },
+   "note": "ADSControllerTest.java and DryerFunctionsTest.java were reworded to describe the bed selector (comments, one display name, one method name and one assertion message); no test logic changed. The Sn10 baseline was re-run on the reworded files. The Java mutation and change-scenario results (J1-J5, JC1, JC2, ST2) are from the run recorded above, before the rewording."
   }
  }
 }
