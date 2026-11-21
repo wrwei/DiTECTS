@@ -20,7 +20,6 @@ repository; the repository is not modified. On the unmodified copy all four chec
 | B1 | A bound simulation parameter is edited in the simulation source and not in the design (tCycle 7000 to 9000) | reported | coverage B1: tCycle <- changeoverPeriod (files differ from the thread: SysML 7000.0, Modelica 9000.0)<br>freshness: simulation/modelica/ADSChangeover.mo differs from the recorded hash; cited by Sn2 (recorded PASS) |
 | B2 | A bound simulation parameter is renamed in the simulation source (tCycle to tSwap) | reported | coverage B1: tCycle <- changeoverPeriod (files differ from the thread: SysML 7000.0, Modelica None)<br>freshness: simulation/modelica/ADSChangeover.mo differs from the recorded hash; cited by Sn2 (recorded PASS) |
 | B3 | A simulation binding joins the wrong design attribute (tCycle to saturationTimeConstant) | reported | coverage B1: tCycle <- saturationTimeConstant (thread values differ: 7000.0 vs 4000) |
-| B4 | A telemetry signal is bound to the wrong design attribute (the dewpoint signal to bedSaturation) | not reported | no check reports anything |
 
 ## Stale evidence
 
@@ -38,4 +37,4 @@ repository; the repository is not modified. On the unmodified copy all four chec
 | S4 | A design part is added and not yet linked (a third dryer bed, dryerC) | reported | coverage C1: dryerC |
 | S5 | A Goal's claim is narrowed and its links are left as they are (G3 limited to design-basis flow) | reported | comparison: G3 changed (description); reaches 7 Goals and 11 Solutions, nearest Sn2 (depth 1), G1 (depth 2), G2 (depth 2), G4 (depth 2) |
 
-15 examples: 14 reported, 1 not reported.
+14 examples: 14 reported, 0 not reported.

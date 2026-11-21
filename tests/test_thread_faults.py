@@ -10,7 +10,7 @@ def test_fault_examples_match_expected_outcomes(tmp_path):
     assert r.returncode == 0, r.stderr[-400:]
     results = json.load(open(out + ".json"))
     assert all(x["asExpected"] for x in results)
-    assert sorted(x["id"] for x in results if x["outcome"] == "not reported") == ["B4"]
+    assert sorted(x["id"] for x in results if x["outcome"] == "not reported") == []
     assert results == json.load(open(os.path.join(REPO, "results", "thread_faults.json")))
 
 

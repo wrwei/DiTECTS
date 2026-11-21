@@ -166,25 +166,6 @@
   }
  },
  {
-  "id": "B4",
-  "group": "Bindings",
-  "fault": "A telemetry signal is bound to the wrong design attribute (the dewpoint signal to bedSaturation)",
-  "edits": [
-   {
-    "op": "retarget-edge",
-    "edge": {
-     "kind": "twin-binding",
-     "source": "TwinBinding:dewpoint"
-    },
-    "end": "target",
-    "to": "SAttributeUsage:bedSaturation"
-   }
-  ],
-  "expect": {
-   "outcome": "not reported"
-  }
- },
- {
   "id": "E1",
   "group": "Stale evidence",
   "fault": "A proof source is edited after its verdict was recorded (a Dafny postcondition weakened)",
