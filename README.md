@@ -113,6 +113,6 @@ thread, as `tools/derive_from_export.py` does. `tools/change_detect.py` also com
 
 ## Licence
 
-This repository accompanies a manuscript under peer review and is provided under the
-[DiTECTS Reviewer Evaluation Licence](LICENSE): editors and referees may download, build, run and inspect it
-for the review only. The RoboChart CSP semantic libraries keep their EPL-2.0 licence ([NOTICE](NOTICE)).
+This repository is released under the [PolyForm Noncommercial License 1.0.0](LICENSE). It may be used, copied,
+modified and shared for research and other non-commercial purposes. Commercial use requires a separate licence from the
+copyright holders; please contact them before use. The RoboChart CSP semantic libraries keep their EPL-2.0 licence ([NOTICE](NOTICE)).

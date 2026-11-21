@@ -1,9 +1,10 @@
 Licensing and third-party components
 ====================================
 
-All material in this repository is provided under the DiTECTS Reviewer Evaluation
-Licence (LICENSE), except the third-party files listed below, which keep their
-own licences.
+All material in this repository is provided under the PolyForm Noncommercial
+License 1.0.0 (LICENSE), which permits research and other non-commercial use.
+Commercial use requires a separate licence from the copyright holders. The
+third-party files listed below keep their own licences.
 
 Third-party: RoboChart CSP semantic libraries -- EPL-2.0
 --------------------------------------------------------
